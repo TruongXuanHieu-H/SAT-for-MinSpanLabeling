@@ -1,7 +1,7 @@
-#ifndef LADDER_ENCODER_H
-#define LADDER_ENCODER_H
+#ifndef ITERATIVE_LADDER_ENCODER_H
+#define ITERATIVE_LADDER_ENCODER_H
 
-#include "instance_encoder.h"
+#include "iterative_instance_encoder.h"
 #include <map>
 #include <vector>
 #include <unordered_map>
@@ -22,11 +22,11 @@ struct VectorHash
     }
 };
 
-class LadderEncoder : public InstanceEncoder
+class IterativeLadderEncoder : public IterativeInstanceEncoder
 {
 public:
-    LadderEncoder();
-    ~LadderEncoder() override;
+    IterativeLadderEncoder();
+    ~IterativeLadderEncoder() override;
 
     void encode_antibandwidth() override;
 

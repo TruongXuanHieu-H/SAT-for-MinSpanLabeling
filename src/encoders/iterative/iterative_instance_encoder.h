@@ -1,11 +1,11 @@
-#ifndef INSTANCE_ENCODER_H
-#define INSTANCE_ENCODER_H
+#ifndef ITERATIVE_INSTANCE_ENCODER_H
+#define ITERATIVE_INSTANCE_ENCODER_H
 
-class InstanceEncoder
+class IterativeInstanceEncoder
 {
 public:
-    InstanceEncoder();
-    virtual ~InstanceEncoder();
+    IterativeInstanceEncoder();
+    virtual ~IterativeInstanceEncoder();
 
     virtual void encode_antibandwidth();
 

@@ -7,7 +7,7 @@ class MMSLIterateFromUB : public MMSLIterate
 {
 public:
     MMSLIterateFromUB();
-    ~MMSLIterateFromUB() = default;
+    ~MMSLIterateFromUB();
 
 protected:
     std::deque<int> create_search_order() override;

@@ -1,6 +1,6 @@
 #include "mmsl_iterate.h"
 #include "../global_data.h"
-#include "../encoders/mmsl_instance.h"
+#include "../encoders/iterative/iterative_mmsl_instance.h"
 #include "../utils/pid_manager.h"
 
 #include <iostream>
@@ -11,18 +11,15 @@
 #include <sys/wait.h>
 #include <chrono>
 
-MMSLIterate::MMSLIterate()
+MMSLIterate::MMSLIterate() : MMSLSearcher()
 {
-    max_consumed_memory = (float *)mmap(nullptr, sizeof(float), PROT_READ | PROT_WRITE, MAP_SHARED | MAP_ANONYMOUS, -1, 0);
-
-    setup_bounds();
     max_width_SAT = lower_bound - 1;
     min_width_UNSAT = upper_bound + 1;
 }
 
 MMSLIterate::~MMSLIterate()
 {
-    abp_pids.clear();
+    work_pids.clear();
 }
 
 void MMSLIterate::encode_and_solve()
@@ -40,14 +37,14 @@ void MMSLIterate::encode_and_solve()
         }
         else
         {
-            create_abp_pid(next_width_to_seach);
+            create_work_pid(next_width_to_seach);
         }
     }
 
     bool limit_violated = false;
 
     // Parent process waits until all child processes finish
-    while (!abp_pids.empty())
+    while (!work_pids.empty())
     {
         int status;
         pid_t finished_pid = wait(&status); // Wait for any child to complete
@@ -56,16 +53,16 @@ void MMSLIterate::encode_and_solve()
         {
             limit_violated = true;
             std::cout << "c [Main] Lim pid ends with result: " << WEXITSTATUS(status) << ".\n";
-            while (!abp_pids.empty())
+            while (!work_pids.empty())
             {
-                kill(abp_pids.begin()->second, SIGTERM);
-                abp_pids.erase(abp_pids.begin());
+                kill(work_pids.begin()->second, SIGTERM);
+                work_pids.erase(work_pids.begin());
             }
         }
         else if (WIFEXITED(status))
         {
             // Remove the finished child from the map
-            for (auto it = abp_pids.begin(); it != abp_pids.end(); ++it)
+            for (auto it = work_pids.begin(); it != work_pids.end(); ++it)
             {
                 if (it->second == finished_pid)
                 {
@@ -80,7 +77,7 @@ void MMSLIterate::encode_and_solve()
                             std::cout << "c [Main] Max width SAT is set to " << it->first << ".\n";
                         }
 
-                        for (auto ita = abp_pids.begin(); ita != abp_pids.end(); ita++)
+                        for (auto ita = work_pids.begin(); ita != work_pids.end(); ita++)
                         {
                             // Pid with lower width than SAT pid is also SAT.
                             if (ita->first < it->first)
@@ -97,7 +94,7 @@ void MMSLIterate::encode_and_solve()
                             std::cout << "c [Main] Min width UNSAT is set to " << it->first << "\n";
                         }
 
-                        for (auto ita = abp_pids.begin(); ita != abp_pids.end(); ita++)
+                        for (auto ita = work_pids.begin(); ita != work_pids.end(); ita++)
                         {
                             // Pid with higher width than UNSAT pid is also UNSAT.
                             if (ita->first > it->first)
@@ -111,8 +108,8 @@ void MMSLIterate::encode_and_solve()
                         break;
                     }
 
-                    abp_pids.erase(it);
-                    if (abp_pids.empty() && search_order.empty() && kill(lim_pid, 0) == 0)
+                    work_pids.erase(it);
+                    if (work_pids.empty() && search_order.empty() && kill(lim_pid, 0) == 0)
                     {
                         kill(lim_pid, SIGTERM);
                     }
@@ -123,13 +120,13 @@ void MMSLIterate::encode_and_solve()
         else if (WIFSIGNALED(status))
         {
             // Remove the terminated child from the map
-            for (auto it = abp_pids.begin(); it != abp_pids.end(); ++it)
+            for (auto it = work_pids.begin(); it != work_pids.end(); ++it)
             {
                 if (it->second == finished_pid)
                 {
                     std::cout << "c [Main] Child pid " << it->first << " - " << it->second << " terminated by signal " << WTERMSIG(status) << ".\n";
-                    abp_pids.erase(it);
-                    if (abp_pids.empty() && kill(lim_pid, 0) == 0)
+                    work_pids.erase(it);
+                    if (work_pids.empty() && kill(lim_pid, 0) == 0)
                     {
                         kill(lim_pid, SIGTERM);
                     }
@@ -139,13 +136,13 @@ void MMSLIterate::encode_and_solve()
         }
         else
         {
-            for (auto it = abp_pids.begin(); it != abp_pids.end(); ++it)
+            for (auto it = work_pids.begin(); it != work_pids.end(); ++it)
             {
                 if (it->second == finished_pid)
                 {
                     std::cerr << "e [Main] Child pid " << it->first << " - " << it->second << " stopped or otherwise terminated.\n";
-                    abp_pids.erase(it);
-                    if (abp_pids.empty() && kill(lim_pid, 0) == 0)
+                    work_pids.erase(it);
+                    if (work_pids.empty() && kill(lim_pid, 0) == 0)
                     {
                         kill(lim_pid, SIGTERM);
                     }
@@ -157,7 +154,7 @@ void MMSLIterate::encode_and_solve()
         if (!limit_violated)
         {
             fflush(stdout);
-            while (int(abp_pids.size()) < GlobalData::worker_count)
+            while (int(work_pids.size()) < GlobalData::worker_count)
             {
                 int next_width_to_seach = get_next_width_to_search();
                 if (next_width_to_seach <= lower_bound - 1 || next_width_to_seach >= upper_bound + 1)
@@ -166,11 +163,11 @@ void MMSLIterate::encode_and_solve()
                 }
                 else
                 {
-                    create_abp_pid(next_width_to_seach);
+                    create_work_pid(next_width_to_seach);
                 }
             }
 
-            if (abp_pids.empty() && search_order.empty())
+            if (work_pids.empty() && search_order.empty())
             {
                 kill(lim_pid, SIGTERM);
             }
@@ -194,153 +191,12 @@ void MMSLIterate::encode_and_print_dimacs()
 {
     for (int i = lower_bound; i <= upper_bound; i++)
     {
-        MMSLInstance msl_instance(i);
+        IterativeMMSLInstance msl_instance(i);
         msl_instance.encode_and_print_dimacs();
     }
 };
 
-/*
- *  Check if limit conditions are satified or not
- *  Return:
- *      0   if all the conditions is satified.
- *      -1  if out of memory.
- *      -2  if out of real time.
- *      -3  if out of elapsed time.
- */
-int MMSLIterate::is_limit_satisfied()
-{
-    if (consumed_memory > GlobalData::memory_limit)
-        return -1;
-
-    if (consumed_real_time > GlobalData::real_time_limit)
-        return -2;
-
-    if (consumed_elapsed_time > GlobalData::elapsed_time_limit)
-        return -3;
-
-    return 0;
-}
-
-void MMSLIterate::setup_bounds()
-{
-    lookup_bounds();
-    override_bounds();
-    modify_bound();
-
-    assert((lower_bound >= 2) && (lower_bound <= upper_bound) && (upper_bound <= GlobalData::g->n / 2));
-}
-
-void MMSLIterate::lookup_bounds()
-{
-    lookup_lower_bound();
-    lookup_upper_bound();
-}
-
-void MMSLIterate::lookup_upper_bound()
-{
-    auto pos = GlobalData::abw_UBs.find(GlobalData::g->graph_name);
-    if (pos != GlobalData::abw_UBs.end())
-    {
-        upper_bound = pos->second;
-        std::cout << "c [Main] Upper bound is set to " << upper_bound << ".\n";
-    }
-    else
-    {
-        upper_bound = GlobalData::g->n / 2;
-        std::cout << "c [Main] No predefined upper bound is found for " << GlobalData::g->graph_name << ".\n";
-        std::cout << "c [Main] UB-w = " << upper_bound << " (default value calculated as n/2).\n";
-    }
-}
-
-void MMSLIterate::lookup_lower_bound()
-{
-    auto pos = GlobalData::abw_LBs.find(GlobalData::g->graph_name);
-    if (pos != GlobalData::abw_LBs.end())
-    {
-        lower_bound = pos->second;
-        std::cout << "c [Main] Lower bound is set to " << lower_bound << ".\n";
-    }
-    else
-    {
-        lower_bound = 2;
-        std::cout << "c [Main] No predefined lower bound is found for " << GlobalData::g->graph_name << ".\n";
-        std::cout << "c [Main] LB-w = 2 (default value).\n";
-    }
-}
-
-void MMSLIterate::override_bounds()
-{
-    override_lower_bound();
-    override_upper_bound();
-}
-
-void MMSLIterate::override_lower_bound()
-{
-    if (GlobalData::overwrite_lb)
-    {
-        std::cout << "c [Main] LB " << lower_bound << " is overwritten with " << GlobalData::forced_lb << ".\n";
-        lower_bound = GlobalData::forced_lb;
-    }
-}
-
-void MMSLIterate::override_upper_bound()
-{
-    if (GlobalData::overwrite_ub)
-    {
-        std::cout << "c [Main] UB " << upper_bound << " is overwritten with " << GlobalData::forced_ub << ".\n";
-        upper_bound = GlobalData::forced_ub;
-    }
-}
-
-void MMSLIterate::modify_bound()
-{
-}
-
-void MMSLIterate::create_limit_pid()
-{
-    lim_pid = fork();
-    if (lim_pid < 0)
-    {
-        std::cerr << "e [Lim] Fork Failed!\n";
-        exit(-1);
-    }
-    else if (lim_pid == 0)
-    {
-        pid_t main_pid = getppid();
-        int limit_state = is_limit_satisfied();
-
-        while (limit_state == 0)
-        {
-            consumed_memory = std::round(PIDManager::get_total_memory_usage(main_pid) * 10 / 1024.0) / 10;
-            consumed_real_time += std::round((float)GlobalData::sample_rate * 10 / 1000000.0) / 10;
-            consumed_elapsed_time += (float)(GlobalData::sample_rate * (PIDManager::get_descendant_pids(main_pid).size() - 1)) / 1000000.0;
-
-            if (consumed_memory > *max_consumed_memory)
-            {
-                *max_consumed_memory = consumed_memory;
-                // std::cout << "[Lim] Memory consumed: " << max_consumed_memory << " MB.\n";
-            }
-
-            sampler_count++;
-            if (sampler_count >= GlobalData::report_rate)
-            {
-                // std::cout << "c [Lim] Sampler:\t" << "Memory: " << consumed_memory << " MB\tReal time: " << consumed_real_time << "s\tElapsed time: " << consumed_elapsed_time << "s.\n";
-                sampler_count = 0;
-            }
-            usleep(GlobalData::sample_rate);
-
-            limit_state = is_limit_satisfied();
-        }
-
-        exit(limit_state);
-    }
-    else
-    {
-        // std::cout << "c Lim pid is forked at " << lim_pid << ".\n";
-    }
-}
-
-void MMSLIterate::create_abp_pid(int width)
+void MMSLIterate::create_work_pid(int width)
 {
     // std::cout << "p PID: " << getpid() << ", PPID: " << getppid() << ".\n";
     pid_t pid = fork();
@@ -357,7 +213,7 @@ void MMSLIterate::create_abp_pid(int width)
         std::cout << "c [w = " << width << "] Start task in PID: " << getpid() << ".\n";
 
         // Child process: perform the task
-        int result = do_abp_pid_task(width);
+        int result = do_work_pid_task(width);
 
         exit(result);
     }
@@ -365,16 +221,16 @@ void MMSLIterate::create_abp_pid(int width)
     {
         // Parent process stores the child's PID
         // std::cout << "c Child pid " << width << " - " << pid << " is tracked in PID: " << getpid() << ".\n";
-        abp_pids[width] = pid;
+        work_pids[width] = pid;
     }
 }
 
-int MMSLIterate::do_abp_pid_task(int width)
+int MMSLIterate::do_work_pid_task(int width)
 {
     // Dynamically allocate and use ABPEncoder in child process
-    MMSLInstance msl_instance(width);
+    IterativeMMSLInstance msl_instance(width);
 
-    int result = msl_instance.encode_and_solve_abp();
+    int result = msl_instance.encode_and_solve_problem();
 
     std::cout << "c [w = " << width << "] Result: " << result << ".\n";
 

@@ -14,6 +14,8 @@ MMSLIterateFromUB::MMSLIterateFromUB()
     std::cout << ".\n";
 }
 
+MMSLIterateFromUB::~MMSLIterateFromUB() {}
+
 std::deque<int> MMSLIterateFromUB::create_search_order()
 {
     std::deque<int> order_result;

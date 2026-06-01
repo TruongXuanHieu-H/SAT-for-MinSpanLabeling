@@ -2,16 +2,16 @@
 #define SAT_SOLVER_CADICAL_H
 
 #include "sat_solver.h"
-#include "../../cadical-2.2.1/cadical.hpp"
+#include "../../../cadical-2.2.1/cadical.hpp"
 
 class SATSolverCadical : public SATSolver
 {
 public:
     SATSolverCadical();
-    ~SATSolverCadical() override;
+    ~SATSolverCadical();
 
     void set_up_solver() override;
-    void add_clause(const Clause &c) override;
+    void add_clause(const std::vector<int> &c) override;
     int solve() override;
     std::vector<int> extract_result() override;
     void clear_solver() override;

@@ -36,16 +36,18 @@ INCLUDES := -I$(CADICAL_INC)
 # Source files
 # ================================
 SOURCES := \
-	encoders/clause_container.cpp \
-	encoders/instance_data.cpp \
-	encoders/instance_encoder.cpp \
-	encoders/ladder_encoder.cpp \
-	encoders/mmsl_instance.cpp \
-	encoders/sat_solver_cadical.cpp \
-	encoders/var_handler.cpp \
+	encoders/general/clause_container.cpp \
+	encoders/general/sat_solver_cadical.cpp \
+	encoders/general/var_handler.cpp \
+	encoders/iterative/iterative_instance_data.cpp \
+	encoders/iterative/iterative_instance_encoder.cpp \
+	encoders/iterative/iterative_ladder_encoder.cpp \
+	encoders/iterative/iterative_mmsl_instance.cpp \
 	graph/graph.cpp \
+	searchers/mmsl_incremental_from_ub.cpp \
 	searchers/mmsl_iterate_from_ub.cpp \
 	searchers/mmsl_iterate.cpp \
+	searchers/mmsl_searcher.cpp \
 	utils/args_parser.cpp \
 	utils/pid_manager.cpp \
 	utils/signal_handler.cpp \

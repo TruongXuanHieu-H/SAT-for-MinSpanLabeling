@@ -1,7 +1,7 @@
 #ifndef MMSL_ENCODER_H
 #define MMSL_ENCODER_H
 
-#include "searchers/mmsl_iterate.h"
+#include "searchers/mmsl_searcher.h"
 
 class MMSLEncoder
 {
@@ -13,7 +13,7 @@ public:
 	void encode_and_print_dimacs();
 
 private:
-	MMSLIterate *mmsl_searcher = nullptr;
+	MMSLSearcher *mmsl_searcher = nullptr;
 
 	void setup_searcher();
 };

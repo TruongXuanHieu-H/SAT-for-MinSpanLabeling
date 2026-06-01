@@ -1,21 +1,21 @@
-#ifndef INSTANCE_DATA_H
-#define INSTANCE_DATA_H
+#ifndef ITERATIVE_INSTANCE_DATA_H
+#define ITERATIVE_INSTANCE_DATA_H
 
-#include "../graph/graph.h"
-#include "instance_encoder.h"
-#include "clause_container.h"
-#include "var_handler.h"
-#include "sat_solver.h"
+#include "iterative_instance_encoder.h"
+#include "../general/clause_container.h"
+#include "../general/var_handler.h"
+#include "../general/sat_solver.h"
+#include "../../graph/graph.h"
 
-class InstanceData
+class IterativeInstanceData
 {
 public:
-    InstanceData();
-    ~InstanceData();
+    IterativeInstanceData();
+    ~IterativeInstanceData();
 
     static int width; // Width of the instance
 
-    static InstanceEncoder *enc;
+    static IterativeInstanceEncoder *enc;
     static ClauseContainer *cc;
     static VarHandler *vh;
     static SATSolver *solver;

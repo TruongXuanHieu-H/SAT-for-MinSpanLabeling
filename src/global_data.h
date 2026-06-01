@@ -44,8 +44,8 @@ public:
 
     static void read_graph(std::string graph_file_name);
 
-    static std::unordered_map<std::string, int> abw_LBs;
-    static std::unordered_map<std::string, int> abw_UBs;
+    static std::unordered_map<std::string, int> mmsl_LBs;
+    static std::unordered_map<std::string, int> mmsl_UBs;
 };
 
 #endif // GLOBAL_DATA_H

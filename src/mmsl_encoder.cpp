@@ -23,6 +23,11 @@ void MMSLEncoder::setup_searcher()
         std::cout << "c [Main] Search strategy: Iterating from lower bound.\n";
         mmsl_searcher = new MMSLIterateFromUB();
         break;
+    case SearchStrategy::incremental_from_ub:
+        std::cout << "c [Main] Search strategy: Incremental from upper bound.\n";
+        // mmsl_searcher = new MMSLIncrementalFromUB();
+        std::cerr << "e [Main] Search strategy incremental_from_ub is not implemented yet.\n";
+        break;
 
     default:
         std::cerr << "e [Main] Unrecognized search strategy " << static_cast<int>(GlobalData::search_strategy) << ".\n";
