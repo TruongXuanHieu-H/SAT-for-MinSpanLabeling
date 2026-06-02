@@ -1,4 +1,4 @@
-#include "mmsl_searcher.h"
+#include "searcher.h"
 #include "../global_data.h"
 #include "../utils/pid_manager.h"
 
@@ -10,14 +10,14 @@
 #include <sys/wait.h>
 #include <chrono>
 
-MMSLSearcher::MMSLSearcher()
+Searcher::Searcher()
 {
     max_consumed_memory = (float *)mmap(nullptr, sizeof(float), PROT_READ | PROT_WRITE, MAP_SHARED | MAP_ANONYMOUS, -1, 0);
 
     setup_bounds();
 }
 
-MMSLSearcher::~MMSLSearcher()
+Searcher::~Searcher()
 {
     munmap(max_consumed_memory, sizeof(float));
 }
@@ -30,7 +30,7 @@ MMSLSearcher::~MMSLSearcher()
  *      -2  if out of real time.
  *      -3  if out of elapsed time.
  */
-int MMSLSearcher::is_limit_satisfied()
+int Searcher::is_limit_satisfied()
 {
     if (consumed_memory > GlobalData::memory_limit)
         return -1;
@@ -44,7 +44,7 @@ int MMSLSearcher::is_limit_satisfied()
     return 0;
 }
 
-void MMSLSearcher::setup_bounds()
+void Searcher::setup_bounds()
 {
     lookup_bounds();
     override_bounds();
@@ -52,13 +52,13 @@ void MMSLSearcher::setup_bounds()
     assert((lower_bound >= 2) && (lower_bound <= upper_bound) && (upper_bound <= GlobalData::g->n / 2));
 }
 
-void MMSLSearcher::lookup_bounds()
+void Searcher::lookup_bounds()
 {
     lookup_lower_bound();
     lookup_upper_bound();
 }
 
-void MMSLSearcher::lookup_upper_bound()
+void Searcher::lookup_upper_bound()
 {
     auto pos = GlobalData::mmsl_UBs.find(GlobalData::g->graph_name);
     if (pos != GlobalData::mmsl_UBs.end())
@@ -74,7 +74,7 @@ void MMSLSearcher::lookup_upper_bound()
     }
 }
 
-void MMSLSearcher::lookup_lower_bound()
+void Searcher::lookup_lower_bound()
 {
     auto pos = GlobalData::mmsl_LBs.find(GlobalData::g->graph_name);
     if (pos != GlobalData::mmsl_LBs.end())
@@ -90,13 +90,13 @@ void MMSLSearcher::lookup_lower_bound()
     }
 }
 
-void MMSLSearcher::override_bounds()
+void Searcher::override_bounds()
 {
     override_lower_bound();
     override_upper_bound();
 }
 
-void MMSLSearcher::override_lower_bound()
+void Searcher::override_lower_bound()
 {
     if (GlobalData::overwrite_lb)
     {
@@ -105,7 +105,7 @@ void MMSLSearcher::override_lower_bound()
     }
 }
 
-void MMSLSearcher::override_upper_bound()
+void Searcher::override_upper_bound()
 {
     if (GlobalData::overwrite_ub)
     {
@@ -114,7 +114,7 @@ void MMSLSearcher::override_upper_bound()
     }
 }
 
-void MMSLSearcher::create_limit_pid()
+void Searcher::create_limit_pid()
 {
     lim_pid = fork();
     if (lim_pid < 0)

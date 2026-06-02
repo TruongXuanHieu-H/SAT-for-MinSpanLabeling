@@ -1,11 +1,11 @@
-#include "iterative_instance_data.h"
-#include "iterative_ladder_encoder.h"
+#include "ite_instance_data.h"
+#include "ite_ladder.h"
 #include "../general/sat_solver_cadical.h"
 #include "../../global_data.h"
 
 #include <iostream>
 
-IterativeInstanceData::~IterativeInstanceData()
+IteInstanceData::~IteInstanceData()
 {
     if (enc)
         delete enc;
@@ -17,24 +17,24 @@ IterativeInstanceData::~IterativeInstanceData()
         delete solver;
 }
 
-int IterativeInstanceData::width = 0;
+int IteInstanceData::width = 0;
 
-IterativeInstanceEncoder *IterativeInstanceData::enc = nullptr;
-ClauseContainer *IterativeInstanceData::cc = nullptr;
-VarHandler *IterativeInstanceData::vh = nullptr;
-SATSolver *IterativeInstanceData::solver = nullptr;
+IteEncoder *IteInstanceData::enc = nullptr;
+ClauseContainer *IteInstanceData::cc = nullptr;
+VarHandler *IteInstanceData::vh = nullptr;
+SATSolver *IteInstanceData::solver = nullptr;
 
-std::string IterativeInstanceData::get_signature()
+std::string IteInstanceData::get_signature()
 {
     return "[w = " + std::to_string(width) + "]";
 };
 
-void IterativeInstanceData::set_up_encoder()
+void IteInstanceData::set_up_encoder()
 {
     switch (GlobalData::encode_type)
     {
     case EncodeType::ladder:
-        enc = new IterativeLadderEncoder();
+        enc = new IteLadder();
         break;
 
     default:
@@ -42,7 +42,7 @@ void IterativeInstanceData::set_up_encoder()
     }
 };
 
-void IterativeInstanceData::set_up_sat_solver()
+void IteInstanceData::set_up_sat_solver()
 {
     switch (GlobalData::sat_solver_type)
     {
@@ -55,14 +55,14 @@ void IterativeInstanceData::set_up_sat_solver()
     }
 };
 
-void IterativeInstanceData::setup_for_solving()
+void IteInstanceData::setup_for_solving()
 {
     set_up_sat_solver();
 
     setup_for_encoding();
 }
 
-void IterativeInstanceData::setup_for_encoding()
+void IteInstanceData::setup_for_encoding()
 {
     cc = new ClauseContainer(solver);
     vh = new VarHandler(1, GlobalData::g->n);
@@ -70,21 +70,21 @@ void IterativeInstanceData::setup_for_encoding()
     set_up_encoder();
 }
 
-void IterativeInstanceData::cleanup_encoding()
+void IteInstanceData::cleanup_encoding()
 {
     delete enc;
     delete cc;
     delete vh;
 }
 
-void IterativeInstanceData::cleanup_solving()
+void IteInstanceData::cleanup_solving()
 {
     cleanup_encoding();
 
     delete solver;
 }
 
-void IterativeInstanceData::export_dimacs(std::ostream &out)
+void IteInstanceData::export_dimacs(std::ostream &out)
 {
     out << "c CNF fomular for graph " << GlobalData::g->graph_name << " with Cyclic Antibandwidth value of " << width << "\n";
     out << "p cnf " << vh->size() << " " << cc->size() << "\n";

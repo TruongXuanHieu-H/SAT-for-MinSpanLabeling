@@ -1,15 +1,15 @@
-#ifndef MMSL_SEARCHER_H
-#define MMSL_SEARCHER_H
+#ifndef SEARCHER_H
+#define SEARCHER_H
 
 #include <unordered_map>
 #include <unistd.h>
 #include <deque>
 
-class MMSLSearcher
+class Searcher
 {
 public:
-    MMSLSearcher();
-    virtual ~MMSLSearcher();
+    Searcher();
+    virtual ~Searcher();
 
     virtual void encode_and_solve() = 0;
     virtual void encode_and_print_dimacs() = 0;

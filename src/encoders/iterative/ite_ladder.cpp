@@ -1,5 +1,5 @@
-#include "iterative_ladder_encoder.h"
-#include "iterative_instance_data.h"
+#include "ite_ladder.h"
+#include "ite_instance_data.h"
 #include "../../global_data.h"
 #include <iostream>
 #include <numeric>
@@ -7,12 +7,12 @@
 #include <assert.h>
 #include <cmath>
 
-IterativeLadderEncoder::IterativeLadderEncoder() {}
-IterativeLadderEncoder::~IterativeLadderEncoder() {}
+IteLadder::IteLadder() {}
+IteLadder::~IteLadder() {}
 
-void IterativeLadderEncoder::encode_antibandwidth()
+void IteLadder::encode_antibandwidth()
 {
-    if (IterativeInstanceData::width < 1 || IterativeInstanceData::width > GlobalData::g->n)
+    if (IteInstanceData::width < 1 || IteInstanceData::width > GlobalData::g->n)
     {
         std::cout << "c Non-valid value of w, nothing to encode.\n";
         return;
@@ -20,7 +20,7 @@ void IterativeLadderEncoder::encode_antibandwidth()
     do_encode_antibandwidth();
 }
 
-void IterativeLadderEncoder::do_encode_antibandwidth()
+void IteLadder::do_encode_antibandwidth()
 {
     obj_k_aux_vars.clear();
 
@@ -33,7 +33,7 @@ void IterativeLadderEncoder::do_encode_antibandwidth()
     encode_labels();
 };
 
-int IterativeLadderEncoder::get_obj_k_aux_var(std::vector<int> key, bool is_key_exist)
+int IteLadder::get_obj_k_aux_var(std::vector<int> key, bool is_key_exist)
 {
     if (key.front() == key.back() && key.size() == 1)
     {
@@ -52,12 +52,12 @@ int IterativeLadderEncoder::get_obj_k_aux_var(std::vector<int> key, bool is_key_
         return pair->second;
     }
 
-    int new_obj_k_aux_var = IterativeInstanceData::vh->get_new_var();
+    int new_obj_k_aux_var = IteInstanceData::vh->get_new_var();
     obj_k_aux_vars.insert({key, new_obj_k_aux_var});
     return new_obj_k_aux_var;
 }
 
-void IterativeLadderEncoder::encode_vertices()
+void IteLadder::encode_vertices()
 {
     for (int label = 0; label < GlobalData::g->n; label++)
     {
@@ -72,18 +72,18 @@ void IterativeLadderEncoder::encode_vertices()
     }
 }
 
-void IterativeLadderEncoder::encode_labels()
+void IteLadder::encode_labels()
 {
     for (int vertex = 0; vertex < GlobalData::g->n; vertex++)
     {
-        int number_windows = ceil((float)GlobalData::g->n / IterativeInstanceData::width);
+        int number_windows = ceil((float)GlobalData::g->n / IteInstanceData::width);
         std::vector<std::vector<int>> vertice_vars(number_windows);
 
         for (int window = 0; window < number_windows; window++)
         {
-            int start = vertex * GlobalData::g->n + window * IterativeInstanceData::width + 1;
+            int start = vertex * GlobalData::g->n + window * IteInstanceData::width + 1;
             int end = std::min(
-                vertex * GlobalData::g->n + (window + 1) * IterativeInstanceData::width,
+                vertex * GlobalData::g->n + (window + 1) * IteInstanceData::width,
                 vertex * GlobalData::g->n + GlobalData::g->n);
 
             for (int var = start; var <= end; var++)
@@ -100,22 +100,22 @@ void IterativeLadderEncoder::encode_labels()
             for (int next_window = window + 1; next_window < number_windows; next_window++)
             {
                 int second_window_aux_var = get_obj_k_aux_var(vertice_vars[next_window]);
-                IterativeInstanceData::cc->add_clause({-first_window_aux_var, -second_window_aux_var});
+                IteInstanceData::cc->add_clause({-first_window_aux_var, -second_window_aux_var});
             }
         }
-        IterativeInstanceData::cc->add_clause(alo_clause);
+        IteInstanceData::cc->add_clause(alo_clause);
     }
 }
 
-void IterativeLadderEncoder::encode_exactly_one_product(const std::vector<int> &vars)
+void IteLadder::encode_exactly_one_product(const std::vector<int> &vars)
 {
     if (vars.size() < 2)
         return;
     if (vars.size() == 2)
     {
         // simplifies to vars[0] /\ -1*vars[0], in case vars[0] == vars[1]
-        IterativeInstanceData::cc->add_clause({vars[0], vars[1]});
-        IterativeInstanceData::cc->add_clause({-1 * vars[0], -1 * vars[1]});
+        IteInstanceData::cc->add_clause({vars[0], vars[1]});
+        IteInstanceData::cc->add_clause({-1 * vars[0], -1 * vars[1]});
         return;
     }
 
@@ -127,12 +127,12 @@ void IterativeLadderEncoder::encode_exactly_one_product(const std::vector<int> &
     std::vector<int> v_vars;
     for (int i = 1; i <= p; ++i)
     {
-        int new_var = IterativeInstanceData::vh->get_new_var();
+        int new_var = IteInstanceData::vh->get_new_var();
         u_vars.push_back(new_var);
     }
     for (int j = 1; j <= q; ++j)
     {
-        int new_var = IterativeInstanceData::vh->get_new_var();
+        int new_var = IteInstanceData::vh->get_new_var();
         v_vars.push_back(new_var);
     }
 
@@ -143,18 +143,18 @@ void IterativeLadderEncoder::encode_exactly_one_product(const std::vector<int> &
         i = std::floor(idx / p);
         j = idx % p;
 
-        IterativeInstanceData::cc->add_clause({-1 * vars[idx], v_vars[i]});
-        IterativeInstanceData::cc->add_clause({-1 * vars[idx], u_vars[j]});
+        IteInstanceData::cc->add_clause({-1 * vars[idx], v_vars[i]});
+        IteInstanceData::cc->add_clause({-1 * vars[idx], u_vars[j]});
 
         or_clause.push_back(vars[idx]);
     }
-    IterativeInstanceData::cc->add_clause(or_clause);
+    IteInstanceData::cc->add_clause(or_clause);
 
     encode_amo_seq(u_vars);
     encode_amo_seq(v_vars);
 };
 
-void IterativeLadderEncoder::encode_amo_seq(const std::vector<int> &vars)
+void IteLadder::encode_amo_seq(const std::vector<int> &vars)
 {
     if (vars.size() < 2)
         return;
@@ -164,17 +164,17 @@ void IterativeLadderEncoder::encode_amo_seq(const std::vector<int> &vars)
     for (int idx = 1; idx < (int)vars.size() - 1; ++idx)
     {
         int curr = vars[idx];
-        int next = IterativeInstanceData::vh->get_new_var();
-        IterativeInstanceData::cc->add_clause({-1 * prev, -1 * curr});
-        IterativeInstanceData::cc->add_clause({-1 * prev, next});
-        IterativeInstanceData::cc->add_clause({-1 * curr, next});
+        int next = IteInstanceData::vh->get_new_var();
+        IteInstanceData::cc->add_clause({-1 * prev, -1 * curr});
+        IteInstanceData::cc->add_clause({-1 * prev, next});
+        IteInstanceData::cc->add_clause({-1 * curr, next});
 
         prev = next;
     }
-    IterativeInstanceData::cc->add_clause({-1 * prev, -1 * vars[vars.size() - 1]});
+    IteInstanceData::cc->add_clause({-1 * prev, -1 * vars[vars.size() - 1]});
 };
 
-void IterativeLadderEncoder::encode_obj_k()
+void IteLadder::encode_obj_k()
 {
     std::vector<std::vector<int>> ladders_vars;
     for (int vertex = 0; vertex < GlobalData::g->n; vertex++)
@@ -189,16 +189,16 @@ void IterativeLadderEncoder::encode_obj_k()
 
     for (int i = 0; i < GlobalData::g->n; i++)
     {
-        encode_ladder(ladders_vars[i], IterativeInstanceData::width);
+        encode_ladder(ladders_vars[i], IteInstanceData::width);
     }
 
     for (auto edge : GlobalData::g->edges)
     {
-        connect_ladder(ladders_vars[edge.first - 1], ladders_vars[edge.second - 1], IterativeInstanceData::width); // Have to reduce by 1 since edges are start from 1
+        connect_ladder(ladders_vars[edge.first - 1], ladders_vars[edge.second - 1], IteInstanceData::width); // Have to reduce by 1 since edges are start from 1
     }
 }
 
-void IterativeLadderEncoder::encode_ladder(const std::vector<int> ladder_vars, int width)
+void IteLadder::encode_ladder(const std::vector<int> ladder_vars, int width)
 {
     if (is_debug_mode)
     {
@@ -232,7 +232,7 @@ void IterativeLadderEncoder::encode_ladder(const std::vector<int> ladder_vars, i
     }
 }
 
-void IterativeLadderEncoder::encode_window(const std::vector<int> window_vars, bool is_first_window, bool is_last_window)
+void IteLadder::encode_window(const std::vector<int> window_vars, bool is_first_window, bool is_last_window)
 {
     if (is_debug_mode)
     {
@@ -250,26 +250,26 @@ void IterativeLadderEncoder::encode_window(const std::vector<int> window_vars, b
     {
         for (int i = 1; i < window_vars_size; i++)
         {
-            IterativeInstanceData::cc->add_clause({-(window_vars[i]),
+            IteInstanceData::cc->add_clause({-(window_vars[i]),
                                                    get_obj_k_aux_var(std::vector<int>(window_vars.begin(), window_vars.begin() + i + 1))});
         }
 
         for (int i = 0; i < window_vars_size - 1; i++)
         {
-            IterativeInstanceData::cc->add_clause({-get_obj_k_aux_var(std::vector<int>(window_vars.begin(), window_vars.begin() + i + 1)),
+            IteInstanceData::cc->add_clause({-get_obj_k_aux_var(std::vector<int>(window_vars.begin(), window_vars.begin() + i + 1)),
                                                    get_obj_k_aux_var(std::vector<int>(window_vars.begin(), window_vars.begin() + i + 2))});
         }
 
         for (int i = window_vars_size - 1; i > 0; i--)
         {
-            IterativeInstanceData::cc->add_clause({window_vars[i],
+            IteInstanceData::cc->add_clause({window_vars[i],
                                                    get_obj_k_aux_var(std::vector<int>(window_vars.begin(), window_vars.begin() + i)),
                                                    -get_obj_k_aux_var(std::vector<int>(window_vars.begin(), window_vars.begin() + i + 1))});
         }
 
         for (int i = window_vars_size - 1; i > 0; i--)
         {
-            IterativeInstanceData::cc->add_clause({-(window_vars[i]),
+            IteInstanceData::cc->add_clause({-(window_vars[i]),
                                                    -get_obj_k_aux_var(std::vector<int>(window_vars.begin(), window_vars.begin() + i))});
         }
     }
@@ -278,19 +278,19 @@ void IterativeLadderEncoder::encode_window(const std::vector<int> window_vars, b
     {
         for (int i = window_vars_size - 2; i >= 0; i--)
         {
-            IterativeInstanceData::cc->add_clause({-(window_vars[i]),
+            IteInstanceData::cc->add_clause({-(window_vars[i]),
                                                    get_obj_k_aux_var(std::vector<int>(window_vars.begin() + i, window_vars.end()))});
         }
 
         for (int i = window_vars_size - 1; i >= 1; i--)
         {
-            IterativeInstanceData::cc->add_clause({-get_obj_k_aux_var(std::vector<int>(window_vars.begin() + i, window_vars.end())),
+            IteInstanceData::cc->add_clause({-get_obj_k_aux_var(std::vector<int>(window_vars.begin() + i, window_vars.end())),
                                                    get_obj_k_aux_var(std::vector<int>(window_vars.begin() + i - 1, window_vars.end()))});
         }
 
         for (int i = 0; i < window_vars_size - 1; i++)
         {
-            IterativeInstanceData::cc->add_clause({window_vars[i],
+            IteInstanceData::cc->add_clause({window_vars[i],
                                                    get_obj_k_aux_var(std::vector<int>(window_vars.begin() + i + 1, window_vars.end())),
                                                    -get_obj_k_aux_var(std::vector<int>(window_vars.begin() + i, window_vars.end()))});
         }
@@ -299,14 +299,14 @@ void IterativeLadderEncoder::encode_window(const std::vector<int> window_vars, b
         {
             for (int i = 0; i < window_vars_size - 1; i++)
             {
-                IterativeInstanceData::cc->add_clause({-(window_vars[i]),
+                IteInstanceData::cc->add_clause({-(window_vars[i]),
                                                        -get_obj_k_aux_var(std::vector<int>(window_vars.begin() + i + 1, window_vars.end()))});
             }
         }
     }
 }
 
-void IterativeLadderEncoder::connect_windows(const std::vector<int> first_window_vars, const std::vector<int> second_window_vars)
+void IteLadder::connect_windows(const std::vector<int> first_window_vars, const std::vector<int> second_window_vars)
 {
     if (is_debug_mode)
     {
@@ -333,12 +333,12 @@ void IterativeLadderEncoder::connect_windows(const std::vector<int> first_window
 
     for (int i = 0; i < number_connections; i++)
     {
-        IterativeInstanceData::cc->add_clause({-get_obj_k_aux_var(std::vector<int>(first_window_vars.begin() + i + 1, first_window_vars.end())),
+        IteInstanceData::cc->add_clause({-get_obj_k_aux_var(std::vector<int>(first_window_vars.begin() + i + 1, first_window_vars.end())),
                                                -get_obj_k_aux_var(std::vector<int>(second_window_vars.begin(), second_window_vars.begin() + i + 1))});
     }
 }
 
-void IterativeLadderEncoder::connect_ladder(const std::vector<int> first_ladder_vars, const std::vector<int> second_ladder_vars, int width)
+void IteLadder::connect_ladder(const std::vector<int> first_ladder_vars, const std::vector<int> second_ladder_vars, int width)
 {
     if (is_debug_mode)
     {
@@ -368,7 +368,7 @@ void IterativeLadderEncoder::connect_ladder(const std::vector<int> first_ladder_
             int first_aux_var = get_obj_k_aux_var(std::vector<int>(first_ladder_vars.begin() + i, first_ladder_vars.begin() + i + width));
             int second_aux_var = get_obj_k_aux_var(std::vector<int>(second_ladder_vars.begin() + i, second_ladder_vars.begin() + i + width));
 
-            IterativeInstanceData::cc->add_clause({-first_aux_var, -second_aux_var});
+            IteInstanceData::cc->add_clause({-first_aux_var, -second_aux_var});
         }
         else
         {
@@ -377,10 +377,10 @@ void IterativeLadderEncoder::connect_ladder(const std::vector<int> first_ladder_
             int second_aux_var_1 = get_obj_k_aux_var(std::vector<int>(second_ladder_vars.begin() + i, second_ladder_vars.begin() + i + width - mod));
             int second_aux_var_2 = get_obj_k_aux_var(std::vector<int>(second_ladder_vars.begin() + i + width - mod, second_ladder_vars.begin() + i + width));
 
-            IterativeInstanceData::cc->add_clause({-first_aux_var_1, -second_aux_var_1});
-            IterativeInstanceData::cc->add_clause({-first_aux_var_1, -second_aux_var_2});
-            IterativeInstanceData::cc->add_clause({-first_aux_var_2, -second_aux_var_1});
-            IterativeInstanceData::cc->add_clause({-first_aux_var_2, -second_aux_var_2});
+            IteInstanceData::cc->add_clause({-first_aux_var_1, -second_aux_var_1});
+            IteInstanceData::cc->add_clause({-first_aux_var_1, -second_aux_var_2});
+            IteInstanceData::cc->add_clause({-first_aux_var_2, -second_aux_var_1});
+            IteInstanceData::cc->add_clause({-first_aux_var_2, -second_aux_var_2});
         }
     }
 }

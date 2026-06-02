@@ -1,9 +1,9 @@
-#include "mmsl_iterate_from_ub.h"
+#include "ite_from_ub.h"
 #include "../global_data.h"
 
 #include <iostream>
 
-MMSLIterateFromUB::MMSLIterateFromUB()
+IteFromUB::IteFromUB()
 {
     search_order = create_search_order();
     std::cout << "c [Main] Search order:";
@@ -14,9 +14,9 @@ MMSLIterateFromUB::MMSLIterateFromUB()
     std::cout << ".\n";
 }
 
-MMSLIterateFromUB::~MMSLIterateFromUB() {}
+IteFromUB::~IteFromUB() {}
 
-std::deque<int> MMSLIterateFromUB::create_search_order()
+std::deque<int> IteFromUB::create_search_order()
 {
     std::deque<int> order_result;
     for (int i = lower_bound; i <= upper_bound; i++)

@@ -1,13 +1,13 @@
-#ifndef MMSL_ITERATE_H
-#define MMSL_ITERATE_H
+#ifndef ITERATION_H
+#define ITERATION_H
 
-#include "mmsl_searcher.h"
+#include "searcher.h"
 
-class MMSLIterate : public MMSLSearcher
+class Iteration : public Searcher
 {
 public:
-    MMSLIterate();
-    ~MMSLIterate();
+    Iteration();
+    ~Iteration();
 
     void encode_and_solve() override;
     void encode_and_print_dimacs() override;

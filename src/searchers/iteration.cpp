@@ -1,6 +1,6 @@
-#include "mmsl_iterate.h"
+#include "iteration.h"
 #include "../global_data.h"
-#include "../encoders/iterative/iterative_mmsl_instance.h"
+#include "../encoders/iterative/ite_instance.h"
 #include "../utils/pid_manager.h"
 
 #include <iostream>
@@ -11,18 +11,18 @@
 #include <sys/wait.h>
 #include <chrono>
 
-MMSLIterate::MMSLIterate() : MMSLSearcher()
+Iteration::Iteration() : Searcher()
 {
     max_width_SAT = lower_bound - 1;
     min_width_UNSAT = upper_bound + 1;
 }
 
-MMSLIterate::~MMSLIterate()
+Iteration::~Iteration()
 {
     work_pids.clear();
 }
 
-void MMSLIterate::encode_and_solve()
+void Iteration::encode_and_solve()
 {
     fflush(stdout);
     std::chrono::time_point<std::chrono::high_resolution_clock> start_time = std::chrono::high_resolution_clock::now();
@@ -187,16 +187,16 @@ void MMSLIterate::encode_and_solve()
     std::cout << "r [Main] \n";
 }
 
-void MMSLIterate::encode_and_print_dimacs()
+void Iteration::encode_and_print_dimacs()
 {
     for (int i = lower_bound; i <= upper_bound; i++)
     {
-        IterativeMMSLInstance msl_instance(i);
+        IteInstance msl_instance(i);
         msl_instance.encode_and_print_dimacs();
     }
 };
 
-void MMSLIterate::create_work_pid(int width)
+void Iteration::create_work_pid(int width)
 {
     // std::cout << "p PID: " << getpid() << ", PPID: " << getppid() << ".\n";
     pid_t pid = fork();
@@ -225,10 +225,10 @@ void MMSLIterate::create_work_pid(int width)
     }
 }
 
-int MMSLIterate::do_work_pid_task(int width)
+int Iteration::do_work_pid_task(int width)
 {
     // Dynamically allocate and use ABPEncoder in child process
-    IterativeMMSLInstance msl_instance(width);
+    IteInstance msl_instance(width);
 
     int result = msl_instance.encode_and_solve_problem();
 
@@ -238,7 +238,7 @@ int MMSLIterate::do_work_pid_task(int width)
     return result;
 }
 
-int MMSLIterate::get_next_width_to_search()
+int Iteration::get_next_width_to_search()
 {
     if (search_order.empty())
         return lower_bound - 1; // To terminate the search if no valid width is left. Value (upper_bound + 1) also works.

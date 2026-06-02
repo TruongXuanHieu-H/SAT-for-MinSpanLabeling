@@ -1,4 +1,4 @@
-#include "mmsl_incremental_from_ub.h"
+#include "incre_from_ub.h"
 
 #include <iostream>
 #include <assert.h>
@@ -8,15 +8,15 @@
 #include <sys/wait.h>
 #include <chrono>
 
-MMSLIncrementalFromUB::MMSLIncrementalFromUB() : MMSLSearcher()
+IncreFromUB::IncreFromUB() : Searcher()
 {
 }
 
-MMSLIncrementalFromUB::~MMSLIncrementalFromUB()
+IncreFromUB::~IncreFromUB()
 {
 }
 
-void MMSLIncrementalFromUB::encode_and_solve()
+void IncreFromUB::encode_and_solve()
 {
     fflush(stdout);
     std::chrono::time_point<std::chrono::high_resolution_clock> start_time = std::chrono::high_resolution_clock::now();
@@ -48,13 +48,13 @@ void MMSLIncrementalFromUB::encode_and_solve()
     std::cout << "r [Main] \n";
 }
 
-void MMSLIncrementalFromUB::encode_and_print_dimacs()
+void IncreFromUB::encode_and_print_dimacs()
 {
     std::cout << "e [Main] Print dimacs is currently not supported for incremental searchers.\n";
     exit(-1);
 };
 
-void MMSLIncrementalFromUB::create_work_pid()
+void IncreFromUB::create_work_pid()
 {
     // std::cout << "p PID: " << getpid() << ", PPID: " << getppid() << ".\n";
     pid_t pid = fork();

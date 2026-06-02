@@ -1,11 +1,11 @@
-#ifndef ITERATIVE_INSTANCE_ENCODER_H
-#define ITERATIVE_INSTANCE_ENCODER_H
+#ifndef ITE_ENCODER_H
+#define ITE_ENCODER_H
 
-class IterativeInstanceEncoder
+class IteEncoder
 {
 public:
-    IterativeInstanceEncoder();
-    virtual ~IterativeInstanceEncoder();
+    IteEncoder();
+    virtual ~IteEncoder();
 
     virtual void encode_antibandwidth();
 
@@ -17,4 +17,4 @@ private:
     void encode_symmetry_break_lowest_degree_node();
 };
 
-#endif // INSTANCE_ENCODER_H
+#endif // ITE_ENCODER_H

@@ -1,7 +1,7 @@
 #include <iostream>
 
 #include "global_data.h"
-#include "mmsl_encoder.h"
+#include "encoder.h"
 #include "utils/signal_handler.h"
 #include "utils/version.h"
 #include "utils/args_parser.h"
@@ -19,12 +19,12 @@ int main(int argc, char **argv)
         return parse_result;
     }
 
-    MMSLEncoder mmsl_enc;
+    Encoder encoder;
 
     if (GlobalData::just_print_dimacs)
-        mmsl_enc.encode_and_print_dimacs();
+        encoder.encode_and_print_dimacs();
     else
-        mmsl_enc.encode_and_solve();
+        encoder.encode_and_solve();
 
     return 0;
 }
