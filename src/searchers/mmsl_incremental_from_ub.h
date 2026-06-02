@@ -3,7 +3,7 @@
 
 #include "mmsl_searcher.h"
 
-class MMSLIncrementalFromUB : MMSLSearcher
+class MMSLIncrementalFromUB : public MMSLSearcher
 {
 public:
     MMSLIncrementalFromUB();

@@ -1,5 +1,6 @@
 #include "global_data.h"
 #include "mmsl_encoder.h"
+#include "searchers/mmsl_incremental_from_ub.h"
 #include "searchers/mmsl_iterate_from_ub.h"
 
 #include <iostream>
@@ -25,8 +26,7 @@ void MMSLEncoder::setup_searcher()
         break;
     case SearchStrategy::incremental_from_ub:
         std::cout << "c [Main] Search strategy: Incremental from upper bound.\n";
-        // mmsl_searcher = new MMSLIncrementalFromUB();
-        std::cerr << "e [Main] Search strategy incremental_from_ub is not implemented yet.\n";
+        mmsl_searcher = new MMSLIncrementalFromUB();
         break;
 
     default:
