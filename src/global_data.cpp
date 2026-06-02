@@ -39,7 +39,3 @@ void GlobalData::read_graph(std::string graph_file_name)
 {
     g = new Graph(graph_file_name);
 };
-
-std::unordered_map<std::string, int> GlobalData::mmsl_LBs = {};
-
-std::unordered_map<std::string, int> GlobalData::mmsl_UBs = {};

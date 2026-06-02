@@ -18,9 +18,26 @@ void ArgsParser::init_parser()
         GlobalData::enable_solution_verification = true;
     };
 
-    cmd["--iterate-from-lb"] = [](int &, int, char **)
+    cmd["--iterate-from-ub"] = [](int &, int, char **)
     {
         GlobalData::search_strategy = SearchStrategy::iterate_from_ub;
+    };
+
+    cmd["--incremental-from-ub"] = [](int &, int, char **)
+    {
+        GlobalData::search_strategy = SearchStrategy::incremental_from_ub;
+    };
+
+    cmd["-target-value"] = [](int &i, int argc, char **argv)
+    {
+        int val = get_positive(i, argc, argv, "target value");
+
+        if (val < 2)
+            throw std::runtime_error("Target value has to be at least 2");
+        if (val > GlobalData::g->n / 2)
+            throw std::runtime_error("Target value cannot be greater than n/2");
+
+        GlobalData::target_value = val;
     };
 
     cmd["-set-lb"] = [](int &i, int argc, char **argv)

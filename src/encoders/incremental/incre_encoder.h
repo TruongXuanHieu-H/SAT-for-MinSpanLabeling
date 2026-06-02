@@ -1,11 +1,11 @@
-#ifndef ITE_ENCODER_H
-#define ITE_ENCODER_H
+#ifndef INCRE_ENCODER_H
+#define INCRE_ENCODER_H
 
-class IteEncoder
+class IncreEncoder
 {
 public:
-    IteEncoder();
-    virtual ~IteEncoder();
+    IncreEncoder();
+    virtual ~IncreEncoder();
 
     virtual void encode_antibandwidth() = 0;
 
@@ -17,4 +17,4 @@ private:
     void encode_symmetry_break_lowest_degree_node();
 };
 
-#endif // ITE_ENCODER_H
+#endif

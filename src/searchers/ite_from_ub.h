@@ -5,10 +5,6 @@
 
 class IteFromUB : public Iteration
 {
-public:
-    IteFromUB();
-    ~IteFromUB();
-
 protected:
     std::deque<int> create_search_order() override;
 };

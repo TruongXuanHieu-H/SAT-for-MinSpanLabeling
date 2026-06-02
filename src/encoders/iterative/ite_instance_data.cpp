@@ -7,14 +7,10 @@
 
 IteInstanceData::~IteInstanceData()
 {
-    if (enc)
-        delete enc;
-    if (cc)
-        delete cc;
-    if (vh)
-        delete vh;
-    if (solver)
-        delete solver;
+    delete enc;
+    delete cc;
+    delete vh;
+    delete solver;
 }
 
 int IteInstanceData::width = 0;

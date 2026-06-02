@@ -11,10 +11,18 @@
 #include <sys/wait.h>
 #include <chrono>
 
-Iteration::Iteration() : Searcher()
+Iteration::Iteration(int target_value, int lower_bound, int upper_bound) : Searcher(target_value, lower_bound, upper_bound)
 {
     max_width_SAT = lower_bound - 1;
     min_width_UNSAT = upper_bound + 1;
+
+    search_order = create_search_order();
+    std::cout << "c [Main] Search order:";
+    for (const auto &width : search_order)
+    {
+        std::cout << " " << width;
+    }
+    std::cout << ".\n";
 }
 
 Iteration::~Iteration()
@@ -30,14 +38,14 @@ void Iteration::encode_and_solve()
 
     for (int i = 0; i < GlobalData::worker_count && i < (upper_bound + 1 - lower_bound); i += 1)
     {
-        int next_width_to_seach = get_next_width_to_search();
-        if (next_width_to_seach <= lower_bound - 1 || next_width_to_seach >= upper_bound + 1)
+        int next_width_to_search = get_next_width_to_search();
+        if (next_width_to_search <= lower_bound - 1 || next_width_to_search >= upper_bound + 1)
         {
             break; // No valid width to search
         }
         else
         {
-            create_work_pid(next_width_to_seach);
+            create_work_pid(next_width_to_search);
         }
     }
 
@@ -191,8 +199,8 @@ void Iteration::encode_and_print_dimacs()
 {
     for (int i = lower_bound; i <= upper_bound; i++)
     {
-        IteInstance msl_instance(i);
-        msl_instance.encode_and_print_dimacs();
+        IteInstance instance(i);
+        instance.encode_and_print_dimacs();
     }
 };
 
@@ -228,9 +236,9 @@ void Iteration::create_work_pid(int width)
 int Iteration::do_work_pid_task(int width)
 {
     // Dynamically allocate and use ABPEncoder in child process
-    IteInstance msl_instance(width);
+    IteInstance instance(width);
 
-    int result = msl_instance.encode_and_solve_problem();
+    int result = instance.encode_and_solve_problem();
 
     std::cout << "c [w = " << width << "] Result: " << result << ".\n";
 

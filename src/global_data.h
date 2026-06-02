@@ -15,7 +15,8 @@ public:
     GlobalData();
     ~GlobalData();
 
-    static Graph *g; // Pointer to the global graph instance
+    static Graph *g;         // Pointer to the global graph instance
+    static int target_value; // Target value for the problem (e.g., antibandwidth value for ABP)
 
     static int worker_count;
 
@@ -43,9 +44,6 @@ public:
     static float elapsed_time_limit; // bound of total time consumed by all the process, in seconds
 
     static void read_graph(std::string graph_file_name);
-
-    static std::unordered_map<std::string, int> mmsl_LBs;
-    static std::unordered_map<std::string, int> mmsl_UBs;
 };
 
 #endif // GLOBAL_DATA_H

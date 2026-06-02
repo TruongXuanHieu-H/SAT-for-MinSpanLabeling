@@ -10,11 +10,9 @@
 #include <sys/wait.h>
 #include <chrono>
 
-Searcher::Searcher()
+Searcher::Searcher(int targert_value, int lower_bound, int upper_bound) : target_value(targert_value), lower_bound(lower_bound), upper_bound(upper_bound)
 {
     max_consumed_memory = (float *)mmap(nullptr, sizeof(float), PROT_READ | PROT_WRITE, MAP_SHARED | MAP_ANONYMOUS, -1, 0);
-
-    setup_bounds();
 }
 
 Searcher::~Searcher()
@@ -42,76 +40,6 @@ int Searcher::is_limit_satisfied()
         return -3;
 
     return 0;
-}
-
-void Searcher::setup_bounds()
-{
-    lookup_bounds();
-    override_bounds();
-
-    assert((lower_bound >= 2) && (lower_bound <= upper_bound) && (upper_bound <= GlobalData::g->n / 2));
-}
-
-void Searcher::lookup_bounds()
-{
-    lookup_lower_bound();
-    lookup_upper_bound();
-}
-
-void Searcher::lookup_upper_bound()
-{
-    auto pos = GlobalData::mmsl_UBs.find(GlobalData::g->graph_name);
-    if (pos != GlobalData::mmsl_UBs.end())
-    {
-        upper_bound = pos->second;
-        std::cout << "c [Main] Upper bound is set to " << upper_bound << ".\n";
-    }
-    else
-    {
-        upper_bound = GlobalData::g->n / 2;
-        std::cout << "c [Main] No predefined upper bound is found for " << GlobalData::g->graph_name << ".\n";
-        std::cout << "c [Main] UB-w = " << upper_bound << " (default value calculated as n/2).\n";
-    }
-}
-
-void Searcher::lookup_lower_bound()
-{
-    auto pos = GlobalData::mmsl_LBs.find(GlobalData::g->graph_name);
-    if (pos != GlobalData::mmsl_LBs.end())
-    {
-        lower_bound = pos->second;
-        std::cout << "c [Main] Lower bound is set to " << lower_bound << ".\n";
-    }
-    else
-    {
-        lower_bound = 2;
-        std::cout << "c [Main] No predefined lower bound is found for " << GlobalData::g->graph_name << ".\n";
-        std::cout << "c [Main] LB-w = 2 (default value).\n";
-    }
-}
-
-void Searcher::override_bounds()
-{
-    override_lower_bound();
-    override_upper_bound();
-}
-
-void Searcher::override_lower_bound()
-{
-    if (GlobalData::overwrite_lb)
-    {
-        std::cout << "c [Main] LB " << lower_bound << " is overwritten with " << GlobalData::forced_lb << ".\n";
-        lower_bound = GlobalData::forced_lb;
-    }
-}
-
-void Searcher::override_upper_bound()
-{
-    if (GlobalData::overwrite_ub)
-    {
-        std::cout << "c [Main] UB " << upper_bound << " is overwritten with " << GlobalData::forced_ub << ".\n";
-        upper_bound = GlobalData::forced_ub;
-    }
 }
 
 void Searcher::create_limit_pid()

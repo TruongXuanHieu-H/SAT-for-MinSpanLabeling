@@ -8,13 +8,14 @@
 class Searcher
 {
 public:
-    Searcher();
+    Searcher(int target_value, int lower_bound, int upper_bound);
     virtual ~Searcher();
 
     virtual void encode_and_solve() = 0;
     virtual void encode_and_print_dimacs() = 0;
 
 protected:
+    int target_value;
     int lower_bound;
     int upper_bound;
 
@@ -28,14 +29,6 @@ protected:
     float consumed_elapsed_time = 0; // total time consumed by all the process, in seconds
 
     int is_limit_satisfied();
-
-    void setup_bounds();
-    void lookup_bounds();
-    void lookup_lower_bound();
-    void lookup_upper_bound();
-    void override_bounds();
-    void override_lower_bound();
-    void override_upper_bound();
 
     void create_limit_pid();
 };

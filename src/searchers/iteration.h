@@ -6,7 +6,7 @@
 class Iteration : public Searcher
 {
 public:
-    Iteration();
+    Iteration(int target_value, int lower_bound, int upper_bound);
     ~Iteration();
 
     void encode_and_solve() override;

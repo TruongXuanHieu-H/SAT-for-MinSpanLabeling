@@ -1,4 +1,7 @@
 #include "incre_from_ub.h"
+#include "../global_data.h"
+#include "../encoders/incremental/incre_instance.h"
+#include "../utils/pid_manager.h"
 
 #include <iostream>
 #include <assert.h>
@@ -8,7 +11,7 @@
 #include <sys/wait.h>
 #include <chrono>
 
-IncreFromUB::IncreFromUB() : Searcher()
+IncreFromUB::IncreFromUB(int target_value, int lower_bound, int upper_bound) : Searcher(target_value, lower_bound, upper_bound)
 {
 }
 
@@ -70,9 +73,11 @@ void IncreFromUB::create_work_pid()
         prctl(PR_SET_PDEATHSIG, SIGTERM);
         std::cout << "c [Incremental] Start task in PID: " << getpid() << ".\n";
 
+        IncreInstance instance(upper_bound);
         int result = 0;
 
-        std::cout << "c [Incremental] Result: " << result << ".\n";
+        std::cout
+            << "c [Incremental] Result: " << result << ".\n";
 
         exit(result);
     }
