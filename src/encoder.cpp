@@ -22,11 +22,11 @@ void Encoder::setup_searcher()
     {
     case SearchStrategy::iterate_from_ub:
         std::cout << "c [Main] Search strategy: Iterating from lower bound.\n";
-        searcher = new IteFromUB();
+        searcher = new IteFromUB(GlobalData::target_value, GlobalData::lower_bound, GlobalData::upper_bound);
         break;
     case SearchStrategy::incremental_from_ub:
         std::cout << "c [Main] Search strategy: Incremental from upper bound.\n";
-        searcher = new IncreFromUB();
+        searcher = new IncreFromUB(GlobalData::target_value, GlobalData::lower_bound, GlobalData::upper_bound);
         break;
 
     default:

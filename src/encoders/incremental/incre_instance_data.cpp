@@ -1,9 +1,13 @@
 #include "incre_instance_data.h"
+#include "incre_encoder.h"
 #include "incre_ladder.h"
 #include "../general/sat_solver_cadical.h"
 #include "../../global_data.h"
 
 #include <iostream>
+
+IncreInstanceData::IncreInstanceData(int target_value, int lower_bound, int upper_bound)
+    : target_value(target_value), lower_bound(lower_bound), upper_bound(upper_bound) {};
 
 IncreInstanceData::~IncreInstanceData()
 {
@@ -12,12 +16,6 @@ IncreInstanceData::~IncreInstanceData()
     delete vh;
     delete solver;
 };
-
-int IncreInstanceData::target_value = 0;
-IncreEncoder *IncreInstanceData::enc = nullptr;
-ClauseContainer *IncreInstanceData::cc = nullptr;
-VarHandler *IncreInstanceData::vh = nullptr;
-SATSolver *IncreInstanceData::solver = nullptr;
 
 std::string IncreInstanceData::get_signature()
 {
@@ -29,10 +27,66 @@ void IncreInstanceData::set_up_encoder()
     switch (GlobalData::encode_type)
     {
     case EncodeType::ladder:
-        enc = new IncreLadder();
+        enc = new IncreLadder(this);
         break;
 
     default:
         break;
     }
 };
+
+void IncreInstanceData::set_up_sat_solver()
+{
+    switch (GlobalData::sat_solver_type)
+    {
+    case SATSolverType::CaDiCaL:
+        solver = new SATSolverCadical();
+        break;
+
+    default:
+        break;
+    }
+};
+
+void IncreInstanceData::setup_for_solving()
+{
+    set_up_sat_solver();
+
+    setup_for_encoding();
+}
+
+void IncreInstanceData::setup_for_encoding()
+{
+    cc = new ClauseContainer(solver);
+    vh = new VarHandler(1, GlobalData::g->n);
+
+    set_up_encoder();
+}
+
+void IncreInstanceData::cleanup_encoding()
+{
+    delete enc;
+    delete cc;
+    delete vh;
+}
+
+void IncreInstanceData::cleanup_solving()
+{
+    cleanup_encoding();
+
+    delete solver;
+}
+
+void IncreInstanceData::export_dimacs(std::ostream &out)
+{
+    out << "c CNF fomular for graph " << GlobalData::g->graph_name << " with Antibandwidth value of " << target_value << "\n";
+    out << "p cnf " << vh->size() << " " << cc->size() << "\n";
+    for (const std::vector<int> &c : cc->clause_list)
+    {
+        for (int lit : c)
+        {
+            out << lit << " ";
+        }
+        out << "0\n";
+    }
+}

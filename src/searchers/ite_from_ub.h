@@ -5,6 +5,10 @@
 
 class IteFromUB : public Iteration
 {
+public:
+    IteFromUB(int target_value, int lower_bound, int upper_bound);
+    ~IteFromUB() override;
+
 protected:
     std::deque<int> create_search_order() override;
 };

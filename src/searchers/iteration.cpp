@@ -15,14 +15,6 @@ Iteration::Iteration(int target_value, int lower_bound, int upper_bound) : Searc
 {
     max_width_SAT = lower_bound - 1;
     min_width_UNSAT = upper_bound + 1;
-
-    search_order = create_search_order();
-    std::cout << "c [Main] Search order:";
-    for (const auto &width : search_order)
-    {
-        std::cout << " " << width;
-    }
-    std::cout << ".\n";
 }
 
 Iteration::~Iteration()

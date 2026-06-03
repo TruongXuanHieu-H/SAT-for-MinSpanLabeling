@@ -31,10 +31,8 @@ public:
     static bool enable_solution_verification;
     static int split_limit;
 
-    static bool overwrite_lb;
-    static bool overwrite_ub;
-    static int forced_lb;
-    static int forced_ub;
+    static int lower_bound;
+    static int upper_bound;
 
     static int sample_rate; // Interval of sampler, in microseconds
     static int report_rate; // Interval of report, in number of sampler

@@ -39,23 +39,27 @@ SOURCES := \
 	encoders/general/clause_container.cpp \
 	encoders/general/sat_solver_cadical.cpp \
 	encoders/general/var_handler.cpp \
-	encoders/iterative/iterative_instance_data.cpp \
-	encoders/iterative/iterative_instance_encoder.cpp \
-	encoders/iterative/iterative_ladder_encoder.cpp \
-	encoders/iterative/iterative_mmsl_instance.cpp \
+	encoders/incremental/incre_encoder.cpp \
+	encoders/incremental/incre_instance_data.cpp \
+	encoders/incremental/incre_instance.cpp \
+	encoders/incremental/incre_ladder.cpp \
+	encoders/iterative/ite_encoder.cpp \
+	encoders/iterative/ite_instance_data.cpp \
+	encoders/iterative/ite_instance.cpp \
+	encoders/iterative/ite_ladder.cpp \
 	graph/graph.cpp \
-	searchers/mmsl_incremental_from_ub.cpp \
-	searchers/mmsl_iterate_from_ub.cpp \
-	searchers/mmsl_iterate.cpp \
-	searchers/mmsl_searcher.cpp \
+	searchers/incre_from_ub.cpp \
+	searchers/ite_from_ub.cpp \
+	searchers/iteration.cpp \
+	searchers/searcher.cpp \
 	utils/args_parser.cpp \
 	utils/pid_manager.cpp \
 	utils/signal_handler.cpp \
 	utils/usage.cpp \
 	utils/version.cpp \
+	encoder.cpp \
 	global_data.cpp \
-	main.cpp \
-	mmsl_encoder.cpp
+	main.cpp 
 
 # ================================
 # Object files

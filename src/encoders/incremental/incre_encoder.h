@@ -1,13 +1,18 @@
 #ifndef INCRE_ENCODER_H
 #define INCRE_ENCODER_H
 
+class IncreInstanceData;
+
 class IncreEncoder
 {
 public:
-    IncreEncoder();
+    IncreEncoder(IncreInstanceData *data);
     virtual ~IncreEncoder();
 
     virtual void encode_antibandwidth() = 0;
+
+protected:
+    IncreInstanceData *data;
 
     void encode_symmetry_break();
 

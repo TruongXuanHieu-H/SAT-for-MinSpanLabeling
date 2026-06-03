@@ -49,8 +49,7 @@ void ArgsParser::init_parser()
         if (val > GlobalData::g->n / 2)
             throw std::runtime_error("Lower bound cannot be greater than n/2");
 
-        GlobalData::forced_lb = val;
-        GlobalData::overwrite_lb = true;
+        GlobalData::lower_bound = val;
 
         std::cout << "c [Param] LB is predefined as " << val << ".\n";
     };
@@ -64,8 +63,7 @@ void ArgsParser::init_parser()
         if (val > GlobalData::g->n / 2)
             throw std::runtime_error("Upper bound cannot be greater than n/2");
 
-        GlobalData::forced_ub = val;
-        GlobalData::overwrite_ub = true;
+        GlobalData::upper_bound = val;
 
         std::cout << "c [Param] UB is predefined as " << val << ".\n";
     };

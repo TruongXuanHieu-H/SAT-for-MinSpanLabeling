@@ -7,7 +7,7 @@
 #include <assert.h>
 #include <cmath>
 
-IncreLadder::IncreLadder() {}
+IncreLadder::IncreLadder(IncreInstanceData *data) : IncreEncoder(data) {}
 IncreLadder::~IncreLadder() {}
 
 void IncreLadder::encode_antibandwidth()
@@ -45,7 +45,7 @@ int IncreLadder::get_obj_k_aux_var(std::vector<int> key, bool is_key_exist)
         return pair->second;
     }
 
-    int new_obj_k_aux_var = IncreInstanceData::vh->get_new_var();
+    int new_obj_k_aux_var = data->vh->get_new_var();
     obj_k_aux_vars.insert({key, new_obj_k_aux_var});
     return new_obj_k_aux_var;
 }
@@ -54,14 +54,14 @@ void IncreLadder::encode_labels()
 {
     for (int vertex = 0; vertex < GlobalData::g->n; vertex++)
     {
-        int number_windows = ceil((float)GlobalData::g->n / IncreInstanceData::target_value);
+        int number_windows = ceil((float)GlobalData::g->n / data->target_value);
         std::vector<std::vector<int>> vertice_vars(number_windows);
 
         for (int window = 0; window < number_windows; window++)
         {
-            int start = vertex * GlobalData::g->n + window * IncreInstanceData::target_value + 1;
+            int start = vertex * GlobalData::g->n + window * data->target_value + 1;
             int end = std::min(
-                vertex * GlobalData::g->n + (window + 1) * IncreInstanceData::target_value,
+                vertex * GlobalData::g->n + (window + 1) * data->target_value,
                 vertex * GlobalData::g->n + GlobalData::g->n);
 
             for (int var = start; var <= end; var++)
@@ -78,10 +78,10 @@ void IncreLadder::encode_labels()
             for (int next_window = window + 1; next_window < number_windows; next_window++)
             {
                 int second_window_aux_var = get_obj_k_aux_var(vertice_vars[next_window]);
-                IncreInstanceData::cc->add_clause({-first_window_aux_var, -second_window_aux_var});
+                data->cc->add_clause({-first_window_aux_var, -second_window_aux_var});
             }
         }
-        IncreInstanceData::cc->add_clause(alo_clause);
+        data->cc->add_clause(alo_clause);
     }
 }
 
@@ -100,12 +100,12 @@ void IncreLadder::encode_obj_k()
 
     for (int i = 0; i < GlobalData::g->n; i++)
     {
-        encode_ladder(ladders_vars[i], IncreInstanceData::target_value);
+        encode_ladder(ladders_vars[i], data->target_value);
     }
 
     for (auto edge : GlobalData::g->edges)
     {
-        connect_ladder(ladders_vars[edge.first - 1], ladders_vars[edge.second - 1], IncreInstanceData::target_value); // Have to reduce by 1 since edges are start from 1
+        connect_ladder(ladders_vars[edge.first - 1], ladders_vars[edge.second - 1], data->target_value); // Have to reduce by 1 since edges are start from 1
     }
 }
 
@@ -161,27 +161,27 @@ void IncreLadder::encode_window(const std::vector<int> window_vars, bool is_firs
     {
         for (int i = 1; i < window_vars_size; i++)
         {
-            IncreInstanceData::cc->add_clause({-(window_vars[i]),
-                                               get_obj_k_aux_var(std::vector<int>(window_vars.begin(), window_vars.begin() + i + 1))});
+            data->cc->add_clause({-(window_vars[i]),
+                                  get_obj_k_aux_var(std::vector<int>(window_vars.begin(), window_vars.begin() + i + 1))});
         }
 
         for (int i = 0; i < window_vars_size - 1; i++)
         {
-            IncreInstanceData::cc->add_clause({-get_obj_k_aux_var(std::vector<int>(window_vars.begin(), window_vars.begin() + i + 1)),
-                                               get_obj_k_aux_var(std::vector<int>(window_vars.begin(), window_vars.begin() + i + 2))});
+            data->cc->add_clause({-get_obj_k_aux_var(std::vector<int>(window_vars.begin(), window_vars.begin() + i + 1)),
+                                  get_obj_k_aux_var(std::vector<int>(window_vars.begin(), window_vars.begin() + i + 2))});
         }
 
         for (int i = window_vars_size - 1; i > 0; i--)
         {
-            IncreInstanceData::cc->add_clause({window_vars[i],
-                                               get_obj_k_aux_var(std::vector<int>(window_vars.begin(), window_vars.begin() + i)),
-                                               -get_obj_k_aux_var(std::vector<int>(window_vars.begin(), window_vars.begin() + i + 1))});
+            data->cc->add_clause({window_vars[i],
+                                  get_obj_k_aux_var(std::vector<int>(window_vars.begin(), window_vars.begin() + i)),
+                                  -get_obj_k_aux_var(std::vector<int>(window_vars.begin(), window_vars.begin() + i + 1))});
         }
 
         for (int i = window_vars_size - 1; i > 0; i--)
         {
-            IncreInstanceData::cc->add_clause({-(window_vars[i]),
-                                               -get_obj_k_aux_var(std::vector<int>(window_vars.begin(), window_vars.begin() + i))});
+            data->cc->add_clause({-(window_vars[i]),
+                                  -get_obj_k_aux_var(std::vector<int>(window_vars.begin(), window_vars.begin() + i))});
         }
     }
 
@@ -189,29 +189,29 @@ void IncreLadder::encode_window(const std::vector<int> window_vars, bool is_firs
     {
         for (int i = window_vars_size - 2; i >= 0; i--)
         {
-            IncreInstanceData::cc->add_clause({-(window_vars[i]),
-                                               get_obj_k_aux_var(std::vector<int>(window_vars.begin() + i, window_vars.end()))});
+            data->cc->add_clause({-(window_vars[i]),
+                                  get_obj_k_aux_var(std::vector<int>(window_vars.begin() + i, window_vars.end()))});
         }
 
         for (int i = window_vars_size - 1; i >= 1; i--)
         {
-            IncreInstanceData::cc->add_clause({-get_obj_k_aux_var(std::vector<int>(window_vars.begin() + i, window_vars.end())),
-                                               get_obj_k_aux_var(std::vector<int>(window_vars.begin() + i - 1, window_vars.end()))});
+            data->cc->add_clause({-get_obj_k_aux_var(std::vector<int>(window_vars.begin() + i, window_vars.end())),
+                                  get_obj_k_aux_var(std::vector<int>(window_vars.begin() + i - 1, window_vars.end()))});
         }
 
         for (int i = 0; i < window_vars_size - 1; i++)
         {
-            IncreInstanceData::cc->add_clause({window_vars[i],
-                                               get_obj_k_aux_var(std::vector<int>(window_vars.begin() + i + 1, window_vars.end())),
-                                               -get_obj_k_aux_var(std::vector<int>(window_vars.begin() + i, window_vars.end()))});
+            data->cc->add_clause({window_vars[i],
+                                  get_obj_k_aux_var(std::vector<int>(window_vars.begin() + i + 1, window_vars.end())),
+                                  -get_obj_k_aux_var(std::vector<int>(window_vars.begin() + i, window_vars.end()))});
         }
 
         if (is_first_window)
         {
             for (int i = 0; i < window_vars_size - 1; i++)
             {
-                IncreInstanceData::cc->add_clause({-(window_vars[i]),
-                                                   -get_obj_k_aux_var(std::vector<int>(window_vars.begin() + i + 1, window_vars.end()))});
+                data->cc->add_clause({-(window_vars[i]),
+                                      -get_obj_k_aux_var(std::vector<int>(window_vars.begin() + i + 1, window_vars.end()))});
             }
         }
     }
@@ -244,8 +244,8 @@ void IncreLadder::connect_windows(const std::vector<int> first_window_vars, cons
 
     for (int i = 0; i < number_connections; i++)
     {
-        IncreInstanceData::cc->add_clause({-get_obj_k_aux_var(std::vector<int>(first_window_vars.begin() + i + 1, first_window_vars.end())),
-                                           -get_obj_k_aux_var(std::vector<int>(second_window_vars.begin(), second_window_vars.begin() + i + 1))});
+        data->cc->add_clause({-get_obj_k_aux_var(std::vector<int>(first_window_vars.begin() + i + 1, first_window_vars.end())),
+                              -get_obj_k_aux_var(std::vector<int>(second_window_vars.begin(), second_window_vars.begin() + i + 1))});
     }
 }
 
@@ -279,7 +279,7 @@ void IncreLadder::connect_ladder(const std::vector<int> first_ladder_vars, const
             int first_aux_var = get_obj_k_aux_var(std::vector<int>(first_ladder_vars.begin() + i, first_ladder_vars.begin() + i + width));
             int second_aux_var = get_obj_k_aux_var(std::vector<int>(second_ladder_vars.begin() + i, second_ladder_vars.begin() + i + width));
 
-            IncreInstanceData::cc->add_clause({-first_aux_var, -second_aux_var});
+            data->cc->add_clause({-first_aux_var, -second_aux_var});
         }
         else
         {
@@ -288,10 +288,10 @@ void IncreLadder::connect_ladder(const std::vector<int> first_ladder_vars, const
             int second_aux_var_1 = get_obj_k_aux_var(std::vector<int>(second_ladder_vars.begin() + i, second_ladder_vars.begin() + i + width - mod));
             int second_aux_var_2 = get_obj_k_aux_var(std::vector<int>(second_ladder_vars.begin() + i + width - mod, second_ladder_vars.begin() + i + width));
 
-            IncreInstanceData::cc->add_clause({-first_aux_var_1, -second_aux_var_1});
-            IncreInstanceData::cc->add_clause({-first_aux_var_1, -second_aux_var_2});
-            IncreInstanceData::cc->add_clause({-first_aux_var_2, -second_aux_var_1});
-            IncreInstanceData::cc->add_clause({-first_aux_var_2, -second_aux_var_2});
+            data->cc->add_clause({-first_aux_var_1, -second_aux_var_1});
+            data->cc->add_clause({-first_aux_var_1, -second_aux_var_2});
+            data->cc->add_clause({-first_aux_var_2, -second_aux_var_1});
+            data->cc->add_clause({-first_aux_var_2, -second_aux_var_2});
         }
     }
 }

@@ -25,7 +25,7 @@ struct VectorHash
 class IncreLadder : public IncreEncoder
 {
 public:
-    IncreLadder();
+    IncreLadder(IncreInstanceData *data);
     ~IncreLadder() override;
 
     void encode_antibandwidth() override;
