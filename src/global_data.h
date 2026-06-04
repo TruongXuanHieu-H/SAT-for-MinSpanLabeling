@@ -29,7 +29,6 @@ public:
     static std::string dimacs_directory;
 
     static bool enable_solution_verification;
-    static int split_limit;
 
     static int lower_bound;
     static int upper_bound;

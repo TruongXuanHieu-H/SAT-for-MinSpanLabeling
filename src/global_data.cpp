@@ -14,7 +14,7 @@ int GlobalData::target_value = 0;
 int GlobalData::worker_count = 1;
 
 EncodeType GlobalData::encode_type = EncodeType::ladder;
-SearchStrategy GlobalData::search_strategy = SearchStrategy::incremental_from_ub;
+SearchStrategy GlobalData::search_strategy = SearchStrategy::iterate_from_ub;
 SymmetryBreakingType GlobalData::symmetry_break_strategy = SymmetryBreakingType::NONE;
 SATSolverType GlobalData::sat_solver_type = SATSolverType::CaDiCaL;
 
@@ -22,7 +22,6 @@ bool GlobalData::just_print_dimacs = false;
 std::string GlobalData::dimacs_directory = "./dimacs_output/";
 
 bool GlobalData::enable_solution_verification = true;
-int GlobalData::split_limit = 0;
 
 int GlobalData::lower_bound = 0;
 int GlobalData::upper_bound = 0;
