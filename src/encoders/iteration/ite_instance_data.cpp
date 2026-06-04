@@ -5,24 +5,20 @@
 
 #include <iostream>
 
+IteInstanceData::IteInstanceData(int target_value, int label)
+    : target_value(target_value), label(label) {};
+
 IteInstanceData::~IteInstanceData()
 {
     delete enc;
     delete cc;
     delete vh;
     delete solver;
-}
-
-int IteInstanceData::width = 0;
-
-IteEncoder *IteInstanceData::enc = nullptr;
-ClauseContainer *IteInstanceData::cc = nullptr;
-VarHandler *IteInstanceData::vh = nullptr;
-SATSolver *IteInstanceData::solver = nullptr;
+};
 
 std::string IteInstanceData::get_signature()
 {
-    return "[w = " + std::to_string(width) + "]";
+    return "[Label = " + std::to_string(label) + "]";
 };
 
 void IteInstanceData::set_up_encoder()
@@ -30,7 +26,7 @@ void IteInstanceData::set_up_encoder()
     switch (GlobalData::encode_type)
     {
     case EncodeType::ladder:
-        enc = new IteLadder();
+        enc = new IteLadder(this);
         break;
 
     default:
@@ -61,7 +57,7 @@ void IteInstanceData::setup_for_solving()
 void IteInstanceData::setup_for_encoding()
 {
     cc = new ClauseContainer(solver);
-    vh = new VarHandler(1, GlobalData::g->n);
+    vh = new VarHandler(1, GlobalData::g->n * label);
 
     set_up_encoder();
 }
@@ -69,8 +65,11 @@ void IteInstanceData::setup_for_encoding()
 void IteInstanceData::cleanup_encoding()
 {
     delete enc;
+    enc = nullptr;
     delete cc;
+    cc = nullptr;
     delete vh;
+    vh = nullptr;
 }
 
 void IteInstanceData::cleanup_solving()
@@ -78,11 +77,12 @@ void IteInstanceData::cleanup_solving()
     cleanup_encoding();
 
     delete solver;
+    solver = nullptr;
 }
 
 void IteInstanceData::export_dimacs(std::ostream &out)
 {
-    out << "c CNF fomular for graph " << GlobalData::g->graph_name << " with Cyclic Antibandwidth value of " << width << "\n";
+    out << "c CNF fomular for graph " << GlobalData::g->graph_name << " with Cyclic Antibandwidth value of " << target_value << "\n";
     out << "p cnf " << vh->size() << " " << cc->size() << "\n";
     for (const std::vector<int> &c : cc->clause_list)
     {

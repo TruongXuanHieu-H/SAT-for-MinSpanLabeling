@@ -16,10 +16,10 @@ SATSolverCadical::~SATSolverCadical()
 void SATSolverCadical::set_up_solver()
 {
     solver = new CaDiCaL::Solver();
-    std::cout << "c " << " Initializing CaDiCaL (version " << solver->version() << ").\n";
+    std::cout << "c [Solver] Initializing CaDiCaL (version " << solver->version() << ").\n";
     std::string sat_configuration = "sat";
     int res = solver->configure(sat_configuration.data());
-    std::cout << "c " << " Configuring CaDiCaL as --" << sat_configuration << " (" << res << ").\n";
+    std::cout << "c [Solver] Configuring CaDiCaL as --" << sat_configuration << " (" << res << ").\n";
 }
 
 void SATSolverCadical::clear_solver()
@@ -42,22 +42,22 @@ int SATSolverCadical::solve()
     return solver->solve();
 }
 
-std::vector<int> SATSolverCadical::extract_result()
+std::vector<int> SATSolverCadical::extract_result(int num_vertices, int num_labels)
 {
-    std::vector<int> result(GlobalData::g->n, 0);
-    for (int node = 0; node < GlobalData::g->n; ++node)
+    std::vector<int> result(num_vertices, 0);
+    for (int vertex = 0; vertex < num_vertices; ++vertex)
     {
-        for (int label = 1; label <= GlobalData::g->n; ++label)
+        for (int label = 1; label <= num_labels; ++label)
         {
-            int res = solver->val(node * GlobalData::g->n + label);
+            int res = solver->val(vertex * num_labels + label);
             if (res > 0)
             {
-                if (result[node] != 0)
+                if (result[vertex] != 0)
                 {
-                    std::cerr << "e " << " Error, the solution is not a labelling: more than one label assigned for node " << node + 1 << ".\n";
+                    std::cerr << "e " << " Error, the solution is not a labelling: more than one label assigned for vertex " << vertex + 1 << ".\n";
                     raise(SIGABRT);
                 }
-                result[node] = label;
+                result[vertex] = label;
             }
         }
     }

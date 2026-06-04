@@ -13,7 +13,7 @@ public:
     void set_up_solver() override;
     void add_clause(const std::vector<int> &c) override;
     int solve() override;
-    std::vector<int> extract_result() override;
+    std::vector<int> extract_result(int num_vertices, int num_labels) override;
     void clear_solver() override;
 
     CaDiCaL::Solver *solver;

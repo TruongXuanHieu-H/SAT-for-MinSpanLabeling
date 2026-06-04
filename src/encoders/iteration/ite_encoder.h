@@ -1,13 +1,18 @@
 #ifndef ITE_ENCODER_H
 #define ITE_ENCODER_H
 
+class IteInstanceData;
+
 class IteEncoder
 {
 public:
-    IteEncoder();
+    IteEncoder(IteInstanceData *data);
     virtual ~IteEncoder();
 
     virtual void encode_antibandwidth() = 0;
+
+protected:
+    IteInstanceData *data;
 
     void encode_symmetry_break();
 

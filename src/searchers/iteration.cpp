@@ -13,8 +13,8 @@
 
 Iteration::Iteration(int target_value, int lower_bound, int upper_bound) : Searcher(target_value, lower_bound, upper_bound)
 {
-    highest_label_SAT = lower_bound - 1;
-    lowest_label_UNSAT = upper_bound + 1;
+    lowest_label_SAT = upper_bound + 1;
+    highest_label_UNSAT = lower_bound - 1;
 }
 
 Iteration::~Iteration()
@@ -71,35 +71,35 @@ void Iteration::encode_and_solve()
                     switch (WEXITSTATUS(status))
                     {
                     case 10:
-                        if (it->first > highest_label_SAT)
+                        if (it->first < lowest_label_SAT)
                         {
-                            highest_label_SAT = it->first;
-                            std::cout << "c [Main] Max width SAT is set to " << it->first << ".\n";
+                            lowest_label_SAT = it->first;
+                            std::cout << "c [Main] Lowest label SAT is set to " << it->first << ".\n";
                         }
 
                         for (auto ita = work_pids.begin(); ita != work_pids.end(); ita++)
                         {
-                            // Pid with lower width than SAT pid is also SAT.
-                            if (ita->first < it->first)
+                            // Pid with higher label than SAT pid is also SAT.
+                            if (ita->first > it->first)
                             {
-                                std::cout << "c [Main] Kill lower pid " << ita->first << ".\n";
+                                std::cout << "c [Main] Kill higher label pid " << ita->first << ".\n";
                                 kill(ita->second, SIGTERM);
                             }
                         }
                         break;
                     case 20:
-                        if (it->first < lowest_label_UNSAT)
+                        if (it->first > highest_label_UNSAT)
                         {
-                            lowest_label_UNSAT = it->first;
-                            std::cout << "c [Main] Min width UNSAT is set to " << it->first << "\n";
+                            highest_label_UNSAT = it->first;
+                            std::cout << "c [Main] Highest label UNSAT is set to " << it->first << "\n";
                         }
 
                         for (auto ita = work_pids.begin(); ita != work_pids.end(); ita++)
                         {
-                            // Pid with higher width than UNSAT pid is also UNSAT.
-                            if (ita->first > it->first)
+                            // Pid with lower label than UNSAT pid is also UNSAT.
+                            if (ita->first < it->first)
                             {
-                                std::cout << "c [Main] Kill higher pid " << ita->first << ".\n";
+                                std::cout << "c [Main] Kill lower label pid " << ita->first << ".\n";
                                 kill(ita->second, SIGTERM);
                             }
                         }
@@ -180,8 +180,8 @@ void Iteration::encode_and_solve()
 
     std::cout << "r [Main] \n";
     std::cout << "r [Main] Final results: \n";
-    std::cout << "r [Main] Max width SAT:  \t" << ((highest_label_SAT == lower_bound - 1) ? "-" : std::to_string(highest_label_SAT)) << ".\n";
-    std::cout << "r [Main] Min width UNSAT:\t" << ((lowest_label_UNSAT == upper_bound + 1) ? "-" : std::to_string(lowest_label_UNSAT)) << ".\n";
+    std::cout << "r [Main] Max label SAT:  \t" << ((lowest_label_SAT == upper_bound + 1) ? "-" : std::to_string(lowest_label_SAT)) << ".\n";
+    std::cout << "r [Main] Min label UNSAT:\t" << ((highest_label_UNSAT == lower_bound - 1) ? "-" : std::to_string(highest_label_UNSAT)) << ".\n";
     std::cout << "r [Main] Total real time: " << encode_duration << " ms.\n";
     std::cout << "r [Main] Total memory consumed: " << *max_consumed_memory << " MB.\n";
     std::cout << "r [Main] \n";
@@ -191,7 +191,7 @@ void Iteration::encode_and_print_dimacs()
 {
     for (int i = lower_bound; i <= upper_bound; i++)
     {
-        IteInstance instance(i);
+        IteInstance instance(GlobalData::target_value, i);
         instance.encode_and_print_dimacs();
     }
 };
@@ -204,17 +204,16 @@ void Iteration::create_work_pid(int label)
 
     if (pid < 0)
     {
-        std::cerr << "e [w = " << label << "] Fork failed!\n";
+        std::cerr << "e [Label = " << label << "] Fork failed!\n";
         exit(-1);
     }
     else if (pid == 0)
     {
         prctl(PR_SET_PDEATHSIG, SIGTERM);
-        std::cout << "c [w = " << label << "] Start task in PID: " << getpid() << ".\n";
+        std::cout << "c [Label = " << label << "] Start task in PID: " << getpid() << ".\n";
 
         // Child process: perform the task
         int result = do_work_pid_task(label);
-
         exit(result);
     }
     else
@@ -228,11 +227,11 @@ void Iteration::create_work_pid(int label)
 int Iteration::do_work_pid_task(int label)
 {
     // Dynamically allocate and use ABPEncoder in child process
-    IteInstance instance(label);
+    IteInstance instance(GlobalData::target_value, label);
 
     int result = instance.encode_and_solve_problem();
 
-    std::cout << "c [w = " << label << "] Result: " << result << ".\n";
+    std::cout << "c [Label = " << label << "] Result: " << result << ".\n";
 
     return result;
 }
@@ -245,8 +244,9 @@ int Iteration::get_next_label_to_search()
     int next_label = label_search_order.front();
     label_search_order.pop_front();
 
-    while (next_label <= highest_label_SAT || next_label >= lowest_label_UNSAT)
+    while (next_label >= lowest_label_SAT || next_label <= highest_label_UNSAT)
     {
+
         if (label_search_order.empty())
             return lower_bound - 1; // To terminate the search if no valid width is left. Value (upper_bound + 1) also works.
 

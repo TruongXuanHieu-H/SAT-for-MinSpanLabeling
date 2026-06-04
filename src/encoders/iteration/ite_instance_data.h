@@ -1,35 +1,37 @@
 #ifndef ITE_INSTANCE_DATA_H
 #define ITE_INSTANCE_DATA_H
 
-#include "ite_encoder.h"
 #include "../general/clause_container.h"
 #include "../general/var_handler.h"
 #include "../general/sat_solver.h"
 #include "../../graph/graph.h"
 
+class IteEncoder;
+
 class IteInstanceData
 {
 public:
-    IteInstanceData();
+    IteInstanceData(int target_value, int label);
     ~IteInstanceData();
 
-    static int width; // Width of the instance
+    int target_value; // Width of the instance
+    int label;
 
-    static IteEncoder *enc;
-    static ClauseContainer *cc;
-    static VarHandler *vh;
-    static SATSolver *solver;
+    IteEncoder *enc;
+    ClauseContainer *cc;
+    VarHandler *vh;
+    SATSolver *solver;
 
-    static std::string get_signature();
+    std::string get_signature();
 
-    static void set_up_encoder();
-    static void set_up_sat_solver();
-    static void setup_for_solving();
-    static void setup_for_encoding();
-    static void cleanup_encoding();
-    static void cleanup_solving();
+    void set_up_encoder();
+    void set_up_sat_solver();
+    void setup_for_solving();
+    void setup_for_encoding();
+    void cleanup_encoding();
+    void cleanup_solving();
 
-    static void export_dimacs(std::ostream &out);
+    void export_dimacs(std::ostream &out);
 };
 
 #endif // INSTANCE_DATA_H

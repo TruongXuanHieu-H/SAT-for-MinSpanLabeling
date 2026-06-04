@@ -22,6 +22,13 @@ void ClauseContainer::do_add_clause(const std::vector<int> &c)
 {
     clause_list.push_back(c);
     solver->add_clause(c);
+
+    // std::cout << "c ";
+    // for (int lit : c)
+    // {
+    //     std::cout << lit << " ";
+    // }
+    // std::cout << "0\n";
 };
 
 int ClauseContainer::do_size()

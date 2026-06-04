@@ -13,8 +13,8 @@ public:
     void encode_and_print_dimacs() override;
 
 protected:
-    int highest_label_SAT;
-    int lowest_label_UNSAT;
+    int lowest_label_SAT;
+    int highest_label_UNSAT;
 
     std::unordered_map<int, pid_t> work_pids;
 
