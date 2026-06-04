@@ -1,6 +1,6 @@
 #include "iteration.h"
 #include "../global_data.h"
-#include "../encoders/iterative/ite_instance.h"
+#include "../encoders/iteration/ite_instance.h"
 #include "../utils/pid_manager.h"
 
 #include <iostream>
