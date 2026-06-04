@@ -111,7 +111,7 @@ void IteLadder::encode_obj_k()
 
 void IteLadder::encode_ladder(const std::vector<int> ladder_vars, int width)
 {
-    if (is_debug_mode)
+    if (GlobalData::verbose)
     {
         std::cout << "c Encoding ladder ";
         for (int var : ladder_vars)
@@ -145,7 +145,7 @@ void IteLadder::encode_ladder(const std::vector<int> ladder_vars, int width)
 
 void IteLadder::encode_window(const std::vector<int> window_vars, bool is_first_window, bool is_last_window)
 {
-    if (is_debug_mode)
+    if (GlobalData::verbose)
     {
         std::cout << "c Encoding window ";
         for (int var : window_vars)
@@ -219,7 +219,7 @@ void IteLadder::encode_window(const std::vector<int> window_vars, bool is_first_
 
 void IteLadder::connect_windows(const std::vector<int> first_window_vars, const std::vector<int> second_window_vars)
 {
-    if (is_debug_mode)
+    if (GlobalData::verbose)
     {
         std::cout << "c Connecting windows: " << std::endl;
         std::cout << "c First window vars: ";
@@ -251,7 +251,7 @@ void IteLadder::connect_windows(const std::vector<int> first_window_vars, const 
 
 void IteLadder::connect_ladder(const std::vector<int> first_ladder_vars, const std::vector<int> second_ladder_vars, int width)
 {
-    if (is_debug_mode)
+    if (GlobalData::verbose)
     {
         std::cout << "c Connecting ladders: " << std::endl;
         std::cout << "c First ladder vars: ";

@@ -41,6 +41,8 @@ public:
     static float elapsed_time_limit; // bound of total time consumed by all the process, in seconds
 
     static void read_graph(std::string graph_file_name);
+
+    static bool verbose; // If true, print more detailed information during the execution, such as the encoding details and the solving process. This is useful for debugging and understanding the behavior of the program, but it may produce a large amount of output for large instances.
 };
 
 #endif // GLOBAL_DATA_H

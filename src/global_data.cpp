@@ -37,3 +37,5 @@ void GlobalData::read_graph(std::string graph_file_name)
 {
     g = new Graph(graph_file_name);
 };
+
+bool GlobalData::verbose = false;

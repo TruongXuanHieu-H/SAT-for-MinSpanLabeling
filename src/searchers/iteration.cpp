@@ -180,8 +180,8 @@ void Iteration::encode_and_solve()
 
     std::cout << "r [Main] \n";
     std::cout << "r [Main] Final results: \n";
-    std::cout << "r [Main] Max label SAT:  \t" << ((lowest_label_SAT == upper_bound + 1) ? "-" : std::to_string(lowest_label_SAT)) << ".\n";
-    std::cout << "r [Main] Min label UNSAT:\t" << ((highest_label_UNSAT == lower_bound - 1) ? "-" : std::to_string(highest_label_UNSAT)) << ".\n";
+    std::cout << "r [Main] Lowest label SAT:  \t" << ((lowest_label_SAT == upper_bound + 1) ? "-" : std::to_string(lowest_label_SAT)) << ".\n";
+    std::cout << "r [Main] Highest label UNSAT:\t" << ((highest_label_UNSAT == lower_bound - 1) ? "-" : std::to_string(highest_label_UNSAT)) << ".\n";
     std::cout << "r [Main] Total real time: " << encode_duration << " ms.\n";
     std::cout << "r [Main] Total memory consumed: " << *max_consumed_memory << " MB.\n";
     std::cout << "r [Main] \n";

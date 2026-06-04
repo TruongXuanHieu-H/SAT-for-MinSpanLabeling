@@ -118,6 +118,11 @@ void ArgsParser::init_parser()
         GlobalData::just_print_dimacs = true;
         GlobalData::dimacs_directory = argv[++i];
     };
+
+    cmd["--verbose"] = [](int &, int, char **)
+    {
+        GlobalData::verbose = true;
+    };
 }
 
 int ArgsParser::try_parse_args(int argc, char **argv)

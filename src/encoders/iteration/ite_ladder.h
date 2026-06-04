@@ -31,8 +31,6 @@ public:
     void encode_antibandwidth() override;
 
 private:
-    bool is_debug_mode = false;
-
     // Use to save aux vars of OBJ-K constraints
     std::unordered_map<std::vector<int>, int, VectorHash> obj_k_aux_vars;
 
