@@ -1,0 +1,78 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] UB is predefined as 59.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 150.
+c [Main] Search strategy: Iterating from lower bound.
+c [Main] Search order: 59 58 57 56 55 54 53 52 51 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0.
+c [Main] Encoding and solving for graph: H-impcol_b.mtx.rnd.
+c [Label = 59] Start task in PID: 61037.
+c [Label = 59] Antibandwidth problem with w = 8 (H-impcol_b.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 59] Encoding starts with w = 8:
+c [Label = 59] Encoding duration: 54ms.
+c [Label = 59] Number of clauses: 76383.
+c [Label = 59] Number of variables: 8614.
+c [Label = 59] SAT Solving starts:
+c [Label = 59] Solving duration: 3 ms.
+c [Label = 59] Answer:
+s [Label = 59] SAT (w = 8).
+c [Label = 59] Solution check w = 8.
+c [Label = 59] The solution is correct.
+c [Label = 59] Result: 10.
+c [Main] Lowest label SAT is set to 59.
+c [Label = 58] Start task in PID: 61038.
+c [Label = 58] Antibandwidth problem with w = 8 (H-impcol_b.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 58] Encoding starts with w = 8:
+c [Label = 58] Encoding duration: 54ms.
+c [Label = 58] Number of clauses: 74964.
+c [Label = 58] Number of variables: 8496.
+c [Label = 58] SAT Solving starts:
+c [Label = 58] Solving duration: 3 ms.
+c [Label = 58] Answer:
+s [Label = 58] SAT (w = 8).
+c [Label = 58] Solution check w = 8.
+c [Label = 58] The solution is correct.
+c [Label = 58] Result: 10.
+c [Main] Lowest label SAT is set to 58.
+c [Label = 57] Start task in PID: 61039.
+c [Label = 57] Antibandwidth problem with w = 8 (H-impcol_b.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 57] Encoding starts with w = 8:
+c [Label = 57] Encoding duration: 54ms.
+c [Label = 57] Number of clauses: 73545.
+c [Label = 57] Number of variables: 8378.
+c [Label = 57] SAT Solving starts:
+c [Label = 57] Solving duration: 3 ms.
+c [Label = 57] Answer:
+s [Label = 57] SAT (w = 8).
+c [Label = 57] Solution check w = 8.
+c [Label = 57] The solution is correct.
+c [Label = 57] Result: 10.
+c [Main] Lowest label SAT is set to 57.
+c [Label = 56] Start task in PID: 61041.
+c [Label = 56] Antibandwidth problem with w = 8 (H-impcol_b.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 56] Encoding starts with w = 8:
+c [Label = 56] Encoding duration: 49ms.
+c [Label = 56] Number of clauses: 70710.
+c [Label = 56] Number of variables: 7965.
+c [Label = 56] SAT Solving starts:
+c [Label = 56] Solving duration: 371 ms.
+c [Label = 56] Answer:
+s [Label = 56] UNSAT (w = 8).
+c [Label = 56] Result: 20.
+c [Main] Highest label UNSAT is set to 56
+c [Main] All children have completed.
+r [Main] 
+r [Main] Final results: 
+r [Main] Lowest label SAT:  	57.
+r [Main] Highest label UNSAT:	56.
+r [Main] Total real time: 652 ms.
+r [Main] Total memory consumed: 27.5 MB.
+r [Main] 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).

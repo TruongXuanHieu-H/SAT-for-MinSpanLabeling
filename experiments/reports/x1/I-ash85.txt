@@ -1,0 +1,238 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] UB is predefined as 85.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 150.
+c [Main] Search strategy: Iterating from lower bound.
+c [Main] Search order: 85 84 83 82 81 80 79 78 77 76 75 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 59 58 57 56 55 54 53 52 51 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0.
+c [Main] Encoding and solving for graph: I-ash85.mtx.rnd.
+c [Label = 85] Start task in PID: 61044.
+c [Label = 85] Antibandwidth problem with w = 24 (I-ash85.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 85] Encoding starts with w = 24:
+c [Label = 85] Encoding duration: 78ms.
+c [Label = 85] Number of clauses: 97221.
+c [Label = 85] Number of variables: 17850.
+c [Label = 85] SAT Solving starts:
+c [Label = 85] Solving duration: 279 ms.
+c [Label = 85] Answer:
+s [Label = 85] SAT (w = 24).
+c [Label = 85] Solution check w = 24.
+c [Label = 85] The solution is correct.
+c [Label = 85] Result: 10.
+c [Main] Lowest label SAT is set to 85.
+c [Label = 84] Start task in PID: 61053.
+c [Label = 84] Antibandwidth problem with w = 24 (I-ash85.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 84] Encoding starts with w = 24:
+c [Label = 84] Encoding duration: 83ms.
+c [Label = 84] Number of clauses: 95920.
+c [Label = 84] Number of variables: 17680.
+c [Label = 84] SAT Solving starts:
+c [Label = 84] Solving duration: 278 ms.
+c [Label = 84] Answer:
+s [Label = 84] SAT (w = 24).
+c [Label = 84] Solution check w = 24.
+c [Label = 84] The solution is correct.
+c [Label = 84] Result: 10.
+c [Main] Lowest label SAT is set to 84.
+c [Label = 83] Start task in PID: 61054.
+c [Label = 83] Antibandwidth problem with w = 24 (I-ash85.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 83] Encoding starts with w = 24:
+c [Label = 83] Encoding duration: 75ms.
+c [Label = 83] Number of clauses: 94619.
+c [Label = 83] Number of variables: 17510.
+c [Label = 83] SAT Solving starts:
+c [Label = 83] Solving duration: 278 ms.
+c [Label = 83] Answer:
+s [Label = 83] SAT (w = 24).
+c [Label = 83] Solution check w = 24.
+c [Label = 83] The solution is correct.
+c [Label = 83] Result: 10.
+c [Main] Lowest label SAT is set to 83.
+c [Label = 82] Start task in PID: 61056.
+c [Label = 82] Antibandwidth problem with w = 24 (I-ash85.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 82] Encoding starts with w = 24:
+c [Label = 82] Encoding duration: 72ms.
+c [Label = 82] Number of clauses: 93318.
+c [Label = 82] Number of variables: 17340.
+c [Label = 82] SAT Solving starts:
+c [Label = 82] Solving duration: 262 ms.
+c [Label = 82] Answer:
+s [Label = 82] SAT (w = 24).
+c [Label = 82] Solution check w = 24.
+c [Label = 82] The solution is correct.
+c [Label = 82] Result: 10.
+c [Main] Lowest label SAT is set to 82.
+c [Label = 81] Start task in PID: 61057.
+c [Label = 81] Antibandwidth problem with w = 24 (I-ash85.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 81] Encoding starts with w = 24:
+c [Label = 81] Encoding duration: 72ms.
+c [Label = 81] Number of clauses: 92017.
+c [Label = 81] Number of variables: 17170.
+c [Label = 81] SAT Solving starts:
+c [Label = 81] Solving duration: 274 ms.
+c [Label = 81] Answer:
+s [Label = 81] SAT (w = 24).
+c [Label = 81] Solution check w = 24.
+c [Label = 81] The solution is correct.
+c [Label = 81] Result: 10.
+c [Main] Lowest label SAT is set to 81.
+c [Label = 80] Start task in PID: 61058.
+c [Label = 80] Antibandwidth problem with w = 24 (I-ash85.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 80] Encoding starts with w = 24:
+c [Label = 80] Encoding duration: 72ms.
+c [Label = 80] Number of clauses: 90716.
+c [Label = 80] Number of variables: 17000.
+c [Label = 80] SAT Solving starts:
+c [Label = 80] Solving duration: 273 ms.
+c [Label = 80] Answer:
+s [Label = 80] SAT (w = 24).
+c [Label = 80] Solution check w = 24.
+c [Label = 80] The solution is correct.
+c [Label = 80] Result: 10.
+c [Main] Lowest label SAT is set to 80.
+c [Label = 79] Start task in PID: 61072.
+c [Label = 79] Antibandwidth problem with w = 24 (I-ash85.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 79] Encoding starts with w = 24:
+c [Label = 79] Encoding duration: 70ms.
+c [Label = 79] Number of clauses: 89415.
+c [Label = 79] Number of variables: 16830.
+c [Label = 79] SAT Solving starts:
+c [Label = 79] Solving duration: 262 ms.
+c [Label = 79] Answer:
+s [Label = 79] SAT (w = 24).
+c [Label = 79] Solution check w = 24.
+c [Label = 79] The solution is correct.
+c [Label = 79] Result: 10.
+c [Main] Lowest label SAT is set to 79.
+c [Label = 78] Start task in PID: 61073.
+c [Label = 78] Antibandwidth problem with w = 24 (I-ash85.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 78] Encoding starts with w = 24:
+c [Label = 78] Encoding duration: 69ms.
+c [Label = 78] Number of clauses: 88114.
+c [Label = 78] Number of variables: 16660.
+c [Label = 78] SAT Solving starts:
+c [Label = 78] Solving duration: 260 ms.
+c [Label = 78] Answer:
+s [Label = 78] SAT (w = 24).
+c [Label = 78] Solution check w = 24.
+c [Label = 78] The solution is correct.
+c [Label = 78] Result: 10.
+c [Main] Lowest label SAT is set to 78.
+c [Label = 77] Start task in PID: 61074.
+c [Label = 77] Antibandwidth problem with w = 24 (I-ash85.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 77] Encoding starts with w = 24:
+c [Label = 77] Encoding duration: 67ms.
+c [Label = 77] Number of clauses: 86813.
+c [Label = 77] Number of variables: 16490.
+c [Label = 77] SAT Solving starts:
+c [Label = 77] Solving duration: 262 ms.
+c [Label = 77] Answer:
+s [Label = 77] SAT (w = 24).
+c [Label = 77] Solution check w = 24.
+c [Label = 77] The solution is correct.
+c [Label = 77] Result: 10.
+c [Main] Lowest label SAT is set to 77.
+c [Label = 76] Start task in PID: 61085.
+c [Label = 76] Antibandwidth problem with w = 24 (I-ash85.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 76] Encoding starts with w = 24:
+c [Label = 76] Encoding duration: 67ms.
+c [Label = 76] Number of clauses: 85512.
+c [Label = 76] Number of variables: 16320.
+c [Label = 76] SAT Solving starts:
+c [Label = 76] Solving duration: 259 ms.
+c [Label = 76] Answer:
+s [Label = 76] SAT (w = 24).
+c [Label = 76] Solution check w = 24.
+c [Label = 76] The solution is correct.
+c [Label = 76] Result: 10.
+c [Main] Lowest label SAT is set to 76.
+c [Label = 75] Start task in PID: 61086.
+c [Label = 75] Antibandwidth problem with w = 24 (I-ash85.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 75] Encoding starts with w = 24:
+c [Label = 75] Encoding duration: 65ms.
+c [Label = 75] Number of clauses: 84211.
+c [Label = 75] Number of variables: 16150.
+c [Label = 75] SAT Solving starts:
+c [Label = 75] Solving duration: 243 ms.
+c [Label = 75] Answer:
+s [Label = 75] SAT (w = 24).
+c [Label = 75] Solution check w = 24.
+c [Label = 75] The solution is correct.
+c [Label = 75] Result: 10.
+c [Main] Lowest label SAT is set to 75.
+c [Label = 74] Start task in PID: 61087.
+c [Label = 74] Antibandwidth problem with w = 24 (I-ash85.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 74] Encoding starts with w = 24:
+c [Label = 74] Encoding duration: 66ms.
+c [Label = 74] Number of clauses: 82910.
+c [Label = 74] Number of variables: 15980.
+c [Label = 74] SAT Solving starts:
+c [Label = 74] Solving duration: 248 ms.
+c [Label = 74] Answer:
+s [Label = 74] SAT (w = 24).
+c [Label = 74] Solution check w = 24.
+c [Label = 74] The solution is correct.
+c [Label = 74] Result: 10.
+c [Main] Lowest label SAT is set to 74.
+c [Label = 73] Start task in PID: 61088.
+c [Label = 73] Antibandwidth problem with w = 24 (I-ash85.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 73] Encoding starts with w = 24:
+c [Label = 73] Encoding duration: 67ms.
+c [Label = 73] Number of clauses: 81609.
+c [Label = 73] Number of variables: 15810.
+c [Label = 73] SAT Solving starts:
+c [Label = 73] Solving duration: 260 ms.
+c [Label = 73] Answer:
+s [Label = 73] SAT (w = 24).
+c [Label = 73] Solution check w = 24.
+c [Label = 73] The solution is correct.
+c [Label = 73] Result: 10.
+c [Main] Lowest label SAT is set to 73.
+c [Label = 72] Start task in PID: 61089.
+c [Label = 72] Antibandwidth problem with w = 24 (I-ash85.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 72] Encoding starts with w = 24:
+c [Label = 72] Encoding duration: 58ms.
+c [Label = 72] Number of clauses: 74528.
+c [Label = 72] Number of variables: 13855.
+c [Label = 72] SAT Solving starts:
+c [Label = 72] Solving duration: 128 ms.
+c [Label = 72] Answer:
+s [Label = 72] UNSAT (w = 24).
+c [Label = 72] Result: 20.
+c [Main] Highest label UNSAT is set to 72
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] All children have completed.
+r [Main] 
+r [Main] Final results: 
+r [Main] Lowest label SAT:  	73.
+r [Main] Highest label UNSAT:	72.
+r [Main] Total real time: 4858 ms.
+r [Main] Total memory consumed: 38.8 MB.
+r [Main] 

@@ -1,0 +1,510 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] UB is predefined as 100.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 150.
+c [Main] Search strategy: Iterating from lower bound.
+c [Main] Search order: 100 99 98 97 96 95 94 93 92 91 90 89 88 87 86 85 84 83 82 81 80 79 78 77 76 75 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 59 58 57 56 55 54 53 52 51 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0.
+c [Main] Encoding and solving for graph: J-nos4.mtx.rnd.
+c [Label = 100] Start task in PID: 61092.
+c [Label = 100] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 100] Encoding starts with w = 35:
+c [Label = 100] Encoding duration: 96ms.
+c [Label = 100] Number of clauses: 119526.
+c [Label = 100] Number of variables: 23000.
+c [Label = 100] SAT Solving starts:
+c [Label = 100] Solving duration: 5 ms.
+c [Label = 100] Answer:
+s [Label = 100] SAT (w = 35).
+c [Label = 100] Solution check w = 35.
+c [Label = 100] The solution is correct.
+c [Label = 100] Result: 10.
+c [Main] Lowest label SAT is set to 100.
+c [Label = 99] Start task in PID: 61094.
+c [Label = 99] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 99] Encoding starts with w = 35:
+c [Label = 99] Encoding duration: 96ms.
+c [Label = 99] Number of clauses: 118038.
+c [Label = 99] Number of variables: 22800.
+c [Label = 99] SAT Solving starts:
+c [Label = 99] Solving duration: 6 ms.
+c [Label = 99] Answer:
+s [Label = 99] SAT (w = 35).
+c [Label = 99] Solution check w = 35.
+c [Label = 99] The solution is correct.
+c [Label = 99] Result: 10.
+c [Main] Lowest label SAT is set to 99.
+c [Label = 98] Start task in PID: 61095.
+c [Label = 98] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 98] Encoding starts with w = 35:
+c [Label = 98] Encoding duration: 94ms.
+c [Label = 98] Number of clauses: 116550.
+c [Label = 98] Number of variables: 22600.
+c [Label = 98] SAT Solving starts:
+c [Label = 98] Solving duration: 5 ms.
+c [Label = 98] Answer:
+s [Label = 98] SAT (w = 35).
+c [Label = 98] Solution check w = 35.
+c [Label = 98] The solution is correct.
+c [Label = 98] Result: 10.
+c [Main] Lowest label SAT is set to 98.
+c [Label = 97] Start task in PID: 61096.
+c [Label = 97] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 97] Encoding starts with w = 35:
+c [Label = 97] Encoding duration: 91ms.
+c [Label = 97] Number of clauses: 115062.
+c [Label = 97] Number of variables: 22400.
+c [Label = 97] SAT Solving starts:
+c [Label = 97] Solving duration: 5 ms.
+c [Label = 97] Answer:
+s [Label = 97] SAT (w = 35).
+c [Label = 97] Solution check w = 35.
+c [Label = 97] The solution is correct.
+c [Label = 97] Result: 10.
+c [Main] Lowest label SAT is set to 97.
+c [Label = 96] Start task in PID: 61097.
+c [Label = 96] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 96] Encoding starts with w = 35:
+c [Label = 96] Encoding duration: 91ms.
+c [Label = 96] Number of clauses: 113574.
+c [Label = 96] Number of variables: 22200.
+c [Label = 96] SAT Solving starts:
+c [Label = 96] Solving duration: 5 ms.
+c [Label = 96] Answer:
+s [Label = 96] SAT (w = 35).
+c [Label = 96] Solution check w = 35.
+c [Label = 96] The solution is correct.
+c [Label = 96] Result: 10.
+c [Main] Lowest label SAT is set to 96.
+c [Label = 95] Start task in PID: 61098.
+c [Label = 95] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 95] Encoding starts with w = 35:
+c [Label = 95] Encoding duration: 88ms.
+c [Label = 95] Number of clauses: 112086.
+c [Label = 95] Number of variables: 22000.
+c [Label = 95] SAT Solving starts:
+c [Label = 95] Solving duration: 5 ms.
+c [Label = 95] Answer:
+s [Label = 95] SAT (w = 35).
+c [Label = 95] Solution check w = 35.
+c [Label = 95] The solution is correct.
+c [Label = 95] Result: 10.
+c [Main] Lowest label SAT is set to 95.
+c [Label = 94] Start task in PID: 61099.
+c [Label = 94] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 94] Encoding starts with w = 35:
+c [Label = 94] Encoding duration: 97ms.
+c [Label = 94] Number of clauses: 110598.
+c [Label = 94] Number of variables: 21800.
+c [Label = 94] SAT Solving starts:
+c [Label = 94] Solving duration: 5 ms.
+c [Label = 94] Answer:
+s [Label = 94] SAT (w = 35).
+c [Label = 94] Solution check w = 35.
+c [Label = 94] The solution is correct.
+c [Label = 94] Result: 10.
+c [Main] Lowest label SAT is set to 94.
+c [Label = 93] Start task in PID: 61100.
+c [Label = 93] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 93] Encoding starts with w = 35:
+c [Label = 93] Encoding duration: 87ms.
+c [Label = 93] Number of clauses: 109110.
+c [Label = 93] Number of variables: 21600.
+c [Label = 93] SAT Solving starts:
+c [Label = 93] Solving duration: 5 ms.
+c [Label = 93] Answer:
+s [Label = 93] SAT (w = 35).
+c [Label = 93] Solution check w = 35.
+c [Label = 93] The solution is correct.
+c [Label = 93] Result: 10.
+c [Main] Lowest label SAT is set to 93.
+c [Label = 92] Start task in PID: 61103.
+c [Label = 92] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 92] Encoding starts with w = 35:
+c [Label = 92] Encoding duration: 88ms.
+c [Label = 92] Number of clauses: 107622.
+c [Label = 92] Number of variables: 21400.
+c [Label = 92] SAT Solving starts:
+c [Label = 92] Solving duration: 5 ms.
+c [Label = 92] Answer:
+s [Label = 92] SAT (w = 35).
+c [Label = 92] Solution check w = 35.
+c [Label = 92] The solution is correct.
+c [Label = 92] Result: 10.
+c [Main] Lowest label SAT is set to 92.
+c [Label = 91] Start task in PID: 61104.
+c [Label = 91] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 91] Encoding starts with w = 35:
+c [Label = 91] Encoding duration: 85ms.
+c [Label = 91] Number of clauses: 106134.
+c [Label = 91] Number of variables: 21200.
+c [Label = 91] SAT Solving starts:
+c [Label = 91] Solving duration: 5 ms.
+c [Label = 91] Answer:
+s [Label = 91] SAT (w = 35).
+c [Label = 91] Solution check w = 35.
+c [Label = 91] The solution is correct.
+c [Label = 91] Result: 10.
+c [Main] Lowest label SAT is set to 91.
+c [Label = 90] Start task in PID: 61106.
+c [Label = 90] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 90] Encoding starts with w = 35:
+c [Label = 90] Encoding duration: 84ms.
+c [Label = 90] Number of clauses: 104646.
+c [Label = 90] Number of variables: 21000.
+c [Label = 90] SAT Solving starts:
+c [Label = 90] Solving duration: 5 ms.
+c [Label = 90] Answer:
+s [Label = 90] SAT (w = 35).
+c [Label = 90] Solution check w = 35.
+c [Label = 90] The solution is correct.
+c [Label = 90] Result: 10.
+c [Main] Lowest label SAT is set to 90.
+c [Label = 89] Start task in PID: 61109.
+c [Label = 89] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 89] Encoding starts with w = 35:
+c [Label = 89] Encoding duration: 81ms.
+c [Label = 89] Number of clauses: 103158.
+c [Label = 89] Number of variables: 20800.
+c [Label = 89] SAT Solving starts:
+c [Label = 89] Solving duration: 5 ms.
+c [Label = 89] Answer:
+s [Label = 89] SAT (w = 35).
+c [Label = 89] Solution check w = 35.
+c [Label = 89] The solution is correct.
+c [Label = 89] Result: 10.
+c [Main] Lowest label SAT is set to 89.
+c [Label = 88] Start task in PID: 61111.
+c [Label = 88] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 88] Encoding starts with w = 35:
+c [Label = 88] Encoding duration: 81ms.
+c [Label = 88] Number of clauses: 101670.
+c [Label = 88] Number of variables: 20600.
+c [Label = 88] SAT Solving starts:
+c [Label = 88] Solving duration: 5 ms.
+c [Label = 88] Answer:
+s [Label = 88] SAT (w = 35).
+c [Label = 88] Solution check w = 35.
+c [Label = 88] The solution is correct.
+c [Label = 88] Result: 10.
+c [Main] Lowest label SAT is set to 88.
+c [Label = 87] Start task in PID: 61112.
+c [Label = 87] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 87] Encoding starts with w = 35:
+c [Label = 87] Encoding duration: 80ms.
+c [Label = 87] Number of clauses: 100182.
+c [Label = 87] Number of variables: 20400.
+c [Label = 87] SAT Solving starts:
+c [Label = 87] Solving duration: 5 ms.
+c [Label = 87] Answer:
+s [Label = 87] SAT (w = 35).
+c [Label = 87] Solution check w = 35.
+c [Label = 87] The solution is correct.
+c [Label = 87] Result: 10.
+c [Main] Lowest label SAT is set to 87.
+c [Label = 86] Start task in PID: 61113.
+c [Label = 86] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 86] Encoding starts with w = 35:
+c [Label = 86] Encoding duration: 80ms.
+c [Label = 86] Number of clauses: 98694.
+c [Label = 86] Number of variables: 20200.
+c [Label = 86] SAT Solving starts:
+c [Label = 86] Solving duration: 5 ms.
+c [Label = 86] Answer:
+s [Label = 86] SAT (w = 35).
+c [Label = 86] Solution check w = 35.
+c [Label = 86] The solution is correct.
+c [Label = 86] Result: 10.
+c [Main] Lowest label SAT is set to 86.
+c [Label = 85] Start task in PID: 61114.
+c [Label = 85] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 85] Encoding starts with w = 35:
+c [Label = 85] Encoding duration: 78ms.
+c [Label = 85] Number of clauses: 97206.
+c [Label = 85] Number of variables: 20000.
+c [Label = 85] SAT Solving starts:
+c [Label = 85] Solving duration: 5 ms.
+c [Label = 85] Answer:
+s [Label = 85] SAT (w = 35).
+c [Label = 85] Solution check w = 35.
+c [Label = 85] The solution is correct.
+c [Label = 85] Result: 10.
+c [Main] Lowest label SAT is set to 85.
+c [Label = 84] Start task in PID: 61115.
+c [Label = 84] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 84] Encoding starts with w = 35:
+c [Label = 84] Encoding duration: 76ms.
+c [Label = 84] Number of clauses: 95718.
+c [Label = 84] Number of variables: 19800.
+c [Label = 84] SAT Solving starts:
+c [Label = 84] Solving duration: 4 ms.
+c [Label = 84] Answer:
+s [Label = 84] SAT (w = 35).
+c [Label = 84] Solution check w = 35.
+c [Label = 84] The solution is correct.
+c [Label = 84] Result: 10.
+c [Main] Lowest label SAT is set to 84.
+c [Label = 83] Start task in PID: 61116.
+c [Label = 83] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 83] Encoding starts with w = 35:
+c [Label = 83] Encoding duration: 74ms.
+c [Label = 83] Number of clauses: 94230.
+c [Label = 83] Number of variables: 19600.
+c [Label = 83] SAT Solving starts:
+c [Label = 83] Solving duration: 4 ms.
+c [Label = 83] Answer:
+s [Label = 83] SAT (w = 35).
+c [Label = 83] Solution check w = 35.
+c [Label = 83] The solution is correct.
+c [Label = 83] Result: 10.
+c [Main] Lowest label SAT is set to 83.
+c [Label = 82] Start task in PID: 61117.
+c [Label = 82] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 82] Encoding starts with w = 35:
+c [Label = 82] Encoding duration: 73ms.
+c [Label = 82] Number of clauses: 92742.
+c [Label = 82] Number of variables: 19400.
+c [Label = 82] SAT Solving starts:
+c [Label = 82] Solving duration: 4 ms.
+c [Label = 82] Answer:
+s [Label = 82] SAT (w = 35).
+c [Label = 82] Solution check w = 35.
+c [Label = 82] The solution is correct.
+c [Label = 82] Result: 10.
+c [Main] Lowest label SAT is set to 82.
+c [Label = 81] Start task in PID: 61118.
+c [Label = 81] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 81] Encoding starts with w = 35:
+c [Label = 81] Encoding duration: 72ms.
+c [Label = 81] Number of clauses: 91254.
+c [Label = 81] Number of variables: 19200.
+c [Label = 81] SAT Solving starts:
+c [Label = 81] Solving duration: 4 ms.
+c [Label = 81] Answer:
+s [Label = 81] SAT (w = 35).
+c [Label = 81] Solution check w = 35.
+c [Label = 81] The solution is correct.
+c [Label = 81] Result: 10.
+c [Main] Lowest label SAT is set to 81.
+c [Label = 80] Start task in PID: 61119.
+c [Label = 80] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 80] Encoding starts with w = 35:
+c [Label = 80] Encoding duration: 70ms.
+c [Label = 80] Number of clauses: 89766.
+c [Label = 80] Number of variables: 19000.
+c [Label = 80] SAT Solving starts:
+c [Label = 80] Solving duration: 4 ms.
+c [Label = 80] Answer:
+s [Label = 80] SAT (w = 35).
+c [Label = 80] Solution check w = 35.
+c [Label = 80] The solution is correct.
+c [Label = 80] Result: 10.
+c [Main] Lowest label SAT is set to 80.
+c [Label = 79] Start task in PID: 61120.
+c [Label = 79] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 79] Encoding starts with w = 35:
+c [Label = 79] Encoding duration: 71ms.
+c [Label = 79] Number of clauses: 88278.
+c [Label = 79] Number of variables: 18800.
+c [Label = 79] SAT Solving starts:
+c [Label = 79] Solving duration: 4 ms.
+c [Label = 79] Answer:
+s [Label = 79] SAT (w = 35).
+c [Label = 79] Solution check w = 35.
+c [Label = 79] The solution is correct.
+c [Label = 79] Result: 10.
+c [Main] Lowest label SAT is set to 79.
+c [Label = 78] Start task in PID: 61121.
+c [Label = 78] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 78] Encoding starts with w = 35:
+c [Label = 78] Encoding duration: 69ms.
+c [Label = 78] Number of clauses: 86790.
+c [Label = 78] Number of variables: 18600.
+c [Label = 78] SAT Solving starts:
+c [Label = 78] Solving duration: 4 ms.
+c [Label = 78] Answer:
+s [Label = 78] SAT (w = 35).
+c [Label = 78] Solution check w = 35.
+c [Label = 78] The solution is correct.
+c [Label = 78] Result: 10.
+c [Main] Lowest label SAT is set to 78.
+c [Label = 77] Start task in PID: 61122.
+c [Label = 77] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 77] Encoding starts with w = 35:
+c [Label = 77] Encoding duration: 80ms.
+c [Label = 77] Number of clauses: 85302.
+c [Label = 77] Number of variables: 18400.
+c [Label = 77] SAT Solving starts:
+c [Label = 77] Solving duration: 4 ms.
+c [Label = 77] Answer:
+s [Label = 77] SAT (w = 35).
+c [Label = 77] Solution check w = 35.
+c [Label = 77] The solution is correct.
+c [Label = 77] Result: 10.
+c [Main] Lowest label SAT is set to 77.
+c [Label = 76] Start task in PID: 61123.
+c [Label = 76] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 76] Encoding starts with w = 35:
+c [Label = 76] Encoding duration: 66ms.
+c [Label = 76] Number of clauses: 83814.
+c [Label = 76] Number of variables: 18200.
+c [Label = 76] SAT Solving starts:
+c [Label = 76] Solving duration: 4 ms.
+c [Label = 76] Answer:
+s [Label = 76] SAT (w = 35).
+c [Label = 76] Solution check w = 35.
+c [Label = 76] The solution is correct.
+c [Label = 76] Result: 10.
+c [Main] Lowest label SAT is set to 76.
+c [Label = 75] Start task in PID: 61124.
+c [Label = 75] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 75] Encoding starts with w = 35:
+c [Label = 75] Encoding duration: 66ms.
+c [Label = 75] Number of clauses: 82326.
+c [Label = 75] Number of variables: 18000.
+c [Label = 75] SAT Solving starts:
+c [Label = 75] Solving duration: 4 ms.
+c [Label = 75] Answer:
+s [Label = 75] SAT (w = 35).
+c [Label = 75] Solution check w = 35.
+c [Label = 75] The solution is correct.
+c [Label = 75] Result: 10.
+c [Main] Lowest label SAT is set to 75.
+c [Label = 74] Start task in PID: 61125.
+c [Label = 74] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 74] Encoding starts with w = 35:
+c [Label = 74] Encoding duration: 65ms.
+c [Label = 74] Number of clauses: 80838.
+c [Label = 74] Number of variables: 17800.
+c [Label = 74] SAT Solving starts:
+c [Label = 74] Solving duration: 4 ms.
+c [Label = 74] Answer:
+s [Label = 74] SAT (w = 35).
+c [Label = 74] Solution check w = 35.
+c [Label = 74] The solution is correct.
+c [Label = 74] Result: 10.
+c [Main] Lowest label SAT is set to 74.
+c [Label = 73] Start task in PID: 61127.
+c [Label = 73] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 73] Encoding starts with w = 35:
+c [Label = 73] Encoding duration: 63ms.
+c [Label = 73] Number of clauses: 79350.
+c [Label = 73] Number of variables: 17600.
+c [Label = 73] SAT Solving starts:
+c [Label = 73] Solving duration: 4 ms.
+c [Label = 73] Answer:
+s [Label = 73] SAT (w = 35).
+c [Label = 73] Solution check w = 35.
+c [Label = 73] The solution is correct.
+c [Label = 73] Result: 10.
+c [Main] Lowest label SAT is set to 73.
+c [Label = 72] Start task in PID: 61131.
+c [Label = 72] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 72] Encoding starts with w = 35:
+c [Label = 72] Encoding duration: 60ms.
+c [Label = 72] Number of clauses: 77862.
+c [Label = 72] Number of variables: 17400.
+c [Label = 72] SAT Solving starts:
+c [Label = 72] Solving duration: 4 ms.
+c [Label = 72] Answer:
+s [Label = 72] SAT (w = 35).
+c [Label = 72] Solution check w = 35.
+c [Label = 72] The solution is correct.
+c [Label = 72] Result: 10.
+c [Main] Lowest label SAT is set to 72.
+c [Label = 71] Start task in PID: 61132.
+c [Label = 71] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 71] Encoding starts with w = 35:
+c [Label = 71] Encoding duration: 59ms.
+c [Label = 71] Number of clauses: 76374.
+c [Label = 71] Number of variables: 17200.
+c [Label = 71] SAT Solving starts:
+c [Label = 71] Solving duration: 3 ms.
+c [Label = 71] Answer:
+s [Label = 71] SAT (w = 35).
+c [Label = 71] Solution check w = 35.
+c [Label = 71] The solution is correct.
+c [Label = 71] Result: 10.
+c [Main] Lowest label SAT is set to 71.
+c [Label = 70] Start task in PID: 61133.
+c [Label = 70] Antibandwidth problem with w = 35 (J-nos4.mtx.rnd):
+c [Solver] Initializing CaDiCaL (version 2.2.1).
+c [Solver] Configuring CaDiCaL as --sat (1).
+c [Label = 70] Encoding starts with w = 35:
+c [Label = 70] Encoding duration: 48ms.
+c [Label = 70] Number of clauses: 64886.
+c [Label = 70] Number of variables: 13800.
+c [Label = 70] SAT Solving starts:
+c [Label = 70] Solving duration: 1 ms.
+c [Label = 70] Answer:
+s [Label = 70] UNSAT (w = 35).
+c [Label = 70] Result: 20.
+c [Main] Highest label UNSAT is set to 70
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] All children have completed.
+r [Main] 
+r [Main] Final results: 
+r [Main] Lowest label SAT:  	71.
+r [Main] Highest label UNSAT:	70.
+r [Main] Total real time: 3257 ms.
+r [Main] Total memory consumed: 30.9 MB.
+r [Main] 
