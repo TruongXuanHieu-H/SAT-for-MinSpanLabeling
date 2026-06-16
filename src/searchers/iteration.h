@@ -13,16 +13,16 @@ public:
     void encode_and_print_dimacs() override;
 
 protected:
-    int max_width_SAT;
-    int min_width_UNSAT;
+    int lowest_label_SAT;
+    int highest_label_UNSAT;
 
     std::unordered_map<int, pid_t> work_pids;
 
-    void create_work_pid(int width);
-    int do_work_pid_task(int width);
+    void create_work_pid(int label);
+    int do_work_pid_task(int label);
 
-    std::deque<int> search_order; // Stores the order of widths to search
-    virtual std::deque<int> create_search_order() = 0;
-    int get_next_width_to_search();
+    std::deque<int> label_search_order; // Stores the order of labels to search
+    virtual std::deque<int> create_label_search_order() = 0;
+    int get_next_label_to_search();
 };
 #endif

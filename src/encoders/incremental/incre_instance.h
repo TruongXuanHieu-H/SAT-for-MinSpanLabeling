@@ -8,7 +8,7 @@ class IncreInstance
 {
 public:
     IncreInstance(int target_value, int lower_bound, int upper_bound);
-    ~IncreInstance();
+    virtual ~IncreInstance();
 
     int encode_and_solve_problem();
     void encode_and_print_dimacs();
@@ -16,7 +16,7 @@ public:
 private:
     IncreInstanceData *data;
 
-    int verify_solution();
+    int recalculate_solution(const std::vector<int> &node_labels);
 };
 
 #endif

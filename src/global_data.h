@@ -18,7 +18,7 @@ public:
     static Graph *g;         // Pointer to the global graph instance
     static int target_value; // Target value for the problem (e.g., antibandwidth value for ABP)
 
-    static int worker_count;
+    static int worker_count; // Does not matter if incremental is selected
 
     static EncodeType encode_type;
     static SearchStrategy search_strategy;
@@ -29,7 +29,6 @@ public:
     static std::string dimacs_directory;
 
     static bool enable_solution_verification;
-    static int split_limit;
 
     static int lower_bound;
     static int upper_bound;
@@ -42,6 +41,8 @@ public:
     static float elapsed_time_limit; // bound of total time consumed by all the process, in seconds
 
     static void read_graph(std::string graph_file_name);
+
+    static bool verbose; // If true, print more detailed information during the execution, such as the encoding details and the solving process. This is useful for debugging and understanding the behavior of the program, but it may produce a large amount of output for large instances.
 };
 
 #endif // GLOBAL_DATA_H

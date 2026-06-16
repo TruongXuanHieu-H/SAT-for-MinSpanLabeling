@@ -74,7 +74,8 @@ void IncreFromUB::create_work_pid()
         std::cout << "c [Incremental] Start task in PID: " << getpid() << ".\n";
 
         IncreInstance instance(GlobalData::target_value, GlobalData::lower_bound, GlobalData::upper_bound);
-        int result = 0;
+
+        int result = instance.encode_and_solve_problem();
 
         std::cout
             << "c [Incremental] Result: " << result << ".\n";

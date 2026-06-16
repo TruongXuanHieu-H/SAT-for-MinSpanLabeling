@@ -10,7 +10,7 @@ public:
     ~IteFromUB() override;
 
 protected:
-    std::deque<int> create_search_order() override;
+    std::deque<int> create_label_search_order() override;
 };
 
 #endif

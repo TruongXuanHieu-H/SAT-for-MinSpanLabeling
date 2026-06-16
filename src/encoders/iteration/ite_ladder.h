@@ -25,14 +25,12 @@ struct VectorHash
 class IteLadder : public IteEncoder
 {
 public:
-    IteLadder();
+    IteLadder(IteInstanceData *data);
     ~IteLadder() override;
 
     void encode_antibandwidth() override;
 
 private:
-    bool is_debug_mode = false;
-
     // Use to save aux vars of OBJ-K constraints
     std::unordered_map<std::vector<int>, int, VectorHash> obj_k_aux_vars;
 
@@ -40,11 +38,7 @@ private:
 
     int get_obj_k_aux_var(std::vector<int> key, bool is_key_exist = false);
 
-    void encode_vertices();
     void encode_labels();
-    void encode_exactly_one_product(const std::vector<int> &vars);
-    void encode_amo_seq(const std::vector<int> &vars);
-
     void encode_obj_k();
 
     void encode_ladder(const std::vector<int> ladder_vars, int width);

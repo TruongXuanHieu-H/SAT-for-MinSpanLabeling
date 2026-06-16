@@ -15,7 +15,7 @@ public:
 private:
 	Searcher *searcher = nullptr;
 
-	void setup_searcher();
+	Searcher *get_searcher();
 };
 
 #endif

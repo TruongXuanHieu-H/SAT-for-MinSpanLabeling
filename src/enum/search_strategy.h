@@ -3,9 +3,9 @@
 
 enum class SearchStrategy
 {
-    iterate_from_ub,    // Search from upper bound iteratively
-    incremental_from_ub // Search from upper bound incrementally by modifying the encoding
-
+    incremental_from_ub, // Search using BFS incrementaly
+    iterate_from_ub,     // Search from upper bound iteratively
+    iterate_bfs,         // Search using BFS iteratively
 };
 
 #endif // SEARCH_STRATEGY_H

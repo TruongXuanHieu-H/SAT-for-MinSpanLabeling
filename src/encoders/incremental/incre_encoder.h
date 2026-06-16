@@ -9,7 +9,7 @@ public:
     IncreEncoder(IncreInstanceData *data);
     virtual ~IncreEncoder();
 
-    virtual void encode_antibandwidth() = 0;
+    virtual void encode_min_makespan_labeling() = 0;
 
 protected:
     IncreInstanceData *data;

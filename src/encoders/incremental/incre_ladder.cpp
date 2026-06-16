@@ -10,16 +10,16 @@
 IncreLadder::IncreLadder(IncreInstanceData *data) : IncreEncoder(data) {}
 IncreLadder::~IncreLadder() {}
 
-void IncreLadder::encode_antibandwidth()
+void IncreLadder::encode_min_makespan_labeling()
 {
     do_encode_antibandwidth();
 }
 
 void IncreLadder::do_encode_antibandwidth()
 {
-    obj_k_aux_vars.clear();
+    assert(obj_k_aux_vars.size() == 0);
 
-    encode_symmetry_break();
+    // encode_symmetry_break();
 
     encode_obj_k();
 
@@ -54,15 +54,15 @@ void IncreLadder::encode_labels()
 {
     for (int vertex = 0; vertex < GlobalData::g->n; vertex++)
     {
-        int number_windows = ceil((float)GlobalData::g->n / data->target_value);
+        int number_windows = ceil((float)data->upper_bound / data->target_value);
         std::vector<std::vector<int>> vertice_vars(number_windows);
 
         for (int window = 0; window < number_windows; window++)
         {
-            int start = vertex * GlobalData::g->n + window * data->target_value + 1;
+            int start = vertex * data->upper_bound + window * data->target_value + 1;
             int end = std::min(
-                vertex * GlobalData::g->n + (window + 1) * data->target_value,
-                vertex * GlobalData::g->n + GlobalData::g->n);
+                vertex * data->upper_bound + (window + 1) * data->target_value,
+                vertex * data->upper_bound + data->upper_bound);
 
             for (int var = start; var <= end; var++)
             {
@@ -73,11 +73,11 @@ void IncreLadder::encode_labels()
         std::vector<int> alo_clause = {};
         for (int window = 0; window < number_windows; window++)
         {
-            int first_window_aux_var = get_obj_k_aux_var(vertice_vars[window]);
+            int first_window_aux_var = get_obj_k_aux_var(vertice_vars[window], true);
             alo_clause.push_back(first_window_aux_var);
             for (int next_window = window + 1; next_window < number_windows; next_window++)
             {
-                int second_window_aux_var = get_obj_k_aux_var(vertice_vars[next_window]);
+                int second_window_aux_var = get_obj_k_aux_var(vertice_vars[next_window], true);
                 data->cc->add_clause({-first_window_aux_var, -second_window_aux_var});
             }
         }
@@ -91,9 +91,9 @@ void IncreLadder::encode_obj_k()
     for (int vertex = 0; vertex < GlobalData::g->n; vertex++)
     {
         std::vector<int> ladder_vars;
-        for (int label = 0; label < GlobalData::g->n; label++)
+        for (int label = 0; label < data->upper_bound; label++)
         {
-            ladder_vars.push_back(vertex * GlobalData::g->n + label + 1);
+            ladder_vars.push_back(vertex * data->upper_bound + label + 1);
         }
         ladders_vars.push_back(ladder_vars);
     }
@@ -111,7 +111,7 @@ void IncreLadder::encode_obj_k()
 
 void IncreLadder::encode_ladder(const std::vector<int> ladder_vars, int width)
 {
-    if (is_debug_mode)
+    if (GlobalData::verbose)
     {
         std::cout << "c Encoding ladder ";
         for (int var : ladder_vars)
@@ -145,7 +145,7 @@ void IncreLadder::encode_ladder(const std::vector<int> ladder_vars, int width)
 
 void IncreLadder::encode_window(const std::vector<int> window_vars, bool is_first_window, bool is_last_window)
 {
-    if (is_debug_mode)
+    if (GlobalData::verbose)
     {
         std::cout << "c Encoding window ";
         for (int var : window_vars)
@@ -219,7 +219,7 @@ void IncreLadder::encode_window(const std::vector<int> window_vars, bool is_firs
 
 void IncreLadder::connect_windows(const std::vector<int> first_window_vars, const std::vector<int> second_window_vars)
 {
-    if (is_debug_mode)
+    if (GlobalData::verbose)
     {
         std::cout << "c Connecting windows: " << std::endl;
         std::cout << "c First window vars: ";
@@ -251,7 +251,7 @@ void IncreLadder::connect_windows(const std::vector<int> first_window_vars, cons
 
 void IncreLadder::connect_ladder(const std::vector<int> first_ladder_vars, const std::vector<int> second_ladder_vars, int width)
 {
-    if (is_debug_mode)
+    if (GlobalData::verbose)
     {
         std::cout << "c Connecting ladders: " << std::endl;
         std::cout << "c First ladder vars: ";

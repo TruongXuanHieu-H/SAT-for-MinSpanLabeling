@@ -43,12 +43,13 @@ SOURCES := \
 	encoders/incremental/incre_instance_data.cpp \
 	encoders/incremental/incre_instance.cpp \
 	encoders/incremental/incre_ladder.cpp \
-	encoders/iterative/ite_encoder.cpp \
-	encoders/iterative/ite_instance_data.cpp \
-	encoders/iterative/ite_instance.cpp \
-	encoders/iterative/ite_ladder.cpp \
+	encoders/iteration/ite_encoder.cpp \
+	encoders/iteration/ite_instance_data.cpp \
+	encoders/iteration/ite_instance.cpp \
+	encoders/iteration/ite_ladder.cpp \
 	graph/graph.cpp \
 	searchers/incre_from_ub.cpp \
+	searchers/ite_bfs.cpp \
 	searchers/ite_from_ub.cpp \
 	searchers/iteration.cpp \
 	searchers/searcher.cpp \

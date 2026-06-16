@@ -5,16 +5,8 @@
  */
 VarHandler::VarHandler(int start_id, int input_size = 0) : first_assigned_id(start_id)
 {
-    if (input_size > 0)
-    {
-        next_to_assign = first_assigned_id + input_size * input_size;
-        last_intput_var = next_to_assign - 1;
-    }
-    else
-    {
-        last_intput_var = 0;
-        next_to_assign = start_id;
-    }
+    next_to_assign = first_assigned_id + input_size;
+    last_intput_var = next_to_assign - 1;
 };
 
 int VarHandler::get_new_var()

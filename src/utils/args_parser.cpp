@@ -18,103 +18,74 @@ void ArgsParser::init_parser()
         GlobalData::enable_solution_verification = true;
     };
 
-    cmd["--iterate-from-ub"] = [](int &, int, char **)
-    {
-        GlobalData::search_strategy = SearchStrategy::iterate_from_ub;
-    };
-
     cmd["--incremental-from-ub"] = [](int &, int, char **)
     {
         GlobalData::search_strategy = SearchStrategy::incremental_from_ub;
     };
 
+    cmd["--iterate-bfs"] = [](int &, int, char **)
+    {
+        GlobalData::search_strategy = SearchStrategy::iterate_bfs;
+    };
+
+    cmd["--iterate-from-ub"] = [](int &, int, char **)
+    {
+        GlobalData::search_strategy = SearchStrategy::iterate_from_ub;
+    };
+
     cmd["-target-value"] = [](int &i, int argc, char **argv)
     {
-        int val = get_positive(i, argc, argv, "target value");
-
-        if (val < 2)
-            throw std::runtime_error("Target value has to be at least 2");
-        if (val > GlobalData::g->n / 2)
-            throw std::runtime_error("Target value cannot be greater than n/2");
-
-        GlobalData::target_value = val;
+        GlobalData::target_value = get_positive(i, argc, argv, "target value");
     };
 
     cmd["-set-lb"] = [](int &i, int argc, char **argv)
     {
-        int val = get_positive(i, argc, argv, "lower bound");
+        GlobalData::lower_bound = get_positive(i, argc, argv, "lower bound");
 
-        if (val < 2)
-            throw std::runtime_error("Lower bound has to be at least 2");
-        if (val > GlobalData::g->n / 2)
-            throw std::runtime_error("Lower bound cannot be greater than n/2");
-
-        GlobalData::lower_bound = val;
-
-        std::cout << "c [Param] LB is predefined as " << val << ".\n";
+        std::cout << "c [Param] LB is predefined as " << GlobalData::lower_bound << ".\n";
     };
 
     cmd["-set-ub"] = [](int &i, int argc, char **argv)
     {
-        int val = get_positive(i, argc, argv, "upper bound");
+        GlobalData::upper_bound = get_positive(i, argc, argv, "upper bound");
 
-        if (val < 2)
-            throw std::runtime_error("Upper bound has to be at least 2");
-        if (val > GlobalData::g->n / 2)
-            throw std::runtime_error("Upper bound cannot be greater than n/2");
-
-        GlobalData::upper_bound = val;
-
-        std::cout << "c [Param] UB is predefined as " << val << ".\n";
+        std::cout << "c [Param] UB is predefined as " << GlobalData::upper_bound << ".\n";
     };
 
     cmd["-limit-memory"] = [](int &i, int argc, char **argv)
     {
-        int v = get_positive(i, argc, argv, "memory limit");
-        GlobalData::memory_limit = v;
-        std::cout << "c [Param] Memory limit is set to " << v << ".\n";
+        GlobalData::memory_limit = get_positive(i, argc, argv, "memory limit");
+        std::cout << "c [Param] Memory limit is set to " << GlobalData::memory_limit << ".\n";
     };
 
     cmd["-limit-real-time"] = [](int &i, int argc, char **argv)
     {
-        int v = get_positive(i, argc, argv, "real time limit");
-        GlobalData::real_time_limit = v;
-        std::cout << "c [Param] Real time limit is set to " << v << ".\n";
+        GlobalData::real_time_limit = get_positive(i, argc, argv, "real time limit");
+        std::cout << "c [Param] Real time limit is set to " << GlobalData::real_time_limit << ".\n";
     };
 
     cmd["-limit-elapsed-time"] = [](int &i, int argc, char **argv)
     {
-        int v = get_positive(i, argc, argv, "elapsed time limit");
-        GlobalData::elapsed_time_limit = v;
-        std::cout << "c [Param] Elapsed time limit is set to " << v << ".\n";
+        GlobalData::elapsed_time_limit = get_positive(i, argc, argv, "elapsed time limit");
+        std::cout << "c [Param] Elapsed time limit is set to " << GlobalData::elapsed_time_limit << ".\n";
     };
 
     cmd["-sample-rate"] = [](int &i, int argc, char **argv)
     {
-        int v = get_positive(i, argc, argv, "sample rate");
-        GlobalData::sample_rate = v;
-        std::cout << "c [Param] Sample rate is set to " << v << ".\n";
+        GlobalData::sample_rate = get_positive(i, argc, argv, "sample rate");
+        std::cout << "c [Param] Sample rate is set to " << GlobalData::sample_rate << ".\n";
     };
 
     cmd["-report-rate"] = [](int &i, int argc, char **argv)
     {
-        int v = get_positive(i, argc, argv, "report rate");
-        GlobalData::report_rate = v;
-        std::cout << "c [Param] Report rate is set to " << v << ".\n";
-    };
-
-    cmd["-split-size"] = [](int &i, int argc, char **argv)
-    {
-        int v = get_positive(i, argc, argv, "split size");
-        GlobalData::split_limit = v;
-        std::cout << "c [Param] Splitting clauses at length " << v << ".\n";
+        GlobalData::report_rate = get_positive(i, argc, argv, "report rate");
+        std::cout << "c [Param] Report rate is set to " << GlobalData::report_rate << ".\n";
     };
 
     cmd["-worker-count"] = [](int &i, int argc, char **argv)
     {
-        int v = get_positive(i, argc, argv, "worker count");
-        GlobalData::worker_count = v;
-        std::cout << "c [Param] Worker count is set to " << v << ".\n";
+        GlobalData::worker_count = get_positive(i, argc, argv, "worker count");
+        std::cout << "c [Param] Worker count is set to " << GlobalData::worker_count << ".\n";
     };
 
     cmd["-symmetry-break"] = [](int &i, int argc, char **argv)
@@ -156,6 +127,11 @@ void ArgsParser::init_parser()
 
         GlobalData::just_print_dimacs = true;
         GlobalData::dimacs_directory = argv[++i];
+    };
+
+    cmd["--verbose"] = [](int &, int, char **)
+    {
+        GlobalData::verbose = true;
     };
 }
 

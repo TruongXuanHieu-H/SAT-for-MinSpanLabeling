@@ -19,7 +19,7 @@ IncreInstanceData::~IncreInstanceData()
 
 std::string IncreInstanceData::get_signature()
 {
-    return "[width = " + std::to_string(target_value) + "]";
+    return "[Incremental]";
 };
 
 void IncreInstanceData::set_up_encoder()
@@ -58,7 +58,7 @@ void IncreInstanceData::setup_for_solving()
 void IncreInstanceData::setup_for_encoding()
 {
     cc = new ClauseContainer(solver);
-    vh = new VarHandler(1, GlobalData::g->n);
+    vh = new VarHandler(1, GlobalData::g->n * upper_bound);
 
     set_up_encoder();
 }
@@ -66,8 +66,11 @@ void IncreInstanceData::setup_for_encoding()
 void IncreInstanceData::cleanup_encoding()
 {
     delete enc;
+    enc = nullptr;
     delete cc;
+    cc = nullptr;
     delete vh;
+    vh = nullptr;
 }
 
 void IncreInstanceData::cleanup_solving()
@@ -75,6 +78,7 @@ void IncreInstanceData::cleanup_solving()
     cleanup_encoding();
 
     delete solver;
+    solver = nullptr;
 }
 
 void IncreInstanceData::export_dimacs(std::ostream &out)
