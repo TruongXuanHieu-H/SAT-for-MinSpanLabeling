@@ -44,6 +44,7 @@ SOURCES := \
 	encoders/iteration/ite_instance.cpp \
 	encoders/iteration/ite_ladder.cpp \
 	graph/graph.cpp \
+	searchers/ite_bfs.cpp \
 	searchers/ite_from_ub.cpp \
 	searchers/iteration.cpp \
 	searchers/searcher.cpp \

@@ -18,6 +18,11 @@ void ArgsParser::init_parser()
         GlobalData::enable_solution_verification = true;
     };
 
+    cmd["--iterate-bfs"] = [](int &, int, char **)
+    {
+        GlobalData::search_strategy = SearchStrategy::iterate_bfs;
+    };
+
     cmd["--iterate-from-ub"] = [](int &, int, char **)
     {
         GlobalData::search_strategy = SearchStrategy::iterate_from_ub;

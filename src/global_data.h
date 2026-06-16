@@ -18,7 +18,7 @@ public:
     static Graph *g;         // Pointer to the global graph instance
     static int target_value; // Target value for the problem (e.g., antibandwidth value for ABP)
 
-    static int worker_count;
+    static int worker_count; // Does not matter if incremental is selected
 
     static EncodeType encode_type;
     static SearchStrategy search_strategy;

@@ -4,7 +4,7 @@
 enum class SearchStrategy
 {
     iterate_from_ub, // Search from upper bound iteratively
-
+    iterate_bfs,     // Search using BFS
 };
 
 #endif // SEARCH_STRATEGY_H
