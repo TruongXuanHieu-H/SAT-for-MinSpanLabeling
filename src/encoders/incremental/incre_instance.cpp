@@ -33,7 +33,6 @@ int IncreInstance::encode_and_solve_problem()
     std::cout << "c " << instance_data->get_signature() << " Encoding duration: " << encode_duration << "ms" << ".\n";
     std::cout << "c " << instance_data->get_signature() << " Number of clauses: " << instance_data->cc->size() << ".\n";
     std::cout << "c " << instance_data->get_signature() << " Number of variables: " << instance_data->vh->size() << ".\n";
-    std::cout << "c " << instance_data->get_signature() << " SAT Solving starts:" << std::endl;
 
     for (int i = global_data.upper_bound; i >= global_data.lower_bound; i--)
     {
@@ -43,7 +42,6 @@ int IncreInstance::encode_and_solve_problem()
         t2 = std::chrono::high_resolution_clock::now();
         auto solving_duration = std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1).count();
         std::cout << "c " << instance_data->get_signature() << " Solving duration: " << solving_duration << " ms.\n";
-        std::cout << "c " << instance_data->get_signature() << " Answer:\n";
 
         if (SAT_res == 10)
         {
@@ -60,10 +58,6 @@ int IncreInstance::encode_and_solve_problem()
 
                     instance_data->cleanup_solving();
                     return -10;
-                }
-                else
-                {
-                    std::cout << "c " + instance_data->get_signature() + " The solution is correct.\n";
                 }
             }
 
@@ -107,19 +101,15 @@ int IncreInstance::recalculate_solution(const std::vector<int> &node_labels)
     }
     int min_dist = global_data.g->calculate_antibandwidth(node_labels);
 
-    std::cout << "c " << instance_data->get_signature() << " Solution check w = " << min_dist << ".\n";
-
     return min_dist;
 }
 
 void IncreInstance::encode_and_print_dimacs()
 {
-    std::cout << "c " + instance_data->get_signature() + " Antibandwidth problem with w = " << global_data.target_value << " (" << global_data.g->graph_name << "):\n";
-
     instance_data->setup_for_encoding();
-    std::cout << "c " + instance_data->get_signature() + " Encoding starts with w = " << global_data.target_value << ":\n";
 
     instance_data->enc->encode_min_makespan_labeling();
+
     std::cout << "c " + instance_data->get_signature() + " Number of clauses: " << instance_data->cc->size() << ".\n";
     std::cout << "c " + instance_data->get_signature() + " Number of variables: " << instance_data->vh->size() << ".\n";
 

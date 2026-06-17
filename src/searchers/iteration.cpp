@@ -210,7 +210,6 @@ void Iteration::create_work_pid(int label)
     else if (pid == 0)
     {
         prctl(PR_SET_PDEATHSIG, SIGTERM);
-        std::cout << "c [Label = " << label << "] Start task in PID: " << getpid() << ".\n";
 
         // Child process: perform the task
         int result = do_work_pid_task(label);
@@ -230,8 +229,6 @@ int Iteration::do_work_pid_task(int label)
     IteInstance instance(global_data, label);
 
     int result = instance.encode_and_solve_problem();
-
-    std::cout << "c [Label = " << label << "] Result: " << result << ".\n";
 
     return result;
 }

@@ -28,10 +28,7 @@ IteInstance::~IteInstance()
 */
 int IteInstance::encode_and_solve_problem()
 {
-    std::cout << "c " << data->get_signature() << " Antibandwidth problem with w = " << global_data.target_value << " (" << global_data.g->graph_name << "):" << std::endl;
-
     data->setup_for_solving();
-    std::cout << "c " << data->get_signature() << " Encoding starts with w = " << global_data.target_value << ":" << std::endl;
 
     auto t1 = std::chrono::high_resolution_clock::now();
     data->enc->encode_antibandwidth();
@@ -41,14 +38,12 @@ int IteInstance::encode_and_solve_problem()
     std::cout << "c " << data->get_signature() << " Encoding duration: " << encode_duration << "ms" << ".\n";
     std::cout << "c " << data->get_signature() << " Number of clauses: " << data->cc->size() << ".\n";
     std::cout << "c " << data->get_signature() << " Number of variables: " << data->vh->size() << ".\n";
-    std::cout << "c " << data->get_signature() << " SAT Solving starts:" << std::endl;
 
     t1 = std::chrono::high_resolution_clock::now();
     SAT_res = data->solver->solve();
     t2 = std::chrono::high_resolution_clock::now();
     auto solving_duration = std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1).count();
     std::cout << "c " << data->get_signature() << " Solving duration: " << solving_duration << " ms.\n";
-    std::cout << "c " << data->get_signature() << " Answer:\n";
     if (SAT_res == 10)
     {
         std::cout << "s " << data->get_signature() << " SAT (w = " << global_data.target_value << ").\n";
@@ -59,18 +54,10 @@ int IteInstance::encode_and_solve_problem()
             int solution_abp = recalculate_solution(label_assignment);
             if (solution_abp < global_data.target_value)
             {
-                std::cerr << "c " << data->get_signature() << " Error, the solution is not correct, antibandwidth should be at least " << global_data.target_value << ", but it is " << solution_abp << ".\n";
+                std::cerr << "c " << data->get_signature() << " Error, the solution is not correct, target value should be at least " << global_data.target_value << ", but it is " << solution_abp << ".\n";
 
                 data->cleanup_solving();
                 return -10;
-            }
-            else if (solution_abp == global_data.target_value)
-            {
-                std::cout << "c " + data->get_signature() + " The solution is correct.\n";
-            }
-            else
-            {
-                std::cout << "c " + data->get_signature() + " Found an optimal solution " << solution_abp << ".\n ";
             }
         }
     }
@@ -95,8 +82,6 @@ int IteInstance::recalculate_solution(const std::vector<int> &node_labels)
         return 0;
     }
     int min_dist = global_data.g->calculate_antibandwidth(node_labels);
-
-    std::cout << "c " << data->get_signature() << " Solution check w = " << min_dist << ".\n";
 
     return min_dist;
 }

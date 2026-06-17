@@ -67,14 +67,10 @@ void IncreFromUB::create_work_pid()
     else if (pid == 0)
     {
         prctl(PR_SET_PDEATHSIG, SIGTERM);
-        std::cout << "c [Incremental] Start task in PID: " << getpid() << ".\n";
 
         IncreInstance instance(global_data);
 
         int result = instance.encode_and_solve_problem();
-
-        std::cout
-            << "c [Incremental] Result: " << result << ".\n";
 
         exit(result);
     }
