@@ -19,7 +19,7 @@ void IncreLadder::do_encode_antibandwidth()
 {
     assert(obj_k_aux_vars.size() == 0);
 
-    // encode_symmetry_break();
+    encode_symmetry_break();
 
     encode_obj_k();
 
