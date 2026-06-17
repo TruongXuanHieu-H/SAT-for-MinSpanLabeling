@@ -6,8 +6,7 @@
 
 #include <iostream>
 
-IncreInstanceData::IncreInstanceData(int target_value, int lower_bound, int upper_bound)
-    : target_value(target_value), lower_bound(lower_bound), upper_bound(upper_bound) {};
+IncreInstanceData::IncreInstanceData(GlobalData &global_data) : global_data(global_data) {};
 
 IncreInstanceData::~IncreInstanceData()
 {
@@ -24,10 +23,10 @@ std::string IncreInstanceData::get_signature()
 
 void IncreInstanceData::set_up_encoder()
 {
-    switch (GlobalData::encode_type)
+    switch (global_data.encode_type)
     {
     case EncodeType::ladder:
-        enc = new IncreLadder(this);
+        enc = new IncreLadder(*this);
         break;
 
     default:
@@ -37,7 +36,7 @@ void IncreInstanceData::set_up_encoder()
 
 void IncreInstanceData::set_up_sat_solver()
 {
-    switch (GlobalData::sat_solver_type)
+    switch (global_data.sat_solver_type)
     {
     case SATSolverType::CaDiCaL:
         solver = new SATSolverCadical();
@@ -58,7 +57,7 @@ void IncreInstanceData::setup_for_solving()
 void IncreInstanceData::setup_for_encoding()
 {
     cc = new ClauseContainer(solver);
-    vh = new VarHandler(1, GlobalData::g->n * upper_bound);
+    vh = new VarHandler(1, global_data.g->n * global_data.upper_bound);
 
     set_up_encoder();
 }
@@ -83,7 +82,7 @@ void IncreInstanceData::cleanup_solving()
 
 void IncreInstanceData::export_dimacs(std::ostream &out)
 {
-    out << "c CNF fomular for graph " << GlobalData::g->graph_name << " with Antibandwidth value of " << target_value << "\n";
+    out << "c CNF fomular for graph " << global_data.g->graph_name << " with Antibandwidth value of " << global_data.target_value << "\n";
     out << "p cnf " << vh->size() << " " << cc->size() << "\n";
     for (const std::vector<int> &c : cc->clause_list)
     {

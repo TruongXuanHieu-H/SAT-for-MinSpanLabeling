@@ -6,13 +6,13 @@ class IncreInstanceData;
 class IncreEncoder
 {
 public:
-    IncreEncoder(IncreInstanceData *data);
+    IncreEncoder(IncreInstanceData &instance_data);
     virtual ~IncreEncoder();
 
     virtual void encode_min_makespan_labeling() = 0;
 
 protected:
-    IncreInstanceData *data;
+    IncreInstanceData &instance_data;
 
     void encode_symmetry_break();
 

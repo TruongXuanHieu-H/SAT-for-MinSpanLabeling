@@ -5,8 +5,7 @@
 
 #include <iostream>
 
-IteInstanceData::IteInstanceData(int target_value, int label)
-    : target_value(target_value), label(label) {};
+IteInstanceData::IteInstanceData(GlobalData &global_data, int label) : global_data(global_data), label(label) {};
 
 IteInstanceData::~IteInstanceData()
 {
@@ -23,10 +22,10 @@ std::string IteInstanceData::get_signature()
 
 void IteInstanceData::set_up_encoder()
 {
-    switch (GlobalData::encode_type)
+    switch (global_data.encode_type)
     {
     case EncodeType::ladder:
-        enc = new IteLadder(this);
+        enc = new IteLadder(*this);
         break;
 
     default:
@@ -36,7 +35,7 @@ void IteInstanceData::set_up_encoder()
 
 void IteInstanceData::set_up_sat_solver()
 {
-    switch (GlobalData::sat_solver_type)
+    switch (global_data.sat_solver_type)
     {
     case SATSolverType::CaDiCaL:
         solver = new SATSolverCadical();
@@ -57,7 +56,7 @@ void IteInstanceData::setup_for_solving()
 void IteInstanceData::setup_for_encoding()
 {
     cc = new ClauseContainer(solver);
-    vh = new VarHandler(1, GlobalData::g->n * label);
+    vh = new VarHandler(1, global_data.g->n * label);
 
     set_up_encoder();
 }
@@ -82,7 +81,7 @@ void IteInstanceData::cleanup_solving()
 
 void IteInstanceData::export_dimacs(std::ostream &out)
 {
-    out << "c CNF fomular for graph " << GlobalData::g->graph_name << " with Cyclic Antibandwidth value of " << target_value << "\n";
+    out << "c CNF fomular for graph " << global_data.g->graph_name << " with Cyclic Antibandwidth value of " << global_data.target_value << "\n";
     out << "p cnf " << vh->size() << " " << cc->size() << "\n";
     for (const std::vector<int> &c : cc->clause_list)
     {

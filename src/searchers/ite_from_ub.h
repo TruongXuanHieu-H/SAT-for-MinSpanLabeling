@@ -6,7 +6,7 @@
 class IteFromUB : public Iteration
 {
 public:
-    IteFromUB(int target_value, int lower_bound, int upper_bound);
+    IteFromUB(GlobalData &data);
     ~IteFromUB() override;
 
 protected:

@@ -25,7 +25,7 @@ struct VectorHash
 class IncreLadder : public IncreEncoder
 {
 public:
-    IncreLadder(IncreInstanceData *data);
+    IncreLadder(IncreInstanceData &instance_data);
     ~IncreLadder() override;
 
     void encode_min_makespan_labeling() override;

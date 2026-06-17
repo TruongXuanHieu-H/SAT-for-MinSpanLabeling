@@ -25,7 +25,7 @@ struct VectorHash
 class IteLadder : public IteEncoder
 {
 public:
-    IteLadder(IteInstanceData *data);
+    IteLadder(IteInstanceData &instance_data);
     ~IteLadder() override;
 
     void encode_antibandwidth() override;

@@ -1,6 +1,8 @@
 #ifndef SEARCHER_H
 #define SEARCHER_H
 
+#include "../global_data.h"
+
 #include <unordered_map>
 #include <unistd.h>
 #include <deque>
@@ -8,16 +10,14 @@
 class Searcher
 {
 public:
-    Searcher(int target_value, int lower_bound, int upper_bound);
+    Searcher(GlobalData &data);
     virtual ~Searcher();
 
     virtual void encode_and_solve() = 0;
     virtual void encode_and_print_dimacs() = 0;
 
 protected:
-    int target_value;
-    int lower_bound;
-    int upper_bound;
+    GlobalData &global_data;
 
     pid_t lim_pid;
 

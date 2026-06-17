@@ -4,91 +4,106 @@
 #include "stdexcept"
 #include "usage.h"
 
-std::unordered_map<std::string, Command> ArgsParser::cmd;
+ArgsParser::ArgsParser(GlobalData &data) : globalData(data)
+{
+    init_parser();
+}
+
+ArgsParser::~ArgsParser() {}
 
 void ArgsParser::init_parser()
 {
-    cmd["--ladder"] = [](int &, int, char **)
+    cmd["--abp"] = [this](int, int, char **)
     {
-        GlobalData::encode_type = EncodeType::ladder;
+        globalData.problem_type = ProblemType::ABP;
     };
 
-    cmd["--verify-result"] = [](int &, int, char **)
+    cmd["--cabp"] = [this](int, int, char **)
     {
-        GlobalData::enable_solution_verification = true;
+        globalData.problem_type = ProblemType::CyclicABP;
     };
 
-    cmd["--incremental-from-ub"] = [](int &, int, char **)
+    cmd["--ladder"] = [this](int, int, char **)
     {
-        GlobalData::search_strategy = SearchStrategy::incremental_from_ub;
+        globalData.encode_type = EncodeType::ladder;
     };
 
-    cmd["--iterate-bfs"] = [](int &, int, char **)
+    cmd["--verify-result"] = [this](int, int, char **)
     {
-        GlobalData::search_strategy = SearchStrategy::iterate_bfs;
+        globalData.enable_solution_verification = true;
     };
 
-    cmd["--iterate-from-ub"] = [](int &, int, char **)
+    cmd["--incremental-from-ub"] = [this](int, int, char **)
     {
-        GlobalData::search_strategy = SearchStrategy::iterate_from_ub;
+        globalData.search_strategy = SearchStrategy::incremental_from_ub;
     };
 
-    cmd["-target-value"] = [](int &i, int argc, char **argv)
+    cmd["--iterate-bfs"] = [this](int, int, char **)
     {
-        GlobalData::target_value = get_positive(i, argc, argv, "target value");
+        globalData.search_strategy = SearchStrategy::iterate_bfs;
     };
 
-    cmd["-set-lb"] = [](int &i, int argc, char **argv)
+    cmd["--iterate-from-ub"] = [this](int, int, char **)
     {
-        GlobalData::lower_bound = get_positive(i, argc, argv, "lower bound");
-
-        std::cout << "c [Param] LB is predefined as " << GlobalData::lower_bound << ".\n";
+        globalData.search_strategy = SearchStrategy::iterate_from_ub;
     };
 
-    cmd["-set-ub"] = [](int &i, int argc, char **argv)
+    cmd["-target-value"] = [this](int &i, int argc, char **argv)
     {
-        GlobalData::upper_bound = get_positive(i, argc, argv, "upper bound");
-
-        std::cout << "c [Param] UB is predefined as " << GlobalData::upper_bound << ".\n";
+        globalData.target_value = get_positive(i, argc, argv, "target value");
     };
 
-    cmd["-limit-memory"] = [](int &i, int argc, char **argv)
+    cmd["-set-lb"] = [this](int &i, int argc, char **argv)
     {
-        GlobalData::memory_limit = get_positive(i, argc, argv, "memory limit");
-        std::cout << "c [Param] Memory limit is set to " << GlobalData::memory_limit << ".\n";
+        globalData.lower_bound = get_positive(i, argc, argv, "lower bound");
+
+        std::cout << "c [Param] LB is predefined as " << globalData.lower_bound << ".\n";
     };
 
-    cmd["-limit-real-time"] = [](int &i, int argc, char **argv)
+    cmd["-set-ub"] = [this](int &i, int argc, char **argv)
     {
-        GlobalData::real_time_limit = get_positive(i, argc, argv, "real time limit");
-        std::cout << "c [Param] Real time limit is set to " << GlobalData::real_time_limit << ".\n";
+        globalData.upper_bound = get_positive(i, argc, argv, "upper bound");
+
+        std::cout << "c [Param] UB is predefined as " << globalData.upper_bound << ".\n";
     };
 
-    cmd["-limit-elapsed-time"] = [](int &i, int argc, char **argv)
+    cmd["-limit-memory"] = [this](int &i, int argc, char **argv)
     {
-        GlobalData::elapsed_time_limit = get_positive(i, argc, argv, "elapsed time limit");
-        std::cout << "c [Param] Elapsed time limit is set to " << GlobalData::elapsed_time_limit << ".\n";
+        globalData.memory_limit = get_positive(i, argc, argv, "memory limit");
+        std::cout << "c [Param] Memory limit is set to " << globalData.memory_limit << ".\n";
     };
 
-    cmd["-sample-rate"] = [](int &i, int argc, char **argv)
+    cmd["-limit-real-time"] = [this](int &i, int argc, char **argv)
     {
-        GlobalData::sample_rate = get_positive(i, argc, argv, "sample rate");
-        std::cout << "c [Param] Sample rate is set to " << GlobalData::sample_rate << ".\n";
+        globalData.real_time_limit = get_positive(i, argc, argv, "real time limit");
+        std::cout << "c [Param] Real time limit is set to " << globalData.real_time_limit << ".\n";
     };
 
-    cmd["-report-rate"] = [](int &i, int argc, char **argv)
+    cmd["-limit-elapsed-time"] = [this](int &i, int argc, char **argv)
     {
-        GlobalData::report_rate = get_positive(i, argc, argv, "report rate");
-        std::cout << "c [Param] Report rate is set to " << GlobalData::report_rate << ".\n";
+        globalData.elapsed_time_limit = get_positive(i, argc, argv, "elapsed time limit");
+        std::cout << "c [Param] Elapsed time limit is set to " << globalData.elapsed_time_limit << ".\n";
     };
 
-    cmd["-worker-count"] = [](int &i, int argc, char **argv)
+    cmd["-sample-rate"] = [this](int &i, int argc, char **argv)
     {
-        GlobalData::worker_count = get_positive(i, argc, argv, "worker count");
-        std::cout << "c [Param] Worker count is set to " << GlobalData::worker_count << ".\n";
+        globalData.sample_rate = get_positive(i, argc, argv, "sample rate");
+        std::cout << "c [Param] Sample rate is set to " << globalData.sample_rate << ".\n";
     };
 
-    cmd["-symmetry-break"] = [](int &i, int argc, char **argv)
+    cmd["-report-rate"] = [this](int &i, int argc, char **argv)
+    {
+        globalData.report_rate = get_positive(i, argc, argv, "report rate");
+        std::cout << "c [Param] Report rate is set to " << globalData.report_rate << ".\n";
+    };
+
+    cmd["-worker-count"] = [this](int &i, int argc, char **argv)
+    {
+        globalData.worker_count = get_positive(i, argc, argv, "worker count");
+        std::cout << "c [Param] Worker count is set to " << globalData.worker_count << ".\n";
+    };
+
+    cmd["-symmetry-break"] = [this](int &i, int argc, char **argv)
     {
         if (i + 1 >= argc)
             throw std::runtime_error("Missing symmetry type");
@@ -96,18 +111,18 @@ void ArgsParser::init_parser()
         std::string s = argv[++i];
 
         if (s == "none")
-            GlobalData::symmetry_break_strategy = SymmetryBreakingType::NONE;
+            globalData.symmetry_break_strategy = SymmetryBreakingType::NONE;
         else if (s == "first")
-            GlobalData::symmetry_break_strategy = SymmetryBreakingType::FIRST;
+            globalData.symmetry_break_strategy = SymmetryBreakingType::FIRST;
         else if (s == "highest-degree")
-            GlobalData::symmetry_break_strategy = SymmetryBreakingType::HIGHEST_DEGREE;
+            globalData.symmetry_break_strategy = SymmetryBreakingType::HIGHEST_DEGREE;
         else if (s == "lowest-degree")
-            GlobalData::symmetry_break_strategy = SymmetryBreakingType::LOWEST_DEGREE;
+            globalData.symmetry_break_strategy = SymmetryBreakingType::LOWEST_DEGREE;
         else
             throw std::runtime_error("Unrecognized symmetry breaking type: " + s);
     };
 
-    cmd["-sat-solver"] = [](int &i, int argc, char **argv)
+    cmd["-sat-solver"] = [this](int &i, int argc, char **argv)
     {
         if (i + 1 >= argc)
             throw std::runtime_error("Missing solver type");
@@ -115,23 +130,23 @@ void ArgsParser::init_parser()
         std::string s = argv[++i];
 
         if (s == "cadical")
-            GlobalData::sat_solver_type = SATSolverType::CaDiCaL;
+            globalData.sat_solver_type = SATSolverType::CaDiCaL;
         else
             throw std::runtime_error("Unrecognized SAT solver type: " + s);
     };
 
-    cmd["-just-print-dimacs"] = [](int &i, int argc, char **argv)
+    cmd["-just-print-dimacs"] = [this](int &i, int argc, char **argv)
     {
         if (i + 1 >= argc)
             throw std::runtime_error("Missing directory");
 
-        GlobalData::just_print_dimacs = true;
-        GlobalData::dimacs_directory = argv[++i];
+        globalData.just_print_dimacs = true;
+        globalData.dimacs_directory = argv[++i];
     };
 
-    cmd["--verbose"] = [](int &, int, char **)
+    cmd["--verbose"] = [this](int, int, char **)
     {
-        GlobalData::verbose = true;
+        globalData.verbose = true;
     };
 }
 
@@ -145,7 +160,7 @@ int ArgsParser::try_parse_args(int argc, char **argv)
 
             if (arg[0] != '-')
             {
-                GlobalData::read_graph(arg);
+                globalData.read_graph(arg);
                 continue;
             }
 

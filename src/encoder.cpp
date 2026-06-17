@@ -6,46 +6,37 @@
 
 #include <iostream>
 
-Encoder::Encoder()
-{
-    searcher = get_searcher();
-};
+Encoder::Encoder(GlobalData &data) : global_data(data), searcher(get_searcher()) {}
 
-Encoder::~Encoder()
+std::unique_ptr<Searcher> Encoder::get_searcher()
 {
-    delete searcher;
-};
-
-Searcher *Encoder::get_searcher()
-{
-    switch (GlobalData::search_strategy)
+    switch (global_data.search_strategy)
     {
     case SearchStrategy::incremental_from_ub:
         std::cout << "c [Main] Search strategy: Incremental from upper bound.\n";
-        return new IncreFromUB(GlobalData::target_value, GlobalData::lower_bound, GlobalData::upper_bound);
+        return std::make_unique<IncreFromUB>(global_data);
     case SearchStrategy::iterate_from_ub:
         std::cout << "c [Main] Search strategy: Iterating from upper bound.\n";
-        return new IteFromUB(GlobalData::target_value, GlobalData::lower_bound, GlobalData::upper_bound);
+        return std::make_unique<IteFromUB>(global_data);
     case SearchStrategy::iterate_bfs:
-        std::cout << "c [Main] Search strategy: Iterating Breath First Search.\n";
-        return new IteBFS(GlobalData::target_value, GlobalData::lower_bound, GlobalData::upper_bound);
+        std::cout << "c [Main] Search strategy: Iterating Breadth First Search.\n";
+        return std::make_unique<IteBFS>(global_data);
 
     default:
-        std::cerr << "e [Main] Unrecognized search strategy " << static_cast<int>(GlobalData::search_strategy) << ".\n";
-        exit(-1);
+        throw std::runtime_error("Unrecognized search strategy: " + std::to_string(static_cast<int>(global_data.search_strategy)));
     }
 }
 
 void Encoder::encode_and_solve()
 {
-    std::cout << "c [Main] Encoding and solving for graph: " << GlobalData::g->graph_name << ".\n";
+    std::cout << "c [Main] Encoding and solving for graph: " << global_data.g->graph_name << ".\n";
 
     searcher->encode_and_solve();
-};
+}
 
 void Encoder::encode_and_print_dimacs()
 {
-    std::cout << "c [Main] Encoding and printing DIMACS for graph: " << GlobalData::g->graph_name << ".\n";
+    std::cout << "c [Main] Encoding and printing DIMACS for graph: " << global_data.g->graph_name << ".\n";
 
     searcher->encode_and_print_dimacs();
-};
+}

@@ -9,19 +9,20 @@
 int main(int argc, char **argv)
 {
     SignalHandler::init_signals();
-
     Version::print_version();
 
-    ArgsParser::init_parser();
-    int parse_result = ArgsParser::try_parse_args(argc, argv);
+    GlobalData global_data;
+    ArgsParser args_parser(global_data);
+
+    int parse_result = args_parser.try_parse_args(argc, argv);
     if (parse_result != 0)
     {
         return parse_result;
     }
 
-    Encoder encoder;
+    Encoder encoder(global_data);
 
-    if (GlobalData::just_print_dimacs)
+    if (global_data.just_print_dimacs)
         encoder.encode_and_print_dimacs();
     else
         encoder.encode_and_solve();

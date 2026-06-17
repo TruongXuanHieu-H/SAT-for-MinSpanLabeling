@@ -11,13 +11,9 @@
 #include <sys/wait.h>
 #include <chrono>
 
-IncreFromUB::IncreFromUB(int target_value, int lower_bound, int upper_bound) : Searcher(target_value, lower_bound, upper_bound)
-{
-}
+IncreFromUB::IncreFromUB(GlobalData &data) : Searcher(data) {}
 
-IncreFromUB::~IncreFromUB()
-{
-}
+IncreFromUB::~IncreFromUB() {}
 
 void IncreFromUB::encode_and_solve()
 {
@@ -73,7 +69,7 @@ void IncreFromUB::create_work_pid()
         prctl(PR_SET_PDEATHSIG, SIGTERM);
         std::cout << "c [Incremental] Start task in PID: " << getpid() << ".\n";
 
-        IncreInstance instance(GlobalData::target_value, GlobalData::lower_bound, GlobalData::upper_bound);
+        IncreInstance instance(global_data);
 
         int result = instance.encode_and_solve_problem();
 

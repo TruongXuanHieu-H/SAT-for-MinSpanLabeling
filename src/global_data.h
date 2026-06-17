@@ -3,6 +3,7 @@
 
 #include "graph/graph.h"
 #include "enum/encode_type.h"
+#include "enum/problem_type.h"
 #include "enum/sat_solver_type.h"
 #include "enum/search_strategy.h"
 #include "enum/symmetry_breaking_type.h"
@@ -12,37 +13,47 @@
 class GlobalData
 {
 public:
-    GlobalData();
-    ~GlobalData();
+    GlobalData() {};
+    ~GlobalData()
+    {
+        if (g)
+        {
+            delete g; // Clean up the global graph instance
+            g = nullptr;
+        }
+    };
 
-    static Graph *g;         // Pointer to the global graph instance
-    static int target_value; // Target value for the problem (e.g., antibandwidth value for ABP)
+    Graph *g = nullptr;   // Pointer to the global graph instance
+    int target_value = 0; // Target value for the problem (e.g., antibandwidth value for ABP)
+    int lower_bound = 0;
+    int upper_bound = 0;
 
-    static int worker_count; // Does not matter if incremental is selected
+    int worker_count = 1; // Does not matter if incremental is selected
 
-    static EncodeType encode_type;
-    static SearchStrategy search_strategy;
-    static SymmetryBreakingType symmetry_break_strategy;
-    static SATSolverType sat_solver_type;
+    ProblemType problem_type = ProblemType::ABP;
+    EncodeType encode_type = EncodeType::ladder;
+    SearchStrategy search_strategy = SearchStrategy::iterate_bfs;
+    SymmetryBreakingType symmetry_break_strategy = SymmetryBreakingType::NONE;
+    SATSolverType sat_solver_type = SATSolverType::CaDiCaL;
 
-    static bool just_print_dimacs;
-    static std::string dimacs_directory;
+    bool just_print_dimacs = false;
+    std::string dimacs_directory = "./dimacs_output/";
 
-    static bool enable_solution_verification;
+    bool enable_solution_verification = true;
 
-    static int lower_bound;
-    static int upper_bound;
+    int sample_rate = 100000; // Interval of sampler, in microseconds
+    int report_rate = 100;    // Interval of report, in number of sampler
 
-    static int sample_rate; // Interval of sampler, in microseconds
-    static int report_rate; // Interval of report, in number of sampler
+    float memory_limit = std::numeric_limits<float>::max();       // bound of total memory consumed by all the processes, in megabyte
+    float real_time_limit = std::numeric_limits<float>::max();    // bound of time consumed by main process, in seconds
+    float elapsed_time_limit = std::numeric_limits<float>::max(); // bound of total time consumed by all the process, in seconds
 
-    static float memory_limit;       // bound of total memory consumed by all the processes, in megabyte
-    static float real_time_limit;    // bound of time consumed by main process, in seconds
-    static float elapsed_time_limit; // bound of total time consumed by all the process, in seconds
+    void read_graph(std::string graph_file_name)
+    {
+        g = new Graph(graph_file_name);
+    };
 
-    static void read_graph(std::string graph_file_name);
-
-    static bool verbose; // If true, print more detailed information during the execution, such as the encoding details and the solving process. This is useful for debugging and understanding the behavior of the program, but it may produce a large amount of output for large instances.
+    bool verbose = false; // If true, print more detailed information during the execution, such as the encoding details and the solving process. This is useful for debugging and understanding the behavior of the program, but it may produce a large amount of output for large instances.
 };
 
 #endif // GLOBAL_DATA_H

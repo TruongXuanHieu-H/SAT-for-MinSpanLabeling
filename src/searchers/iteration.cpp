@@ -11,10 +11,10 @@
 #include <sys/wait.h>
 #include <chrono>
 
-Iteration::Iteration(int target_value, int lower_bound, int upper_bound) : Searcher(target_value, lower_bound, upper_bound)
+Iteration::Iteration(GlobalData &data) : Searcher(data)
 {
-    lowest_label_SAT = upper_bound + 1;
-    highest_label_UNSAT = lower_bound - 1;
+    lowest_label_SAT = global_data.upper_bound + 1;
+    highest_label_UNSAT = global_data.lower_bound - 1;
 }
 
 Iteration::~Iteration()
@@ -28,10 +28,10 @@ void Iteration::encode_and_solve()
     std::chrono::time_point<std::chrono::high_resolution_clock> start_time = std::chrono::high_resolution_clock::now();
     create_limit_pid();
 
-    for (int i = 0; i < GlobalData::worker_count && i < (upper_bound + 1 - lower_bound); i += 1)
+    for (int i = 0; i < global_data.worker_count && i < (global_data.upper_bound + 1 - global_data.lower_bound); i += 1)
     {
         int next_label_to_search = get_next_label_to_search();
-        if (next_label_to_search <= lower_bound - 1 || next_label_to_search >= upper_bound + 1)
+        if (next_label_to_search <= global_data.lower_bound - 1 || next_label_to_search >= global_data.upper_bound + 1)
         {
             break; // No valid label to search
         }
@@ -154,10 +154,10 @@ void Iteration::encode_and_solve()
         if (!limit_violated)
         {
             fflush(stdout);
-            while (int(work_pids.size()) < GlobalData::worker_count)
+            while (int(work_pids.size()) < global_data.worker_count)
             {
                 int next_label_to_seach = get_next_label_to_search();
-                if (next_label_to_seach <= lower_bound - 1 || next_label_to_seach >= upper_bound + 1)
+                if (next_label_to_seach <= global_data.lower_bound - 1 || next_label_to_seach >= global_data.upper_bound + 1)
                 {
                     break; // No valid label to search
                 }
@@ -180,8 +180,8 @@ void Iteration::encode_and_solve()
 
     std::cout << "r [Main] \n";
     std::cout << "r [Main] Final results: \n";
-    std::cout << "r [Main] Lowest label SAT:  \t" << ((lowest_label_SAT == upper_bound + 1) ? "-" : std::to_string(lowest_label_SAT)) << ".\n";
-    std::cout << "r [Main] Highest label UNSAT:\t" << ((highest_label_UNSAT == lower_bound - 1) ? "-" : std::to_string(highest_label_UNSAT)) << ".\n";
+    std::cout << "r [Main] Lowest label SAT:  \t" << ((lowest_label_SAT == global_data.upper_bound + 1) ? "-" : std::to_string(lowest_label_SAT)) << ".\n";
+    std::cout << "r [Main] Highest label UNSAT:\t" << ((highest_label_UNSAT == global_data.lower_bound - 1) ? "-" : std::to_string(highest_label_UNSAT)) << ".\n";
     std::cout << "r [Main] Total real time: " << encode_duration << " ms.\n";
     std::cout << "r [Main] Total memory consumed: " << *max_consumed_memory << " MB.\n";
     std::cout << "r [Main] \n";
@@ -189,9 +189,9 @@ void Iteration::encode_and_solve()
 
 void Iteration::encode_and_print_dimacs()
 {
-    for (int i = lower_bound; i <= upper_bound; i++)
+    for (int i = global_data.lower_bound; i <= global_data.upper_bound; i++)
     {
-        IteInstance instance(GlobalData::target_value, i);
+        IteInstance instance(global_data, i);
         instance.encode_and_print_dimacs();
     }
 };
@@ -227,7 +227,7 @@ void Iteration::create_work_pid(int label)
 int Iteration::do_work_pid_task(int label)
 {
     // Dynamically allocate and use ABPEncoder in child process
-    IteInstance instance(GlobalData::target_value, label);
+    IteInstance instance(global_data, label);
 
     int result = instance.encode_and_solve_problem();
 
@@ -239,7 +239,7 @@ int Iteration::do_work_pid_task(int label)
 int Iteration::get_next_label_to_search()
 {
     if (label_search_order.empty())
-        return lower_bound - 1; // To terminate the search if no valid width is left. Value (upper_bound + 1) also works.
+        return global_data.lower_bound - 1; // To terminate the search if no valid width is left. Value (global_data.upper_bound + 1) also works.
 
     int next_label = label_search_order.front();
     label_search_order.pop_front();
@@ -248,7 +248,7 @@ int Iteration::get_next_label_to_search()
     {
 
         if (label_search_order.empty())
-            return lower_bound - 1; // To terminate the search if no valid width is left. Value (upper_bound + 1) also works.
+            return global_data.lower_bound - 1; // To terminate the search if no valid width is left. Value (global_data.upper_bound + 1) also works.
 
         next_label = label_search_order.front();
         label_search_order.pop_front();

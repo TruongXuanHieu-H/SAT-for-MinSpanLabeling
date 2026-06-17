@@ -2,11 +2,12 @@
 #define ITE_INSTANCE_H
 
 #include "ite_instance_data.h"
+#include "../../global_data.h"
 
 class IteInstance
 {
 public:
-    IteInstance(int target_value, int label);
+    IteInstance(GlobalData &global_data, int label);
     virtual ~IteInstance();
 
     int encode_and_solve_problem();
@@ -14,6 +15,8 @@ public:
 
 private:
     int SAT_res = 0;
+
+    GlobalData &global_data;
     IteInstanceData *data;
 
     int recalculate_solution(const std::vector<int> &node_labels);

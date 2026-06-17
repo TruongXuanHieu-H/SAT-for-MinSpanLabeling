@@ -10,7 +10,7 @@
 #include <sys/wait.h>
 #include <chrono>
 
-Searcher::Searcher(int targert_value, int lower_bound, int upper_bound) : target_value(targert_value), lower_bound(lower_bound), upper_bound(upper_bound)
+Searcher::Searcher(GlobalData &data) : global_data(data)
 {
     max_consumed_memory = (float *)mmap(nullptr, sizeof(float), PROT_READ | PROT_WRITE, MAP_SHARED | MAP_ANONYMOUS, -1, 0);
 }
@@ -30,13 +30,13 @@ Searcher::~Searcher()
  */
 int Searcher::is_limit_satisfied()
 {
-    if (consumed_memory > GlobalData::memory_limit)
+    if (consumed_memory > global_data.memory_limit)
         return -1;
 
-    if (consumed_real_time > GlobalData::real_time_limit)
+    if (consumed_real_time > global_data.real_time_limit)
         return -2;
 
-    if (consumed_elapsed_time > GlobalData::elapsed_time_limit)
+    if (consumed_elapsed_time > global_data.elapsed_time_limit)
         return -3;
 
     return 0;
@@ -58,8 +58,8 @@ void Searcher::create_limit_pid()
         while (limit_state == 0)
         {
             consumed_memory = std::round(PIDManager::get_total_memory_usage(main_pid) * 10 / 1024.0) / 10;
-            consumed_real_time += std::round((float)GlobalData::sample_rate * 10 / 1000000.0) / 10;
-            consumed_elapsed_time += (float)(GlobalData::sample_rate * (PIDManager::get_descendant_pids(main_pid).size() - 1)) / 1000000.0;
+            consumed_real_time += std::round((float)global_data.sample_rate * 10 / 1000000.0) / 10;
+            consumed_elapsed_time += (float)(global_data.sample_rate * (PIDManager::get_descendant_pids(main_pid).size() - 1)) / 1000000.0;
 
             if (consumed_memory > *max_consumed_memory)
             {
@@ -68,12 +68,12 @@ void Searcher::create_limit_pid()
             }
 
             sampler_count++;
-            if (sampler_count >= GlobalData::report_rate)
+            if (sampler_count >= global_data.report_rate)
             {
                 // std::cout << "c [Lim] Sampler:\t" << "Memory: " << consumed_memory << " MB\tReal time: " << consumed_real_time << "s\tElapsed time: " << consumed_elapsed_time << "s.\n";
                 sampler_count = 0;
             }
-            usleep(GlobalData::sample_rate);
+            usleep(global_data.sample_rate);
 
             limit_state = is_limit_satisfied();
         }

@@ -6,7 +6,7 @@
 class IteBFS : public Iteration
 {
 public:
-    IteBFS(int target_value, int lower_bound, int upper_bound);
+    IteBFS(GlobalData &data);
     ~IteBFS() override;
 
 protected:

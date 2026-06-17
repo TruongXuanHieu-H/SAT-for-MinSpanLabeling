@@ -4,6 +4,7 @@
 #include "../general/clause_container.h"
 #include "../general/var_handler.h"
 #include "../general/sat_solver.h"
+#include "../../global_data.h"
 #include "../../graph/graph.h"
 
 class IteEncoder;
@@ -11,10 +12,10 @@ class IteEncoder;
 class IteInstanceData
 {
 public:
-    IteInstanceData(int target_value, int label);
+    IteInstanceData(GlobalData &global_data, int label);
     ~IteInstanceData();
 
-    int target_value; // Width of the instance
+    GlobalData &global_data;
     int label;
 
     IteEncoder *enc;

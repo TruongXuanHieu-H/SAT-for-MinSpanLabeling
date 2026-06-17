@@ -6,7 +6,7 @@
 class IncreFromUB : public Searcher
 {
 public:
-    IncreFromUB(int target_value, int lower_bound, int upper_bound);
+    IncreFromUB(GlobalData &data);
     ~IncreFromUB();
 
     void encode_and_solve() override;

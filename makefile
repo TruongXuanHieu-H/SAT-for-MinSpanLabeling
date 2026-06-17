@@ -59,7 +59,6 @@ SOURCES := \
 	utils/usage.cpp \
 	utils/version.cpp \
 	encoder.cpp \
-	global_data.cpp \
 	main.cpp 
 
 # ================================

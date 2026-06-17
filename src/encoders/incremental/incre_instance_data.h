@@ -4,6 +4,7 @@
 #include "../general/clause_container.h"
 #include "../general/var_handler.h"
 #include "../general/sat_solver.h"
+#include "../../global_data.h"
 #include "../../graph/graph.h"
 
 class IncreEncoder;
@@ -11,17 +12,15 @@ class IncreEncoder;
 class IncreInstanceData
 {
 public:
-    IncreInstanceData(int target_value, int lower_bound, int upper_bound);
+    IncreInstanceData(GlobalData &global_data);
     ~IncreInstanceData();
 
-    const int target_value = 0; // Width of the instance
-    const int lower_bound = 0;  // Lower bound of the search
-    const int upper_bound = 0;  // Upper bound of the search
+    GlobalData &global_data;
 
-    IncreEncoder *enc = nullptr;
-    ClauseContainer *cc = nullptr;
-    VarHandler *vh = nullptr;
-    SATSolver *solver = nullptr;
+    IncreEncoder *enc;
+    ClauseContainer *cc;
+    VarHandler *vh;
+    SATSolver *solver;
 
     std::string get_signature();
 

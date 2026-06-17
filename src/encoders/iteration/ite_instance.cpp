@@ -7,9 +7,9 @@
 #include <fstream>
 #include <chrono>
 
-IteInstance::IteInstance(int target_value, int label)
+IteInstance::IteInstance(GlobalData &global_data, int label) : global_data(global_data)
 {
-    data = new IteInstanceData(target_value, label);
+    data = new IteInstanceData(global_data, label);
 }
 
 IteInstance::~IteInstance()
@@ -28,10 +28,10 @@ IteInstance::~IteInstance()
 */
 int IteInstance::encode_and_solve_problem()
 {
-    std::cout << "c " << data->get_signature() << " Antibandwidth problem with w = " << data->target_value << " (" << GlobalData::g->graph_name << "):" << std::endl;
+    std::cout << "c " << data->get_signature() << " Antibandwidth problem with w = " << global_data.target_value << " (" << global_data.g->graph_name << "):" << std::endl;
 
     data->setup_for_solving();
-    std::cout << "c " << data->get_signature() << " Encoding starts with w = " << data->target_value << ":" << std::endl;
+    std::cout << "c " << data->get_signature() << " Encoding starts with w = " << global_data.target_value << ":" << std::endl;
 
     auto t1 = std::chrono::high_resolution_clock::now();
     data->enc->encode_antibandwidth();
@@ -51,20 +51,20 @@ int IteInstance::encode_and_solve_problem()
     std::cout << "c " << data->get_signature() << " Answer:\n";
     if (SAT_res == 10)
     {
-        std::cout << "s " << data->get_signature() << " SAT (w = " << data->target_value << ").\n";
+        std::cout << "s " << data->get_signature() << " SAT (w = " << global_data.target_value << ").\n";
 
-        if (GlobalData::enable_solution_verification)
+        if (global_data.enable_solution_verification)
         {
-            std::vector<int> label_assignment = data->solver->extract_result(GlobalData::g->n, data->label);
+            std::vector<int> label_assignment = data->solver->extract_result(global_data.g->n, data->label);
             int solution_abp = recalculate_solution(label_assignment);
-            if (solution_abp < data->target_value)
+            if (solution_abp < global_data.target_value)
             {
-                std::cerr << "c " << data->get_signature() << " Error, the solution is not correct, antibandwidth should be at least " << data->target_value << ", but it is " << solution_abp << ".\n";
+                std::cerr << "c " << data->get_signature() << " Error, the solution is not correct, antibandwidth should be at least " << global_data.target_value << ", but it is " << solution_abp << ".\n";
 
                 data->cleanup_solving();
                 return -10;
             }
-            else if (solution_abp == data->target_value)
+            else if (solution_abp == global_data.target_value)
             {
                 std::cout << "c " + data->get_signature() + " The solution is correct.\n";
             }
@@ -75,10 +75,10 @@ int IteInstance::encode_and_solve_problem()
         }
     }
     else if (SAT_res == 20)
-        std::cout << "s " << data->get_signature() << " UNSAT (w = " << data->target_value << ").\n";
+        std::cout << "s " << data->get_signature() << " UNSAT (w = " << global_data.target_value << ").\n";
     else
     {
-        std::cout << "s " << data->get_signature() << " Error at w = " << data->target_value << ", SAT result: " << SAT_res << ".\n";
+        std::cout << "s " << data->get_signature() << " Error at w = " << global_data.target_value << ", SAT result: " << SAT_res << ".\n";
         data->cleanup_solving();
         return -20;
     }
@@ -94,7 +94,7 @@ int IteInstance::recalculate_solution(const std::vector<int> &node_labels)
     {
         return 0;
     }
-    int min_dist = GlobalData::g->calculate_antibandwidth(node_labels);
+    int min_dist = global_data.g->calculate_antibandwidth(node_labels);
 
     std::cout << "c " << data->get_signature() << " Solution check w = " << min_dist << ".\n";
 
@@ -103,30 +103,30 @@ int IteInstance::recalculate_solution(const std::vector<int> &node_labels)
 
 void IteInstance::encode_and_print_dimacs()
 {
-    std::cout << "c " + data->get_signature() + " Cyclic Antibandwidth problem with w = " << data->target_value << " (" << GlobalData::g->graph_name << "):\n";
-    if (GlobalData::g->n < 1)
+    std::cout << "c " + data->get_signature() + " Cyclic Antibandwidth problem with w = " << global_data.target_value << " (" << global_data.g->graph_name << "):\n";
+    if (global_data.g->n < 1)
     {
         std::cout << "c " + data->get_signature() + " The input graph is too small, there is nothing to encode here.\n";
         return;
     }
-    if (data->target_value < 2)
+    if (global_data.target_value < 2)
     {
         std::cout << "c " + data->get_signature() + " There is always at least 1 distance in any labelling. There is nothing to encode here.\n";
         return;
     }
 
     data->setup_for_encoding();
-    std::cout << "c " + data->get_signature() + " Encoding starts with w = " << data->target_value << ":\n";
+    std::cout << "c " + data->get_signature() + " Encoding starts with w = " << global_data.target_value << ":\n";
 
     data->enc->encode_antibandwidth();
     std::cout << "c " + data->get_signature() + " Number of clauses: " << data->cc->size() << ".\n";
     std::cout << "c " + data->get_signature() + " Number of variables: " << data->vh->size() << ".\n";
 
-    std::string file_name = "abp-" + GlobalData::g->graph_name + "-k" + std::to_string(data->target_value) + ".cnf";
-    std::ofstream out(GlobalData::dimacs_directory + "/" + file_name);
+    std::string file_name = "abp-" + global_data.g->graph_name + "-k" + std::to_string(global_data.target_value) + ".cnf";
+    std::ofstream out(global_data.dimacs_directory + "/" + file_name);
     if (!out.is_open())
     {
-        std::cerr << "c " + data->get_signature() + " Error: cannot open file " << GlobalData::dimacs_directory + file_name << " for writing.\n";
+        std::cerr << "c " + data->get_signature() + " Error: cannot open file " << global_data.dimacs_directory + file_name << " for writing.\n";
         data->cleanup_encoding();
         return;
     }

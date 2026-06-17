@@ -1,21 +1,26 @@
 #ifndef ENCODER_H
 #define ENCODER_H
 
+#include "global_data.h"
 #include "searchers/searcher.h"
+
+#include <memory>
 
 class Encoder
 {
 public:
-	Encoder();
-	~Encoder();
+	explicit Encoder(GlobalData &data);
+	~Encoder() = default;
 
 	void encode_and_solve();
 	void encode_and_print_dimacs();
 
 private:
-	Searcher *searcher = nullptr;
+	GlobalData &global_data;
 
-	Searcher *get_searcher();
+	std::unique_ptr<Searcher> searcher;
+
+	std::unique_ptr<Searcher> get_searcher();
 };
 
 #endif

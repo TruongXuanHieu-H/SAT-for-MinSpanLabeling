@@ -6,13 +6,13 @@ class IteInstanceData;
 class IteEncoder
 {
 public:
-    IteEncoder(IteInstanceData *data);
+    IteEncoder(IteInstanceData &instance_data);
     virtual ~IteEncoder();
 
     virtual void encode_antibandwidth() = 0;
 
 protected:
-    IteInstanceData *data;
+    IteInstanceData &instance_data;
 
     void encode_symmetry_break();
 
