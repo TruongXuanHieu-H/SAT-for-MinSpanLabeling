@@ -1,0 +1,119 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 257.
+c [Param] UB is predefined as 546.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Param] Worker count is set to 8.
+c [Main] Search strategy: Iterating Breadth First Search.
+c [Main] Search order: 401 328 474 292 364 437 510 274 310 346 382 419 455 492 528 265 283 301 319 337 355 373 391 410 428 446 464 483 501 519 537 260 269 278 287 296 305 314 323 332 341 350 359 368 377 386 396 405 414 423 432 441 450 459 469 478 487 496 505 514 523 532 542 258 262 267 271 276 280 285 289 294 298 303 307 312 316 321 325 330 334 339 343 348 352 357 361 366 370 375 379 384 388 393 398 403 407 412 416 421 425 430 434 439 443 448 452 457 461 466 471 476 480 485 489 494 498 503 507 512 516 521 525 530 534 539 544 257 259 261 263 266 268 270 272 275 277 279 281 284 286 288 290 293 295 297 299 302 304 306 308 311 313 315 317 320 322 324 326 329 331 333 335 338 340 342 344 347 349 351 353 356 358 360 362 365 367 369 371 374 376 378 380 383 385 387 389 392 394 397 399 402 404 406 408 411 413 415 417 420 422 424 426 429 431 433 435 438 440 442 444 447 449 451 453 456 458 460 462 465 467 470 472 475 477 479 481 484 486 488 490 493 495 497 499 502 504 506 508 511 513 515 517 520 522 524 526 529 531 533 535 538 540 543 545 264 273 282 291 300 309 318 327 336 345 354 363 372 381 390 395 400 409 418 427 436 445 454 463 468 473 482 491 500 509 518 527 536 541 546.
+c [Main] Encoding and solving for graph: S-sherman4.mtx.rnd.
+c [Label = 274] Encoding duration: 1099ms.
+c [Label = 274] Number of clauses: 702998.
+c [Label = 274] Number of variables: 298116.
+c [Label = 274] Solving duration: 4 ms.
+s [Label = 274] SAT (w = 256).
+c [Main] Lowest label SAT is set to 274.
+c [Main] Kill higher label pid 437.
+c [Main] Kill higher label pid 364.
+c [Main] Kill higher label pid 292.
+c [Main] Kill higher label pid 474.
+c [Main] Kill higher label pid 510.
+c [Main] Kill higher label pid 328.
+c [Main] Kill higher label pid 401.
+c [Label = 292] Encoding duration: 1263ms.
+c [Label = 292] Number of clauses: 848699.
+c [Label = 292] Number of variables: 317772.
+c [Label = 292] Solving duration: 8 ms.
+s [Label = 292] SAT (w = 256).
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 292 - 72821 terminated by signal 15.
+c [Main] Child pid 364 - 72822 terminated by signal 15.
+c [Main] Child pid 328 - 72819 terminated by signal 15.
+c [Main] Child pid 401 - 72818 terminated by signal 15.
+c [Main] Child pid 437 - 72823 terminated by signal 15.
+c [Main] Child pid 510 - 72824 terminated by signal 15.
+c [Main] Child pid 474 - 72820 terminated by signal 15.
+c [Label = 257] Encoding duration: 929ms.
+c [Label = 257] Number of clauses: 565391.
+c [Label = 257] Number of variables: 279552.
+c [Label = 257] Solving duration: 10 ms.
+s [Label = 257] SAT (w = 256).
+c [Label = 258] Encoding duration: 948ms.
+c [Label = 258] Number of clauses: 573486.
+c [Label = 258] Number of variables: 280644.
+c [Label = 258] Solving duration: 1 ms.
+s [Label = 258] SAT (w = 256).
+c [Label = 260] Encoding duration: 959ms.
+c [Label = 260] Number of clauses: 589675.
+c [Label = 260] Number of variables: 282828.
+c [Label = 260] Solving duration: 2 ms.
+s [Label = 260] SAT (w = 256).
+c [Label = 262] Encoding duration: 966ms.
+c [Label = 262] Number of clauses: 605864.
+c [Label = 262] Number of variables: 285012.
+c [Label = 262] Solving duration: 2 ms.
+s [Label = 262] SAT (w = 256).
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Lowest label SAT is set to 257.
+c [Main] Kill higher label pid 267.
+c [Main] Kill higher label pid 262.
+c [Main] Kill higher label pid 269.
+c [Main] Kill higher label pid 265.
+c [Main] Kill higher label pid 260.
+c [Main] Kill higher label pid 271.
+c [Main] Kill higher label pid 258.
+c [Label = 267] Encoding duration: 1028ms.
+c [Label = 267] Number of clauses: 646336.
+c [Label = 267] Number of variables: 290472.
+c [Label = 267] Solving duration: 3 ms.
+s [Label = 267] SAT (w = 256).
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 265] Encoding duration: 1037ms.
+c [Label = 265] Number of clauses: 630147.
+c [Label = 265] Number of variables: 288288.
+c [Label = 265] Solving duration: 3 ms.
+s [Label = 265] SAT (w = 256).
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 269] Encoding duration: 1044ms.
+c [Label = 269] Number of clauses: 662525.
+c [Label = 269] Number of variables: 292656.
+c [Label = 269] Solving duration: 4 ms.
+s [Label = 269] SAT (w = 256).
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 271] Encoding duration: 1071ms.
+c [Label = 271] Number of clauses: 678714.
+c [Label = 271] Number of variables: 294840.
+c [Label = 271] Solving duration: 4 ms.
+s [Label = 271] SAT (w = 256).
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Kill higher label pid 267.
+c [Main] Kill higher label pid 262.
+c [Main] Kill higher label pid 269.
+c [Main] Kill higher label pid 265.
+c [Main] Kill higher label pid 260.
+c [Main] Kill higher label pid 271.
+c [Main] Kill higher label pid 267.
+c [Main] Kill higher label pid 262.
+c [Main] Kill higher label pid 269.
+c [Main] Kill higher label pid 265.
+c [Main] Kill higher label pid 271.
+c [Main] Child pid 265 - 72826 terminated by signal 15.
+c [Main] Child pid 267 - 72831 terminated by signal 15.
+c [Main] Child pid 262 - 72830 terminated by signal 15.
+c [Main] Child pid 271 - 72832 terminated by signal 15.
+c [Main] Child pid 269 - 72828 terminated by signal 15.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] All children have completed.
+r [Main] 
+r [Main] Final results: 
+r [Main] Lowest label SAT:  	257.
+r [Main] Highest label UNSAT:	-.
+r [Main] Total real time: 2725 ms.
+r [Main] Total memory consumed: 2599 MB.
+r [Main] 

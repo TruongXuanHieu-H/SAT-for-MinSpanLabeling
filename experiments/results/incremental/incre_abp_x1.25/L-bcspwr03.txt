@@ -1,0 +1,27 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 50.
+c [Param] UB is predefined as 148.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Main] Search strategy: Incremental from upper bound.
+c [Main] Encoding and solving for graph: L-bcspwr03.mtx.rnd.
+c [Incremental] Minimize Makespan Labeling Antibandwidth problem (L-bcspwr03.mtx.rnd):
+c [Incremental] Encoding starts with target value = 49:
+c [Incremental] Encoding duration: 121ms.
+c [Incremental] Number of clauses: 184287.
+c [Incremental] Number of variables: 45548.
+c [Incremental] Solving for max label = 148:
+c [Incremental] Solving duration: 8 ms.
+s [Incremental] SAT (label = 148).
+c [Incremental] Max used label: 148.
+c [Incremental] Label 148 is removed from searching.
+c [Incremental] Solving for max label = 147:
+c [Incremental] Solving duration: 30 ms.
+s [Incremental] UNSAT (label = 147).
+c [Main] Work pid ends with result: 0.
+r [Main] 
+r [Main] Final results: 
+r [Main] Total real time: 200 ms.
+r [Main] Total memory consumed: 43.4 MB.
+r [Main] 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).

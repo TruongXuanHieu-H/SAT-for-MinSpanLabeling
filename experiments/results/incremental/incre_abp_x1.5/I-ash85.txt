@@ -1,0 +1,50 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 37.
+c [Param] UB is predefined as 128.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Main] Search strategy: Incremental from upper bound.
+c [Main] Encoding and solving for graph: I-ash85.mtx.rnd.
+c [Incremental] Minimize Makespan Labeling Antibandwidth problem (I-ash85.mtx.rnd):
+c [Incremental] Encoding starts with target value = 36:
+c [Incremental] Encoding duration: 80ms.
+c [Incremental] Number of clauses: 147816.
+c [Incremental] Number of variables: 27200.
+c [Incremental] Solving for max label = 128:
+c [Incremental] Solving duration: 238 ms.
+s [Incremental] SAT (label = 128).
+c [Incremental] Max used label: 128.
+c [Incremental] Label 128 is removed from searching.
+c [Incremental] Solving for max label = 127:
+c [Incremental] Solving duration: 3 ms.
+s [Incremental] SAT (label = 127).
+c [Incremental] Max used label: 109.
+c [Incremental] Label 127 is removed from searching.
+c [Incremental] Label 126 is removed from searching.
+c [Incremental] Label 125 is removed from searching.
+c [Incremental] Label 124 is removed from searching.
+c [Incremental] Label 123 is removed from searching.
+c [Incremental] Label 122 is removed from searching.
+c [Incremental] Label 121 is removed from searching.
+c [Incremental] Label 120 is removed from searching.
+c [Incremental] Label 119 is removed from searching.
+c [Incremental] Label 118 is removed from searching.
+c [Incremental] Label 117 is removed from searching.
+c [Incremental] Label 116 is removed from searching.
+c [Incremental] Label 115 is removed from searching.
+c [Incremental] Label 114 is removed from searching.
+c [Incremental] Label 113 is removed from searching.
+c [Incremental] Label 112 is removed from searching.
+c [Incremental] Label 111 is removed from searching.
+c [Incremental] Label 110 is removed from searching.
+c [Incremental] Label 109 is removed from searching.
+c [Incremental] Solving for max label = 108:
+c [Incremental] Solving duration: 3 ms.
+s [Incremental] UNSAT (label = 108).
+c [Main] Work pid ends with result: 0.
+r [Main] 
+r [Main] Final results: 
+r [Main] Total real time: 350 ms.
+r [Main] Total memory consumed: 52.5 MB.
+r [Main] 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).

@@ -1,0 +1,583 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 100.
+c [Param] UB is predefined as 557.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Main] Search strategy: Incremental from upper bound.
+c [Main] Encoding and solving for graph: P-can__445.mtx.rnd.
+c [Incremental] Minimize Makespan Labeling Antibandwidth problem (P-can__445.mtx.rnd):
+c [Incremental] Encoding starts with target value = 99:
+c [Incremental] Encoding duration: 4505ms.
+c [Incremental] Number of clauses: 4776450.
+c [Incremental] Number of variables: 665720.
+c [Incremental] Solving for max label = 557:
+c [Incremental] Solving duration: 10496 ms.
+s [Incremental] SAT (label = 557).
+c [Incremental] Max used label: 496.
+c [Incremental] Label 557 is removed from searching.
+c [Incremental] Label 556 is removed from searching.
+c [Incremental] Label 555 is removed from searching.
+c [Incremental] Label 554 is removed from searching.
+c [Incremental] Label 553 is removed from searching.
+c [Incremental] Label 552 is removed from searching.
+c [Incremental] Label 551 is removed from searching.
+c [Incremental] Label 550 is removed from searching.
+c [Incremental] Label 549 is removed from searching.
+c [Incremental] Label 548 is removed from searching.
+c [Incremental] Label 547 is removed from searching.
+c [Incremental] Label 546 is removed from searching.
+c [Incremental] Label 545 is removed from searching.
+c [Incremental] Label 544 is removed from searching.
+c [Incremental] Label 543 is removed from searching.
+c [Incremental] Label 542 is removed from searching.
+c [Incremental] Label 541 is removed from searching.
+c [Incremental] Label 540 is removed from searching.
+c [Incremental] Label 539 is removed from searching.
+c [Incremental] Label 538 is removed from searching.
+c [Incremental] Label 537 is removed from searching.
+c [Incremental] Label 536 is removed from searching.
+c [Incremental] Label 535 is removed from searching.
+c [Incremental] Label 534 is removed from searching.
+c [Incremental] Label 533 is removed from searching.
+c [Incremental] Label 532 is removed from searching.
+c [Incremental] Label 531 is removed from searching.
+c [Incremental] Label 530 is removed from searching.
+c [Incremental] Label 529 is removed from searching.
+c [Incremental] Label 528 is removed from searching.
+c [Incremental] Label 527 is removed from searching.
+c [Incremental] Label 526 is removed from searching.
+c [Incremental] Label 525 is removed from searching.
+c [Incremental] Label 524 is removed from searching.
+c [Incremental] Label 523 is removed from searching.
+c [Incremental] Label 522 is removed from searching.
+c [Incremental] Label 521 is removed from searching.
+c [Incremental] Label 520 is removed from searching.
+c [Incremental] Label 519 is removed from searching.
+c [Incremental] Label 518 is removed from searching.
+c [Incremental] Label 517 is removed from searching.
+c [Incremental] Label 516 is removed from searching.
+c [Incremental] Label 515 is removed from searching.
+c [Incremental] Label 514 is removed from searching.
+c [Incremental] Label 513 is removed from searching.
+c [Incremental] Label 512 is removed from searching.
+c [Incremental] Label 511 is removed from searching.
+c [Incremental] Label 510 is removed from searching.
+c [Incremental] Label 509 is removed from searching.
+c [Incremental] Label 508 is removed from searching.
+c [Incremental] Label 507 is removed from searching.
+c [Incremental] Label 506 is removed from searching.
+c [Incremental] Label 505 is removed from searching.
+c [Incremental] Label 504 is removed from searching.
+c [Incremental] Label 503 is removed from searching.
+c [Incremental] Label 502 is removed from searching.
+c [Incremental] Label 501 is removed from searching.
+c [Incremental] Label 500 is removed from searching.
+c [Incremental] Label 499 is removed from searching.
+c [Incremental] Label 498 is removed from searching.
+c [Incremental] Label 497 is removed from searching.
+c [Incremental] Label 496 is removed from searching.
+c [Incremental] Solving for max label = 495:
+c [Incremental] Solving duration: 1053 ms.
+s [Incremental] SAT (label = 495).
+c [Incremental] Max used label: 495.
+c [Incremental] Label 495 is removed from searching.
+c [Incremental] Solving for max label = 494:
+c [Incremental] Solving duration: 828 ms.
+s [Incremental] SAT (label = 494).
+c [Incremental] Max used label: 494.
+c [Incremental] Label 494 is removed from searching.
+c [Incremental] Solving for max label = 493:
+c [Incremental] Solving duration: 757 ms.
+s [Incremental] SAT (label = 493).
+c [Incremental] Max used label: 493.
+c [Incremental] Label 493 is removed from searching.
+c [Incremental] Solving for max label = 492:
+c [Incremental] Solving duration: 1302 ms.
+s [Incremental] SAT (label = 492).
+c [Incremental] Max used label: 492.
+c [Incremental] Label 492 is removed from searching.
+c [Incremental] Solving for max label = 491:
+c [Incremental] Solving duration: 784 ms.
+s [Incremental] SAT (label = 491).
+c [Incremental] Max used label: 491.
+c [Incremental] Label 491 is removed from searching.
+c [Incremental] Solving for max label = 490:
+c [Incremental] Solving duration: 759 ms.
+s [Incremental] SAT (label = 490).
+c [Incremental] Max used label: 490.
+c [Incremental] Label 490 is removed from searching.
+c [Incremental] Solving for max label = 489:
+c [Incremental] Solving duration: 754 ms.
+s [Incremental] SAT (label = 489).
+c [Incremental] Max used label: 489.
+c [Incremental] Label 489 is removed from searching.
+c [Incremental] Solving for max label = 488:
+c [Incremental] Solving duration: 772 ms.
+s [Incremental] SAT (label = 488).
+c [Incremental] Max used label: 488.
+c [Incremental] Label 488 is removed from searching.
+c [Incremental] Solving for max label = 487:
+c [Incremental] Solving duration: 747 ms.
+s [Incremental] SAT (label = 487).
+c [Incremental] Max used label: 487.
+c [Incremental] Label 487 is removed from searching.
+c [Incremental] Solving for max label = 486:
+c [Incremental] Solving duration: 779 ms.
+s [Incremental] SAT (label = 486).
+c [Incremental] Max used label: 486.
+c [Incremental] Label 486 is removed from searching.
+c [Incremental] Solving for max label = 485:
+c [Incremental] Solving duration: 797 ms.
+s [Incremental] SAT (label = 485).
+c [Incremental] Max used label: 485.
+c [Incremental] Label 485 is removed from searching.
+c [Incremental] Solving for max label = 484:
+c [Incremental] Solving duration: 796 ms.
+s [Incremental] SAT (label = 484).
+c [Incremental] Max used label: 484.
+c [Incremental] Label 484 is removed from searching.
+c [Incremental] Solving for max label = 483:
+c [Incremental] Solving duration: 773 ms.
+s [Incremental] SAT (label = 483).
+c [Incremental] Max used label: 483.
+c [Incremental] Label 483 is removed from searching.
+c [Incremental] Solving for max label = 482:
+c [Incremental] Solving duration: 777 ms.
+s [Incremental] SAT (label = 482).
+c [Incremental] Max used label: 482.
+c [Incremental] Label 482 is removed from searching.
+c [Incremental] Solving for max label = 481:
+c [Incremental] Solving duration: 761 ms.
+s [Incremental] SAT (label = 481).
+c [Incremental] Max used label: 481.
+c [Incremental] Label 481 is removed from searching.
+c [Incremental] Solving for max label = 480:
+c [Incremental] Solving duration: 739 ms.
+s [Incremental] SAT (label = 480).
+c [Incremental] Max used label: 480.
+c [Incremental] Label 480 is removed from searching.
+c [Incremental] Solving for max label = 479:
+c [Incremental] Solving duration: 730 ms.
+s [Incremental] SAT (label = 479).
+c [Incremental] Max used label: 479.
+c [Incremental] Label 479 is removed from searching.
+c [Incremental] Solving for max label = 478:
+c [Incremental] Solving duration: 766 ms.
+s [Incremental] SAT (label = 478).
+c [Incremental] Max used label: 478.
+c [Incremental] Label 478 is removed from searching.
+c [Incremental] Solving for max label = 477:
+c [Incremental] Solving duration: 744 ms.
+s [Incremental] SAT (label = 477).
+c [Incremental] Max used label: 477.
+c [Incremental] Label 477 is removed from searching.
+c [Incremental] Solving for max label = 476:
+c [Incremental] Solving duration: 747 ms.
+s [Incremental] SAT (label = 476).
+c [Incremental] Max used label: 476.
+c [Incremental] Label 476 is removed from searching.
+c [Incremental] Solving for max label = 475:
+c [Incremental] Solving duration: 739 ms.
+s [Incremental] SAT (label = 475).
+c [Incremental] Max used label: 475.
+c [Incremental] Label 475 is removed from searching.
+c [Incremental] Solving for max label = 474:
+c [Incremental] Solving duration: 787 ms.
+s [Incremental] SAT (label = 474).
+c [Incremental] Max used label: 474.
+c [Incremental] Label 474 is removed from searching.
+c [Incremental] Solving for max label = 473:
+c [Incremental] Solving duration: 732 ms.
+s [Incremental] SAT (label = 473).
+c [Incremental] Max used label: 473.
+c [Incremental] Label 473 is removed from searching.
+c [Incremental] Solving for max label = 472:
+c [Incremental] Solving duration: 751 ms.
+s [Incremental] SAT (label = 472).
+c [Incremental] Max used label: 472.
+c [Incremental] Label 472 is removed from searching.
+c [Incremental] Solving for max label = 471:
+c [Incremental] Solving duration: 748 ms.
+s [Incremental] SAT (label = 471).
+c [Incremental] Max used label: 471.
+c [Incremental] Label 471 is removed from searching.
+c [Incremental] Solving for max label = 470:
+c [Incremental] Solving duration: 723 ms.
+s [Incremental] SAT (label = 470).
+c [Incremental] Max used label: 470.
+c [Incremental] Label 470 is removed from searching.
+c [Incremental] Solving for max label = 469:
+c [Incremental] Solving duration: 735 ms.
+s [Incremental] SAT (label = 469).
+c [Incremental] Max used label: 469.
+c [Incremental] Label 469 is removed from searching.
+c [Incremental] Solving for max label = 468:
+c [Incremental] Solving duration: 713 ms.
+s [Incremental] SAT (label = 468).
+c [Incremental] Max used label: 468.
+c [Incremental] Label 468 is removed from searching.
+c [Incremental] Solving for max label = 467:
+c [Incremental] Solving duration: 774 ms.
+s [Incremental] SAT (label = 467).
+c [Incremental] Max used label: 467.
+c [Incremental] Label 467 is removed from searching.
+c [Incremental] Solving for max label = 466:
+c [Incremental] Solving duration: 721 ms.
+s [Incremental] SAT (label = 466).
+c [Incremental] Max used label: 466.
+c [Incremental] Label 466 is removed from searching.
+c [Incremental] Solving for max label = 465:
+c [Incremental] Solving duration: 731 ms.
+s [Incremental] SAT (label = 465).
+c [Incremental] Max used label: 465.
+c [Incremental] Label 465 is removed from searching.
+c [Incremental] Solving for max label = 464:
+c [Incremental] Solving duration: 722 ms.
+s [Incremental] SAT (label = 464).
+c [Incremental] Max used label: 464.
+c [Incremental] Label 464 is removed from searching.
+c [Incremental] Solving for max label = 463:
+c [Incremental] Solving duration: 739 ms.
+s [Incremental] SAT (label = 463).
+c [Incremental] Max used label: 463.
+c [Incremental] Label 463 is removed from searching.
+c [Incremental] Solving for max label = 462:
+c [Incremental] Solving duration: 738 ms.
+s [Incremental] SAT (label = 462).
+c [Incremental] Max used label: 462.
+c [Incremental] Label 462 is removed from searching.
+c [Incremental] Solving for max label = 461:
+c [Incremental] Solving duration: 755 ms.
+s [Incremental] SAT (label = 461).
+c [Incremental] Max used label: 461.
+c [Incremental] Label 461 is removed from searching.
+c [Incremental] Solving for max label = 460:
+c [Incremental] Solving duration: 843 ms.
+s [Incremental] SAT (label = 460).
+c [Incremental] Max used label: 460.
+c [Incremental] Label 460 is removed from searching.
+c [Incremental] Solving for max label = 459:
+c [Incremental] Solving duration: 814 ms.
+s [Incremental] SAT (label = 459).
+c [Incremental] Max used label: 459.
+c [Incremental] Label 459 is removed from searching.
+c [Incremental] Solving for max label = 458:
+c [Incremental] Solving duration: 730 ms.
+s [Incremental] SAT (label = 458).
+c [Incremental] Max used label: 458.
+c [Incremental] Label 458 is removed from searching.
+c [Incremental] Solving for max label = 457:
+c [Incremental] Solving duration: 746 ms.
+s [Incremental] SAT (label = 457).
+c [Incremental] Max used label: 457.
+c [Incremental] Label 457 is removed from searching.
+c [Incremental] Solving for max label = 456:
+c [Incremental] Solving duration: 702 ms.
+s [Incremental] SAT (label = 456).
+c [Incremental] Max used label: 456.
+c [Incremental] Label 456 is removed from searching.
+c [Incremental] Solving for max label = 455:
+c [Incremental] Solving duration: 745 ms.
+s [Incremental] SAT (label = 455).
+c [Incremental] Max used label: 455.
+c [Incremental] Label 455 is removed from searching.
+c [Incremental] Solving for max label = 454:
+c [Incremental] Solving duration: 704 ms.
+s [Incremental] SAT (label = 454).
+c [Incremental] Max used label: 454.
+c [Incremental] Label 454 is removed from searching.
+c [Incremental] Solving for max label = 453:
+c [Incremental] Solving duration: 684 ms.
+s [Incremental] SAT (label = 453).
+c [Incremental] Max used label: 453.
+c [Incremental] Label 453 is removed from searching.
+c [Incremental] Solving for max label = 452:
+c [Incremental] Solving duration: 730 ms.
+s [Incremental] SAT (label = 452).
+c [Incremental] Max used label: 452.
+c [Incremental] Label 452 is removed from searching.
+c [Incremental] Solving for max label = 451:
+c [Incremental] Solving duration: 793 ms.
+s [Incremental] SAT (label = 451).
+c [Incremental] Max used label: 451.
+c [Incremental] Label 451 is removed from searching.
+c [Incremental] Solving for max label = 450:
+c [Incremental] Solving duration: 760 ms.
+s [Incremental] SAT (label = 450).
+c [Incremental] Max used label: 450.
+c [Incremental] Label 450 is removed from searching.
+c [Incremental] Solving for max label = 449:
+c [Incremental] Solving duration: 720 ms.
+s [Incremental] SAT (label = 449).
+c [Incremental] Max used label: 449.
+c [Incremental] Label 449 is removed from searching.
+c [Incremental] Solving for max label = 448:
+c [Incremental] Solving duration: 728 ms.
+s [Incremental] SAT (label = 448).
+c [Incremental] Max used label: 448.
+c [Incremental] Label 448 is removed from searching.
+c [Incremental] Solving for max label = 447:
+c [Incremental] Solving duration: 752 ms.
+s [Incremental] SAT (label = 447).
+c [Incremental] Max used label: 447.
+c [Incremental] Label 447 is removed from searching.
+c [Incremental] Solving for max label = 446:
+c [Incremental] Solving duration: 2099 ms.
+s [Incremental] SAT (label = 446).
+c [Incremental] Max used label: 446.
+c [Incremental] Label 446 is removed from searching.
+c [Incremental] Solving for max label = 445:
+c [Incremental] Solving duration: 631 ms.
+s [Incremental] SAT (label = 445).
+c [Incremental] Max used label: 445.
+c [Incremental] Label 445 is removed from searching.
+c [Incremental] Solving for max label = 444:
+c [Incremental] Solving duration: 516 ms.
+s [Incremental] SAT (label = 444).
+c [Incremental] Max used label: 444.
+c [Incremental] Label 444 is removed from searching.
+c [Incremental] Solving for max label = 443:
+c [Incremental] Solving duration: 534 ms.
+s [Incremental] SAT (label = 443).
+c [Incremental] Max used label: 443.
+c [Incremental] Label 443 is removed from searching.
+c [Incremental] Solving for max label = 442:
+c [Incremental] Solving duration: 506 ms.
+s [Incremental] SAT (label = 442).
+c [Incremental] Max used label: 442.
+c [Incremental] Label 442 is removed from searching.
+c [Incremental] Solving for max label = 441:
+c [Incremental] Solving duration: 486 ms.
+s [Incremental] SAT (label = 441).
+c [Incremental] Max used label: 441.
+c [Incremental] Label 441 is removed from searching.
+c [Incremental] Solving for max label = 440:
+c [Incremental] Solving duration: 536 ms.
+s [Incremental] SAT (label = 440).
+c [Incremental] Max used label: 440.
+c [Incremental] Label 440 is removed from searching.
+c [Incremental] Solving for max label = 439:
+c [Incremental] Solving duration: 507 ms.
+s [Incremental] SAT (label = 439).
+c [Incremental] Max used label: 439.
+c [Incremental] Label 439 is removed from searching.
+c [Incremental] Solving for max label = 438:
+c [Incremental] Solving duration: 503 ms.
+s [Incremental] SAT (label = 438).
+c [Incremental] Max used label: 438.
+c [Incremental] Label 438 is removed from searching.
+c [Incremental] Solving for max label = 437:
+c [Incremental] Solving duration: 498 ms.
+s [Incremental] SAT (label = 437).
+c [Incremental] Max used label: 437.
+c [Incremental] Label 437 is removed from searching.
+c [Incremental] Solving for max label = 436:
+c [Incremental] Solving duration: 499 ms.
+s [Incremental] SAT (label = 436).
+c [Incremental] Max used label: 436.
+c [Incremental] Label 436 is removed from searching.
+c [Incremental] Solving for max label = 435:
+c [Incremental] Solving duration: 490 ms.
+s [Incremental] SAT (label = 435).
+c [Incremental] Max used label: 435.
+c [Incremental] Label 435 is removed from searching.
+c [Incremental] Solving for max label = 434:
+c [Incremental] Solving duration: 491 ms.
+s [Incremental] SAT (label = 434).
+c [Incremental] Max used label: 434.
+c [Incremental] Label 434 is removed from searching.
+c [Incremental] Solving for max label = 433:
+c [Incremental] Solving duration: 507 ms.
+s [Incremental] SAT (label = 433).
+c [Incremental] Max used label: 433.
+c [Incremental] Label 433 is removed from searching.
+c [Incremental] Solving for max label = 432:
+c [Incremental] Solving duration: 530 ms.
+s [Incremental] SAT (label = 432).
+c [Incremental] Max used label: 432.
+c [Incremental] Label 432 is removed from searching.
+c [Incremental] Solving for max label = 431:
+c [Incremental] Solving duration: 481 ms.
+s [Incremental] SAT (label = 431).
+c [Incremental] Max used label: 431.
+c [Incremental] Label 431 is removed from searching.
+c [Incremental] Solving for max label = 430:
+c [Incremental] Solving duration: 474 ms.
+s [Incremental] SAT (label = 430).
+c [Incremental] Max used label: 430.
+c [Incremental] Label 430 is removed from searching.
+c [Incremental] Solving for max label = 429:
+c [Incremental] Solving duration: 498 ms.
+s [Incremental] SAT (label = 429).
+c [Incremental] Max used label: 429.
+c [Incremental] Label 429 is removed from searching.
+c [Incremental] Solving for max label = 428:
+c [Incremental] Solving duration: 495 ms.
+s [Incremental] SAT (label = 428).
+c [Incremental] Max used label: 428.
+c [Incremental] Label 428 is removed from searching.
+c [Incremental] Solving for max label = 427:
+c [Incremental] Solving duration: 489 ms.
+s [Incremental] SAT (label = 427).
+c [Incremental] Max used label: 427.
+c [Incremental] Label 427 is removed from searching.
+c [Incremental] Solving for max label = 426:
+c [Incremental] Solving duration: 503 ms.
+s [Incremental] SAT (label = 426).
+c [Incremental] Max used label: 426.
+c [Incremental] Label 426 is removed from searching.
+c [Incremental] Solving for max label = 425:
+c [Incremental] Solving duration: 500 ms.
+s [Incremental] SAT (label = 425).
+c [Incremental] Max used label: 425.
+c [Incremental] Label 425 is removed from searching.
+c [Incremental] Solving for max label = 424:
+c [Incremental] Solving duration: 445 ms.
+s [Incremental] SAT (label = 424).
+c [Incremental] Max used label: 424.
+c [Incremental] Label 424 is removed from searching.
+c [Incremental] Solving for max label = 423:
+c [Incremental] Solving duration: 470 ms.
+s [Incremental] SAT (label = 423).
+c [Incremental] Max used label: 423.
+c [Incremental] Label 423 is removed from searching.
+c [Incremental] Solving for max label = 422:
+c [Incremental] Solving duration: 466 ms.
+s [Incremental] SAT (label = 422).
+c [Incremental] Max used label: 422.
+c [Incremental] Label 422 is removed from searching.
+c [Incremental] Solving for max label = 421:
+c [Incremental] Solving duration: 472 ms.
+s [Incremental] SAT (label = 421).
+c [Incremental] Max used label: 421.
+c [Incremental] Label 421 is removed from searching.
+c [Incremental] Solving for max label = 420:
+c [Incremental] Solving duration: 489 ms.
+s [Incremental] SAT (label = 420).
+c [Incremental] Max used label: 420.
+c [Incremental] Label 420 is removed from searching.
+c [Incremental] Solving for max label = 419:
+c [Incremental] Solving duration: 495 ms.
+s [Incremental] SAT (label = 419).
+c [Incremental] Max used label: 419.
+c [Incremental] Label 419 is removed from searching.
+c [Incremental] Solving for max label = 418:
+c [Incremental] Solving duration: 477 ms.
+s [Incremental] SAT (label = 418).
+c [Incremental] Max used label: 418.
+c [Incremental] Label 418 is removed from searching.
+c [Incremental] Solving for max label = 417:
+c [Incremental] Solving duration: 473 ms.
+s [Incremental] SAT (label = 417).
+c [Incremental] Max used label: 417.
+c [Incremental] Label 417 is removed from searching.
+c [Incremental] Solving for max label = 416:
+c [Incremental] Solving duration: 479 ms.
+s [Incremental] SAT (label = 416).
+c [Incremental] Max used label: 416.
+c [Incremental] Label 416 is removed from searching.
+c [Incremental] Solving for max label = 415:
+c [Incremental] Solving duration: 462 ms.
+s [Incremental] SAT (label = 415).
+c [Incremental] Max used label: 415.
+c [Incremental] Label 415 is removed from searching.
+c [Incremental] Solving for max label = 414:
+c [Incremental] Solving duration: 477 ms.
+s [Incremental] SAT (label = 414).
+c [Incremental] Max used label: 414.
+c [Incremental] Label 414 is removed from searching.
+c [Incremental] Solving for max label = 413:
+c [Incremental] Solving duration: 454 ms.
+s [Incremental] SAT (label = 413).
+c [Incremental] Max used label: 413.
+c [Incremental] Label 413 is removed from searching.
+c [Incremental] Solving for max label = 412:
+c [Incremental] Solving duration: 491 ms.
+s [Incremental] SAT (label = 412).
+c [Incremental] Max used label: 412.
+c [Incremental] Label 412 is removed from searching.
+c [Incremental] Solving for max label = 411:
+c [Incremental] Solving duration: 465 ms.
+s [Incremental] SAT (label = 411).
+c [Incremental] Max used label: 411.
+c [Incremental] Label 411 is removed from searching.
+c [Incremental] Solving for max label = 410:
+c [Incremental] Solving duration: 1719 ms.
+s [Incremental] SAT (label = 410).
+c [Incremental] Max used label: 410.
+c [Incremental] Label 410 is removed from searching.
+c [Incremental] Solving for max label = 409:
+c [Incremental] Solving duration: 413 ms.
+s [Incremental] SAT (label = 409).
+c [Incremental] Max used label: 409.
+c [Incremental] Label 409 is removed from searching.
+c [Incremental] Solving for max label = 408:
+c [Incremental] Solving duration: 368 ms.
+s [Incremental] SAT (label = 408).
+c [Incremental] Max used label: 408.
+c [Incremental] Label 408 is removed from searching.
+c [Incremental] Solving for max label = 407:
+c [Incremental] Solving duration: 392 ms.
+s [Incremental] SAT (label = 407).
+c [Incremental] Max used label: 407.
+c [Incremental] Label 407 is removed from searching.
+c [Incremental] Solving for max label = 406:
+c [Incremental] Solving duration: 380 ms.
+s [Incremental] SAT (label = 406).
+c [Incremental] Max used label: 406.
+c [Incremental] Label 406 is removed from searching.
+c [Incremental] Solving for max label = 405:
+c [Incremental] Solving duration: 383 ms.
+s [Incremental] SAT (label = 405).
+c [Incremental] Max used label: 405.
+c [Incremental] Label 405 is removed from searching.
+c [Incremental] Solving for max label = 404:
+c [Incremental] Solving duration: 380 ms.
+s [Incremental] SAT (label = 404).
+c [Incremental] Max used label: 404.
+c [Incremental] Label 404 is removed from searching.
+c [Incremental] Solving for max label = 403:
+c [Incremental] Solving duration: 371 ms.
+s [Incremental] SAT (label = 403).
+c [Incremental] Max used label: 403.
+c [Incremental] Label 403 is removed from searching.
+c [Incremental] Solving for max label = 402:
+c [Incremental] Solving duration: 363 ms.
+s [Incremental] SAT (label = 402).
+c [Incremental] Max used label: 402.
+c [Incremental] Label 402 is removed from searching.
+c [Incremental] Solving for max label = 401:
+c [Incremental] Solving duration: 380 ms.
+s [Incremental] SAT (label = 401).
+c [Incremental] Max used label: 401.
+c [Incremental] Label 401 is removed from searching.
+c [Incremental] Solving for max label = 400:
+c [Incremental] Solving duration: 369 ms.
+s [Incremental] SAT (label = 400).
+c [Incremental] Max used label: 400.
+c [Incremental] Label 400 is removed from searching.
+c [Incremental] Solving for max label = 399:
+c [Incremental] Solving duration: 355 ms.
+s [Incremental] SAT (label = 399).
+c [Incremental] Max used label: 399.
+c [Incremental] Label 399 is removed from searching.
+c [Incremental] Solving for max label = 398:
+c [Incremental] Solving duration: 340 ms.
+s [Incremental] SAT (label = 398).
+c [Incremental] Max used label: 398.
+c [Incremental] Label 398 is removed from searching.
+c [Incremental] Solving for max label = 397:
+c [Incremental] Solving duration: 298 ms.
+s [Incremental] SAT (label = 397).
+c [Incremental] Max used label: 397.
+c [Incremental] Label 397 is removed from searching.
+c [Incremental] Solving for max label = 396:
+c [Incremental] Solving duration: 3888 ms.
+s [Incremental] UNSAT (label = 396).
+c [Main] Work pid ends with result: 0.
+r [Main] 
+r [Main] Final results: 
+r [Main] Total real time: 87259 ms.
+r [Main] Total memory consumed: 1556 MB.
+r [Main] 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).

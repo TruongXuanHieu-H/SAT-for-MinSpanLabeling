@@ -1,0 +1,32 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 221.
+c [Param] UB is predefined as 662.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Main] Search strategy: Incremental from upper bound.
+c [Main] Encoding and solving for graph: U-662_bus.mtx.rnd.
+c [Incremental] Minimize Makespan Labeling Antibandwidth problem (U-662_bus.mtx.rnd):
+c [Incremental] Encoding starts with target value = 220:
+c [Incremental] Encoding duration: 5201ms.
+c [Incremental] Number of clauses: 4505775.
+c [Incremental] Number of variables: 1162472.
+c [Incremental] Solving for max label = 662:
+c [Incremental] Solving duration: 182 ms.
+s [Incremental] SAT (label = 662).
+c [Incremental] Max used label: 662.
+c [Incremental] Label 662 is removed from searching.
+c [Incremental] Solving for max label = 661:
+c [Incremental] Solving duration: 134 ms.
+s [Incremental] SAT (label = 661).
+c [Incremental] Max used label: 661.
+c [Incremental] Label 661 is removed from searching.
+c [Incremental] Solving for max label = 660:
+c [Incremental] Solving duration: 608 ms.
+s [Incremental] UNSAT (label = 660).
+c [Main] Work pid ends with result: 0.
+r [Main] 
+r [Main] Final results: 
+r [Main] Total real time: 7335 ms.
+r [Main] Total memory consumed: 1275.3 MB.
+r [Main] 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).

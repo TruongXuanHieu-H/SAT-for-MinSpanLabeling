@@ -1,0 +1,31 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 10.
+c [Param] UB is predefined as 32.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Main] Search strategy: Incremental from upper bound.
+c [Main] Encoding and solving for graph: B-ibm32.mtx.rnd.
+c [Incremental] Minimize Makespan Labeling Antibandwidth problem (B-ibm32.mtx.rnd):
+c [Incremental] Encoding starts with target value = 9:
+c [Incremental] Encoding duration: 6ms.
+c [Incremental] Number of clauses: 13862.
+c [Incremental] Number of variables: 2368.
+c [Incremental] Solving for max label = 32:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 32).
+c [Incremental] Max used label: 28.
+c [Incremental] Label 32 is removed from searching.
+c [Incremental] Label 31 is removed from searching.
+c [Incremental] Label 30 is removed from searching.
+c [Incremental] Label 29 is removed from searching.
+c [Incremental] Label 28 is removed from searching.
+c [Incremental] Solving for max label = 27:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] UNSAT (label = 27).
+c [Main] Work pid ends with result: 0.
+r [Main] 
+r [Main] Final results: 
+r [Main] Total real time: 9 ms.
+r [Main] Total memory consumed: 4.6 MB.
+r [Main] 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).

@@ -1,0 +1,58 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 205.
+c [Param] UB is predefined as 1028.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Main] Search strategy: Incremental from upper bound.
+c [Main] Encoding and solving for graph: W-685_bus.mtx.rnd.
+c [Incremental] Minimize Makespan Labeling Antibandwidth problem (W-685_bus.mtx.rnd):
+c [Incremental] Encoding starts with target value = 204:
+c [Incremental] Encoding duration: 10433ms.
+c [Incremental] Number of clauses: 9253484.
+c [Incremental] Number of variables: 1957730.
+c [Incremental] Solving for max label = 1028:
+c [Incremental] Solving duration: 585 ms.
+s [Incremental] SAT (label = 1028).
+c [Incremental] Max used label: 1028.
+c [Incremental] Label 1028 is removed from searching.
+c [Incremental] Solving for max label = 1027:
+c [Incremental] Solving duration: 480 ms.
+s [Incremental] SAT (label = 1027).
+c [Incremental] Max used label: 1027.
+c [Incremental] Label 1027 is removed from searching.
+c [Incremental] Solving for max label = 1026:
+c [Incremental] Solving duration: 486 ms.
+s [Incremental] SAT (label = 1026).
+c [Incremental] Max used label: 1026.
+c [Incremental] Label 1026 is removed from searching.
+c [Incremental] Solving for max label = 1025:
+c [Incremental] Solving duration: 494 ms.
+s [Incremental] SAT (label = 1025).
+c [Incremental] Max used label: 1025.
+c [Incremental] Label 1025 is removed from searching.
+c [Incremental] Solving for max label = 1024:
+c [Incremental] Solving duration: 489 ms.
+s [Incremental] SAT (label = 1024).
+c [Incremental] Max used label: 1024.
+c [Incremental] Label 1024 is removed from searching.
+c [Incremental] Solving for max label = 1023:
+c [Incremental] Solving duration: 490 ms.
+s [Incremental] SAT (label = 1023).
+c [Incremental] Max used label: 1023.
+c [Incremental] Label 1023 is removed from searching.
+c [Incremental] Solving for max label = 1022:
+c [Incremental] Solving duration: 479 ms.
+s [Incremental] SAT (label = 1022).
+c [Incremental] Max used label: 1021.
+c [Incremental] Label 1022 is removed from searching.
+c [Incremental] Label 1021 is removed from searching.
+c [Incremental] Solving for max label = 1020:
+c [Incremental] Solving duration: 2358 ms.
+s [Incremental] UNSAT (label = 1020).
+c [Main] Work pid ends with result: 0.
+r [Main] 
+r [Main] Final results: 
+r [Main] Total real time: 18743 ms.
+r [Main] Total memory consumed: 2375.6 MB.
+r [Main] 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).

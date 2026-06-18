@@ -1,0 +1,43 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 25.
+c [Param] UB is predefined as 85.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Main] Search strategy: Incremental from upper bound.
+c [Main] Encoding and solving for graph: I-ash85.mtx.rnd.
+c [Incremental] Minimize Makespan Labeling Antibandwidth problem (I-ash85.mtx.rnd):
+c [Incremental] Encoding starts with target value = 24:
+c [Incremental] Encoding duration: 51ms.
+c [Incremental] Number of clauses: 97263.
+c [Incremental] Number of variables: 17850.
+c [Incremental] Solving for max label = 85:
+c [Incremental] Solving duration: 152 ms.
+s [Incremental] SAT (label = 85).
+c [Incremental] Max used label: 85.
+c [Incremental] Label 85 is removed from searching.
+c [Incremental] Solving for max label = 84:
+c [Incremental] Solving duration: 2 ms.
+s [Incremental] SAT (label = 84).
+c [Incremental] Max used label: 73.
+c [Incremental] Label 84 is removed from searching.
+c [Incremental] Label 83 is removed from searching.
+c [Incremental] Label 82 is removed from searching.
+c [Incremental] Label 81 is removed from searching.
+c [Incremental] Label 80 is removed from searching.
+c [Incremental] Label 79 is removed from searching.
+c [Incremental] Label 78 is removed from searching.
+c [Incremental] Label 77 is removed from searching.
+c [Incremental] Label 76 is removed from searching.
+c [Incremental] Label 75 is removed from searching.
+c [Incremental] Label 74 is removed from searching.
+c [Incremental] Label 73 is removed from searching.
+c [Incremental] Solving for max label = 72:
+c [Incremental] Solving duration: 2 ms.
+s [Incremental] UNSAT (label = 72).
+c [Main] Work pid ends with result: 0.
+r [Main] 
+r [Main] Final results: 
+r [Main] Total real time: 224 ms.
+r [Main] Total memory consumed: 36.4 MB.
+r [Main] 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).

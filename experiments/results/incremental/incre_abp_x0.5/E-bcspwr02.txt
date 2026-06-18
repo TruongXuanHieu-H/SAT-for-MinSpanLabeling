@@ -1,0 +1,157 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 12.
+c [Param] UB is predefined as 49.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Main] Search strategy: Incremental from upper bound.
+c [Main] Encoding and solving for graph: E-bcspwr02.mtx.rnd.
+c [Incremental] Minimize Makespan Labeling Antibandwidth problem (E-bcspwr02.mtx.rnd):
+c [Incremental] Encoding starts with target value = 11:
+c [Incremental] Encoding duration: 12ms.
+c [Incremental] Number of clauses: 23808.
+c [Incremental] Number of variables: 5880.
+c [Incremental] Solving for max label = 49:
+c [Incremental] Solving duration: 1 ms.
+s [Incremental] SAT (label = 49).
+c [Incremental] Max used label: 49.
+c [Incremental] Label 49 is removed from searching.
+c [Incremental] Solving for max label = 48:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 48).
+c [Incremental] Max used label: 48.
+c [Incremental] Label 48 is removed from searching.
+c [Incremental] Solving for max label = 47:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 47).
+c [Incremental] Max used label: 47.
+c [Incremental] Label 47 is removed from searching.
+c [Incremental] Solving for max label = 46:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 46).
+c [Incremental] Max used label: 46.
+c [Incremental] Label 46 is removed from searching.
+c [Incremental] Solving for max label = 45:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 45).
+c [Incremental] Max used label: 45.
+c [Incremental] Label 45 is removed from searching.
+c [Incremental] Solving for max label = 44:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 44).
+c [Incremental] Max used label: 44.
+c [Incremental] Label 44 is removed from searching.
+c [Incremental] Solving for max label = 43:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 43).
+c [Incremental] Max used label: 43.
+c [Incremental] Label 43 is removed from searching.
+c [Incremental] Solving for max label = 42:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 42).
+c [Incremental] Max used label: 42.
+c [Incremental] Label 42 is removed from searching.
+c [Incremental] Solving for max label = 41:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 41).
+c [Incremental] Max used label: 41.
+c [Incremental] Label 41 is removed from searching.
+c [Incremental] Solving for max label = 40:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 40).
+c [Incremental] Max used label: 40.
+c [Incremental] Label 40 is removed from searching.
+c [Incremental] Solving for max label = 39:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 39).
+c [Incremental] Max used label: 39.
+c [Incremental] Label 39 is removed from searching.
+c [Incremental] Solving for max label = 38:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 38).
+c [Incremental] Max used label: 38.
+c [Incremental] Label 38 is removed from searching.
+c [Incremental] Solving for max label = 37:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 37).
+c [Incremental] Max used label: 37.
+c [Incremental] Label 37 is removed from searching.
+c [Incremental] Solving for max label = 36:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 36).
+c [Incremental] Max used label: 36.
+c [Incremental] Label 36 is removed from searching.
+c [Incremental] Solving for max label = 35:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 35).
+c [Incremental] Max used label: 35.
+c [Incremental] Label 35 is removed from searching.
+c [Incremental] Solving for max label = 34:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 34).
+c [Incremental] Max used label: 34.
+c [Incremental] Label 34 is removed from searching.
+c [Incremental] Solving for max label = 33:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 33).
+c [Incremental] Max used label: 33.
+c [Incremental] Label 33 is removed from searching.
+c [Incremental] Solving for max label = 32:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 32).
+c [Incremental] Max used label: 32.
+c [Incremental] Label 32 is removed from searching.
+c [Incremental] Solving for max label = 31:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 31).
+c [Incremental] Max used label: 31.
+c [Incremental] Label 31 is removed from searching.
+c [Incremental] Solving for max label = 30:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 30).
+c [Incremental] Max used label: 30.
+c [Incremental] Label 30 is removed from searching.
+c [Incremental] Solving for max label = 29:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 29).
+c [Incremental] Max used label: 29.
+c [Incremental] Label 29 is removed from searching.
+c [Incremental] Solving for max label = 28:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 28).
+c [Incremental] Max used label: 28.
+c [Incremental] Label 28 is removed from searching.
+c [Incremental] Solving for max label = 27:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 27).
+c [Incremental] Max used label: 27.
+c [Incremental] Label 27 is removed from searching.
+c [Incremental] Solving for max label = 26:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 26).
+c [Incremental] Max used label: 26.
+c [Incremental] Label 26 is removed from searching.
+c [Incremental] Solving for max label = 25:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 25).
+c [Incremental] Max used label: 25.
+c [Incremental] Label 25 is removed from searching.
+c [Incremental] Solving for max label = 24:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 24).
+c [Incremental] Max used label: 24.
+c [Incremental] Label 24 is removed from searching.
+c [Incremental] Solving for max label = 23:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 23).
+c [Incremental] Max used label: 23.
+c [Incremental] Label 23 is removed from searching.
+c [Incremental] Solving for max label = 22:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] UNSAT (label = 22).
+c [Main] Work pid ends with result: 0.
+r [Main] 
+r [Main] Final results: 
+r [Main] Total real time: 26 ms.
+r [Main] Total memory consumed: 2.4 MB.
+r [Main] 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).

@@ -1,0 +1,52 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 21.
+c [Param] UB is predefined as 86.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Main] Search strategy: Incremental from upper bound.
+c [Main] Encoding and solving for graph: G-will57.mtx.rnd.
+c [Incremental] Minimize Makespan Labeling Antibandwidth problem (G-will57.mtx.rnd):
+c [Incremental] Encoding starts with target value = 20:
+c [Incremental] Encoding duration: 32ms.
+c [Incremental] Number of clauses: 64988.
+c [Incremental] Number of variables: 12597.
+c [Incremental] Solving for max label = 86:
+c [Incremental] Solving duration: 2 ms.
+s [Incremental] SAT (label = 86).
+c [Incremental] Max used label: 86.
+c [Incremental] Label 86 is removed from searching.
+c [Incremental] Solving for max label = 85:
+c [Incremental] Solving duration: 1 ms.
+s [Incremental] SAT (label = 85).
+c [Incremental] Max used label: 85.
+c [Incremental] Label 85 is removed from searching.
+c [Incremental] Solving for max label = 84:
+c [Incremental] Solving duration: 1 ms.
+s [Incremental] SAT (label = 84).
+c [Incremental] Max used label: 84.
+c [Incremental] Label 84 is removed from searching.
+c [Incremental] Solving for max label = 83:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 83).
+c [Incremental] Max used label: 83.
+c [Incremental] Label 83 is removed from searching.
+c [Incremental] Solving for max label = 82:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 82).
+c [Incremental] Max used label: 82.
+c [Incremental] Label 82 is removed from searching.
+c [Incremental] Solving for max label = 81:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 81).
+c [Incremental] Max used label: 81.
+c [Incremental] Label 81 is removed from searching.
+c [Incremental] Solving for max label = 80:
+c [Incremental] Solving duration: 3 ms.
+s [Incremental] UNSAT (label = 80).
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Work pid ends with result: 0.
+r [Main] 
+r [Main] Final results: 
+r [Main] Total real time: 51 ms.
+r [Main] Total memory consumed: 2.4 MB.
+r [Main] 
