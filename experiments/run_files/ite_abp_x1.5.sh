@@ -6,7 +6,7 @@ report_dir="../../experiments/results/ite_abp_x1.5"
 
 time_limit="1800"
 memory_limit="30000"
-general_config="--ladder --verify-result --iterate-bfs -limit-memory $memory_limit -limit-real-time $time_limit -worker-count 8 -symmetry-break highest-degree"
+general_config="--ladder --has-hole --verify-result --iterate-bfs -limit-memory $memory_limit -limit-real-time $time_limit -worker-count 8 -symmetry-break highest-degree"
 
 mkdir -p "$report_dir"
 

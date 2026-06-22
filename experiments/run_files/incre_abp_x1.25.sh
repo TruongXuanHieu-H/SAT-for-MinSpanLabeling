@@ -6,11 +6,11 @@ report_dir="../../experiments/results/incre_abp_x1.25"
 
 time_limit="1800"
 memory_limit="30000"
-general_config="--ladder --verify-result --incremental-from-ub -limit-memory $memory_limit -limit-real-time $time_limit -symmetry-break highest-degree"
+general_config="--ladder --has-hole --verify-result --incremental-from-ub -limit-memory $memory_limit -limit-real-time $time_limit -symmetry-break highest-degree"
 
 mkdir -p "$report_dir"
 
-$build_dir/mmsl_enc $dataset_dir/A-pores_1.mtx.rnd     -target-value 7   -set-lb 8   -set-ub 38  $general_config >> $report_dir/A-pores_1.txt
+$build_dir/mmsl_enc $dataset_dir/A-pores_1.mtx.rnd     -target-value 7   -set-lb 8   -set-ub 38  $general_config > $report_dir/A-pores_1.txt
 $build_dir/mmsl_enc $dataset_dir/B-ibm32.mtx.rnd       -target-value 11  -set-lb 12  -set-ub 40  $general_config >> $report_dir/B-ibm32.txt
 $build_dir/mmsl_enc $dataset_dir/C-bcspwr01.mtx.rnd    -target-value 21  -set-lb 22  -set-ub 49  $general_config >> $report_dir/C-bcspwr01.txt
 $build_dir/mmsl_enc $dataset_dir/D-bcsstk01.mtx.rnd    -target-value 11  -set-lb 12  -set-ub 60  $general_config >> $report_dir/D-bcsstk01.txt

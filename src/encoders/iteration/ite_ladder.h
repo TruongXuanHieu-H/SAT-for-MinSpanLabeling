@@ -39,7 +39,7 @@ private:
     int get_obj_k_aux_var(std::vector<int> key, bool is_key_exist = false);
 
     void encode_vertices();
-    void encode_exactly_one_product(const std::vector<int> &vars);
+    void encode_at_most_one_product(const std::vector<int> &vars);
     void encode_amo_seq(const std::vector<int> &vars);
 
     void encode_labels();

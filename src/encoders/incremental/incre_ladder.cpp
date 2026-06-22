@@ -39,11 +39,19 @@ void IncreLadder::encode_vertices()
             node_vertices_eo[vertex] = vertex * instance_data.global_data.upper_bound + label + 1;
         }
 
-        encode_exactly_one_product(node_vertices_eo);
+        switch (instance_data.global_data.vertices_mode)
+        {
+        case VerticesMode::has_hole:
+            encode_at_most_one_product(node_vertices_eo);
+            break;
+
+        default:
+            break;
+        }
     }
 }
 
-void IncreLadder::encode_exactly_one_product(const std::vector<int> &vars)
+void IncreLadder::encode_at_most_one_product(const std::vector<int> &vars)
 {
     if (vars.size() < 2)
         return;
@@ -60,31 +68,18 @@ void IncreLadder::encode_exactly_one_product(const std::vector<int> &vars)
     int q = std::ceil((float)len / (float)p);
 
     std::vector<int> u_vars;
-    std::vector<int> v_vars;
     for (int i = 1; i <= p; ++i)
-    {
-        int new_var = instance_data.vh->get_new_var();
-        u_vars.push_back(new_var);
-    }
-    for (int j = 1; j <= q; ++j)
-    {
-        int new_var = instance_data.vh->get_new_var();
-        v_vars.push_back(new_var);
-    }
+        u_vars.push_back(instance_data.vh->get_new_var());
 
-    int i, j;
-    std::vector<int> or_clause = std::vector<int>();
+    std::vector<int> v_vars;
+    for (int j = 1; j <= q; ++j)
+        v_vars.push_back(instance_data.vh->get_new_var());
+
     for (int idx = 0; idx < (int)vars.size(); ++idx)
     {
-        i = std::floor(idx / p);
-        j = idx % p;
-
-        instance_data.cc->add_clause({-1 * vars[idx], v_vars[i]});
-        instance_data.cc->add_clause({-1 * vars[idx], u_vars[j]});
-
-        or_clause.push_back(vars[idx]);
+        instance_data.cc->add_clause({-1 * vars[idx], v_vars[std::floor(idx / p)]});
+        instance_data.cc->add_clause({-1 * vars[idx], u_vars[idx % p]});
     }
-    instance_data.cc->add_clause(or_clause);
 
     encode_amo_seq(u_vars);
     encode_amo_seq(v_vars);

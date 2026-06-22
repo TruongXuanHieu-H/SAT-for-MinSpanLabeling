@@ -48,9 +48,15 @@ int IteInstance::encode_and_solve_problem()
     {
         std::cout << "s " << data->get_signature() << " SAT (w = " << global_data.target_value << ").\n";
 
+        std::vector<int> label_assignment = data->solver->extract_result(global_data.g->n, data->label);
+
+        std::cout << "Label assignment: ";
+        for (int l : label_assignment)
+            std::cout << l << " ";
+        std::cout << "\n";
+
         if (global_data.enable_solution_verification)
         {
-            std::vector<int> label_assignment = data->solver->extract_result(global_data.g->n, data->label);
             int solution_abp = recalculate_solution(label_assignment);
             if (solution_abp < global_data.target_value)
             {

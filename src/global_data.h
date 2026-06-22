@@ -7,6 +7,7 @@
 #include "enum/sat_solver_type.h"
 #include "enum/search_strategy.h"
 #include "enum/symmetry_breaking_type.h"
+#include "enum/vertices_mode.h"
 #include <unordered_map>
 #include <limits>
 
@@ -35,6 +36,7 @@ public:
     SearchStrategy search_strategy = SearchStrategy::iterate_bfs;
     SymmetryBreakingType symmetry_break_strategy = SymmetryBreakingType::NONE;
     SATSolverType sat_solver_type = SATSolverType::CaDiCaL;
+    VerticesMode vertices_mode = VerticesMode::has_hole;
 
     bool just_print_dimacs = false;
     std::string dimacs_directory = "./dimacs_output/";

@@ -148,6 +148,16 @@ void ArgsParser::init_parser()
     {
         globalData.verbose = true;
     };
+
+    cmd["--has-hole"] = [this](int, int, char **)
+    {
+        globalData.vertices_mode = VerticesMode::has_hole;
+    };
+
+    cmd["--no-hole"] = [this](int, int, char **)
+    {
+        globalData.vertices_mode = VerticesMode::no_hole;
+    };
 }
 
 int ArgsParser::try_parse_args(int argc, char **argv)

@@ -6,7 +6,7 @@ report_dir="../../experiments/results/incre_abp_x1"
 
 time_limit="1800"
 memory_limit="30000"
-general_config="--ladder --verify-result --incremental-from-ub -limit-memory $memory_limit -limit-real-time $time_limit -symmetry-break highest-degree"
+general_config="--ladder --has-hole --verify-result --incremental-from-ub -limit-memory $memory_limit -limit-real-time $time_limit -symmetry-break highest-degree"
 
 mkdir -p "$report_dir"
 
