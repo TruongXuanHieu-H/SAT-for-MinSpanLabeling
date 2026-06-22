@@ -10,18 +10,26 @@ void IteEncoder::encode_symmetry_break()
 {
     if (instance_data.global_data.symmetry_break_strategy == SymmetryBreakingType::FIRST)
     {
+        if (instance_data.global_data.verbose)
+            std::cout << "c Symmetry breaking:  First node is applied\n";
         encode_symmetry_break_first_node();
     }
     else if (instance_data.global_data.symmetry_break_strategy == SymmetryBreakingType::HIGHEST_DEGREE)
     {
+        if (instance_data.global_data.verbose)
+            std::cout << "c Symmetry breaking: Highest degree node is applied\n";
         encode_symmetry_break_highest_degree_node();
     }
     else if (instance_data.global_data.symmetry_break_strategy == SymmetryBreakingType::LOWEST_DEGREE)
     {
+        if (instance_data.global_data.verbose)
+            std::cout << "c Symmetry breaking: Lowest degree node is applied\n";
         encode_symmetry_break_lowest_degree_node();
     }
     else
     {
+        if (instance_data.global_data.verbose)
+            std::cout << "c Symmetry breaking: No symmetry\n";
         // No symmetry breaking
     }
 }
