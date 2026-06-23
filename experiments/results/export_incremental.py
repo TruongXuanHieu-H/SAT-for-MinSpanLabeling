@@ -54,6 +54,11 @@ def parse_log(filepath):
             content
         ),
 
+        "Target value": extract(
+            r'c \[Incremental\] Encoding starts with target value = (\d+):',
+            content
+        ),
+
         "Lower bound": extract(
             r'c \[Param\] LB is predefined as\s+(\d+)',
             content
@@ -122,6 +127,7 @@ def main():
                 "Problem",
                 "Memory limit (MB)",
                 "Real time limit (s)",
+                "Target value",
                 "Lower bound",
                 "Upper bound",
                 "Highest label UNSAT",
