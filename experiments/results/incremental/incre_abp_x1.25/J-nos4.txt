@@ -1,207 +1,68 @@
 c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
-c [Param] LB is predefined as 45.
+c [Param] LB is predefined as 44.
 c [Param] UB is predefined as 125.
 c [Param] Memory limit is set to 30000.
 c [Param] Real time limit is set to 1800.
 c [Main] Search strategy: Incremental from upper bound.
 c [Main] Encoding and solving for graph: J-nos4.mtx.rnd.
 c [Incremental] Minimize Makespan Labeling Antibandwidth problem (J-nos4.mtx.rnd):
-c [Incremental] Encoding starts with target value = 44:
-c [Incremental] Encoding duration: 90ms.
-c [Incremental] Number of clauses: 149696.
-c [Incremental] Number of variables: 28900.
+c [Incremental] Encoding starts with target value = 43:
+c [Incremental] Encoding duration: 106ms.
+c [Incremental] Number of clauses: 181734.
+c [Incremental] Number of variables: 33300.
 c [Incremental] Solving for max label = 125:
-c [Incremental] Solving duration: 5 ms.
+c [Incremental] Solving duration: 3072 ms.
 s [Incremental] SAT (label = 125).
+Label assignment: 18 2 31 15 21 57 119 27 93 104 49 108 26 92 80 22 47 59 67 110 40 115 61 120 7 9 97 77 112 70 123 23 54 58 102 60 94 16 25 101 124 109 42 13 62 103 122 12 78 53 106 32 46 63 64 116 96 55 4 5 107 68 11 51 50 69 86 95 105 75 125 1 14 121 117 73 113 48 8 28 10 99 17 24 111 41 72 100 20 6 98 118 71 3 85 43 19 56 52 114 
 c [Incremental] Max used label: 125.
 c [Incremental] Label 125 is removed from searching.
 c [Incremental] Solving for max label = 124:
-c [Incremental] Solving duration: 4 ms.
+c [Incremental] Solving duration: 32 ms.
 s [Incremental] SAT (label = 124).
+Label assignment: 2 1 31 15 21 57 119 27 93 100 47 108 26 92 80 22 39 59 67 110 40 115 60 120 7 9 97 77 104 70 123 23 54 58 102 65 94 16 25 101 122 109 42 13 62 103 112 12 78 53 106 32 46 61 64 116 96 55 4 5 107 68 11 51 50 69 86 95 105 90 124 3 14 121 117 73 113 49 8 33 10 99 17 24 111 41 72 91 20 28 98 118 71 6 85 43 19 56 52 114 
 c [Incremental] Max used label: 124.
 c [Incremental] Label 124 is removed from searching.
 c [Incremental] Solving for max label = 123:
-c [Incremental] Solving duration: 4 ms.
+c [Incremental] Solving duration: 21 ms.
 s [Incremental] SAT (label = 123).
+Label assignment: 2 9 31 21 26 57 119 27 93 100 48 90 46 92 80 22 39 65 66 110 40 115 61 120 7 11 97 77 104 70 123 23 54 58 108 63 94 1 25 101 122 109 42 13 62 103 112 12 59 53 106 32 36 47 69 116 96 55 4 5 107 68 18 51 50 67 86 95 105 89 102 3 14 121 117 73 113 49 8 33 10 99 17 24 111 41 72 91 15 28 98 118 71 6 85 43 16 56 52 114 
 c [Incremental] Max used label: 123.
 c [Incremental] Label 123 is removed from searching.
 c [Incremental] Solving for max label = 122:
-c [Incremental] Solving duration: 4 ms.
+c [Incremental] Solving duration: 4574 ms.
 s [Incremental] SAT (label = 122).
+Label assignment: 19 22 42 25 59 54 117 26 90 100 48 107 44 92 78 20 39 68 67 110 40 116 62 120 50 23 94 74 109 69 121 24 66 55 111 52 93 18 30 98 118 104 45 10 58 97 105 12 71 49 101 32 36 63 16 119 91 56 5 4 103 75 7 51 2 65 102 89 106 88 114 3 11 122 108 73 112 47 8 31 6 96 9 21 115 41 70 87 15 27 99 113 72 1 85 46 13 53 38 95 
 c [Incremental] Max used label: 122.
 c [Incremental] Label 122 is removed from searching.
 c [Incremental] Solving for max label = 121:
-c [Incremental] Solving duration: 4 ms.
+c [Incremental] Solving duration: 1588 ms.
 s [Incremental] SAT (label = 121).
+Label assignment: 19 21 42 25 59 54 117 26 89 97 47 109 44 90 71 23 39 68 67 110 40 116 62 120 50 20 94 74 107 69 114 24 65 57 111 52 93 18 30 100 118 104 45 6 58 96 105 13 64 55 98 28 36 63 16 119 91 56 4 5 101 75 7 51 2 66 102 86 106 88 108 3 11 121 103 73 112 48 8 31 12 92 9 22 115 41 70 87 17 27 99 113 72 1 85 46 15 49 38 95 
 c [Incremental] Max used label: 121.
 c [Incremental] Label 121 is removed from searching.
 c [Incremental] Solving for max label = 120:
-c [Incremental] Solving duration: 3 ms.
+c [Incremental] Solving duration: 3858 ms.
 s [Incremental] SAT (label = 120).
+Label assignment: 14 23 43 25 47 54 117 26 85 97 46 109 44 92 71 21 39 68 67 110 40 116 62 120 50 19 94 74 107 69 114 22 66 57 111 52 93 17 27 100 118 104 45 10 58 99 105 13 72 55 98 28 36 63 4 119 89 56 3 2 106 75 6 51 7 65 90 84 101 88 115 8 11 113 91 70 112 48 1 31 12 96 9 20 103 41 64 87 24 18 102 108 73 5 86 42 15 53 38 95 
 c [Incremental] Max used label: 120.
 c [Incremental] Label 120 is removed from searching.
 c [Incremental] Solving for max label = 119:
-c [Incremental] Solving duration: 4 ms.
+c [Incremental] Solving duration: 8554 ms.
 s [Incremental] SAT (label = 119).
+Label assignment: 14 25 43 18 47 49 110 23 87 94 45 104 44 89 73 19 39 61 72 119 40 109 62 111 50 17 97 68 107 67 117 22 70 57 114 52 93 16 27 100 118 101 42 10 58 98 105 13 69 55 92 28 36 60 4 116 88 56 2 3 106 74 8 54 7 63 91 84 99 85 113 11 6 115 90 71 112 48 1 24 12 96 9 20 103 38 64 82 26 21 102 108 65 5 86 41 15 53 35 95 
 c [Incremental] Max used label: 119.
 c [Incremental] Label 119 is removed from searching.
 c [Incremental] Solving for max label = 118:
-c [Incremental] Solving duration: 3 ms.
+c [Incremental] Solving duration: 38541 ms.
 s [Incremental] SAT (label = 118).
+Label assignment: 30 16 26 11 25 48 112 19 76 91 46 73 47 90 64 4 39 58 65 108 31 111 114 115 118 15 94 72 71 67 107 22 59 52 102 113 75 24 18 95 104 100 42 10 56 98 69 9 60 50 92 21 32 116 117 105 89 53 1 3 99 61 23 51 28 49 77 84 93 85 103 7 5 109 74 62 110 55 8 29 2 101 27 6 97 38 63 82 17 14 96 106 68 12 88 20 13 54 35 70 
 c [Incremental] Max used label: 118.
 c [Incremental] Label 118 is removed from searching.
 c [Incremental] Solving for max label = 117:
-c [Incremental] Solving duration: 4 ms.
-s [Incremental] SAT (label = 117).
-c [Incremental] Max used label: 117.
-c [Incremental] Label 117 is removed from searching.
-c [Incremental] Solving for max label = 116:
-c [Incremental] Solving duration: 4 ms.
-s [Incremental] SAT (label = 116).
-c [Incremental] Max used label: 116.
-c [Incremental] Label 116 is removed from searching.
-c [Incremental] Solving for max label = 115:
-c [Incremental] Solving duration: 4 ms.
-s [Incremental] SAT (label = 115).
-c [Incremental] Max used label: 115.
-c [Incremental] Label 115 is removed from searching.
-c [Incremental] Solving for max label = 114:
-c [Incremental] Solving duration: 3 ms.
-s [Incremental] SAT (label = 114).
-c [Incremental] Max used label: 114.
-c [Incremental] Label 114 is removed from searching.
-c [Incremental] Solving for max label = 113:
-c [Incremental] Solving duration: 4 ms.
-s [Incremental] SAT (label = 113).
-c [Incremental] Max used label: 113.
-c [Incremental] Label 113 is removed from searching.
-c [Incremental] Solving for max label = 112:
-c [Incremental] Solving duration: 3 ms.
-s [Incremental] SAT (label = 112).
-c [Incremental] Max used label: 112.
-c [Incremental] Label 112 is removed from searching.
-c [Incremental] Solving for max label = 111:
-c [Incremental] Solving duration: 4 ms.
-s [Incremental] SAT (label = 111).
-c [Incremental] Max used label: 111.
-c [Incremental] Label 111 is removed from searching.
-c [Incremental] Solving for max label = 110:
-c [Incremental] Solving duration: 4 ms.
-s [Incremental] SAT (label = 110).
-c [Incremental] Max used label: 110.
-c [Incremental] Label 110 is removed from searching.
-c [Incremental] Solving for max label = 109:
-c [Incremental] Solving duration: 4 ms.
-s [Incremental] SAT (label = 109).
-c [Incremental] Max used label: 109.
-c [Incremental] Label 109 is removed from searching.
-c [Incremental] Solving for max label = 108:
-c [Incremental] Solving duration: 3 ms.
-s [Incremental] SAT (label = 108).
-c [Incremental] Max used label: 108.
-c [Incremental] Label 108 is removed from searching.
-c [Incremental] Solving for max label = 107:
-c [Incremental] Solving duration: 3 ms.
-s [Incremental] SAT (label = 107).
-c [Incremental] Max used label: 107.
-c [Incremental] Label 107 is removed from searching.
-c [Incremental] Solving for max label = 106:
-c [Incremental] Solving duration: 3 ms.
-s [Incremental] SAT (label = 106).
-c [Incremental] Max used label: 106.
-c [Incremental] Label 106 is removed from searching.
-c [Incremental] Solving for max label = 105:
-c [Incremental] Solving duration: 3 ms.
-s [Incremental] SAT (label = 105).
-c [Incremental] Max used label: 105.
-c [Incremental] Label 105 is removed from searching.
-c [Incremental] Solving for max label = 104:
-c [Incremental] Solving duration: 3 ms.
-s [Incremental] SAT (label = 104).
-c [Incremental] Max used label: 104.
-c [Incremental] Label 104 is removed from searching.
-c [Incremental] Solving for max label = 103:
-c [Incremental] Solving duration: 3 ms.
-s [Incremental] SAT (label = 103).
-c [Incremental] Max used label: 103.
-c [Incremental] Label 103 is removed from searching.
-c [Incremental] Solving for max label = 102:
-c [Incremental] Solving duration: 3 ms.
-s [Incremental] SAT (label = 102).
-c [Incremental] Max used label: 102.
-c [Incremental] Label 102 is removed from searching.
-c [Incremental] Solving for max label = 101:
-c [Incremental] Solving duration: 3 ms.
-s [Incremental] SAT (label = 101).
-c [Incremental] Max used label: 101.
-c [Incremental] Label 101 is removed from searching.
-c [Incremental] Solving for max label = 100:
-c [Incremental] Solving duration: 3 ms.
-s [Incremental] SAT (label = 100).
-c [Incremental] Max used label: 100.
-c [Incremental] Label 100 is removed from searching.
-c [Incremental] Solving for max label = 99:
-c [Incremental] Solving duration: 3 ms.
-s [Incremental] SAT (label = 99).
-c [Incremental] Max used label: 99.
-c [Incremental] Label 99 is removed from searching.
-c [Incremental] Solving for max label = 98:
-c [Incremental] Solving duration: 3 ms.
-s [Incremental] SAT (label = 98).
-c [Incremental] Max used label: 98.
-c [Incremental] Label 98 is removed from searching.
-c [Incremental] Solving for max label = 97:
-c [Incremental] Solving duration: 4 ms.
-s [Incremental] SAT (label = 97).
-c [Incremental] Max used label: 97.
-c [Incremental] Label 97 is removed from searching.
-c [Incremental] Solving for max label = 96:
-c [Incremental] Solving duration: 3 ms.
-s [Incremental] SAT (label = 96).
-c [Incremental] Max used label: 96.
-c [Incremental] Label 96 is removed from searching.
-c [Incremental] Solving for max label = 95:
-c [Incremental] Solving duration: 3 ms.
-s [Incremental] SAT (label = 95).
-c [Incremental] Max used label: 95.
-c [Incremental] Label 95 is removed from searching.
-c [Incremental] Solving for max label = 94:
-c [Incremental] Solving duration: 3 ms.
-s [Incremental] SAT (label = 94).
-c [Incremental] Max used label: 94.
-c [Incremental] Label 94 is removed from searching.
-c [Incremental] Solving for max label = 93:
-c [Incremental] Solving duration: 3 ms.
-s [Incremental] SAT (label = 93).
-c [Incremental] Max used label: 93.
-c [Incremental] Label 93 is removed from searching.
-c [Incremental] Solving for max label = 92:
-c [Incremental] Solving duration: 3 ms.
-s [Incremental] SAT (label = 92).
-c [Incremental] Max used label: 92.
-c [Incremental] Label 92 is removed from searching.
-c [Incremental] Solving for max label = 91:
-c [Incremental] Solving duration: 3 ms.
-s [Incremental] SAT (label = 91).
-c [Incremental] Max used label: 91.
-c [Incremental] Label 91 is removed from searching.
-c [Incremental] Solving for max label = 90:
-c [Incremental] Solving duration: 3 ms.
-s [Incremental] SAT (label = 90).
-c [Incremental] Max used label: 90.
-c [Incremental] Label 90 is removed from searching.
-c [Incremental] Solving for max label = 89:
-c [Incremental] Solving duration: 3 ms.
-s [Incremental] SAT (label = 89).
-c [Incremental] Max used label: 89.
-c [Incremental] Label 89 is removed from searching.
-c [Incremental] Solving for max label = 88:
-c [Incremental] Solving duration: 1 ms.
-s [Incremental] UNSAT (label = 88).
-c [Main] Work pid ends with result: 0.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Lim pid ends with result: 254.
 r [Main] 
 r [Main] Final results: 
-r [Main] Total real time: 290 ms.
-r [Main] Total memory consumed: 36.4 MB.
+r [Main] Total real time: 1806532 ms.
+r [Main] Total memory consumed: 106.1 MB.
 r [Main] 
-c [Signal] Signal interruption. Caught signal: SIGTERM (15).

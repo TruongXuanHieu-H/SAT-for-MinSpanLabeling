@@ -7,36 +7,34 @@ c [Main] Search strategy: Incremental from upper bound.
 c [Main] Encoding and solving for graph: H-impcol_b.mtx.rnd.
 c [Incremental] Minimize Makespan Labeling Antibandwidth problem (H-impcol_b.mtx.rnd):
 c [Incremental] Encoding starts with target value = 10:
-c [Incremental] Encoding duration: 53ms.
-c [Incremental] Number of clauses: 97463.
-c [Incremental] Number of variables: 11092.
+c [Incremental] Encoding duration: 59ms.
+c [Incremental] Number of clauses: 109007.
+c [Incremental] Number of variables: 13164.
 c [Incremental] Solving for max label = 74:
-c [Incremental] Solving duration: 3 ms.
+c [Incremental] Solving duration: 222 ms.
 s [Incremental] SAT (label = 74).
+Label assignment: 27 24 47 13 36 55 42 59 39 8 26 45 33 5 4 58 32 64 18 72 49 73 22 3 74 7 46 2 23 15 63 52 9 19 53 44 65 66 57 14 60 16 21 70 71 6 28 62 25 38 48 29 68 61 1 17 43 12 56 
 c [Incremental] Max used label: 74.
 c [Incremental] Label 74 is removed from searching.
 c [Incremental] Solving for max label = 73:
-c [Incremental] Solving duration: 2 ms.
+c [Incremental] Solving duration: 11 ms.
 s [Incremental] SAT (label = 73).
+Label assignment: 27 24 47 13 36 55 42 59 39 8 26 45 33 5 4 58 32 64 18 72 49 71 22 3 73 7 46 2 23 15 63 52 9 19 53 44 65 66 57 14 60 16 21 70 31 6 28 61 25 38 48 29 68 62 1 17 43 12 56 
 c [Incremental] Max used label: 73.
 c [Incremental] Label 73 is removed from searching.
 c [Incremental] Solving for max label = 72:
-c [Incremental] Solving duration: 1 ms.
+c [Incremental] Solving duration: 172 ms.
 s [Incremental] SAT (label = 72).
+Label assignment: 69 47 67 48 13 7 72 10 54 8 66 35 59 57 58 4 41 46 32 2 43 3 1 37 21 60 39 55 42 36 51 62 15 70 61 68 34 20 52 50 23 44 38 6 33 56 14 27 63 65 22 53 49 30 11 40 71 31 9 
 c [Incremental] Max used label: 72.
 c [Incremental] Label 72 is removed from searching.
 c [Incremental] Solving for max label = 71:
-c [Incremental] Solving duration: 1 ms.
-s [Incremental] SAT (label = 71).
-c [Incremental] Max used label: 71.
-c [Incremental] Label 71 is removed from searching.
-c [Incremental] Solving for max label = 70:
-c [Incremental] Solving duration: 243 ms.
-s [Incremental] UNSAT (label = 70).
+c [Incremental] Solving duration: 2735 ms.
+s [Incremental] UNSAT (label = 71).
 c [Main] Work pid ends with result: 0.
 r [Main] 
 r [Main] Final results: 
-r [Main] Total real time: 321 ms.
-r [Main] Total memory consumed: 34.4 MB.
+r [Main] Total real time: 3223 ms.
+r [Main] Total memory consumed: 43.6 MB.
 r [Main] 
 c [Signal] Signal interruption. Caught signal: SIGTERM (15).
