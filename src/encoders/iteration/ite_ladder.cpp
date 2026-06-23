@@ -41,6 +41,9 @@ void IteLadder::encode_vertices()
 
         switch (instance_data.global_data.vertices_mode)
         {
+        case VerticesMode::no_hole:
+            encode_at_least_one_naive(node_vertices_eo);
+            break;
         case VerticesMode::has_hole:
             encode_at_most_one_product(node_vertices_eo);
             break;
@@ -49,6 +52,11 @@ void IteLadder::encode_vertices()
             break;
         }
     }
+}
+
+void IteLadder::encode_at_least_one_naive(const std::vector<int> &vars)
+{
+    instance_data.cc->add_clause(vars);
 }
 
 void IteLadder::encode_at_most_one_product(const std::vector<int> &vars)
