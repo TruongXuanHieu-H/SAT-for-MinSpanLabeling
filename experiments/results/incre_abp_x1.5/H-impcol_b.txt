@@ -1,0 +1,46 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 13.
+c [Param] UB is predefined as 89.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Main] Search strategy: Incremental from upper bound.
+c [Main] Encoding and solving for graph: H-impcol_b.mtx.rnd.
+c [Incremental] Minimize Makespan Labeling Antibandwidth problem (H-impcol_b.mtx.rnd):
+c [Incremental] Encoding starts with target value = 12:
+c [Incremental] Encoding duration: 71ms.
+c [Incremental] Number of clauses: 132397.
+c [Incremental] Number of variables: 16062.
+c [Incremental] Solving for max label = 89:
+c [Incremental] Solving duration: 376 ms.
+s [Incremental] SAT (label = 89).
+Label assignment: 78 73 27 47 44 45 26 65 46 54 32 50 18 43 16 66 51 77 3 86 58 59 13 42 1 53 56 55 30 64 39 88 52 80 25 87 84 33 67 69 70 62 31 81 85 17 23 71 76 35 79 15 37 74 63 57 89 75 68 
+c [Incremental] Max used label: 89.
+c [Incremental] Label 89 is removed from searching.
+c [Incremental] Solving for max label = 88:
+c [Incremental] Solving duration: 24 ms.
+s [Incremental] SAT (label = 88).
+Label assignment: 70 73 86 58 44 10 76 65 40 54 28 50 18 43 16 66 27 77 3 72 84 59 13 42 1 53 56 45 30 64 39 88 52 80 75 83 31 33 67 49 69 4 85 81 22 17 23 2 78 35 79 15 55 57 51 74 87 63 68 
+c [Incremental] Max used label: 88.
+c [Incremental] Label 88 is removed from searching.
+c [Incremental] Solving for max label = 87:
+c [Incremental] Solving duration: 15 ms.
+s [Incremental] SAT (label = 87).
+Label assignment: 70 73 81 58 44 10 74 65 40 54 28 37 18 43 16 66 38 77 3 72 84 59 13 42 1 53 56 45 30 64 25 86 52 80 75 83 31 33 67 48 69 4 85 60 22 17 23 2 78 35 79 15 55 57 50 82 87 62 68 
+c [Incremental] Max used label: 87.
+c [Incremental] Label 87 is removed from searching.
+c [Incremental] Solving for max label = 86:
+c [Incremental] Solving duration: 15 ms.
+s [Incremental] SAT (label = 86).
+Label assignment: 70 76 81 58 45 10 73 65 40 54 28 46 18 15 16 66 37 77 31 72 84 59 13 42 1 53 60 48 30 64 25 85 52 80 74 83 33 34 67 38 69 3 32 62 36 17 23 2 78 35 79 19 55 57 49 82 86 61 14 
+c [Incremental] Max used label: 86.
+c [Incremental] Label 86 is removed from searching.
+c [Incremental] Solving for max label = 85:
+c [Incremental] Solving duration: 4704 ms.
+s [Incremental] UNSAT (label = 85).
+c [Main] Work pid ends with result: 0.
+r [Main] 
+r [Main] Final results: 
+r [Main] Total real time: 5235 ms.
+r [Main] Total memory consumed: 52.1 MB.
+r [Main] 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).

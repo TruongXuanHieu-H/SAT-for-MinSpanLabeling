@@ -1,0 +1,82 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 10.
+c [Param] UB is predefined as 45.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Main] Search strategy: Incremental from upper bound.
+c [Main] Encoding and solving for graph: A-pores_1.mtx.rnd.
+c [Incremental] Minimize Makespan Labeling Antibandwidth problem (A-pores_1.mtx.rnd):
+c [Incremental] Encoding starts with target value = 9:
+c [Incremental] Encoding duration: 13ms.
+c [Incremental] Number of clauses: 25706.
+c [Incremental] Number of variables: 3990.
+c [Incremental] Solving for max label = 45:
+c [Incremental] Solving duration: 37 ms.
+s [Incremental] SAT (label = 45).
+Label assignment: 9 10 13 18 19 22 21 42 44 41 30 32 29 26 31 8 45 43 33 6 1 17 23 25 36 40 27 7 39 24 
+c [Incremental] Max used label: 45.
+c [Incremental] Label 45 is removed from searching.
+c [Incremental] Solving for max label = 44:
+c [Incremental] Solving duration: 2 ms.
+s [Incremental] SAT (label = 44).
+Label assignment: 9 16 13 18 19 22 21 42 44 41 30 32 29 26 31 8 38 43 33 6 1 17 23 25 5 40 27 7 39 24 
+c [Incremental] Max used label: 44.
+c [Incremental] Label 44 is removed from searching.
+c [Incremental] Solving for max label = 43:
+c [Incremental] Solving duration: 3 ms.
+s [Incremental] SAT (label = 43).
+Label assignment: 5 10 3 18 4 19 15 41 42 37 24 14 31 11 28 21 39 43 12 6 20 30 23 29 1 38 27 2 40 32 
+c [Incremental] Max used label: 43.
+c [Incremental] Label 43 is removed from searching.
+c [Incremental] Solving for max label = 42:
+c [Incremental] Solving duration: 2 ms.
+s [Incremental] SAT (label = 42).
+Label assignment: 5 10 4 18 20 19 16 37 42 41 30 24 11 22 29 2 36 38 28 39 31 13 15 21 1 6 27 3 40 14 
+c [Incremental] Max used label: 42.
+c [Incremental] Label 42 is removed from searching.
+c [Incremental] Solving for max label = 41:
+c [Incremental] Solving duration: 2 ms.
+s [Incremental] SAT (label = 41).
+Label assignment: 5 16 11 18 19 20 14 41 40 39 23 30 28 26 29 8 36 2 31 38 1 17 21 25 4 3 27 7 37 22 
+c [Incremental] Max used label: 41.
+c [Incremental] Label 41 is removed from searching.
+c [Incremental] Solving for max label = 40:
+c [Incremental] Solving duration: 5 ms.
+s [Incremental] SAT (label = 40).
+Label assignment: 3 16 10 18 15 21 31 2 8 12 22 32 28 26 30 38 36 1 19 6 5 17 23 25 4 40 27 39 37 29 
+c [Incremental] Max used label: 40.
+c [Incremental] Label 40 is removed from searching.
+c [Incremental] Solving for max label = 39:
+c [Incremental] Solving duration: 2 ms.
+s [Incremental] SAT (label = 39).
+Label assignment: 2 15 1 18 25 20 21 37 38 11 30 32 16 26 29 7 36 10 28 6 35 17 23 24 4 39 27 8 5 19 
+c [Incremental] Max used label: 39.
+c [Incremental] Label 39 is removed from searching.
+c [Incremental] Solving for max label = 38:
+c [Incremental] Solving duration: 8 ms.
+s [Incremental] SAT (label = 38).
+Label assignment: 11 36 12 38 24 22 20 14 13 2 30 21 35 26 31 5 7 3 33 1 6 37 32 25 16 10 27 4 15 23 
+c [Incremental] Max used label: 38.
+c [Incremental] Label 38 is removed from searching.
+c [Incremental] Solving for max label = 37:
+c [Incremental] Solving duration: 361 ms.
+s [Incremental] SAT (label = 37).
+Label assignment: 2 34 10 33 25 22 30 7 4 11 21 31 35 37 32 16 14 1 36 12 6 26 20 24 5 3 23 13 15 27 
+c [Incremental] Max used label: 37.
+c [Incremental] Label 37 is removed from searching.
+c [Incremental] Solving for max label = 36:
+c [Incremental] Solving duration: 1 ms.
+s [Incremental] SAT (label = 36).
+Label assignment: 2 33 10 32 25 22 30 7 4 11 21 29 34 35 31 16 14 1 36 12 6 26 20 24 5 3 23 13 15 27 
+c [Incremental] Max used label: 36.
+c [Incremental] Label 36 is removed from searching.
+c [Incremental] Solving for max label = 35:
+c [Incremental] Solving duration: 11249 ms.
+s [Incremental] UNSAT (label = 35).
+c [Main] Work pid ends with result: 0.
+r [Main] 
+r [Main] Final results: 
+r [Main] Total real time: 11697 ms.
+r [Main] Total memory consumed: 16.9 MB.
+r [Main] 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
