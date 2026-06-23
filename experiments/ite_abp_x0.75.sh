@@ -2,7 +2,7 @@
 
 build_dir="../../build"
 dataset_dir="../../benchmarks"
-report_dir="../../experiments/results/incremental/ite_abp_x0.75"
+report_dir="../../experiments/results/iteration/ite_abp_x0.75"
 
 time_limit="1800"
 memory_limit="30000"
