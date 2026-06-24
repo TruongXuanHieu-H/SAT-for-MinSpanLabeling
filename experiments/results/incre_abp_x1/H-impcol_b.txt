@@ -1,0 +1,26 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 9.
+c [Param] UB is predefined as 59.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Main] Search strategy: Incremental from upper bound.
+c [Main] Encoding and solving for graph: H-impcol_b.mtx.rnd.
+c [Incremental] Minimize Makespan Labeling Antibandwidth problem (H-impcol_b.mtx.rnd):
+c [Incremental] Encoding starts with target value = 8:
+c [Incremental] Encoding duration: 38ms.
+c [Incremental] Number of clauses: 85616.
+c [Incremental] Number of variables: 10266.
+c [Incremental] Solving for max label = 59:
+c [Incremental] Solving duration: 378 ms.
+s [Incremental] SAT (label = 59).
+Label assignment: 11 54 36 27 13 24 34 8 21 5 39 55 15 14 20 17 1 32 44 58 30 28 59 7 9 25 57 10 40 4 18 42 3 46 35 37 56 50 23 2 45 29 41 48 53 19 12 47 22 38 6 16 52 49 26 33 43 51 31 
+c [Incremental] Max used label: 59.
+c [Incremental] Label 59 is removed from searching.
+c [Incremental] Solving for max label = 58:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Lim pid ends with result: 254.
+r [Main] 
+r [Main] Final results: 
+r [Main] Total real time: 1806354 ms.
+r [Main] Total memory consumed: 117.8 MB.
+r [Main] 

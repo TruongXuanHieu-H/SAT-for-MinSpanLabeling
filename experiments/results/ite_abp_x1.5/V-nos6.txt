@@ -1,0 +1,50 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 494.
+c [Param] UB is predefined as 1013.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Param] Worker count is set to 8.
+c [Main] Search strategy: Iterating Breadth First Search.
+c [Main] Search order: 753 623 883 558 688 818 948 525 590 655 720 785 850 915 981 509 541 574 606 639 671 704 736 769 801 834 866 899 931 964 997 501 517 533 549 566 582 598 614 631 647 663 679 696 712 728 744 761 777 793 809 826 842 858 874 891 907 923 939 956 972 989 1005 497 505 513 521 529 537 545 553 562 570 578 586 594 602 610 618 627 635 643 651 659 667 675 683 692 700 708 716 724 732 740 748 757 765 773 781 789 797 805 813 822 830 838 846 854 862 870 878 887 895 903 911 919 927 935 943 952 960 968 976 985 993 1001 1009 495 499 503 507 511 515 519 523 527 531 535 539 543 547 551 555 560 564 568 572 576 580 584 588 592 596 600 604 608 612 616 620 625 629 633 637 641 645 649 653 657 661 665 669 673 677 681 685 690 694 698 702 706 710 714 718 722 726 730 734 738 742 746 750 755 759 763 767 771 775 779 783 787 791 795 799 803 807 811 815 820 824 828 832 836 840 844 848 852 856 860 864 868 872 876 880 885 889 893 897 901 905 909 913 917 921 925 929 933 937 941 945 950 954 958 962 966 970 974 978 983 987 991 995 999 1003 1007 1011 494 496 498 500 502 504 506 508 510 512 514 516 518 520 522 524 526 528 530 532 534 536 538 540 542 544 546 548 550 552 554 556 559 561 563 565 567 569 571 573 575 577 579 581 583 585 587 589 591 593 595 597 599 601 603 605 607 609 611 613 615 617 619 621 624 626 628 630 632 634 636 638 640 642 644 646 648 650 652 654 656 658 660 662 664 666 668 670 672 674 676 678 680 682 684 686 689 691 693 695 697 699 701 703 705 707 709 711 713 715 717 719 721 723 725 727 729 731 733 735 737 739 741 743 745 747 749 751 754 756 758 760 762 764 766 768 770 772 774 776 778 780 782 784 786 788 790 792 794 796 798 800 802 804 806 808 810 812 814 816 819 821 823 825 827 829 831 833 835 837 839 841 843 845 847 849 851 853 855 857 859 861 863 865 867 869 871 873 875 877 879 881 884 886 888 890 892 894 896 898 900 902 904 906 908 910 912 914 916 918 920 922 924 926 928 930 932 934 936 938 940 942 944 946 949 951 953 955 957 959 961 963 965 967 969 971 973 975 977 979 982 984 986 988 990 992 994 996 998 1000 1002 1004 1006 1008 1010 1012 557 622 687 752 817 882 947 980 1013.
+c [Main] Encoding and solving for graph: V-nos6.mtx.rnd.
+c [Label = 818] Encoding duration: 9526ms.
+c [Label = 818] Number of clauses: 5326352.
+c [Label = 818] Number of variables: 1184750.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 525] Encoding duration: 4417ms.
+c [Label = 525] Number of clauses: 2387122.
+c [Label = 525] Number of variables: 759900.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 688] Encoding duration: 6917ms.
+c [Label = 688] Number of clauses: 4022257.
+c [Label = 688] Number of variables: 996250.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 558] Encoding duration: 4978ms.
+c [Label = 558] Number of clauses: 2718162.
+c [Label = 558] Number of variables: 807750.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 883] Encoding duration: 10909ms.
+c [Label = 883] Number of clauses: 5978399.
+c [Label = 883] Number of variables: 1279000.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 623] Encoding duration: 5830ms.
+c [Label = 623] Number of clauses: 3370209.
+c [Label = 623] Number of variables: 902000.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 948] Encoding duration: 12734ms.
+c [Label = 948] Number of clauses: 6630447.
+c [Label = 948] Number of variables: 1373250.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 753] Encoding duration: 8247ms.
+c [Label = 753] Number of clauses: 4674304.
+c [Label = 753] Number of variables: 1090500.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Lim pid ends with result: 254.
+c [Main] All children have completed.
+r [Main] 
+r [Main] Final results: 
+r [Main] Lowest label SAT:  	-.
+r [Main] Highest label UNSAT:	-.
+r [Main] Total real time: 1812515 ms.
+r [Main] Total memory consumed: 12657.2 MB.
+r [Main] 

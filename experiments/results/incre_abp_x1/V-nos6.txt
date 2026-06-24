@@ -1,0 +1,20 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 330.
+c [Param] UB is predefined as 675.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Main] Search strategy: Incremental from upper bound.
+c [Main] Encoding and solving for graph: V-nos6.mtx.rnd.
+c [Incremental] Minimize Makespan Labeling Antibandwidth problem (V-nos6.mtx.rnd):
+c [Incremental] Encoding starts with target value = 329:
+c [Incremental] Encoding duration: 6453ms.
+c [Incremental] Number of clauses: 5507092.
+c [Incremental] Number of variables: 1197450.
+c [Incremental] Solving for max label = 675:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Lim pid ends with result: 254.
+r [Main] 
+r [Main] Final results: 
+r [Main] Total real time: 1806606 ms.
+r [Main] Total memory consumed: 2340.5 MB.
+r [Main] 

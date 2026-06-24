@@ -1,0 +1,26 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 52.
+c [Param] UB is predefined as 117.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Main] Search strategy: Incremental from upper bound.
+c [Main] Encoding and solving for graph: K-dwt__234.mtx.rnd.
+c [Incremental] Minimize Makespan Labeling Antibandwidth problem (K-dwt__234.mtx.rnd):
+c [Incremental] Encoding starts with target value = 51:
+c [Incremental] Encoding duration: 102ms.
+c [Incremental] Number of clauses: 155407.
+c [Incremental] Number of variables: 37440.
+c [Incremental] Solving for max label = 117:
+c [Incremental] Solving duration: 122672 ms.
+s [Incremental] SAT (label = 117).
+Label assignment: 115 26 61 45 1 43 9 100 113 21 92 48 16 44 18 84 38 52 117 88 40 33 63 41 82 49 8 103 93 19 74 81 51 110 10 39 101 31 29 69 37 34 64 102 58 105 46 73 72 111 83 106 66 77 99 57 70 91 95 32 114 59 62 47 116 75 78 87 71 50 68 23 7 76 60 17 27 56 4 90 13 22 54 20 24 108 25 96 15 55 67 2 6 35 109 85 89 107 104 65 86 53 112 98 36 80 28 3 79 12 97 30 14 5 42 11 94 
+c [Incremental] Max used label: 117.
+c [Incremental] Label 117 is removed from searching.
+c [Incremental] Solving for max label = 116:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Lim pid ends with result: 254.
+r [Main] 
+r [Main] Final results: 
+r [Main] Total real time: 1806563 ms.
+r [Main] Total memory consumed: 103.6 MB.
+r [Main] 
