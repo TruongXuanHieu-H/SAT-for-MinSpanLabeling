@@ -30,27 +30,50 @@ void IncreLadder::do_encode_antibandwidth()
 
 void IncreLadder::encode_vertices()
 {
-    for (int label = 0; label < instance_data.global_data.upper_bound; label++)
+    switch (instance_data.global_data.vertices_mode)
     {
-        std::vector<int> node_vertices_eo(instance_data.global_data.g->n);
-
-        for (int vertex = 0; vertex < instance_data.global_data.g->n; vertex++)
+    case VerticesMode::no_hole:
+    {
+        std::vector<int> incre_aux_var(instance_data.global_data.upper_bound);
+        for (int label = 0; label < instance_data.global_data.upper_bound; label++)
         {
-            node_vertices_eo[vertex] = vertex * instance_data.global_data.upper_bound + label + 1;
-        }
+            incre_aux_var[label] = instance_data.vh->get_new_var();
 
-        switch (instance_data.global_data.vertices_mode)
+            std::vector<int> node_vertices(instance_data.global_data.g->n);
+
+            for (int vertex = 0; vertex < instance_data.global_data.g->n; vertex++)
+            {
+                node_vertices[vertex] = vertex * instance_data.global_data.upper_bound + label + 1;
+                instance_data.cc->add_clause({incre_aux_var[label], -node_vertices[vertex]});
+            }
+
+            node_vertices.push_back(-incre_aux_var[label]);
+            instance_data.cc->add_clause(node_vertices);
+        }
+        for (int i = 1; i < (int)incre_aux_var.size(); i++)
         {
-        case VerticesMode::no_hole:
-            encode_at_least_one_naive(node_vertices_eo);
-            break;
-        case VerticesMode::has_hole:
-            encode_at_most_one_product(node_vertices_eo);
-            break;
-
-        default:
-            break;
+            instance_data.cc->add_clause({-incre_aux_var[i], incre_aux_var[i - 1]});
         }
+        break;
+    }
+    case VerticesMode::has_hole:
+    {
+        for (int label = 0; label < instance_data.global_data.upper_bound; label++)
+        {
+            std::vector<int> node_vertices(instance_data.global_data.g->n);
+
+            for (int vertex = 0; vertex < instance_data.global_data.g->n; vertex++)
+            {
+                node_vertices[vertex] = vertex * instance_data.global_data.upper_bound + label + 1;
+            }
+
+            encode_at_most_one_product(node_vertices);
+        }
+        break;
+    }
+
+    default:
+        break;
     }
 }
 
