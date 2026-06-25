@@ -74,7 +74,7 @@ int IncreInstance::encode_and_solve_problem()
             {
                 for (int j = 0; j < global_data.g->n; j++)
                 {
-                    instance_data->solver->add_clause({-(j * global_data.upper_bound + k)});
+                    instance_data->cc->add_clause({-(j * global_data.upper_bound + k)});
                 }
                 std::cout << "c " << instance_data->get_signature() << " Label " << k << " is removed from searching.\n";
             }
