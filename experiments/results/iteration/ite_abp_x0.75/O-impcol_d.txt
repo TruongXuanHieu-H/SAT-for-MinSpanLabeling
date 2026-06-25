@@ -1,0 +1,134 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 91.
+c [Param] UB is predefined as 425.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Param] Worker count is set to 8.
+c [Main] Search strategy: Iterating Breadth First Search.
+c [Main] Search order: 258 174 342 132 216 300 384 111 153 195 237 279 321 363 405 100 121 142 163 184 205 226 247 268 289 310 331 352 373 394 415 95 105 116 126 137 147 158 168 179 189 200 210 221 231 242 252 263 273 284 294 305 315 326 336 347 357 368 378 389 399 410 420 92 97 102 108 113 118 123 129 134 139 144 150 155 160 165 171 176 181 186 192 197 202 207 213 218 223 228 234 239 244 249 255 260 265 270 276 281 286 291 297 302 307 312 318 323 328 333 339 344 349 354 360 365 370 375 381 386 391 396 402 407 412 417 423 91 93 96 98 101 103 106 109 112 114 117 119 122 124 127 130 133 135 138 140 143 145 148 151 154 156 159 161 164 166 169 172 175 177 180 182 185 187 190 193 196 198 201 203 206 208 211 214 217 219 222 224 227 229 232 235 238 240 243 245 248 250 253 256 259 261 264 266 269 271 274 277 280 282 285 287 290 292 295 298 301 303 306 308 311 313 316 319 322 324 327 329 332 334 337 340 343 345 348 350 353 355 358 361 364 366 369 371 374 376 379 382 385 387 390 392 395 397 400 403 406 408 411 413 416 418 421 424 94 99 104 107 110 115 120 125 128 131 136 141 146 149 152 157 162 167 170 173 178 183 188 191 194 199 204 209 212 215 220 225 230 233 236 241 246 251 254 257 262 267 272 275 278 283 288 293 296 299 304 309 314 317 320 325 330 335 338 341 346 351 356 359 362 367 372 377 380 383 388 393 398 401 404 409 414 419 422 425.
+c [Main] Encoding and solving for graph: O-impcol_d.mtx.rnd.
+c [Label = 111] Encoding duration: 398ms.
+c [Label = 111] Number of clauses: 302936.
+c [Label = 111] Number of variables: 93500.
+c [Label = 111] Solving duration: 0 ms.
+s [Label = 111] UNSAT (w = 90).
+c [Main] Highest label UNSAT is set to 111
+c [Label = 132] Encoding duration: 534ms.
+c [Label = 132] Number of clauses: 454021.
+c [Label = 132] Number of variables: 111350.
+c [Label = 132] Solving duration: 0 ms.
+s [Label = 132] UNSAT (w = 90).
+c [Main] Highest label UNSAT is set to 132
+c [Label = 174] Encoding duration: 892ms.
+c [Label = 174] Number of clauses: 756190.
+c [Label = 174] Number of variables: 147050.
+c [Label = 174] Solving duration: 0 ms.
+s [Label = 174] UNSAT (w = 90).
+c [Main] Highest label UNSAT is set to 174
+c [Main] Kill lower label pid 153.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 153 - 724523 terminated by signal 15.
+c [Label = 216] Encoding duration: 1315ms.
+c [Label = 216] Number of clauses: 1166758.
+c [Label = 216] Number of variables: 219725.
+c [Label = 216] Solving duration: 3620 ms.
+s [Label = 216] UNSAT (w = 90).
+c [Main] Highest label UNSAT is set to 216
+c [Main] Kill lower label pid 195.
+c [Label = 195] Encoding duration: 1088ms.
+c [Label = 195] Number of clauses: 1015673.
+c [Label = 195] Number of variables: 201875.
+c [Label = 195] Solving duration: 3333 ms.
+s [Label = 195] UNSAT (w = 90).
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 195 - 724525 terminated by signal 15.
+c [Label = 258] Encoding duration: 1751ms.
+c [Label = 258] Number of clauses: 1468927.
+c [Label = 258] Number of variables: 255425.
+c [Label = 258] Solving duration: 4179 ms.
+s [Label = 258] UNSAT (w = 90).
+c [Main] Highest label UNSAT is set to 258
+c [Main] Kill lower label pid 237.
+c [Label = 237] Encoding duration: 1469ms.
+c [Label = 237] Number of clauses: 1317842.
+c [Label = 237] Number of variables: 237575.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 237 - 724526 terminated by signal 15.
+c [Label = 268] Encoding duration: 1826ms.
+c [Label = 268] Number of clauses: 1540872.
+c [Label = 268] Number of variables: 263925.
+c [Label = 268] Solving duration: 4141 ms.
+s [Label = 268] UNSAT (w = 90).
+c [Main] Highest label UNSAT is set to 268
+c [Label = 321] Encoding duration: 2509ms.
+c [Label = 321] Number of clauses: 2031004.
+c [Label = 321] Number of variables: 345950.
+c [Label = 321] Solving duration: 734195 ms.
+s [Label = 321] SAT (w = 90).
+Label assignment: 321 123 52 134 202 300 115 192 167 116 230 5 122 192 321 208 150 40 113 174 320 218 88 7 266 2 321 137 262 183 275 321 321 321 192 111 183 129 321 321 159 251 4 81 230 265 4 286 218 47 231 319 227 30 264 318 231 158 261 257 15 40 4 145 210 47 22 47 1 182 321 1 185 153 259 59 321 321 4 46 34 204 79 99 87 170 188 185 9 3 240 21 93 321 195 176 193 321 173 321 321 126 321 136 33 321 162 1 50 191 217 320 294 321 125 181 177 229 276 140 139 7 125 321 241 321 60 154 78 16 198 313 90 321 321 321 321 91 283 220 42 204 103 33 106 35 269 287 268 238 302 307 57 309 23 152 70 95 1 216 239 89 214 131 237 63 118 82 1 247 223 321 136 96 121 321 166 112 277 310 295 246 133 254 226 242 299 255 11 127 157 37 9 293 231 68 1 74 288 308 139 244 108 1 116 279 91 65 8 270 21 31 119 190 169 256 289 184 132 16 280 211 321 143 103 227 248 186 161 158 25 281 17 61 205 268 206 184 243 267 305 219 107 67 91 216 321 76 197 203 168 4 176 29 13 172 298 5 100 263 321 110 228 171 301 180 94 196 304 312 163 209 4 321 232 314 189 142 215 184 64 212 3 49 1 290 165 71 20 193 19 98 181 234 260 285 1 144 53 149 178 55 206 26 43 199 80 194 187 5 27 184 9 274 138 121 94 128 1 245 235 38 12 92 13 28 51 278 184 184 9 147 146 10 200 101 41 94 45 69 14 122 102 303 258 1 62 220 291 83 77 249 94 24 94 297 18 97 114 236 184 148 225 252 32 179 135 320 6 109 233 311 316 296 86 36 253 58 317 222 292 141 117 73 221 104 213 56 3 99 250 85 44 224 321 180 272 273 130 315 271 151 177 282 48 164 226 120 207 306 75 156 84 72 321 175 66 284 155 39 201 160 54 124 105 
+c [Main] Lowest label SAT is set to 321.
+c [Main] Kill higher label pid 405.
+c [Main] Kill higher label pid 363.
+c [Main] Kill higher label pid 384.
+c [Main] Kill higher label pid 342.
+c [Label = 342] Encoding duration: 2809ms.
+c [Label = 342] Number of clauses: 2182089.
+c [Label = 342] Number of variables: 363800.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 384] Encoding duration: 3428ms.
+c [Label = 384] Number of clauses: 2593507.
+c [Label = 384] Number of variables: 436475.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 363] Encoding duration: 2941ms.
+c [Label = 363] Number of clauses: 2442422.
+c [Label = 363] Number of variables: 418625.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 405] Encoding duration: 3486ms.
+c [Label = 405] Number of clauses: 2744591.
+c [Label = 405] Number of variables: 454325.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 342 - 724517 terminated by signal 15.
+c [Main] Child pid 384 - 724521 terminated by signal 15.
+c [Main] Child pid 363 - 724529 terminated by signal 15.
+c [Main] Child pid 405 - 724530 terminated by signal 15.
+c [Label = 294] Encoding duration: 2365ms.
+c [Label = 294] Number of clauses: 1836753.
+c [Label = 294] Number of variables: 323000.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 273] Encoding duration: 1996ms.
+c [Label = 273] Number of clauses: 1685668.
+c [Label = 273] Number of variables: 305150.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 284] Encoding duration: 2059ms.
+c [Label = 284] Number of clauses: 1764808.
+c [Label = 284] Number of variables: 314500.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 289] Encoding duration: 2254ms.
+c [Label = 289] Number of clauses: 1800780.
+c [Label = 289] Number of variables: 318750.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 305] Encoding duration: 2228ms.
+c [Label = 305] Number of clauses: 1915892.
+c [Label = 305] Number of variables: 332350.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 279] Encoding duration: 2113ms.
+c [Label = 279] Number of clauses: 1728835.
+c [Label = 279] Number of variables: 310250.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 300] Encoding duration: 2287ms.
+c [Label = 300] Number of clauses: 1879920.
+c [Label = 300] Number of variables: 328100.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Lim pid ends with result: 254.
+c [Main] All children have completed.
+r [Main] 
+r [Main] Final results: 
+r [Main] Lowest label SAT:  	321.
+r [Main] Highest label UNSAT:	268.
+r [Main] Total real time: 1812440 ms.
+r [Main] Total memory consumed: 6957.5 MB.
+r [Main] 
+c [Label = 310] Encoding duration: 2384ms.
+c [Label = 310] Number of clauses: 1951865.
+c [Label = 310] Number of variables: 336600.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
