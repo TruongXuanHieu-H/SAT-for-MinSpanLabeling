@@ -7,164 +7,145 @@ c [Param] Worker count is set to 8.
 c [Main] Search strategy: Iterating Breadth First Search.
 c [Main] Search order: 394 248 540 175 321 467 613 138 211 284 357 430 503 576 649 120 156 193 229 266 302 339 375 412 448 485 521 558 594 631 667 111 129 147 165 184 202 220 238 257 275 293 311 330 348 366 384 403 421 439 457 476 494 512 530 549 567 585 603 622 640 658 676 106 115 124 133 142 151 160 170 179 188 197 206 215 224 233 243 252 261 270 279 288 297 306 316 325 334 343 352 361 370 379 389 398 407 416 425 434 443 452 462 471 480 489 498 507 516 525 535 544 553 562 571 580 589 598 608 617 626 635 644 653 662 671 681 104 108 113 117 122 126 131 135 140 144 149 153 158 162 167 172 177 181 186 190 195 199 204 208 213 217 222 226 231 235 240 245 250 254 259 263 268 272 277 281 286 290 295 299 304 308 313 318 323 327 332 336 341 345 350 354 359 363 368 372 377 381 386 391 396 400 405 409 414 418 423 427 432 436 441 445 450 454 459 464 469 473 478 482 487 491 496 500 505 509 514 518 523 527 532 537 542 546 551 555 560 564 569 573 578 582 587 591 596 600 605 610 615 619 624 628 633 637 642 646 651 655 660 664 669 673 678 683 103 105 107 109 112 114 116 118 121 123 125 127 130 132 134 136 139 141 143 145 148 150 152 154 157 159 161 163 166 168 171 173 176 178 180 182 185 187 189 191 194 196 198 200 203 205 207 209 212 214 216 218 221 223 225 227 230 232 234 236 239 241 244 246 249 251 253 255 258 260 262 264 267 269 271 273 276 278 280 282 285 287 289 291 294 296 298 300 303 305 307 309 312 314 317 319 322 324 326 328 331 333 335 337 340 342 344 346 349 351 353 355 358 360 362 364 367 369 371 373 376 378 380 382 385 387 390 392 395 397 399 401 404 406 408 410 413 415 417 419 422 424 426 428 431 433 435 437 440 442 444 446 449 451 453 455 458 460 463 465 468 470 472 474 477 479 481 483 486 488 490 492 495 497 499 501 504 506 508 510 513 515 517 519 522 524 526 528 531 533 536 538 541 543 545 547 550 552 554 556 559 561 563 565 568 570 572 574 577 579 581 583 586 588 590 592 595 597 599 601 604 606 609 611 614 616 618 620 623 625 627 629 632 634 636 638 641 643 645 647 650 652 654 656 659 661 663 665 668 670 672 674 677 679 682 684 110 119 128 137 146 155 164 169 174 183 192 201 210 219 228 237 242 247 256 265 274 283 292 301 310 315 320 329 338 347 356 365 374 383 388 393 402 411 420 429 438 447 456 461 466 475 484 493 502 511 520 529 534 539 548 557 566 575 584 593 602 607 612 621 630 639 648 657 666 675 680 685.
 c [Main] Encoding and solving for graph: W-685_bus.mtx.rnd.
-c [Label = 138] Encoding duration: 799ms.
+c [Label = 138] Encoding duration: 633ms.
 c [Label = 138] Number of clauses: 584767.
 c [Label = 138] Number of variables: 187690.
 c [Label = 138] Solving duration: 0 ms.
 s [Label = 138] UNSAT (w = 102).
 c [Main] Highest label UNSAT is set to 138
-c [Label = 175] Encoding duration: 1071ms.
+c [Label = 175] Encoding duration: 958ms.
 c [Label = 175] Number of clauses: 901283.
 c [Label = 175] Number of variables: 238380.
 c [Label = 175] Solving duration: 0 ms.
 s [Label = 175] UNSAT (w = 102).
 c [Main] Highest label UNSAT is set to 175
-c [Label = 211] Encoding duration: 1559ms.
+c [Label = 211] Encoding duration: 1532ms.
 c [Label = 211] Number of clauses: 1410899.
 c [Label = 211] Number of variables: 355515.
-c [Label = 211] Solving duration: 5249 ms.
+c [Label = 211] Solving duration: 5149 ms.
 s [Label = 211] UNSAT (w = 102).
 c [Main] Highest label UNSAT is set to 211
-c [Label = 248] Encoding duration: 2054ms.
+c [Label = 248] Encoding duration: 1952ms.
 c [Label = 248] Number of clauses: 1727416.
 c [Label = 248] Number of variables: 406205.
-c [Label = 248] Solving duration: 5899 ms.
+c [Label = 248] Solving duration: 5761 ms.
 s [Label = 248] UNSAT (w = 102).
 c [Main] Highest label UNSAT is set to 248
-c [Label = 284] Encoding duration: 2255ms.
+c [Label = 284] Encoding duration: 2215ms.
 c [Label = 284] Number of clauses: 2035378.
 c [Label = 284] Number of variables: 455525.
-c [Label = 284] Solving duration: 6416 ms.
+c [Label = 284] Solving duration: 6549 ms.
 s [Label = 284] UNSAT (w = 102).
 c [Main] Highest label UNSAT is set to 284
-c [Label = 321] Encoding duration: 3321ms.
+c [Label = 321] Encoding duration: 2933ms.
 c [Label = 321] Number of clauses: 2554233.
 c [Label = 321] Number of variables: 574030.
-c [Label = 321] Solving duration: 9245 ms.
+c [Label = 321] Solving duration: 9286 ms.
 s [Label = 321] UNSAT (w = 102).
 c [Main] Highest label UNSAT is set to 321
-c [Label = 394] Encoding duration: 3867ms.
+c [Label = 394] Encoding duration: 3707ms.
 c [Label = 394] Number of clauses: 3178712.
 c [Label = 394] Number of variables: 674040.
-c [Label = 394] Solving duration: 10154 ms.
+c [Label = 394] Solving duration: 10390 ms.
 s [Label = 394] UNSAT (w = 102).
 c [Main] Highest label UNSAT is set to 394
 c [Main] Kill lower label pid 357.
-c [Label = 357] Encoding duration: 3433ms.
+c [Label = 357] Encoding duration: 3349ms.
 c [Label = 357] Number of clauses: 2862195.
 c [Label = 357] Number of variables: 623350.
 c [Signal] Signal interruption. Caught signal: SIGTERM (15).
-c [Main] Child pid 357 - 739451 terminated by signal 15.
-c [Label = 467] Encoding duration: 5354ms.
+c [Main] Child pid 357 - 744607 terminated by signal 15.
+c [Label = 467] Encoding duration: 4893ms.
 c [Label = 467] Number of clauses: 4006214.
 c [Label = 467] Number of variables: 841865.
-c [Label = 467] Solving duration: 14481 ms.
+c [Label = 467] Solving duration: 14300 ms.
 s [Label = 467] UNSAT (w = 102).
 c [Main] Highest label UNSAT is set to 467
 c [Main] Kill lower label pid 430.
 c [Main] Kill lower label pid 412.
-c [Label = 430] Encoding duration: 4594ms.
+c [Label = 430] Encoding duration: 4521ms.
 c [Label = 430] Number of clauses: 3689698.
 c [Label = 430] Number of variables: 791175.
 c [Signal] Signal interruption. Caught signal: SIGTERM (15).
-c [Label = 412] Encoding duration: 4419ms.
+c [Label = 412] Encoding duration: 4262ms.
 c [Label = 412] Number of clauses: 3535717.
 c [Label = 412] Number of variables: 766515.
 c [Signal] Signal interruption. Caught signal: SIGTERM (15).
-c [Main] Child pid 412 - 739459 terminated by signal 15.
-c [Main] Child pid 430 - 739452 terminated by signal 15.
-c [Label = 503] Encoding duration: 5467ms.
+c [Main] Child pid 412 - 744624 terminated by signal 15.
+c [Main] Child pid 430 - 744608 terminated by signal 15.
+c [Label = 503] Encoding duration: 5521ms.
 c [Label = 503] Number of clauses: 4314176.
 c [Label = 503] Number of variables: 891185.
-c [Label = 503] Solving duration: 15095 ms.
+c [Label = 503] Solving duration: 14675 ms.
 s [Label = 503] UNSAT (w = 102).
 c [Main] Highest label UNSAT is set to 503
 c [Main] Kill lower label pid 485.
-c [Label = 485] Encoding duration: 5394ms.
+c [Label = 485] Encoding duration: 4982ms.
 c [Label = 485] Number of clauses: 4160195.
 c [Label = 485] Number of variables: 866525.
 c [Signal] Signal interruption. Caught signal: SIGTERM (15).
-c [Main] Child pid 485 - 739461 terminated by signal 15.
-c [Label = 594] Encoding duration: 6818ms.
+c [Main] Child pid 485 - 744630 terminated by signal 15.
+c [Label = 594] Encoding duration: 6899ms.
 c [Label = 594] Number of clauses: 5296345.
 c [Label = 594] Number of variables: 1083670.
-c [Label = 594] Solving duration: 1229375 ms.
+c [Label = 594] Solving duration: 1228852 ms.
 s [Label = 594] SAT (w = 102).
 Label assignment: 584 592 3 215 594 67 582 576 574 154 557 2 348 146 564 594 558 233 303 303 275 403 593 590 1 166 590 248 252 349 456 78 249 592 291 586 589 1 535 423 513 590 590 544 550 80 578 342 155 579 348 102 319 589 380 332 585 555 561 594 349 594 576 304 3 588 417 590 305 594 394 345 346 562 594 318 249 121 551 1 589 586 506 2 129 589 253 12 589 441 141 295 559 346 145 589 350 1 151 594 346 591 353 494 477 588 35 589 351 594 589 162 418 583 575 256 273 579 584 262 250 594 582 213 591 594 339 589 569 306 302 364 301 344 497 232 574 97 347 351 247 4 593 201 1 589 446 1 1 9 383 583 341 565 453 189 1 424 594 343 420 593 445 187 1 243 104 472 283 478 585 1 373 391 515 258 392 317 414 304 277 586 109 566 570 481 587 591 304 572 533 543 13 61 541 269 357 70 246 577 511 278 100 174 573 532 139 306 355 76 138 157 473 65 297 18 128 362 82 286 335 539 321 142 239 168 164 228 333 521 280 191 282 4 259 221 530 447 536 57 56 45 537 263 73 87 62 134 148 131 126 257 301 489 34 422 396 331 230 10 402 594 282 338 167 327 428 182 279 249 285 265 395 476 459 186 411 254 307 130 276 48 586 122 175 133 351 229 512 356 594 467 452 267 160 217 510 60 156 328 245 99 450 147 465 235 552 296 89 399 72 330 83 22 223 466 409 527 98 436 482 284 261 171 103 29 117 366 549 185 568 125 260 124 400 298 351 143 508 410 442 112 299 165 548 255 24 207 48 518 218 118 520 320 538 220 170 159 412 249 323 266 463 21 195 505 234 419 529 119 389 289 519 310 123 458 359 105 413 58 110 11 387 480 471 192 135 178 196 525 523 448 249 274 8 66 194 81 270 107 462 464 268 1 501 528 2 179 444 485 91 449 71 39 17 75 226 479 363 438 563 53 198 47 524 68 287 211 443 180 43 496 55 28 371 288 329 152 437 216 517 374 309 434 237 334 272 408 292 451 326 42 219 407 52 454 416 84 522 2 132 95 41 293 8 184 252 161 312 140 2 455 169 487 172 507 415 375 15 1 378 188 92 495 324 183 244 314 330 114 181 144 94 224 432 93 367 540 173 316 38 250 50 40 514 101 204 214 492 315 368 32 64 294 116 240 36 30 380 381 153 54 404 199 115 50 44 556 120 516 14 7 502 108 222 103 547 46 88 149 401 398 397 31 313 290 340 8 567 6 193 388 137 79 427 406 264 63 27 405 209 106 163 426 22 33 158 365 435 468 271 20 322 23 433 503 461 531 361 96 498 203 352 197 500 212 238 25 499 384 85 425 294 236 206 429 560 251 460 69 51 16 234 150 177 385 526 553 390 26 74 208 509 200 311 491 111 372 44 77 5 382 358 225 242 227 281 379 86 308 466 490 377 483 474 360 49 127 376 545 176 493 336 581 90 534 439 542 369 300 210 136 430 484 241 440 252 37 457 202 469 325 386 59 19 554 231 504 393 370 488 470 580 113 571 337 431 475 190 354 205 25 546 421 486 
+c [Label = 649] Encoding duration: 7814ms.
+c [Label = 649] Number of clauses: 5971236.
+c [Label = 649] Number of variables: 1226835.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 631] Encoding duration: 7479ms.
+c [Label = 631] Number of clauses: 5817255.
+c [Label = 631] Number of variables: 1202175.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 613] Encoding duration: 7662ms.
+c [Label = 613] Number of clauses: 5663274.
+c [Label = 613] Number of variables: 1177515.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
 c [Main] Lowest label SAT is set to 594.
 c [Main] Kill higher label pid 613.
 c [Main] Kill higher label pid 649.
 c [Main] Kill higher label pid 631.
-c [Label = 613] Encoding duration: 7741ms.
-c [Label = 613] Number of clauses: 5663274.
-c [Label = 613] Number of variables: 1177515.
-c [Signal] Signal interruption. Caught signal: SIGTERM (15).
-c [Label = 649] Encoding duration: 7824ms.
-c [Label = 649] Number of clauses: 5971236.
-c [Label = 649] Number of variables: 1226835.
-c [Signal] Signal interruption. Caught signal: SIGTERM (15).
-c [Label = 631] Encoding duration: 7839ms.
-c [Label = 631] Number of clauses: 5817255.
-c [Label = 631] Number of variables: 1202175.
-c [Signal] Signal interruption. Caught signal: SIGTERM (15).
-c [Main] Child pid 613 - 739446 terminated by signal 15.
-c [Main] Child pid 649 - 739458 terminated by signal 15.
-c [Main] Child pid 631 - 739466 terminated by signal 15.
-c [Label = 558] Encoding duration: 6525ms.
+c [Main] Child pid 613 - 744555 terminated by signal 15.
+c [Main] Child pid 631 - 744641 terminated by signal 15.
+c [Main] Child pid 649 - 744623 terminated by signal 15.
+c [Label = 558] Encoding duration: 6155ms.
 c [Label = 558] Number of clauses: 4988383.
 c [Label = 558] Number of variables: 1034350.
-c [Label = 558] Solving duration: 1629394 ms.
+c [Label = 558] Solving duration: 1666500 ms.
 s [Label = 558] SAT (w = 102).
 Label assignment: 558 557 557 556 243 208 557 57 2 557 1 555 368 552 2 307 479 219 3 214 557 229 1 551 333 152 7 414 432 416 35 544 272 408 204 126 365 391 388 11 1 169 456 558 45 549 558 558 136 557 457 302 550 556 1 452 450 135 558 531 224 32 526 409 357 106 1 265 119 443 460 557 451 288 553 548 555 399 1 404 544 555 1 2 222 463 542 264 460 212 303 554 402 456 314 167 393 200 105 323 1 273 252 1 289 553 537 103 55 280 557 461 184 421 1 556 533 146 555 431 2 556 544 286 306 335 234 554 529 454 436 50 448 197 316 82 1 554 339 42 165 41 28 155 206 534 2 89 157 549 28 551 374 350 4 547 515 182 507 39 460 219 556 446 497 309 480 58 548 434 361 340 474 85 428 236 449 367 141 555 17 325 304 521 547 542 383 489 269 24 477 122 188 400 78 494 104 375 303 437 64 510 441 261 530 345 433 466 207 305 411 343 453 432 446 284 528 312 132 486 534 454 382 280 59 139 454 34 453 138 1 438 511 291 419 237 144 436 318 196 332 246 143 510 274 39 14 411 520 53 114 493 113 49 356 144 411 422 76 447 271 341 557 282 245 558 464 558 159 175 1 203 523 405 483 453 198 436 13 519 294 352 142 301 395 279 503 426 338 425 54 154 407 120 346 99 348 394 111 524 230 307 134 387 23 190 77 93 262 427 440 1 168 339 209 241 470 558 193 429 410 326 277 379 133 105 532 558 337 554 140 186 510 163 281 315 207 26 150 292 458 433 502 418 527 239 441 305 397 522 156 137 510 558 166 351 349 125 95 3 430 210 191 473 558 254 167 149 442 380 86 1 235 303 492 127 525 217 84 177 412 516 245 518 484 164 378 122 268 181 12 457 79 131 94 29 475 409 114 124 308 364 392 469 83 128 456 83 255 371 102 101 16 233 118 163 73 62 98 472 283 238 216 267 505 19 496 459 558 376 121 179 46 173 372 109 275 201 105 56 125 468 363 462 213 413 495 258 256 71 322 490 72 457 455 231 360 160 10 541 558 311 218 335 107 91 424 87 50 227 20 501 536 554 165 207 445 420 381 2 517 192 506 226 51 115 298 228 185 161 242 116 90 509 68 31 32 27 251 178 25 370 334 309 28 257 44 201 171 67 81 172 423 69 499 317 130 390 320 297 232 52 221 558 287 1 37 3 147 240 270 189 5 63 354 425 546 183 488 539 100 244 500 205 444 498 377 110 389 299 312 290 313 96 331 300 476 465 347 327 48 439 199 355 92 42 250 406 403 396 151 40 482 353 341 36 21 33 545 123 74 344 285 170 223 43 195 9 60 487 185 225 260 491 296 324 307 435 249 319 80 259 70 108 180 187 543 540 481 504 295 329 342 145 272 129 266 66 359 386 112 212 158 247 47 398 74 366 336 362 202 417 220 88 314 38 358 253 211 30 328 330 278 174 75 18 215 226 385 8 508 293 276 22 310 369 485 15 471 467 176 61 65 321 194 538 97 478 373 6 401 415 535 514 162 501 248 513 384 117 512 153 263 382 148 
 c [Main] Lowest label SAT is set to 558.
 c [Main] Kill higher label pid 567.
 c [Main] Kill higher label pid 576.
-c [Label = 567] Encoding duration: 7018ms.
+c [Label = 567] Encoding duration: 6628ms.
 c [Label = 567] Number of clauses: 5065373.
 c [Label = 567] Number of variables: 1046680.
 c [Signal] Signal interruption. Caught signal: SIGTERM (15).
-c [Label = 576] Encoding duration: 6613ms.
+c [Label = 576] Encoding duration: 6580ms.
 c [Label = 576] Number of clauses: 5142364.
 c [Label = 576] Number of variables: 1059010.
 c [Signal] Signal interruption. Caught signal: SIGTERM (15).
-c [Main] Child pid 576 - 739457 terminated by signal 15.
-c [Main] Child pid 567 - 740543 terminated by signal 15.
-c [Label = 507] Encoding duration: 5727ms.
+c [Main] Child pid 576 - 744617 terminated by signal 15.
+c [Main] Child pid 567 - 746469 terminated by signal 15.
+c [Label = 507] Encoding duration: 5633ms.
 c [Label = 507] Number of clauses: 4348394.
 c [Label = 507] Number of variables: 896665.
-c [Label = 507] Solving duration: 15190 ms.
+c [Label = 507] Solving duration: 15415 ms.
 s [Label = 507] UNSAT (w = 102).
 c [Main] Highest label UNSAT is set to 507
-c [Label = 535] Encoding duration: 6264ms.
+c [Label = 535] Encoding duration: 6286ms.
 c [Label = 535] Number of clauses: 4791629.
 c [Label = 535] Number of variables: 1002840.
 c [Signal] Signal interruption. Caught signal: SIGTERM (15).
-c [Label = 516] Encoding duration: 6062ms.
-c [Label = 516] Number of clauses: 4629094.
-c [Label = 516] Number of variables: 976810.
-c [Signal] Signal interruption. Caught signal: SIGTERM (15).
-c [Label = 549] Encoding duration: 6613ms.
-c [Label = 549] Number of clauses: 4911392.
-c [Label = 549] Number of variables: 1022020.
-c [Label = 549] Solving duration: 533764 ms.
-s [Label = 549] SAT (w = 102).
-Label assignment: 326 351 549 86 549 495 361 56 70 270 359 411 278 549 546 501 213 549 205 28 306 503 510 444 363 403 217 6 352 345 514 425 269 429 549 318 134 396 479 540 409 243 497 385 381 484 526 334 417 549 178 345 399 185 255 353 409 455 145 104 539 413 542 488 303 1 536 57 423 439 460 317 48 89 424 371 218 166 149 493 510 235 480 443 265 549 213 549 410 549 116 373 352 101 211 329 178 64 200 492 193 81 345 211 364 403 99 541 277 326 317 235 549 121 238 367 299 380 398 39 371 222 279 32 360 491 389 549 208 549 254 506 142 467 237 487 310 270 320 437 109 217 500 549 513 303 163 342 540 432 369 447 197 56 288 544 472 229 397 299 35 422 426 268 549 228 365 430 549 146 549 315 237 264 21 52 206 56 259 237 274 549 544 252 208 33 504 449 56 221 418 381 206 477 185 12 450 549 137 549 403 366 207 7 505 324 513 390 420 324 338 48 295 478 421 186 526 240 342 379 21 436 136 442 18 110 453 151 362 284 302 549 182 204 452 549 203 26 225 239 549 262 508 271 34 419 483 330 435 489 434 519 496 255 138 549 374 137 152 521 224 131 549 256 220 191 412 475 429 549 214 3 148 4 267 7 26 175 299 549 549 35 19 59 323 262 332 263 4 348 211 250 165 515 280 295 176 438 530 325 313 172 290 51 527 347 138 203 216 549 549 269 215 27 5 17 404 549 486 4 474 9 134 11 223 3 349 8 156 461 246 40 305 490 549 298 432 507 9 40 402 274 383 167 426 549 322 2 300 462 393 392 196 272 246 297 179 549 226 201 499 328 319 210 190 509 433 338 177 189 24 234 245 129 185 549 286 282 3 511 547 522 388 8 171 248 87 548 316 457 440 448 48 8 306 465 219 350 549 1 3 328 406 277 47 529 534 417 299 375 251 15 441 407 12 329 368 538 45 143 38 140 258 377 205 549 162 243 227 344 517 232 485 357 358 327 41 312 333 391 184 291 401 28 301 356 394 533 355 468 354 276 340 459 75 454 336 502 134 376 8 43 122 310 414 326 335 535 82 199 108 20 315 212 525 545 204 431 192 543 400 337 378 195 458 18 19 120 386 16 128 537 520 279 456 155 498 395 314 341 463 158 105 370 3 518 281 170 31 399 384 257 14 532 346 54 105 405 331 236 207 53 209 289 23 182 528 110 296 50 10 415 118 231 523 285 242 524 198 464 183 180 387 168 275 293 46 376 230 44 261 273 266 260 445 304 30 471 109 451 516 287 150 159 247 314 49 112 160 13 153 446 339 139 308 292 166 233 249 343 466 372 123 494 294 147 42 25 144 166 161 36 107 309 512 311 135 313 37 119 268 106 408 132 321 307 253 117 115 21 154 125 169 111 428 173 113 470 202 133 157 130 187 62 127 65 58 55 126 68 244 60 29 69 283 481 61 103 132 141 76 66 80 476 124 22 174 241 63 382 194 416 74 72 79 84 482 85 188 83 164 114 78 88 91 92 67 96 93 212 90 95 98 102 73 100 531 469 77 97 94 427 181 71 473 
-c [Signal] Signal interruption. Caught signal: SIGTERM (15).
-c [Label = 512] Encoding duration: 5913ms.
-c [Label = 512] Number of clauses: 4594876.
-c [Label = 512] Number of variables: 971330.
-c [Signal] Signal interruption. Caught signal: SIGTERM (15).
-c [Label = 521] Encoding duration: 6104ms.
-c [Label = 521] Number of clauses: 4671866.
-c [Label = 521] Number of variables: 983660.
-c [Signal] Signal interruption. Caught signal: SIGTERM (15).
-c [Label = 530] Encoding duration: 6132ms.
-c [Label = 530] Number of clauses: 4748857.
-c [Label = 530] Number of variables: 995990.
-c [Signal] Signal interruption. Caught signal: SIGTERM (15).
-c [Label = 540] Encoding duration: 6136ms.
+c [Label = 540] Encoding duration: 6193ms.
 c [Label = 540] Number of clauses: 4834402.
 c [Label = 540] Number of variables: 1009690.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 512] Encoding duration: 5935ms.
+c [Label = 512] Number of clauses: 4594876.
+c [Label = 512] Number of variables: 971330.
 c [Signal] Signal interruption. Caught signal: SIGTERM (15).
 c [Main] Lim pid ends with result: 254.
 c [Main] All children have completed.
@@ -172,10 +153,26 @@ r [Main]
 r [Main] Final results: 
 r [Main] Lowest label SAT:  	558.
 r [Main] Highest label UNSAT:	507.
-r [Main] Total real time: 1812001 ms.
-r [Main] Total memory consumed: 16192.6 MB.
+r [Main] Total real time: 1812452 ms.
+r [Main] Total memory consumed: 16008.4 MB.
 r [Main] 
-c [Label = 525] Encoding duration: 6093ms.
+c [Label = 530] Encoding duration: 6381ms.
+c [Label = 530] Number of clauses: 4748857.
+c [Label = 530] Number of variables: 995990.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 549] Encoding duration: 6565ms.
+c [Label = 549] Number of clauses: 4911392.
+c [Label = 549] Number of variables: 1022020.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 516] Encoding duration: 6572ms.
+c [Label = 516] Number of clauses: 4629094.
+c [Label = 516] Number of variables: 976810.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 525] Encoding duration: 6236ms.
 c [Label = 525] Number of clauses: 4706084.
 c [Label = 525] Number of variables: 989140.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 521] Encoding duration: 5760ms.
+c [Label = 521] Number of clauses: 4671866.
+c [Label = 521] Number of variables: 983660.
 c [Signal] Signal interruption. Caught signal: SIGTERM (15).
