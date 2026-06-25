@@ -2,11 +2,11 @@
 
 build_dir="../../build"
 dataset_dir="../../benchmarks"
-report_dir="../../experiments/results/iteration/ite_abp_x0.5"
+report_dir="../../experiments/results/incremental/incre_abp_x0.5"
 
 time_limit="1800"
 memory_limit="30000"
-general_config="--ladder --no-hole --verify-result --iterate-bfs -limit-memory $memory_limit -limit-real-time $time_limit -worker-count 8 -symmetry-break highest-degree"
+general_config="--ladder --no-hole --verify-result --incremental-from-ub -limit-memory $memory_limit -limit-real-time $time_limit -symmetry-break highest-degree"
 
 mkdir -p "$report_dir"
 
