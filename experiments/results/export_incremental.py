@@ -3,7 +3,7 @@ import re
 import pandas as pd
 
 ROOT_DIR = "./incremental"
-OUTPUT_FILE = "incremental_summary.xlsx"
+OUTPUT_FILE = "sat-incremental_summary.xlsx"
 
 
 def extract(pattern, text, default=""):
@@ -86,7 +86,7 @@ def parse_log(filepath):
         "Optimal found": "x"
     }
 
-    if "c [Main] Lim pid ends with result: 254." in content:
+    if "c [Main] Lim pid ends with result:" in content:
         row["Optimal found"] = ""
 
     return row
