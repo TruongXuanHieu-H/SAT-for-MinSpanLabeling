@@ -11,6 +11,8 @@ public:
 
     virtual void encode_min_makespan_labeling() = 0;
 
+    virtual void ignore_label(int ignored_label) = 0;
+
 protected:
     IncreInstanceData &instance_data;
 

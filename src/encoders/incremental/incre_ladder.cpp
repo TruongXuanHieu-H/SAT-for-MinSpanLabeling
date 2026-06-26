@@ -34,25 +34,25 @@ void IncreLadder::encode_vertices()
     {
     case VerticesMode::no_hole:
     {
-        std::vector<int> incre_aux_var(instance_data.global_data.upper_bound);
+        no_hole_incre_aux_var = std::vector<int>(instance_data.global_data.upper_bound);
         for (int label = 0; label < instance_data.global_data.upper_bound; label++)
         {
-            incre_aux_var[label] = instance_data.vh->get_new_var();
+            no_hole_incre_aux_var[label] = instance_data.vh->get_new_var();
 
             std::vector<int> node_vertices(instance_data.global_data.g->n);
 
             for (int vertex = 0; vertex < instance_data.global_data.g->n; vertex++)
             {
                 node_vertices[vertex] = vertex * instance_data.global_data.upper_bound + label + 1;
-                instance_data.cc->add_clause({incre_aux_var[label], -node_vertices[vertex]});
+                instance_data.cc->add_clause({no_hole_incre_aux_var[label], -node_vertices[vertex]});
             }
 
-            node_vertices.push_back(-incre_aux_var[label]);
+            node_vertices.push_back(-no_hole_incre_aux_var[label]);
             instance_data.cc->add_clause(node_vertices);
         }
-        for (int i = 1; i < (int)incre_aux_var.size(); i++)
+        for (int i = 1; i < (int)no_hole_incre_aux_var.size(); i++)
         {
-            instance_data.cc->add_clause({-incre_aux_var[i], incre_aux_var[i - 1]});
+            instance_data.cc->add_clause({-no_hole_incre_aux_var[i], no_hole_incre_aux_var[i - 1]});
         }
         break;
     }
@@ -403,5 +403,29 @@ void IncreLadder::connect_ladder(const std::vector<int> first_ladder_vars, const
             instance_data.cc->add_clause({-first_aux_var_2, -second_aux_var_1});
             instance_data.cc->add_clause({-first_aux_var_2, -second_aux_var_2});
         }
+    }
+}
+
+void IncreLadder::ignore_label(int label)
+{
+    switch (instance_data.global_data.vertices_mode)
+    {
+    case VerticesMode::has_hole:
+    {
+        for (int j = 0; j < instance_data.global_data.g->n; j++)
+        {
+            instance_data.cc->add_clause({-(j * instance_data.global_data.upper_bound + label)});
+        }
+        break;
+    }
+    case VerticesMode::no_hole:
+    {
+        instance_data.cc->add_clause({-no_hole_incre_aux_var[label - 1]});
+        break;
+    }
+    default:
+    {
+        exit(1);
+    }
     }
 }

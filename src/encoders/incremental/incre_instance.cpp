@@ -72,10 +72,7 @@ int IncreInstance::encode_and_solve_problem()
 
             for (int k = i; k >= max_used_label; k--)
             {
-                for (int j = 0; j < global_data.g->n; j++)
-                {
-                    instance_data->cc->add_clause({-(j * global_data.upper_bound + k)});
-                }
+                instance_data->enc->ignore_label(k);
                 std::cout << "c " << instance_data->get_signature() << " Label " << k << " is removed from searching.\n";
             }
             i = max_used_label;

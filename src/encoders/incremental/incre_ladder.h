@@ -30,9 +30,12 @@ public:
 
     void encode_min_makespan_labeling() override;
 
+    void ignore_label(int ignored_label) override;
+
 private:
     // Use to save aux vars of OBJ-K constraints
     std::unordered_map<std::vector<int>, int, VectorHash> obj_k_aux_vars;
+    std::vector<int> no_hole_incre_aux_var;
 
     void do_encode_antibandwidth();
 

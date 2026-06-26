@@ -1,0 +1,20 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 48.
+c [Param] UB is predefined as 503.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Main] Search strategy: Incremental from upper bound.
+c [Main] Encoding and solving for graph: R-dwt__503.mtx.rnd.
+c [Incremental] Minimize Makespan Labeling Antibandwidth problem (R-dwt__503.mtx.rnd):
+c [Incremental] Encoding starts with target value = 47:
+c [Incremental] Encoding duration: 5627ms.
+c [Incremental] Number of clauses: 7087980.
+c [Incremental] Number of variables: 704703.
+c [Incremental] Solving for max label = 503:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Lim pid ends with result: 254.
+r [Main] 
+r [Main] Final results: 
+r [Main] Total real time: 1806364 ms.
+r [Main] Total memory consumed: 2445.7 MB.
+r [Main] 
