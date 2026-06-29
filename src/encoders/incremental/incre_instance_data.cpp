@@ -47,8 +47,8 @@ void IncreInstanceData::setup_for_solving()
 
 void IncreInstanceData::setup_for_encoding()
 {
-    cc = std::make_unique<ClauseContainer>(*solver);
     vh = std::make_unique<VarHandler>(1, global_data.g->n * global_data.upper_bound);
+    cc = std::make_unique<ClauseContainer>(global_data, *vh, *solver);
 
     set_up_encoder();
 }

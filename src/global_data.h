@@ -47,6 +47,8 @@ public:
     void read_graph(std::string graph_file_name) { g = std::make_unique<Graph>(graph_file_name); };
 
     bool verbose = false; // If true, print more detailed information during the execution, such as the encoding details and the solving process. This is useful for debugging and understanding the behavior of the program, but it may produce a large amount of output for large instances.
+
+    int max_cnf_size = 0; // CNF clauses with larger size will be split.
 };
 
 #endif // GLOBAL_DATA_H
