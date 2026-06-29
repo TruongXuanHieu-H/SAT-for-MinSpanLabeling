@@ -1,8 +1,8 @@
 #!/bin/bash
 
-build_dir="../../build"
-dataset_dir="../../benchmarks"
-report_dir="../../experiments/results/incremental_reduced_bound/incre_abp_x0.75"
+build_dir="../../../build"
+dataset_dir="../../../benchmarks"
+report_dir="../../../experiments/results/reduced_bound/incre_abp_x0.75"
 
 time_limit="1800"
 memory_limit="30000"
