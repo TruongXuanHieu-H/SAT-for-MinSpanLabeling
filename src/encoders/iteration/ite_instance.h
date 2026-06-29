@@ -17,7 +17,7 @@ private:
     int SAT_res = 0;
 
     GlobalData &global_data;
-    IteInstanceData *data;
+    std::unique_ptr<IteInstanceData> data;
 
     int recalculate_solution(const std::vector<int> &node_labels);
 };

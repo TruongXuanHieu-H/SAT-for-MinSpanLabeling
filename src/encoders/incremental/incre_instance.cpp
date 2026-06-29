@@ -9,14 +9,10 @@
 
 IncreInstance::IncreInstance(GlobalData &global_data) : global_data(global_data)
 {
-    instance_data = new IncreInstanceData(global_data);
+    instance_data = std::make_unique<IncreInstanceData>(global_data);
 };
 
-IncreInstance::~IncreInstance()
-{
-    delete instance_data;
-    instance_data = nullptr;
-};
+IncreInstance::~IncreInstance() {};
 
 int IncreInstance::encode_and_solve_problem()
 {
@@ -60,8 +56,6 @@ int IncreInstance::encode_and_solve_problem()
                 if (solution_abp < global_data.target_value)
                 {
                     std::cerr << "c " << instance_data->get_signature() << " Error, the solution is not correct, antibandwidth should be at least " << global_data.target_value << ", but it is " << solution_abp << ".\n";
-
-                    instance_data->cleanup_solving();
                     return -10;
                 }
             }
@@ -85,12 +79,9 @@ int IncreInstance::encode_and_solve_problem()
         else
         {
             std::cout << "s " << instance_data->get_signature() << " Error at label = " << i << ", SAT result: " << SAT_res << ".\n";
-            instance_data->cleanup_solving();
             return -20;
         }
     }
-
-    instance_data->cleanup_solving();
 
     return 0;
 };
@@ -120,11 +111,8 @@ void IncreInstance::encode_and_print_dimacs()
     if (!out.is_open())
     {
         std::cerr << "c " + instance_data->get_signature() + " Error: cannot open file " << global_data.dimacs_directory + file_name << " for writing.\n";
-        instance_data->cleanup_encoding();
         return;
     }
     instance_data->export_dimacs(out);
     out.close();
-
-    instance_data->cleanup_encoding();
 };

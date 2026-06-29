@@ -7,7 +7,7 @@
 class ClauseContainer
 {
 public:
-	ClauseContainer(SATSolver *solver);
+	ClauseContainer(SATSolver &solver);
 	~ClauseContainer();
 
 	std::vector<std::vector<int>> clause_list;
@@ -16,7 +16,7 @@ public:
 	int size();
 
 private:
-	SATSolver *solver;
+	SATSolver &solver;
 	void do_add_clause(const std::vector<int> &c);
 	int do_size();
 };

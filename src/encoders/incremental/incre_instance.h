@@ -4,6 +4,7 @@
 #include "incre_instance_data.h"
 #include "../../global_data.h"
 #include <limits>
+#include <memory>
 
 class IncreInstance
 {
@@ -16,7 +17,7 @@ public:
 
 private:
     GlobalData &global_data;
-    IncreInstanceData *instance_data;
+    std::unique_ptr<IncreInstanceData> instance_data;
 
     int recalculate_solution(const std::vector<int> &node_labels);
 };

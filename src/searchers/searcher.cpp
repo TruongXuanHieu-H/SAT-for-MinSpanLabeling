@@ -20,14 +20,6 @@ Searcher::~Searcher()
     munmap(max_consumed_memory, sizeof(float));
 }
 
-/*
- *  Check if limit conditions are satified or not
- *  Return:
- *      0   if all the conditions is satified.
- *      -1  if out of memory.
- *      -2  if out of real time.
- *      -3  if out of elapsed time.
- */
 int Searcher::is_limit_satisfied()
 {
     if (consumed_memory > global_data.memory_limit)

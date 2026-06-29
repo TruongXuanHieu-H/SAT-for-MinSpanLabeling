@@ -10,22 +10,16 @@
 #include "enum/vertices_mode.h"
 #include <unordered_map>
 #include <limits>
+#include <memory>
 
 class GlobalData
 {
 public:
     GlobalData() {};
-    ~GlobalData()
-    {
-        if (g)
-        {
-            delete g; // Clean up the global graph instance
-            g = nullptr;
-        }
-    };
+    ~GlobalData() {};
 
-    Graph *g = nullptr;   // Pointer to the global graph instance
-    int target_value = 0; // Target value for the problem (e.g., antibandwidth value for ABP)
+    std::unique_ptr<Graph> g; // Pointer to the global graph instance
+    int target_value = 0;     // Target value for the problem (e.g., antibandwidth value for ABP)
     int lower_bound = 0;
     int upper_bound = 0;
 
@@ -50,10 +44,7 @@ public:
     float real_time_limit = std::numeric_limits<float>::max();    // bound of time consumed by main process, in seconds
     float elapsed_time_limit = std::numeric_limits<float>::max(); // bound of total time consumed by all the process, in seconds
 
-    void read_graph(std::string graph_file_name)
-    {
-        g = new Graph(graph_file_name);
-    };
+    void read_graph(std::string graph_file_name) { g = std::make_unique<Graph>(graph_file_name); };
 
     bool verbose = false; // If true, print more detailed information during the execution, such as the encoding details and the solving process. This is useful for debugging and understanding the behavior of the program, but it may produce a large amount of output for large instances.
 };

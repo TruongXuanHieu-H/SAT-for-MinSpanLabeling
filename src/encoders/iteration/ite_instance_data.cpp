@@ -7,25 +7,16 @@
 
 IteInstanceData::IteInstanceData(GlobalData &global_data, int label) : global_data(global_data), label(label) {};
 
-IteInstanceData::~IteInstanceData()
-{
-    delete enc;
-    delete cc;
-    delete vh;
-    delete solver;
-};
+IteInstanceData::~IteInstanceData() {};
 
-std::string IteInstanceData::get_signature()
-{
-    return "[Label = " + std::to_string(label) + "]";
-};
+std::string IteInstanceData::get_signature() { return "[Label = " + std::to_string(label) + "]"; };
 
 void IteInstanceData::set_up_encoder()
 {
     switch (global_data.encode_type)
     {
     case EncodeType::ladder:
-        enc = new IteLadder(*this);
+        enc = std::make_unique<IteLadder>(*this);
         break;
 
     default:
@@ -38,7 +29,7 @@ void IteInstanceData::set_up_sat_solver()
     switch (global_data.sat_solver_type)
     {
     case SATSolverType::CaDiCaL:
-        solver = new SATSolverCadical();
+        solver = std::make_unique<SATSolverCadical>();
         break;
 
     default:
@@ -55,28 +46,10 @@ void IteInstanceData::setup_for_solving()
 
 void IteInstanceData::setup_for_encoding()
 {
-    cc = new ClauseContainer(solver);
-    vh = new VarHandler(1, global_data.g->n * label);
+    cc = std::make_unique<ClauseContainer>(*solver);
+    vh = std::make_unique<VarHandler>(1, global_data.g->n * label);
 
     set_up_encoder();
-}
-
-void IteInstanceData::cleanup_encoding()
-{
-    delete enc;
-    enc = nullptr;
-    delete cc;
-    cc = nullptr;
-    delete vh;
-    vh = nullptr;
-}
-
-void IteInstanceData::cleanup_solving()
-{
-    cleanup_encoding();
-
-    delete solver;
-    solver = nullptr;
 }
 
 void IteInstanceData::export_dimacs(std::ostream &out)

@@ -8,25 +8,16 @@
 
 IncreInstanceData::IncreInstanceData(GlobalData &global_data) : global_data(global_data) {};
 
-IncreInstanceData::~IncreInstanceData()
-{
-    delete enc;
-    delete cc;
-    delete vh;
-    delete solver;
-};
+IncreInstanceData::~IncreInstanceData() {};
 
-std::string IncreInstanceData::get_signature()
-{
-    return "[Incremental]";
-};
+std::string IncreInstanceData::get_signature() { return "[Incremental]"; };
 
 void IncreInstanceData::set_up_encoder()
 {
     switch (global_data.encode_type)
     {
     case EncodeType::ladder:
-        enc = new IncreLadder(*this);
+        enc = std::make_unique<IncreLadder>(*this);
         break;
 
     default:
@@ -39,7 +30,7 @@ void IncreInstanceData::set_up_sat_solver()
     switch (global_data.sat_solver_type)
     {
     case SATSolverType::CaDiCaL:
-        solver = new SATSolverCadical();
+        solver = std::make_unique<SATSolverCadical>();
         break;
 
     default:
@@ -56,28 +47,10 @@ void IncreInstanceData::setup_for_solving()
 
 void IncreInstanceData::setup_for_encoding()
 {
-    cc = new ClauseContainer(solver);
-    vh = new VarHandler(1, global_data.g->n * global_data.upper_bound);
+    cc = std::make_unique<ClauseContainer>(*solver);
+    vh = std::make_unique<VarHandler>(1, global_data.g->n * global_data.upper_bound);
 
     set_up_encoder();
-}
-
-void IncreInstanceData::cleanup_encoding()
-{
-    delete enc;
-    enc = nullptr;
-    delete cc;
-    cc = nullptr;
-    delete vh;
-    vh = nullptr;
-}
-
-void IncreInstanceData::cleanup_solving()
-{
-    cleanup_encoding();
-
-    delete solver;
-    solver = nullptr;
 }
 
 void IncreInstanceData::export_dimacs(std::ostream &out)

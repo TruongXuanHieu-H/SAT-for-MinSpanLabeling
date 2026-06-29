@@ -65,7 +65,6 @@ void IteLadder::encode_at_most_one_product(const std::vector<int> &vars)
         return;
     if (vars.size() == 2)
     {
-        // simplifies to vars[0] /\ -1*vars[0], in case vars[0] == vars[1]
         instance_data.cc->add_clause({vars[0], vars[1]});
         instance_data.cc->add_clause({-1 * vars[0], -1 * vars[1]});
         return;

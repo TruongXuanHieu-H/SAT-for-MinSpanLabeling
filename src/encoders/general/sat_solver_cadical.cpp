@@ -5,40 +5,21 @@
 
 SATSolverCadical::SATSolverCadical()
 {
-    set_up_solver();
-}
-
-SATSolverCadical::~SATSolverCadical()
-{
-    clear_solver();
-}
-
-void SATSolverCadical::set_up_solver()
-{
-    solver = new CaDiCaL::Solver();
+    solver = std::make_unique<CaDiCaL::Solver>();
     std::string sat_configuration = "sat";
     solver->configure(sat_configuration.data());
 }
 
-void SATSolverCadical::clear_solver()
-{
-    delete solver;
-    solver = nullptr;
-}
+SATSolverCadical::~SATSolverCadical() {}
 
 void SATSolverCadical::add_clause(const std::vector<int> &c)
 {
     for (const auto &lit : c)
-    {
         solver->add(lit);
-    }
     solver->add(0);
 }
 
-int SATSolverCadical::solve()
-{
-    return solver->solve();
-}
+int SATSolverCadical::solve() { return solver->solve(); }
 
 std::vector<int> SATSolverCadical::extract_result(int num_vertices, int num_labels)
 {

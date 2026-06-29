@@ -9,23 +9,11 @@
 
 IteInstance::IteInstance(GlobalData &global_data, int label) : global_data(global_data)
 {
-    data = new IteInstanceData(global_data, label);
+    data = std::make_unique<IteInstanceData>(global_data, label);
 }
 
-IteInstance::~IteInstance()
-{
-    delete data;
-    data = nullptr;
-};
+IteInstance::~IteInstance() {}
 
-/*
-    Return the result of ABP:
-    -   0 if graph only contains 1 vertex.
-    -   10 if SAT (including w < 2 because it is always SAT).
-    -   20 if UNSAT.
-    -   -20 for undefined answers.
-    -   -10 for incorrect SAT answers.
-*/
 int IteInstance::encode_and_solve_problem()
 {
     data->setup_for_solving();
@@ -61,8 +49,6 @@ int IteInstance::encode_and_solve_problem()
             if (solution_abp < global_data.target_value)
             {
                 std::cerr << "c " << data->get_signature() << " Error, the solution is not correct, target value should be at least " << global_data.target_value << ", but it is " << solution_abp << ".\n";
-
-                data->cleanup_solving();
                 return -10;
             }
         }
@@ -72,11 +58,8 @@ int IteInstance::encode_and_solve_problem()
     else
     {
         std::cout << "s " << data->get_signature() << " Error at w = " << global_data.target_value << ", SAT result: " << SAT_res << ".\n";
-        data->cleanup_solving();
         return -20;
     }
-
-    data->cleanup_solving();
 
     return SAT_res;
 };
@@ -118,11 +101,8 @@ void IteInstance::encode_and_print_dimacs()
     if (!out.is_open())
     {
         std::cerr << "c " + data->get_signature() + " Error: cannot open file " << global_data.dimacs_directory + file_name << " for writing.\n";
-        data->cleanup_encoding();
         return;
     }
     data->export_dimacs(out);
     out.close();
-
-    data->cleanup_encoding();
 };
