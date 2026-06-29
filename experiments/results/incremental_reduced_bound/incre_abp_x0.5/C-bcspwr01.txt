@@ -1,0 +1,40 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 9.
+c [Param] UB is predefined as 19.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Main] Search strategy: Incremental from upper bound.
+c [Main] Encoding and solving for graph: C-bcspwr01.mtx.rnd.
+c [Incremental] Minimize Makespan Labeling Antibandwidth problem (C-bcspwr01.mtx.rnd):
+c [Incremental] Encoding starts with target value = 8:
+c [Incremental] Encoding duration: 3ms.
+c [Incremental] Number of clauses: 6580.
+c [Incremental] Number of variables: 1618.
+c [Incremental] Solving for max label = 19:
+c [Incremental] Solving duration: 16 ms.
+s [Incremental] SAT (label = 19).
+Label assignment: 8 2 1 1 1 16 1 1 10 1 1 1 9 1 9 19 19 19 11 6 7 9 9 13 1 12 11 1 5 17 1 3 18 1 15 10 19 4 14 
+c [Incremental] Max used label: 19.
+c [Incremental] Label 19 is removed from searching.
+c [Incremental] Solving for max label = 18:
+c [Incremental] Solving duration: 1 ms.
+s [Incremental] SAT (label = 18).
+Label assignment: 8 2 1 1 1 16 1 1 10 1 1 3 9 1 9 18 11 18 10 6 7 9 9 13 1 12 10 1 5 17 1 2 18 1 15 10 18 4 14 
+c [Incremental] Max used label: 18.
+c [Incremental] Label 18 is removed from searching.
+c [Incremental] Solving for max label = 17:
+c [Incremental] Solving duration: 1 ms.
+s [Incremental] SAT (label = 17).
+Label assignment: 8 2 1 1 1 16 1 1 17 1 1 7 9 1 9 17 3 1 9 11 17 9 9 13 6 12 9 1 5 17 1 17 9 1 14 10 1 4 15 
+c [Incremental] Max used label: 17.
+c [Incremental] Label 17 is removed from searching.
+c [Incremental] Solving for max label = 16:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] UNSAT (label = 16).
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Work pid ends with result: 0.
+r [Main] 
+r [Main] Final results: 
+r [Main] Total real time: 26 ms.
+r [Main] Total memory consumed: 2.4 MB.
+r [Main] 

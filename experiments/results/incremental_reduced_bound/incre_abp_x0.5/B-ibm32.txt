@@ -1,0 +1,46 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 5.
+c [Param] UB is predefined as 16.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Main] Search strategy: Incremental from upper bound.
+c [Main] Encoding and solving for graph: B-ibm32.mtx.rnd.
+c [Incremental] Minimize Makespan Labeling Antibandwidth problem (B-ibm32.mtx.rnd):
+c [Incremental] Encoding starts with target value = 4:
+c [Incremental] Encoding duration: 2ms.
+c [Incremental] Number of clauses: 6775.
+c [Incremental] Number of variables: 1040.
+c [Incremental] Solving for max label = 16:
+c [Incremental] Solving duration: 11 ms.
+s [Incremental] SAT (label = 16).
+Label assignment: 4 4 1 1 1 5 12 12 12 8 1 11 12 16 9 8 16 1 6 7 16 16 12 16 13 12 15 10 3 16 14 2 
+c [Incremental] Max used label: 16.
+c [Incremental] Label 16 is removed from searching.
+c [Incremental] Solving for max label = 15:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 15).
+Label assignment: 4 4 1 7 9 5 12 1 14 2 1 12 11 8 1 8 14 1 5 5 1 12 15 3 13 12 15 14 6 9 14 10 
+c [Incremental] Max used label: 15.
+c [Incremental] Label 15 is removed from searching.
+c [Incremental] Solving for max label = 14:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 14).
+Label assignment: 4 4 1 7 9 5 12 1 14 2 1 12 11 8 1 8 14 1 5 5 1 12 14 3 13 12 14 14 6 9 14 10 
+c [Incremental] Max used label: 14.
+c [Incremental] Label 14 is removed from searching.
+c [Incremental] Solving for max label = 13:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 13).
+Label assignment: 4 4 1 7 9 5 12 1 13 2 1 12 11 8 1 8 13 1 5 5 1 12 13 3 10 12 13 13 6 9 13 9 
+c [Incremental] Max used label: 13.
+c [Incremental] Label 13 is removed from searching.
+c [Incremental] Solving for max label = 12:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] UNSAT (label = 12).
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Work pid ends with result: 0.
+r [Main] 
+r [Main] Final results: 
+r [Main] Total real time: 19 ms.
+r [Main] Total memory consumed: 4.5 MB.
+r [Main] 

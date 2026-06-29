@@ -1,0 +1,34 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 7.
+c [Param] UB is predefined as 44.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Main] Search strategy: Incremental from upper bound.
+c [Main] Encoding and solving for graph: H-impcol_b.mtx.rnd.
+c [Incremental] Minimize Makespan Labeling Antibandwidth problem (H-impcol_b.mtx.rnd):
+c [Incremental] Encoding starts with target value = 6:
+c [Incremental] Encoding duration: 25ms.
+c [Incremental] Number of clauses: 58045.
+c [Incremental] Number of variables: 6180.
+c [Incremental] Solving for max label = 44:
+c [Incremental] Solving duration: 135 ms.
+s [Incremental] SAT (label = 44).
+Label assignment: 40 9 14 15 13 38 8 35 18 37 24 16 36 36 11 33 26 19 44 30 3 25 32 23 38 27 29 34 44 6 44 14 1 44 7 13 44 28 31 41 44 1 21 17 8 10 12 43 39 20 26 22 5 42 1 4 14 20 2 
+c [Incremental] Max used label: 44.
+c [Incremental] Label 44 is removed from searching.
+c [Incremental] Solving for max label = 43:
+c [Incremental] Solving duration: 123 ms.
+s [Incremental] SAT (label = 43).
+Label assignment: 28 13 43 34 1 21 1 20 35 27 8 1 1 1 2 22 7 31 9 29 23 32 37 1 31 1 33 24 40 41 19 43 30 39 1 1 15 5 1 4 14 23 10 42 36 3 6 16 12 35 1 26 38 17 25 11 43 13 18 
+c [Incremental] Max used label: 43.
+c [Incremental] Label 43 is removed from searching.
+c [Incremental] Solving for max label = 42:
+c [Incremental] Solving duration: 162 ms.
+s [Incremental] UNSAT (label = 42).
+c [Main] Work pid ends with result: 0.
+r [Main] 
+r [Main] Final results: 
+r [Main] Total real time: 454 ms.
+r [Main] Total memory consumed: 22.5 MB.
+r [Main] 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).

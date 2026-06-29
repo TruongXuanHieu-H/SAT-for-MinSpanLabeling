@@ -1,0 +1,46 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 7.
+c [Param] UB is predefined as 28.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Main] Search strategy: Incremental from upper bound.
+c [Main] Encoding and solving for graph: G-will57.mtx.rnd.
+c [Incremental] Minimize Makespan Labeling Antibandwidth problem (G-will57.mtx.rnd):
+c [Incremental] Encoding starts with target value = 6:
+c [Incremental] Encoding duration: 10ms.
+c [Incremental] Number of clauses: 21344.
+c [Incremental] Number of variables: 3619.
+c [Incremental] Solving for max label = 28:
+c [Incremental] Solving duration: 40 ms.
+s [Incremental] SAT (label = 28).
+Label assignment: 6 6 1 1 1 7 19 13 1 1 1 7 1 7 1 7 13 1 13 19 1 1 7 28 7 25 25 1 7 28 1 7 28 9 22 20 7 26 8 11 18 5 4 12 17 16 3 17 24 28 15 10 21 2 23 14 27 
+c [Incremental] Max used label: 28.
+c [Incremental] Label 28 is removed from searching.
+c [Incremental] Solving for max label = 27:
+c [Incremental] Solving duration: 3 ms.
+s [Incremental] SAT (label = 27).
+Label assignment: 6 6 1 1 1 7 19 13 1 1 1 7 1 7 1 7 13 1 13 19 1 1 7 27 7 25 25 1 7 27 1 7 27 9 21 16 7 22 8 11 18 5 4 12 17 15 3 17 24 27 13 10 20 2 23 14 26 
+c [Incremental] Max used label: 27.
+c [Incremental] Label 27 is removed from searching.
+c [Incremental] Solving for max label = 26:
+c [Incremental] Solving duration: 4 ms.
+s [Incremental] SAT (label = 26).
+Label assignment: 6 6 1 1 1 7 19 13 1 1 1 7 1 7 1 7 13 1 13 19 1 1 7 26 7 25 25 1 7 25 1 7 25 9 20 16 7 21 8 11 18 5 4 12 22 14 3 17 24 25 13 10 19 2 23 15 25 
+c [Incremental] Max used label: 26.
+c [Incremental] Label 26 is removed from searching.
+c [Incremental] Solving for max label = 25:
+c [Incremental] Solving duration: 16 ms.
+s [Incremental] SAT (label = 25).
+Label assignment: 8 18 15 1 1 7 25 13 1 1 1 7 16 7 1 7 13 1 25 19 1 1 7 25 21 25 19 1 7 25 1 22 19 9 19 19 7 7 7 11 17 5 4 12 20 13 3 25 24 6 25 10 13 2 23 14 19 
+c [Incremental] Max used label: 25.
+c [Incremental] Label 25 is removed from searching.
+c [Incremental] Solving for max label = 24:
+c [Incremental] Solving duration: 1 ms.
+s [Incremental] UNSAT (label = 24).
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Work pid ends with result: 0.
+r [Main] 
+r [Main] Final results: 
+r [Main] Total real time: 82 ms.
+r [Main] Total memory consumed: 2.4 MB.
+r [Main] 
