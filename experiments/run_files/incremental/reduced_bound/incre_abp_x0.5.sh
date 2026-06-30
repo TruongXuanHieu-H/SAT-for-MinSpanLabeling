@@ -1,8 +1,11 @@
 #!/bin/bash
 
-build_dir="../../../build"
-dataset_dir="../../../benchmarks"
-report_dir="../../../experiments/results/reduced_bound/incre_abp_x0.5"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT_DIR="$(cd "$SCRIPT_DIR/../../../.." && pwd)"
+
+build_dir="$ROOT_DIR/build"
+dataset_dir="$ROOT_DIR/benchmarks"
+report_dir="$ROOT_DIR/experiments/results/incremental/reduced_bound/incre_abp_x0.5"
 
 time_limit="1800"
 memory_limit="30000"
