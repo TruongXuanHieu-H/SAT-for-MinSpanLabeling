@@ -1,9 +1,7 @@
 import os
 import re
+import argparse
 import pandas as pd
-
-ROOT_DIR = "./iteration"
-OUTPUT_FILE = "sat-iteration_summary.xlsx"
 
 
 def extract(pattern, text, default=""):
@@ -64,12 +62,12 @@ def parse_log(filepath):
         ),
 
         "Memory consumed (MB)": extract(
-            r'r \[Main\] Total memory consumed:\s*([^\n\r]+) MB.',
+            r'r \[Main\] Total memory consumed:\s*([^\n\r]+) MB\.',
             content
         ),
 
         "Time consumed (ms)": extract(
-            r'r \[Main\] Total real time:\s*([^\n\r]+) ms.',
+            r'r \[Main\] Total real time:\s*([^\n\r]+) ms\.',
             content
         ),
 
@@ -82,14 +80,14 @@ def parse_log(filepath):
     return row
 
 
-def main():
+def main(root_dir, output_file):
     with pd.ExcelWriter(
-        OUTPUT_FILE,
+        output_file,
         engine="openpyxl"
     ) as writer:
 
-        for folder in sorted(os.listdir(ROOT_DIR)):
-            folder_path = os.path.join(ROOT_DIR, folder)
+        for folder in sorted(os.listdir(root_dir)):
+            folder_path = os.path.join(root_dir, folder)
 
             if not os.path.isdir(folder_path):
                 continue
@@ -138,8 +136,28 @@ def main():
                 index=False
             )
 
-    print(f"Saved to {OUTPUT_FILE}")
+    print(f"Saved to {output_file}")
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(
+        description="Parse SAT iteration logs into an Excel summary."
+    )
+
+    parser.add_argument(
+        "root_dir",
+        nargs="?",
+        default="./iteration",
+        help="Root directory containing experiment folders"
+    )
+
+    parser.add_argument(
+        "output_file",
+        nargs="?",
+        default="sat-iteration_summary.xlsx",
+        help="Output Excel file"
+    )
+
+    args = parser.parse_args()
+
+    main(args.root_dir, args.output_file)
