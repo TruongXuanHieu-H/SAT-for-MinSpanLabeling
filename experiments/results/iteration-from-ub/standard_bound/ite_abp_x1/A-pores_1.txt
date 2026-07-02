@@ -1,0 +1,65 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 7.
+c [Param] UB is predefined as 30.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Param] Worker count is set to 8.
+c [Main] Search strategy: Iterating from upper bound.
+c [Main] Search order: 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7.
+c [Main] Encoding and solving for graph: A-pores_1.mtx.rnd.
+c [Label = 23] Encoding duration: 7ms.
+c [Label = 23] Number of clauses: 12249.
+c [Label = 23] Number of variables: 1914.
+c [Label = 23] Solving duration: 225 ms.
+s [Label = 23] UNSAT (w = 6).
+c [Main] Highest label UNSAT is set to 23
+c [Label = 30] Encoding duration: 36ms.
+c [Label = 30] Number of clauses: 16540.
+c [Label = 30] Number of variables: 2550.
+c [Label = 30] Solving duration: 235 ms.
+s [Label = 30] SAT (w = 6).
+Label assignment: 30 10 29 21 19 14 24 3 28 7 16 23 9 17 22 25 4 6 18 2 26 11 13 20 27 8 15 5 1 12 
+c [Main] Lowest label SAT is set to 30.
+c [Label = 24] Encoding duration: 24ms.
+c [Label = 24] Number of clauses: 12556.
+c [Label = 24] Number of variables: 1992.
+c [Label = 24] Solving duration: 598 ms.
+s [Label = 24] UNSAT (w = 6).
+c [Main] Highest label UNSAT is set to 24
+c [Label = 25] Encoding duration: 12ms.
+c [Label = 25] Number of clauses: 13651.
+c [Label = 25] Number of variables: 2160.
+c [Label = 25] Solving duration: 2443 ms.
+s [Label = 25] UNSAT (w = 6).
+c [Main] Highest label UNSAT is set to 25
+c [Label = 26] Encoding duration: 9ms.
+c [Label = 26] Number of clauses: 14297.
+c [Label = 26] Number of variables: 2238.
+c [Label = 26] Solving duration: 9417 ms.
+s [Label = 26] UNSAT (w = 6).
+c [Main] Highest label UNSAT is set to 26
+c [Label = 27] Encoding duration: 9ms.
+c [Label = 27] Number of clauses: 14942.
+c [Label = 27] Number of variables: 2316.
+c [Label = 27] Solving duration: 31366 ms.
+s [Label = 27] UNSAT (w = 6).
+c [Main] Highest label UNSAT is set to 27
+c [Label = 28] Encoding duration: 23ms.
+c [Label = 28] Number of clauses: 15588.
+c [Label = 28] Number of variables: 2394.
+c [Label = 28] Solving duration: 227788 ms.
+s [Label = 28] UNSAT (w = 6).
+c [Main] Highest label UNSAT is set to 28
+c [Label = 29] Encoding duration: 11ms.
+c [Label = 29] Number of clauses: 16233.
+c [Label = 29] Number of variables: 2472.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Lim pid ends with result: 254.
+c [Main] All children have completed.
+r [Main] 
+r [Main] Final results: 
+r [Main] Lowest label SAT:  	30.
+r [Main] Highest label UNSAT:	28.
+r [Main] Total real time: 1807318 ms.
+r [Main] Total memory consumed: 93.2 MB.
+r [Main] 

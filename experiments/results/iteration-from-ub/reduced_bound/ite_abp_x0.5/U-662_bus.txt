@@ -1,0 +1,79 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 111.
+c [Param] UB is predefined as 331.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Param] Worker count is set to 8.
+c [Main] Search strategy: Iterating from upper bound.
+c [Main] Search order: 331 330 329 328 327 326 325 324 323 322 321 320 319 318 317 316 315 314 313 312 311 310 309 308 307 306 305 304 303 302 301 300 299 298 297 296 295 294 293 292 291 290 289 288 287 286 285 284 283 282 281 280 279 278 277 276 275 274 273 272 271 270 269 268 267 266 265 264 263 262 261 260 259 258 257 256 255 254 253 252 251 250 249 248 247 246 245 244 243 242 241 240 239 238 237 236 235 234 233 232 231 230 229 228 227 226 225 224 223 222 221 220 219 218 217 216 215 214 213 212 211 210 209 208 207 206 205 204 203 202 201 200 199 198 197 196 195 194 193 192 191 190 189 188 187 186 185 184 183 182 181 180 179 178 177 176 175 174 173 172 171 170 169 168 167 166 165 164 163 162 161 160 159 158 157 156 155 154 153 152 151 150 149 148 147 146 145 144 143 142 141 140 139 138 137 136 135 134 133 132 131 130 129 128 127 126 125 124 123 122 121 120 119 118 117 116 115 114 113 112 111.
+c [Main] Encoding and solving for graph: U-662_bus.mtx.rnd.
+c [Label = 328] Encoding duration: 2836ms.
+c [Label = 328] Number of clauses: 2012088.
+c [Label = 328] Number of variables: 503782.
+c [Label = 328] Solving duration: 8656 ms.
+s [Label = 328] UNSAT (w = 110).
+c [Label = 324] Encoding duration: 2788ms.
+c [Label = 324] Number of clauses: 1984346.
+c [Label = 324] Number of variables: 498486.
+c [Label = 324] Solving duration: 8705 ms.
+s [Label = 324] UNSAT (w = 110).
+c [Label = 330] Encoding duration: 2840ms.
+c [Label = 330] Number of clauses: 2022579.
+c [Label = 330] Number of variables: 506430.
+c [Label = 330] Solving duration: 8685 ms.
+s [Label = 330] UNSAT (w = 110).
+c [Label = 329] Encoding duration: 2853ms.
+c [Label = 329] Number of clauses: 2019023.
+c [Label = 329] Number of variables: 505106.
+c [Label = 329] Solving duration: 8705 ms.
+s [Label = 329] UNSAT (w = 110).
+c [Main] Highest label UNSAT is set to 328
+c [Main] Kill lower label pid 324.
+c [Main] Kill lower label pid 325.
+c [Main] Kill lower label pid 326.
+c [Main] Kill lower label pid 327.
+c [Label = 325] Encoding duration: 2920ms.
+c [Label = 325] Number of clauses: 1991281.
+c [Label = 325] Number of variables: 499810.
+c [Label = 325] Solving duration: 8736 ms.
+s [Label = 325] UNSAT (w = 110).
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 327] Encoding duration: 2879ms.
+c [Label = 327] Number of clauses: 2005152.
+c [Label = 327] Number of variables: 502458.
+c [Label = 327] Solving duration: 8686 ms.
+s [Label = 327] UNSAT (w = 110).
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 326] Encoding duration: 2953ms.
+c [Label = 326] Number of clauses: 1998217.
+c [Label = 326] Number of variables: 501134.
+c [Label = 326] Solving duration: 8688 ms.
+s [Label = 326] UNSAT (w = 110).
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Highest label UNSAT is set to 330
+c [Main] Kill lower label pid 325.
+c [Main] Kill lower label pid 326.
+c [Main] Kill lower label pid 327.
+c [Main] Kill lower label pid 329.
+c [Main] Kill lower label pid 325.
+c [Main] Kill lower label pid 326.
+c [Main] Kill lower label pid 327.
+c [Main] Child pid 326 - 1192652 terminated by signal 15.
+c [Main] Child pid 325 - 1192653 terminated by signal 15.
+c [Main] Child pid 327 - 1192651 terminated by signal 15.
+c [Label = 331] Encoding duration: 3401ms.
+c [Label = 331] Number of clauses: 2245326.
+c [Label = 331] Number of variables: 578588.
+c [Label = 331] Solving duration: 214290 ms.
+s [Label = 331] SAT (w = 110).
+Label assignment: 213 115 210 63 94 208 86 97 7 331 331 258 331 112 97 281 31 221 111 296 292 256 180 141 86 328 204 97 68 78 302 152 331 201 25 94 97 210 97 129 162 9 95 295 207 57 97 97 72 290 156 294 331 75 64 331 25 43 210 217 208 217 88 129 331 1 265 130 93 216 304 227 220 98 196 53 211 214 76 331 46 97 214 278 97 331 331 221 331 221 211 318 97 111 207 97 221 206 88 221 111 301 220 138 16 208 330 43 184 6 322 135 97 86 91 220 98 331 91 97 65 79 331 91 97 97 44 230 168 81 103 221 135 110 43 208 97 82 94 321 249 15 331 263 208 331 98 216 98 207 298 331 207 331 196 331 97 331 97 319 269 43 331 42 155 32 213 307 150 329 210 208 45 221 331 331 331 97 331 74 192 201 331 114 73 97 212 137 250 97 237 169 239 331 209 208 211 199 209 173 166 165 90 94 259 322 331 331 87 211 208 172 167 92 170 135 279 122 136 99 67 221 331 207 89 221 178 97 319 97 210 141 221 98 33 117 93 280 210 5 300 86 97 39 208 221 89 331 271 209 328 89 210 331 201 331 317 264 93 231 207 331 36 284 35 98 297 331 241 58 306 276 96 14 331 40 274 207 42 252 94 152 235 305 91 111 331 91 331 195 270 98 262 92 331 49 315 123 211 331 16 204 90 331 303 232 325 331 233 55 98 98 131 97 221 330 209 159 43 206 331 201 331 277 186 164 98 43 229 209 200 87 331 97 163 15 285 331 207 135 134 207 98 330 208 97 331 100 92 125 33 113 313 66 179 221 331 202 77 151 97 91 133 2 207 36 312 190 207 91 210 331 331 70 114 221 331 208 201 293 221 97 142 34 207 208 167 309 28 245 324 149 208 221 204 330 331 203 182 331 197 71 202 107 125 331 207 331 132 68 31 177 273 87 168 246 310 209 331 223 154 207 158 176 57 206 159 330 209 161 208 331 331 209 221 255 186 89 31 120 26 192 326 24 319 110 205 90 209 268 209 86 331 143 1 97 275 98 331 86 331 257 97 331 316 111 331 330 80 272 331 224 311 208 331 1 195 282 28 302 152 331 49 22 260 17 120 8 98 331 126 242 214 98 84 326 188 308 1 237 69 331 193 97 247 287 97 320 225 24 30 266 190 217 330 234 331 228 202 331 145 327 61 331 147 331 1 238 98 48 2 184 95 189 194 86 60 90 94 98 56 97 210 331 116 193 157 144 219 243 207 47 97 160 331 210 10 127 299 97 86 97 101 175 75 131 97 111 111 331 146 50 237 62 21 119 185 111 27 171 283 54 286 139 83 222 12 38 226 148 261 118 198 331 191 331 19 102 104 108 288 289 114 124 187 29 221 51 109 244 154 331 314 267 130 183 106 13 331 207 221 141 18 323 240 59 140 254 331 236 215 207 218 105 41 121 174 207 85 176 128 176 221 156 153 1 253 52 291 248 37 3 331 20 173 11 174 23 181 251 4 111 
+c [Main] Lowest label SAT is set to 331.
+c [Main] All children have completed.
+r [Main] 
+r [Main] Final results: 
+r [Main] Lowest label SAT:  	331.
+r [Main] Highest label UNSAT:	330.
+r [Main] Total real time: 218220 ms.
+r [Main] Total memory consumed: 6419.6 MB.
+r [Main] 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).

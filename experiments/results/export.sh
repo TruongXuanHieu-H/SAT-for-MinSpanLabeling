@@ -7,3 +7,7 @@ python3 export_incremental.py   ./incremental/standard_bound    ./incremental/st
 python3 export_iteration.py     ./iteration/extended_bound      ./iteration/extended_bound/sat-iteration-extended-bound.xlsx
 python3 export_iteration.py     ./iteration/reduced_bound       ./iteration/reduced_bound/sat-iteration-reduced-bound.xlsx
 python3 export_iteration.py     ./iteration/standard_bound      ./iteration/standard_bound/sat-iteration-standard-bound.xlsx
+
+python3 export_iteration.py     ./iteration-from-ub/extended_bound      ./iteration-from-ub/extended_bound/sat-iteration-extended-bound.xlsx
+python3 export_iteration.py     ./iteration-from-ub/reduced_bound       ./iteration-from-ub/reduced_bound/sat-iteration-reduced-bound.xlsx
+python3 export_iteration.py     ./iteration-from-ub/standard_bound      ./iteration-from-ub/standard_bound/sat-iteration-standard-bound.xlsx

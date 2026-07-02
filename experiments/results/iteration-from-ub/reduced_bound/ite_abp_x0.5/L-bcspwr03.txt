@@ -1,0 +1,72 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 20.
+c [Param] UB is predefined as 59.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Param] Worker count is set to 8.
+c [Main] Search strategy: Iterating from upper bound.
+c [Main] Search order: 59 58 57 56 55 54 53 52 51 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26 25 24 23 22 21 20.
+c [Main] Encoding and solving for graph: L-bcspwr03.mtx.rnd.
+c [Label = 55] Encoding duration: 54ms.
+c [Label = 55] Number of clauses: 61018.
+c [Label = 55] Number of variables: 14632.
+c [Label = 55] Solving duration: 161 ms.
+s [Label = 55] UNSAT (w = 19).
+c [Label = 53] Encoding duration: 52ms.
+c [Label = 53] Number of clauses: 58403.
+c [Label = 53] Number of variables: 14160.
+c [Label = 53] Solving duration: 161 ms.
+s [Label = 53] UNSAT (w = 19).
+c [Main] Highest label UNSAT is set to 55
+c [Main] Kill lower label pid 52.
+c [Main] Kill lower label pid 53.
+c [Main] Kill lower label pid 54.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 54] Encoding duration: 52ms.
+c [Label = 54] Number of clauses: 59711.
+c [Label = 54] Number of variables: 14396.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 52] Encoding duration: 48ms.
+c [Label = 52] Number of clauses: 57096.
+c [Label = 52] Number of variables: 13924.
+c [Label = 52] Solving duration: 170 ms.
+s [Label = 52] UNSAT (w = 19).
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 53 - 1181401 terminated by signal 15.
+c [Main] Child pid 52 - 1181402 terminated by signal 15.
+c [Main] Child pid 54 - 1181400 terminated by signal 15.
+c [Label = 56] Encoding duration: 54ms.
+c [Label = 56] Number of clauses: 62326.
+c [Label = 56] Number of variables: 14868.
+c [Label = 56] Solving duration: 172 ms.
+s [Label = 56] UNSAT (w = 19).
+c [Main] Highest label UNSAT is set to 56
+c [Label = 57] Encoding duration: 54ms.
+c [Label = 57] Number of clauses: 62978.
+c [Label = 57] Number of variables: 15104.
+c [Label = 57] Solving duration: 185 ms.
+s [Label = 57] UNSAT (w = 19).
+c [Main] Highest label UNSAT is set to 57
+c [Label = 59] Encoding duration: 66ms.
+c [Label = 59] Number of clauses: 71847.
+c [Label = 59] Number of variables: 17464.
+c [Label = 59] Solving duration: 550 ms.
+s [Label = 59] SAT (w = 19).
+Label assignment: 59 59 59 59 59 59 59 59 40 59 40 59 59 59 40 40 40 40 59 39 40 59 21 59 47 40 40 40 40 21 59 40 40 52 28 49 20 59 48 40 54 53 21 42 43 59 40 59 23 1 34 36 21 21 45 1 59 21 21 59 26 40 59 59 33 21 34 1 40 38 21 31 29 59 22 25 40 59 24 58 27 1 35 59 30 44 32 59 2 59 21 3 57 16 21 40 41 50 4 56 15 37 46 17 18 19 10 7 6 8 5 9 13 55 14 12 51 11 
+c [Main] Lowest label SAT is set to 59.
+c [Label = 58] Encoding duration: 65ms.
+c [Label = 58] Number of clauses: 70540.
+c [Label = 58] Number of variables: 17228.
+c [Label = 58] Solving duration: 720 ms.
+s [Label = 58] SAT (w = 19).
+Label assignment: 58 58 58 58 58 58 58 44 39 47 39 58 58 58 39 2 39 30 58 39 39 58 20 58 45 39 39 39 39 21 48 1 33 52 26 24 20 58 53 41 56 58 22 55 54 58 1 58 58 1 39 34 20 1 51 1 20 37 37 58 28 39 58 58 23 20 38 6 39 39 1 27 32 58 20 21 39 58 25 58 20 1 29 9 36 42 35 58 15 58 20 3 58 5 20 57 43 50 4 1 16 39 31 12 18 19 17 7 40 11 5 8 13 46 10 12 49 14 
+c [Main] Lowest label SAT is set to 58.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] All children have completed.
+r [Main] 
+r [Main] Final results: 
+r [Main] Lowest label SAT:  	58.
+r [Main] Highest label UNSAT:	57.
+r [Main] Total real time: 802 ms.
+r [Main] Total memory consumed: 214.3 MB.
+r [Main] 
