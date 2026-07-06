@@ -1,0 +1,70 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 11.
+c [Param] UB is predefined as 24.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Param] Worker count is set to 8.
+c [Param] Max CNF size is set to 10.
+c [Main] Search strategy: Iterating from upper bound.
+c [Main] Search order: 24 23 22 21 20 19 18 17 16 15 14 13 12 11.
+c [Main] Encoding and solving for graph: E-bcspwr02.mtx.rnd.
+c [Label = 17] Encoding duration: 4ms.
+c [Label = 17] Number of clauses: 5202.
+c [Label = 17] Number of variables: 1653.
+c [Label = 17] Solving duration: 0 ms.
+s [Label = 17] UNSAT (w = 10).
+c [Label = 18] Encoding duration: 4ms.
+c [Label = 18] Number of clauses: 5690.
+c [Label = 18] Number of variables: 1756.
+c [Label = 18] Solving duration: 0 ms.
+s [Label = 18] UNSAT (w = 10).
+c [Label = 19] Encoding duration: 5ms.
+c [Label = 19] Number of clauses: 6177.
+c [Label = 19] Number of variables: 1859.
+c [Label = 19] Solving duration: 0 ms.
+s [Label = 19] UNSAT (w = 10).
+c [Main] Highest label UNSAT is set to 17
+c [Label = 20] Encoding duration: 5ms.
+c [Label = 20] Number of clauses: 6439.
+c [Label = 20] Number of variables: 1962.
+c [Label = 20] Solving duration: 0 ms.
+s [Label = 20] UNSAT (w = 10).
+c [Main] Highest label UNSAT is set to 18
+c [Main] Highest label UNSAT is set to 19
+c [Main] Highest label UNSAT is set to 20
+c [Label = 22] Encoding duration: 7ms.
+c [Label = 22] Number of clauses: 8639.
+c [Label = 22] Number of variables: 2511.
+c [Label = 22] Solving duration: 59 ms.
+s [Label = 22] SAT (w = 10).
+Label assignment: 4 17 18 1 22 6 12 7 22 8 15 11 19 22 22 22 1 22 12 5 22 22 11 1 22 22 1 12 14 16 3 22 11 12 9 22 22 22 10 1 20 22 2 13 21 12 22 1 1 
+c [Label = 24] Encoding duration: 8ms.
+c [Label = 24] Number of clauses: 9614.
+c [Label = 24] Number of variables: 2717.
+c [Label = 24] Solving duration: 58 ms.
+s [Label = 24] SAT (w = 10).
+Label assignment: 15 17 24 24 24 24 24 8 14 24 24 24 24 14 7 24 14 24 24 24 19 6 2 9 2 14 2 2 2 24 20 12 24 1 18 24 1 11 10 14 23 5 4 24 22 3 13 16 21 
+c [Main] Lowest label SAT is set to 24.
+c [Main] Lowest label SAT is set to 22.
+c [Main] Kill higher label pid 23.
+c [Label = 23] Encoding duration: 7ms.
+c [Label = 23] Number of clauses: 9126.
+c [Label = 23] Number of variables: 2614.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 23 - 1368053 terminated by signal 15.
+c [Label = 21] Encoding duration: 6ms.
+c [Label = 21] Number of clauses: 8151.
+c [Label = 21] Number of variables: 2408.
+c [Label = 21] Solving duration: 94 ms.
+s [Label = 21] SAT (w = 10).
+Label assignment: 11 14 17 11 11 21 21 21 4 21 19 1 16 7 1 2 1 1 21 21 13 21 21 11 11 11 1 21 21 15 8 11 21 21 12 21 21 9 18 6 20 10 1 21 3 21 1 5 11 
+c [Main] Lowest label SAT is set to 21.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] All children have completed.
+r [Main] 
+r [Main] Final results: 
+r [Main] Lowest label SAT:  	21.
+r [Main] Highest label UNSAT:	20.
+r [Main] Total real time: 104 ms.
+r [Main] Total memory consumed: 21 MB.
+r [Main] 

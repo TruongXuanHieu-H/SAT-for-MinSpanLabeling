@@ -1,0 +1,41 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 7.
+c [Param] UB is predefined as 27.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Param] Max CNF size is set to 10.
+c [Main] Search strategy: Incremental from upper bound.
+c [Main] Encoding and solving for graph: F-curtis54.mtx.rnd.
+c [Incremental] Minimize Makespan Labeling Antibandwidth problem (F-curtis54.mtx.rnd):
+c [Incremental] Encoding starts with target value = 6:
+c [Incremental] Encoding duration: 9ms.
+c [Incremental] Number of clauses: 19831.
+c [Incremental] Number of variables: 3456.
+c [Incremental] Solving for max label = 27:
+c [Incremental] Solving duration: 35 ms.
+s [Incremental] SAT (label = 27).
+Label assignment: 3 6 21 1 1 1 19 1 7 7 19 1 1 7 7 1 7 19 21 1 1 27 1 24 15 25 13 27 19 22 5 27 20 23 16 27 21 14 27 17 12 4 18 15 25 25 9 11 26 10 8 2 13 1 
+c [Incremental] Max used label: 27.
+c [Incremental] Label 27 is removed from searching.
+c [Incremental] Solving for max label = 26:
+c [Incremental] Solving duration: 5 ms.
+s [Incremental] SAT (label = 26).
+Label assignment: 2 6 20 1 1 3 20 1 7 7 19 1 1 7 26 1 7 22 20 9 1 20 1 24 14 14 13 26 21 22 5 26 20 23 15 26 20 14 26 1 12 17 18 14 16 25 8 11 26 10 8 2 4 1 
+c [Incremental] Max used label: 26.
+c [Incremental] Label 26 is removed from searching.
+c [Incremental] Solving for max label = 25:
+c [Incremental] Solving duration: 29 ms.
+s [Incremental] SAT (label = 25).
+Label assignment: 7 6 19 1 1 2 21 1 7 7 19 25 1 7 25 1 7 19 19 9 25 19 1 24 13 15 13 25 25 22 5 25 20 17 16 8 19 14 25 11 12 4 18 13 25 13 1 25 25 13 7 10 3 23 
+c [Incremental] Max used label: 25.
+c [Incremental] Label 25 is removed from searching.
+c [Incremental] Solving for max label = 24:
+c [Incremental] Solving duration: 4 ms.
+s [Incremental] UNSAT (label = 24).
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Work pid ends with result: 0.
+r [Main] 
+r [Main] Final results: 
+r [Main] Total real time: 87 ms.
+r [Main] Total memory consumed: 2.4 MB.
+r [Main] 

@@ -1,0 +1,47 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 11.
+c [Param] UB is predefined as 24.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Param] Max CNF size is set to 10.
+c [Main] Search strategy: Incremental from upper bound.
+c [Main] Encoding and solving for graph: E-bcspwr02.mtx.rnd.
+c [Incremental] Minimize Makespan Labeling Antibandwidth problem (E-bcspwr02.mtx.rnd):
+c [Incremental] Encoding starts with target value = 10:
+c [Incremental] Encoding duration: 5ms.
+c [Incremental] Number of clauses: 10813.
+c [Incremental] Number of variables: 2741.
+c [Incremental] Solving for max label = 24:
+c [Incremental] Solving duration: 32 ms.
+s [Incremental] SAT (label = 24).
+Label assignment: 10 2 1 1 1 1 1 11 1 1 1 1 1 11 1 1 11 1 22 1 1 18 14 24 21 1 21 24 20 1 6 11 14 24 17 9 19 3 15 24 1 16 12 5 4 23 13 8 7 
+c [Incremental] Max used label: 24.
+c [Incremental] Label 24 is removed from searching.
+c [Incremental] Solving for max label = 23:
+c [Incremental] Solving duration: 1 ms.
+s [Incremental] SAT (label = 23).
+Label assignment: 10 2 1 1 1 1 1 14 1 1 1 1 1 11 1 1 11 1 22 1 4 18 13 23 21 1 21 23 20 1 6 11 12 23 17 9 19 2 15 23 1 16 12 5 3 23 13 8 7 
+c [Incremental] Max used label: 23.
+c [Incremental] Label 23 is removed from searching.
+c [Incremental] Solving for max label = 22:
+c [Incremental] Solving duration: 44 ms.
+s [Incremental] SAT (label = 22).
+Label assignment: 6 22 22 2 19 22 22 9 22 8 11 2 16 22 22 2 2 1 2 1 15 18 3 22 20 22 1 12 17 22 4 12 11 7 12 1 12 22 14 21 22 5 12 10 13 11 22 1 1 
+c [Incremental] Max used label: 22.
+c [Incremental] Label 22 is removed from searching.
+c [Incremental] Solving for max label = 21:
+c [Incremental] Solving duration: 1 ms.
+s [Incremental] SAT (label = 21).
+Label assignment: 6 21 21 1 19 21 21 9 21 8 11 1 16 21 21 1 1 1 1 1 15 18 3 21 20 21 1 11 17 21 4 11 11 7 11 2 12 21 14 21 21 5 11 10 13 11 21 1 1 
+c [Incremental] Max used label: 21.
+c [Incremental] Label 21 is removed from searching.
+c [Incremental] Solving for max label = 20:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] UNSAT (label = 20).
+c [Main] Work pid ends with result: 0.
+r [Main] 
+r [Main] Final results: 
+r [Main] Total real time: 88 ms.
+r [Main] Total memory consumed: 4.6 MB.
+r [Main] 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
