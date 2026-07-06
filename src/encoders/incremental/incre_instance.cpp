@@ -45,7 +45,7 @@ int IncreInstance::encode_and_solve_problem()
 
             std::vector<int> label_assignment = instance_data->solver->extract_result(global_data.g->n, global_data.upper_bound);
 
-            std::cout << "Label assignment: ";
+            std::cout << "c " << instance_data->get_signature() << "Label assignment: ";
             for (int l : label_assignment)
                 std::cout << l << " ";
             std::cout << "\n";
