@@ -34,4 +34,4 @@ public:
     void export_dimacs(std::ostream &out);
 };
 
-#endif // INSTANCE_DATA_H
+#endif

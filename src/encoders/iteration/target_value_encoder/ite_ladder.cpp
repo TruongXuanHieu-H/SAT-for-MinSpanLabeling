@@ -1,0 +1,214 @@
+#include "ite_ladder.h"
+
+#include <assert.h>
+
+int IteLadder::get_target_value_aux_var(const IteInstanceData &instance_data, std::vector<int> key, bool is_key_exist)
+{
+    if (key.front() == key.back() && key.size() == 1)
+    {
+        return key.front();
+    }
+
+    auto pair = target_value_aux_vars.find(key);
+
+    if (is_key_exist)
+    {
+        assert(pair != target_value_aux_vars.end());
+    }
+
+    if (pair != target_value_aux_vars.end())
+    {
+        return pair->second;
+    }
+
+    int new_target_value_aux_var = instance_data.vh->get_new_var();
+    target_value_aux_vars.insert({key, new_target_value_aux_var});
+    return new_target_value_aux_var;
+}
+
+void IteLadder::encode_ladder(const IteInstanceData &instance_data, const std::vector<int> ladder_vars, int width)
+{
+    if (instance_data.global_data.verbose)
+    {
+        std::cout << "c Encoding ladder ";
+        for (int var : ladder_vars)
+        {
+            std::cout << var << " ";
+        }
+        std::cout << "with width " << width << std::endl;
+    }
+
+    std::vector<std::vector<int>> windows_vars;
+    int number_ladder_vars = (int)ladder_vars.size();
+
+    for (int i = 0; i < number_ladder_vars; i += width)
+    {
+        int end = std::min(i + width, number_ladder_vars);
+        windows_vars.emplace_back(ladder_vars.begin() + i, ladder_vars.begin() + end);
+    }
+
+    int number_windows = (int)windows_vars.size();
+
+    for (int i = 0; i < number_windows; i++)
+    {
+        encode_window(instance_data, windows_vars[i], i == 0, i == number_windows - 1);
+    }
+
+    for (int i = 0; i < number_windows - 1; i++)
+    {
+        connect_windows(instance_data, windows_vars[i], windows_vars[i + 1]);
+    }
+}
+
+void IteLadder::encode_window(const IteInstanceData &instance_data, const std::vector<int> window_vars, bool is_first_window, bool is_last_window)
+{
+    if (instance_data.global_data.verbose)
+    {
+        std::cout << "c Encoding window ";
+        for (int var : window_vars)
+        {
+            std::cout << var << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    int window_vars_size = (int)window_vars.size();
+
+    if (!is_first_window)
+    {
+        for (int i = 1; i < window_vars_size; i++)
+        {
+            instance_data.cc->add_clause({-(window_vars[i]),
+                                          get_target_value_aux_var(instance_data, std::vector<int>(window_vars.begin(), window_vars.begin() + i + 1))});
+        }
+
+        for (int i = 0; i < window_vars_size - 1; i++)
+        {
+            instance_data.cc->add_clause({-get_target_value_aux_var(instance_data, std::vector<int>(window_vars.begin(), window_vars.begin() + i + 1)),
+                                          get_target_value_aux_var(instance_data, std::vector<int>(window_vars.begin(), window_vars.begin() + i + 2))});
+        }
+
+        for (int i = window_vars_size - 1; i > 0; i--)
+        {
+            instance_data.cc->add_clause({window_vars[i],
+                                          get_target_value_aux_var(instance_data, std::vector<int>(window_vars.begin(), window_vars.begin() + i)),
+                                          -get_target_value_aux_var(instance_data, std::vector<int>(window_vars.begin(), window_vars.begin() + i + 1))});
+        }
+
+        for (int i = window_vars_size - 1; i > 0; i--)
+        {
+            instance_data.cc->add_clause({-(window_vars[i]),
+                                          -get_target_value_aux_var(instance_data, std::vector<int>(window_vars.begin(), window_vars.begin() + i))});
+        }
+    }
+
+    if (!is_last_window)
+    {
+        for (int i = window_vars_size - 2; i >= 0; i--)
+        {
+            instance_data.cc->add_clause({-(window_vars[i]),
+                                          get_target_value_aux_var(instance_data, std::vector<int>(window_vars.begin() + i, window_vars.end()))});
+        }
+
+        for (int i = window_vars_size - 1; i >= 1; i--)
+        {
+            instance_data.cc->add_clause({-get_target_value_aux_var(instance_data, std::vector<int>(window_vars.begin() + i, window_vars.end())),
+                                          get_target_value_aux_var(instance_data, std::vector<int>(window_vars.begin() + i - 1, window_vars.end()))});
+        }
+
+        for (int i = 0; i < window_vars_size - 1; i++)
+        {
+            instance_data.cc->add_clause({window_vars[i],
+                                          get_target_value_aux_var(instance_data, std::vector<int>(window_vars.begin() + i + 1, window_vars.end())),
+                                          -get_target_value_aux_var(instance_data, std::vector<int>(window_vars.begin() + i, window_vars.end()))});
+        }
+
+        if (is_first_window)
+        {
+            for (int i = 0; i < window_vars_size - 1; i++)
+            {
+                instance_data.cc->add_clause({-(window_vars[i]),
+                                              -get_target_value_aux_var(instance_data, std::vector<int>(window_vars.begin() + i + 1, window_vars.end()))});
+            }
+        }
+    }
+}
+
+void IteLadder::connect_windows(const IteInstanceData &instance_data, const std::vector<int> first_window_vars, const std::vector<int> second_window_vars)
+{
+    if (instance_data.global_data.verbose)
+    {
+        std::cout << "c Connecting windows: " << std::endl;
+        std::cout << "c First window vars: ";
+        for (int var : first_window_vars)
+        {
+            std::cout << var << " ";
+        }
+        std::cout << std::endl;
+        std::cout << "c Second window vars: ";
+        for (int var : second_window_vars)
+        {
+            std::cout << var << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    int number_first_window_vars = (int)first_window_vars.size();
+    int number_second_window_vars = (int)second_window_vars.size();
+    assert(number_first_window_vars >= number_second_window_vars);
+
+    int number_connections = number_first_window_vars == number_second_window_vars ? number_second_window_vars - 1 : number_second_window_vars;
+
+    for (int i = 0; i < number_connections; i++)
+    {
+        instance_data.cc->add_clause({-get_target_value_aux_var(instance_data, std::vector<int>(first_window_vars.begin() + i + 1, first_window_vars.end())),
+                                      -get_target_value_aux_var(instance_data, std::vector<int>(second_window_vars.begin(), second_window_vars.begin() + i + 1))});
+    }
+}
+
+void IteLadder::connect_ladder(const IteInstanceData &instance_data, const std::vector<int> first_ladder_vars, const std::vector<int> second_ladder_vars, int width)
+{
+    if (instance_data.global_data.verbose)
+    {
+        std::cout << "c Connecting ladders: " << std::endl;
+        std::cout << "c First ladder vars: ";
+        for (int var : first_ladder_vars)
+        {
+            std::cout << var << " ";
+        }
+        std::cout << std::endl;
+        std::cout << "c Second ladder vars: ";
+        for (int var : second_ladder_vars)
+        {
+            std::cout << var << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    assert(first_ladder_vars.size() == second_ladder_vars.size());
+
+    int number_connections = first_ladder_vars.size() - width + 1;
+    for (int i = 0; i < number_connections; i++)
+    {
+        int mod = i % width;
+        if (mod == 0)
+        {
+            int first_aux_var = get_target_value_aux_var(instance_data, std::vector<int>(first_ladder_vars.begin() + i, first_ladder_vars.begin() + i + width));
+            int second_aux_var = get_target_value_aux_var(instance_data, std::vector<int>(second_ladder_vars.begin() + i, second_ladder_vars.begin() + i + width));
+
+            instance_data.cc->add_clause({-first_aux_var, -second_aux_var});
+        }
+        else
+        {
+            int first_aux_var_1 = get_target_value_aux_var(instance_data, std::vector<int>(first_ladder_vars.begin() + i, first_ladder_vars.begin() + i + width - mod));
+            int first_aux_var_2 = get_target_value_aux_var(instance_data, std::vector<int>(first_ladder_vars.begin() + i + width - mod, first_ladder_vars.begin() + i + width));
+            int second_aux_var_1 = get_target_value_aux_var(instance_data, std::vector<int>(second_ladder_vars.begin() + i, second_ladder_vars.begin() + i + width - mod));
+            int second_aux_var_2 = get_target_value_aux_var(instance_data, std::vector<int>(second_ladder_vars.begin() + i + width - mod, second_ladder_vars.begin() + i + width));
+
+            instance_data.cc->add_clause({-first_aux_var_1, -second_aux_var_1});
+            instance_data.cc->add_clause({-first_aux_var_1, -second_aux_var_2});
+            instance_data.cc->add_clause({-first_aux_var_2, -second_aux_var_1});
+            instance_data.cc->add_clause({-first_aux_var_2, -second_aux_var_2});
+        }
+    }
+}

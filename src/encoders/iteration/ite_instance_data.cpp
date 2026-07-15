@@ -1,5 +1,5 @@
 #include "ite_instance_data.h"
-#include "ite_ladder.h"
+#include "ite_encoder.h"
 #include "../general/sat_solver_cadical.h"
 #include "../../global_data.h"
 
@@ -13,15 +13,7 @@ std::string IteInstanceData::get_signature() { return "[Label = " + std::to_stri
 
 void IteInstanceData::set_up_encoder()
 {
-    switch (global_data.encode_type)
-    {
-    case EncodeType::ladder:
-        enc = std::make_unique<IteLadder>(*this);
-        break;
-
-    default:
-        break;
-    }
+    enc = std::make_unique<IteEncoder>(*this);
 };
 
 void IteInstanceData::set_up_sat_solver()
@@ -54,7 +46,7 @@ void IteInstanceData::setup_for_encoding()
 
 void IteInstanceData::export_dimacs(std::ostream &out)
 {
-    out << "c CNF fomular for graph " << global_data.g->graph_name << " with Cyclic Antibandwidth value of " << global_data.target_value << "\n";
+    out << "c CNF fomular for graph " << global_data.g->graph_name << " with target value of " << global_data.target_value << "\n";
     out << "p cnf " << vh->size() << " " << cc->size() << "\n";
     for (const std::vector<int> &c : cc->clause_list)
     {

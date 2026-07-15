@@ -1,44 +1,47 @@
 #include "ite_instance.h"
-#include "ite_instance_data.h"
-#include "ite_ladder.h"
-#include "../general/sat_solver_cadical.h"
+#include "ite_encoder.h"
 #include "../../global_data.h"
+#include "assert.h"
 #include <iostream>
 #include <fstream>
 #include <chrono>
+#include <algorithm>
 
 IteInstance::IteInstance(GlobalData &global_data, int label) : global_data(global_data)
 {
-    data = std::make_unique<IteInstanceData>(global_data, label);
+    instance_data = std::make_unique<IteInstanceData>(global_data, label);
 }
 
 IteInstance::~IteInstance() {}
 
 int IteInstance::encode_and_solve_problem()
 {
-    data->setup_for_solving();
+    std::cout << "c " << instance_data->get_signature() << " Minimize Makespan Labeling problem (" << global_data.g->graph_name << "):" << std::endl;
+
+    instance_data->setup_for_solving();
+    std::cout << "c " << instance_data->get_signature() << " Encoding starts with target value = " << global_data.target_value << ":\n";
 
     auto t1 = std::chrono::high_resolution_clock::now();
-    data->enc->encode_antibandwidth();
+    instance_data->enc->encode_min_makespan_labeling();
     auto t2 = std::chrono::high_resolution_clock::now();
     auto encode_duration = std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1).count();
 
-    std::cout << "c " << data->get_signature() << " Encoding duration: " << encode_duration << "ms" << ".\n";
-    std::cout << "c " << data->get_signature() << " Number of clauses: " << data->cc->size() << ".\n";
-    std::cout << "c " << data->get_signature() << " Number of variables: " << data->vh->size() << ".\n";
+    std::cout << "c " << instance_data->get_signature() << " Encoding duration: " << encode_duration << "ms" << ".\n";
+    std::cout << "c " << instance_data->get_signature() << " Number of clauses: " << instance_data->cc->size() << ".\n";
+    std::cout << "c " << instance_data->get_signature() << " Number of variables: " << instance_data->vh->size() << ".\n";
 
     t1 = std::chrono::high_resolution_clock::now();
-    SAT_res = data->solver->solve();
+    SAT_res = instance_data->solver->solve();
     t2 = std::chrono::high_resolution_clock::now();
     auto solving_duration = std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1).count();
-    std::cout << "c " << data->get_signature() << " Solving duration: " << solving_duration << " ms.\n";
+    std::cout << "c " << instance_data->get_signature() << " Solving duration: " << solving_duration << " ms.\n";
     if (SAT_res == 10)
     {
-        std::cout << "s " << data->get_signature() << " SAT (w = " << global_data.target_value << ").\n";
+        std::cout << "s " << instance_data->get_signature() << " SAT (w = " << global_data.target_value << ").\n";
 
-        std::vector<int> label_assignment = data->solver->extract_result(global_data.g->n, data->label);
+        std::vector<int> label_assignment = instance_data->solver->extract_result(global_data.g->n, instance_data->label);
 
-        std::cout << "c " << data->get_signature() << "Label assignment: ";
+        std::cout << "c " << instance_data->get_signature() << "Label assignment: ";
         for (int l : label_assignment)
             std::cout << l << " ";
         std::cout << "\n";
@@ -48,16 +51,16 @@ int IteInstance::encode_and_solve_problem()
             int solution_abp = recalculate_solution(label_assignment);
             if (solution_abp < global_data.target_value)
             {
-                std::cerr << "c " << data->get_signature() << " Error, the solution is not correct, target value should be at least " << global_data.target_value << ", but it is " << solution_abp << ".\n";
+                std::cerr << "c " << instance_data->get_signature() << " Error, the solution is not correct, target value should be at least " << global_data.target_value << ", but it is " << solution_abp << ".\n";
                 return -10;
             }
         }
     }
     else if (SAT_res == 20)
-        std::cout << "s " << data->get_signature() << " UNSAT (w = " << global_data.target_value << ").\n";
+        std::cout << "s " << instance_data->get_signature() << " UNSAT (w = " << global_data.target_value << ").\n";
     else
     {
-        std::cout << "s " << data->get_signature() << " Error at w = " << global_data.target_value << ", SAT result: " << SAT_res << ".\n";
+        std::cout << "s " << instance_data->get_signature() << " Error at w = " << global_data.target_value << ", SAT result: " << SAT_res << ".\n";
         return -20;
     }
 
@@ -77,32 +80,6 @@ int IteInstance::recalculate_solution(const std::vector<int> &node_labels)
 
 void IteInstance::encode_and_print_dimacs()
 {
-    std::cout << "c " + data->get_signature() + " Cyclic Antibandwidth problem with w = " << global_data.target_value << " (" << global_data.g->graph_name << "):\n";
-    if (global_data.g->n < 1)
-    {
-        std::cout << "c " + data->get_signature() + " The input graph is too small, there is nothing to encode here.\n";
-        return;
-    }
-    if (global_data.target_value < 2)
-    {
-        std::cout << "c " + data->get_signature() + " There is always at least 1 distance in any labelling. There is nothing to encode here.\n";
-        return;
-    }
-
-    data->setup_for_encoding();
-    std::cout << "c " + data->get_signature() + " Encoding starts with w = " << global_data.target_value << ":\n";
-
-    data->enc->encode_antibandwidth();
-    std::cout << "c " + data->get_signature() + " Number of clauses: " << data->cc->size() << ".\n";
-    std::cout << "c " + data->get_signature() + " Number of variables: " << data->vh->size() << ".\n";
-
-    std::string file_name = "abp-" + global_data.g->graph_name + "-k" + std::to_string(global_data.target_value) + ".cnf";
-    std::ofstream out(global_data.dimacs_directory + "/" + file_name);
-    if (!out.is_open())
-    {
-        std::cerr << "c " + data->get_signature() + " Error: cannot open file " << global_data.dimacs_directory + file_name << " for writing.\n";
-        return;
-    }
-    data->export_dimacs(out);
-    out.close();
+    std::cerr << "c " << instance_data->get_signature() << " DIMAC printing is not implemented.\n";
+    exit(-1);
 };
