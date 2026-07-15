@@ -99,20 +99,6 @@ int IncreInstance::recalculate_solution(const std::vector<int> &node_labels)
 
 void IncreInstance::encode_and_print_dimacs()
 {
-    instance_data->setup_for_encoding();
-
-    instance_data->enc->encode_min_makespan_labeling();
-
-    std::cout << "c " + instance_data->get_signature() + " Number of clauses: " << instance_data->cc->size() << ".\n";
-    std::cout << "c " + instance_data->get_signature() + " Number of variables: " << instance_data->vh->size() << ".\n";
-
-    std::string file_name = "abp-" + global_data.g->graph_name + "-k" + std::to_string(global_data.target_value) + ".cnf";
-    std::ofstream out(global_data.dimacs_directory + "/" + file_name);
-    if (!out.is_open())
-    {
-        std::cerr << "c " + instance_data->get_signature() + " Error: cannot open file " << global_data.dimacs_directory + file_name << " for writing.\n";
-        return;
-    }
-    instance_data->export_dimacs(out);
-    out.close();
+    std::cerr << "c " << instance_data->get_signature() << " DIMAC printing is not implemented.\n";
+    exit(-1);
 };
