@@ -35,36 +35,12 @@ INCLUDES := -I$(CADICAL_INC)
 # ================================
 # Source files
 # ================================
-SOURCES := \
-	encoders/general/clause_container.cpp \
-	encoders/general/sat_solver_cadical.cpp \
-	encoders/general/var_handler.cpp \
-	encoders/incremental/incre_encoder.cpp \
-	encoders/incremental/incre_instance_data.cpp \
-	encoders/incremental/incre_instance.cpp \
-	encoders/incremental/incre_ladder.cpp \
-	encoders/iteration/ite_encoder.cpp \
-	encoders/iteration/ite_instance_data.cpp \
-	encoders/iteration/ite_instance.cpp \
-	encoders/iteration/ite_ladder.cpp \
-	graph/graph.cpp \
-	searchers/incre_from_ub.cpp \
-	searchers/ite_bfs.cpp \
-	searchers/ite_from_ub.cpp \
-	searchers/iteration.cpp \
-	searchers/searcher.cpp \
-	utils/args_parser.cpp \
-	utils/pid_manager.cpp \
-	utils/signal_handler.cpp \
-	utils/usage.cpp \
-	utils/version.cpp \
-	encoder.cpp \
-	main.cpp 
+SOURCES := $(shell find $(SRCDIR) -type f -name "*.cpp")
 
 # ================================
 # Object files
 # ================================
-OBJECTS := $(SOURCES:%.cpp=$(OBJDIR)/%.o)
+OBJECTS := $(patsubst $(SRCDIR)/%.cpp,$(OBJDIR)/%.o,$(SOURCES))
 
 # ================================
 # Default target

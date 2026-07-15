@@ -1,6 +1,5 @@
 #include "incre_instance_data.h"
 #include "incre_encoder.h"
-#include "incre_ladder.h"
 #include "../general/sat_solver_cadical.h"
 #include "../../global_data.h"
 
@@ -14,16 +13,8 @@ std::string IncreInstanceData::get_signature() { return "[Incremental]"; };
 
 void IncreInstanceData::set_up_encoder()
 {
-    switch (global_data.encode_type)
-    {
-    case EncodeType::ladder:
-        enc = std::make_unique<IncreLadder>(*this);
-        break;
-
-    default:
-        break;
-    }
-};
+    enc = std::make_unique<IncreEncoder>(*this);
+}
 
 void IncreInstanceData::set_up_sat_solver()
 {
@@ -55,7 +46,7 @@ void IncreInstanceData::setup_for_encoding()
 
 void IncreInstanceData::export_dimacs(std::ostream &out)
 {
-    out << "c CNF fomular for graph " << global_data.g->graph_name << " with Antibandwidth value of " << global_data.target_value << "\n";
+    out << "c CNF fomular for graph " << global_data.g->graph_name << " with target value of " << global_data.target_value << "\n";
     out << "p cnf " << vh->size() << " " << cc->size() << "\n";
     for (const std::vector<int> &c : cc->clause_list)
     {

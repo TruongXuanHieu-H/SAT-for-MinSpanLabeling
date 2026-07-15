@@ -10,22 +10,4 @@ enum class ProblemType
 
 };
 
-class ProblemTypeUtils
-{
-public:
-    std::string GetProblemType(ProblemType type)
-    {
-        switch (type)
-        {
-        case ProblemType::ABP:
-            return "Antibandwidth";
-        case ProblemType::CyclicABP:
-            return "Cyclic Antibandwdith";
-
-        default:
-            return "";
-        }
-    }
-};
-
 #endif

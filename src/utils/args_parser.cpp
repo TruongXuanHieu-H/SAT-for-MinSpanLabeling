@@ -159,6 +159,11 @@ void ArgsParser::init_parser()
         globalData.vertices_mode = VerticesMode::no_hole;
     };
 
+    cmd["--amo-vertex"] = [this](int, int, char **)
+    {
+        globalData.vertices_mode = VerticesMode::amo_vertex;
+    };
+
     cmd["-max-cnf-size"] = [this](int &i, int argc, char **argv)
     {
         globalData.max_cnf_size = get_positive(i, argc, argv, "max cnf size");

@@ -15,7 +15,7 @@ const std::map<std::string, std::string> Helper::option_list = {
     {"--conf-sat", "Use --sat configuration of CaDiCaL [default: true]"},
     {"--conf-unsat", "Use --unsat configuration of CaDiCaL [default: false]"},
     {"--force-phase", "Set options --forcephase,--phase=0 and --no-rephase of CaDiCal [default: false]"},
-    {"--verify-result", "Verify the antibandwidth of the found SAT solution [default: false]"},
+    {"--verify-result", "Verify the target value of the found SAT solution [default: false]"},
     {"--from-lb", "Start solving with width = LB, increasing in each iteration [default: true]"},
     {"-split-size <n>", "Maximal allowed length of clauses, every longer clause is split up into two by introducing a new variable"},
     {"-set-lb <new LB>", "Overwrite predefined LB with <new LB>, has to be at least 2"},

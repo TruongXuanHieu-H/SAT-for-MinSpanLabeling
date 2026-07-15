@@ -1,20 +1,31 @@
 #ifndef INCRE_ENCODER_H
 #define INCRE_ENCODER_H
 
+#include "vertices_encoder/incre_amo_vertex.h"
+#include "vertices_encoder/incre_has_hole.h"
+#include "vertices_encoder/incre_no_hole.h"
+
+#include "target_value_encoder/incre_ladder_abp.h"
+
+#include <memory>
+
 class IncreInstanceData;
 
 class IncreEncoder
 {
 public:
     IncreEncoder(IncreInstanceData &instance_data);
-    virtual ~IncreEncoder();
+    ~IncreEncoder();
 
-    virtual void encode_min_makespan_labeling() = 0;
+    void encode_min_makespan_labeling();
 
-    virtual void ignore_label(int ignored_label) = 0;
+    void ignore_label(int ignored_label);
 
 protected:
     IncreInstanceData &instance_data;
+
+    std::unique_ptr<IncreVerticesEncoder> vertices_encoder;
+    std::unique_ptr<IncreTargetValueEncoder> target_value_encoder;
 
     void encode_symmetry_break();
 
