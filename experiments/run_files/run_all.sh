@@ -3,23 +3,23 @@
 export TZ='Asia/Ho_Chi_Minh'
 
 scripts=(
-    "abp/incremental/incre_abp_x0.5-10.sh"
-    "abp/incremental/incre_abp_x0.75-10.sh"
-    "abp/incremental/ite_abp_x1.5.sh"
-    "abp/incremental/ite_abp_x1.25.sh"
-    "abp/incremental/ite_abp_x1.sh"
+    # "abp/incremental/incre_abp_x0.5-10.sh"
+    # "abp/incremental/incre_abp_x0.75-10.sh"
+    # "abp/incremental/ite_abp_x1.5.sh"
+    # "abp/incremental/ite_abp_x1.25.sh"
+    # "abp/incremental/ite_abp_x1.sh"
 
-    "abp/iteration-bfs/ite_abp_x0.5-10.sh"
-    "abp/iteration-bfs/ite_abp_x0.75-10.sh"
-    "abp/iteration-bfs/ite_abp_x1.5.sh"
-    "abp/iteration-bfs/ite_abp_x1.25.sh"
-    "abp/iteration-bfs/ite_abp_x1.sh"
+    # "abp/iteration-bfs/ite_abp_x0.5-10.sh"
+    # "abp/iteration-bfs/ite_abp_x0.75-10.sh"
+    # "abp/iteration-bfs/ite_abp_x1.5.sh"
+    # "abp/iteration-bfs/ite_abp_x1.25.sh"
+    # "abp/iteration-bfs/ite_abp_x1.sh"
 
-    "abp/iteration-from-ub/ite_abp_x0.5-10.sh"
-    "abp/iteration-from-ub/ite_abp_x0.75-10.sh"
-    "abp/iteration-from-ub/ite_abp_x1.5.sh"
-    "abp/iteration-from-ub/ite_abp_x1.25.sh"
-    "abp/iteration-from-ub/ite_abp_x1.sh"
+    # "abp/iteration-from-ub/ite_abp_x0.5-10.sh"
+    # "abp/iteration-from-ub/ite_abp_x0.75-10.sh"
+    # "abp/iteration-from-ub/ite_abp_x1.5.sh"
+    # "abp/iteration-from-ub/ite_abp_x1.25.sh"
+    # "abp/iteration-from-ub/ite_abp_x1.sh"
 
     # "cabp/incremental/incre_cabp_x0.5-10.sh"
     # "cabp/incremental/incre_cabp_x0.75-10.sh"
