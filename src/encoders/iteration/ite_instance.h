@@ -20,8 +20,6 @@ private:
 
     GlobalData &global_data;
     std::unique_ptr<IteInstanceData> instance_data;
-
-    int recalculate_solution(const std::vector<int> &node_labels);
 };
 
 #endif

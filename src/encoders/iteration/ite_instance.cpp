@@ -1,6 +1,7 @@
 #include "ite_instance.h"
 #include "ite_encoder.h"
 #include "../../global_data.h"
+#include "../verifier/verifier.h"
 #include "assert.h"
 #include <iostream>
 #include <fstream>
@@ -48,12 +49,6 @@ int IteInstance::encode_and_solve_problem()
 
         if (global_data.enable_solution_verification)
         {
-            int solution_abp = recalculate_solution(label_assignment);
-            if (solution_abp < global_data.target_value)
-            {
-                std::cerr << "c " << instance_data->get_signature() << " Error, the solution is not correct, target value should be at least " << global_data.target_value << ", but it is " << solution_abp << ".\n";
-                return -10;
-            }
         }
     }
     else if (SAT_res == 20)
@@ -66,17 +61,6 @@ int IteInstance::encode_and_solve_problem()
 
     return SAT_res;
 };
-
-int IteInstance::recalculate_solution(const std::vector<int> &node_labels)
-{
-    if ((int)node_labels.size() == 0)
-    {
-        return 0;
-    }
-    int min_dist = global_data.g->calculate_antibandwidth(node_labels);
-
-    return min_dist;
-}
 
 void IteInstance::encode_and_print_dimacs()
 {

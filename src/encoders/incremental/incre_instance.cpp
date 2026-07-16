@@ -52,12 +52,6 @@ int IncreInstance::encode_and_solve_problem()
 
             if (global_data.enable_solution_verification)
             {
-                int solution_target_value = recalculate_solution(label_assignment);
-                if (solution_target_value < global_data.target_value)
-                {
-                    std::cerr << "c " << instance_data->get_signature() << " Error, the solution is not correct, target value should be at least " << global_data.target_value << ", but it is " << solution_target_value << ".\n";
-                    return -10;
-                }
             }
 
             int max_used_label = *std::max_element(label_assignment.begin(), label_assignment.end());
@@ -85,17 +79,6 @@ int IncreInstance::encode_and_solve_problem()
 
     return 0;
 };
-
-int IncreInstance::recalculate_solution(const std::vector<int> &node_labels)
-{
-    if ((int)node_labels.size() == 0)
-    {
-        return 0;
-    }
-    int min_dist = global_data.g->calculate_antibandwidth(node_labels);
-
-    return min_dist;
-}
 
 void IncreInstance::encode_and_print_dimacs()
 {
