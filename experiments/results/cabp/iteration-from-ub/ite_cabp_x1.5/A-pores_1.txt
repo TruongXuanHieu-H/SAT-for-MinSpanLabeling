@@ -1,0 +1,164 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 10.
+c [Param] UB is predefined as 45.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Param] Worker count is set to 8.
+c [Main] Search strategy: Iterating from upper bound.
+c [Main] Search order: 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10.
+c [Main] Encoding and solving for graph: A-pores_1.mtx.rnd.
+c [Label = 42] Minimize Makespan Labeling problem (A-pores_1.mtx.rnd):
+c [Label = 45] Minimize Makespan Labeling problem (A-pores_1.mtx.rnd):
+c [Label = 38] Minimize Makespan Labeling problem (A-pores_1.mtx.rnd):
+c [Label = 44] Minimize Makespan Labeling problem (A-pores_1.mtx.rnd):
+c [Label = 43] Minimize Makespan Labeling problem (A-pores_1.mtx.rnd):
+c [Label = 39] Minimize Makespan Labeling problem (A-pores_1.mtx.rnd):
+c [Label = 41] Minimize Makespan Labeling problem (A-pores_1.mtx.rnd):
+c [Label = 40] Minimize Makespan Labeling problem (A-pores_1.mtx.rnd):
+c [Label = 45] Encoding starts with target value = 9:
+c [Label = 45] Encoding duration: 35ms.
+c [Label = 45] Number of clauses: 27067.
+c [Label = 45] Number of variables: 3600.
+c [Label = 45] Solving duration: 1 ms.
+s [Label = 45] SAT (w = 9).
+c [Label = 45]Label assignment: 36 45 36 45 45 9 45 36 36 18 9 27 27 45 45 18 36 18 27 27 18 27 9 27 18 18 9 18 9 9 
+c [Main] Lowest label SAT is set to 45.
+c [Label = 37] Minimize Makespan Labeling problem (A-pores_1.mtx.rnd):
+c [Label = 39] Encoding starts with target value = 9:
+c [Label = 39] Encoding duration: 43ms.
+c [Label = 39] Number of clauses: 23692.
+c [Label = 39] Number of variables: 3240.
+c [Label = 39] Solving duration: 98 ms.
+s [Label = 39] SAT (w = 9).
+c [Label = 39]Label assignment: 1 8 38 8 8 10 10 17 20 20 29 10 27 29 29 38 18 20 29 20 18 8 29 27 38 38 29 38 38 8 
+c [Main] Lowest label SAT is set to 39.
+c [Main] Kill higher label pid 40.
+c [Main] Kill higher label pid 41.
+c [Main] Kill higher label pid 42.
+c [Main] Kill higher label pid 43.
+c [Main] Kill higher label pid 44.
+c [Label = 38] Encoding starts with target value = 9:
+c [Label = 38] Encoding duration: 39ms.
+c [Label = 38] Number of clauses: 23130.
+c [Label = 38] Number of variables: 3180.
+c [Label = 38] Solving duration: 105 ms.
+s [Label = 38] SAT (w = 9).
+c [Label = 38]Label assignment: 1 9 1 9 9 10 10 38 20 20 29 10 28 29 29 19 18 20 29 20 18 9 29 27 38 38 29 38 38 10 
+c [Label = 44] Encoding starts with target value = 9:
+c [Label = 44] Encoding duration: 64ms.
+c [Label = 44] Number of clauses: 26505.
+c [Label = 44] Number of variables: 3540.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Lowest label SAT is set to 38.
+c [Main] Kill higher label pid 40.
+c [Main] Kill higher label pid 41.
+c [Main] Kill higher label pid 42.
+c [Main] Kill higher label pid 43.
+c [Main] Kill higher label pid 44.
+c [Label = 35] Minimize Makespan Labeling problem (A-pores_1.mtx.rnd):
+c [Main] Child pid 44 - 805647 terminated by signal 15.
+c [Label = 41] Encoding starts with target value = 9:
+c [Label = 41] Encoding duration: 40ms.
+c [Label = 41] Number of clauses: 24817.
+c [Label = 41] Number of variables: 3360.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 43] Encoding starts with target value = 9:
+c [Label = 43] Encoding duration: 68ms.
+c [Label = 43] Number of clauses: 25942.
+c [Label = 43] Number of variables: 3480.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 41 - 805650 terminated by signal 15.
+c [Main] Child pid 43 - 805648 terminated by signal 15.
+c [Label = 42] Encoding starts with target value = 9:
+c [Label = 42] Encoding duration: 44ms.
+c [Label = 42] Number of clauses: 25380.
+c [Label = 42] Number of variables: 3420.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 36] Minimize Makespan Labeling problem (A-pores_1.mtx.rnd):
+c [Main] Child pid 42 - 805649 terminated by signal 15.
+c [Label = 40] Encoding starts with target value = 9:
+c [Label = 40] Encoding duration: 48ms.
+c [Label = 40] Number of clauses: 24255.
+c [Label = 40] Number of variables: 3300.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 32] Minimize Makespan Labeling problem (A-pores_1.mtx.rnd):
+c [Main] Child pid 40 - 805651 terminated by signal 15.
+c [Label = 34] Minimize Makespan Labeling problem (A-pores_1.mtx.rnd):
+c [Label = 31] Minimize Makespan Labeling problem (A-pores_1.mtx.rnd):
+c [Label = 30] Minimize Makespan Labeling problem (A-pores_1.mtx.rnd):
+c [Label = 33] Minimize Makespan Labeling problem (A-pores_1.mtx.rnd):
+c [Label = 37] Encoding starts with target value = 9:
+c [Label = 37] Encoding duration: 27ms.
+c [Label = 37] Number of clauses: 21967.
+c [Label = 37] Number of variables: 2940.
+c [Label = 37] Solving duration: 123 ms.
+s [Label = 37] SAT (w = 9).
+c [Label = 37]Label assignment: 9 37 9 37 37 18 18 28 27 27 37 18 18 37 37 9 27 28 37 27 9 18 37 18 9 9 18 9 28 18 
+c [Main] Lowest label SAT is set to 37.
+c [Label = 29] Minimize Makespan Labeling problem (A-pores_1.mtx.rnd):
+c [Label = 36] Encoding starts with target value = 9:
+c [Label = 36] Encoding duration: 20ms.
+c [Label = 36] Number of clauses: 21624.
+c [Label = 36] Number of variables: 2880.
+c [Label = 36] Solving duration: 77 ms.
+s [Label = 36] SAT (w = 9).
+c [Label = 36]Label assignment: 1 28 1 28 28 10 10 19 1 19 28 10 10 28 28 1 19 19 28 19 19 10 28 10 1 1 10 19 1 10 
+c [Label = 32] Encoding starts with target value = 9:
+c [Label = 32] Encoding duration: 24ms.
+c [Label = 32] Number of clauses: 19374.
+c [Label = 32] Number of variables: 2640.
+c [Label = 32] Solving duration: 71 ms.
+s [Label = 32] UNSAT (w = 9).
+c [Main] Lowest label SAT is set to 36.
+c [Main] Highest label UNSAT is set to 32
+c [Main] Kill lower label pid 28.
+c [Main] Kill lower label pid 29.
+c [Main] Kill lower label pid 30.
+c [Main] Kill lower label pid 31.
+c [Label = 30] Encoding starts with target value = 9:
+c [Label = 30] Encoding duration: 29ms.
+c [Label = 30] Number of clauses: 18249.
+c [Label = 30] Number of variables: 2520.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 31] Encoding starts with target value = 9:
+c [Label = 31] Encoding duration: 12ms.
+c [Label = 31] Number of clauses: 18811.
+c [Label = 31] Number of variables: 2580.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 29] Encoding starts with target value = 9:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 29 - 805662 terminated by signal 15.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 28 - 805663 terminated by signal 15.
+c [Main] Child pid 31 - 805660 terminated by signal 15.
+c [Main] Child pid 30 - 805661 terminated by signal 15.
+c [Label = 34] Encoding starts with target value = 9:
+c [Label = 34] Encoding duration: 21ms.
+c [Label = 34] Number of clauses: 20499.
+c [Label = 34] Number of variables: 2760.
+c [Label = 34] Solving duration: 79 ms.
+s [Label = 34] UNSAT (w = 9).
+c [Main] Highest label UNSAT is set to 34
+c [Main] Kill lower label pid 33.
+c [Label = 33] Encoding starts with target value = 9:
+c [Label = 33] Encoding duration: 46ms.
+c [Label = 33] Number of clauses: 19936.
+c [Label = 33] Number of variables: 2700.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 33 - 805658 terminated by signal 15.
+c [Label = 35] Encoding starts with target value = 9:
+c [Label = 35] Encoding duration: 31ms.
+c [Label = 35] Number of clauses: 21061.
+c [Label = 35] Number of variables: 2820.
+c [Label = 35] Solving duration: 122 ms.
+s [Label = 35] UNSAT (w = 9).
+c [Main] Highest label UNSAT is set to 35
+c [Main] All children have completed.
+r [Main] 
+r [Main] Final results: 
+r [Main] Lowest label SAT:  	36.
+r [Main] Highest label UNSAT:	35.
+r [Main] Total real time: 325 ms.
+r [Main] Total memory consumed: 83.9 MB.
+r [Main] 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).

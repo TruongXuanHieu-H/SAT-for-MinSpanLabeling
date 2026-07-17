@@ -1,0 +1,123 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 7.
+c [Param] UB is predefined as 30.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Param] Worker count is set to 8.
+c [Main] Search strategy: Iterating from upper bound.
+c [Main] Search order: 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7.
+c [Main] Encoding and solving for graph: A-pores_1.mtx.rnd.
+c [Label = 29] Minimize Makespan Labeling problem (A-pores_1.mtx.rnd):
+c [Label = 30] Minimize Makespan Labeling problem (A-pores_1.mtx.rnd):
+c [Label = 28] Minimize Makespan Labeling problem (A-pores_1.mtx.rnd):
+c [Label = 27] Minimize Makespan Labeling problem (A-pores_1.mtx.rnd):
+c [Label = 25] Minimize Makespan Labeling problem (A-pores_1.mtx.rnd):
+c [Label = 26] Minimize Makespan Labeling problem (A-pores_1.mtx.rnd):
+c [Label = 24] Minimize Makespan Labeling problem (A-pores_1.mtx.rnd):
+c [Label = 23] Minimize Makespan Labeling problem (A-pores_1.mtx.rnd):
+c [Label = 30] Encoding starts with target value = 6:
+c [Label = 30] Encoding duration: 33ms.
+c [Label = 30] Number of clauses: 17190.
+c [Label = 30] Number of variables: 2250.
+c [Label = 30] Solving duration: 0 ms.
+s [Label = 30] SAT (w = 6).
+c [Label = 30]Label assignment: 24 30 24 30 30 6 30 24 24 12 6 18 18 30 30 12 24 12 18 18 12 18 6 18 12 12 6 12 6 6 
+c [Main] Lowest label SAT is set to 30.
+c [Label = 22] Minimize Makespan Labeling problem (A-pores_1.mtx.rnd):
+c [Label = 26] Encoding starts with target value = 6:
+c [Label = 26] Encoding duration: 9ms.
+c [Label = 26] Number of clauses: 14940.
+c [Label = 26] Number of variables: 2010.
+c [Label = 26] Solving duration: 58 ms.
+s [Label = 26] SAT (w = 6).
+c [Label = 26]Label assignment: 1 6 1 6 6 7 7 26 14 14 20 7 19 20 20 13 12 14 20 14 12 6 20 18 26 26 20 26 26 7 
+c [Main] Lowest label SAT is set to 26.
+c [Main] Kill higher label pid 27.
+c [Main] Kill higher label pid 28.
+c [Main] Kill higher label pid 29.
+c [Label = 28] Encoding starts with target value = 6:
+c [Label = 28] Encoding duration: 9ms.
+c [Label = 28] Number of clauses: 16065.
+c [Label = 28] Number of variables: 2130.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 29] Encoding starts with target value = 6:
+c [Label = 29] Encoding duration: 11ms.
+c [Label = 29] Number of clauses: 16627.
+c [Label = 29] Number of variables: 2190.
+c [Label = 29] Solving duration: 66 ms.
+s [Label = 29] SAT (w = 6).
+c [Label = 29]Label assignment: 1 1 1 26 28 15 23 11 3 9 17 24 20 20 23 5 8 9 23 3 8 26 17 23 14 9 20 9 14 17 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 28 - 823945 terminated by signal 15.
+c [Label = 25] Encoding starts with target value = 6:
+c [Label = 25] Encoding duration: 8ms.
+c [Label = 25] Number of clauses: 14047.
+c [Label = 25] Number of variables: 1860.
+c [Label = 25] Solving duration: 71 ms.
+s [Label = 25] SAT (w = 6).
+c [Label = 25]Label assignment: 6 1 6 1 1 13 13 19 19 19 25 12 13 1 25 7 7 19 13 7 19 13 25 13 20 19 13 7 7 25 
+c [Main] Lowest label SAT is set to 25.
+c [Main] Kill higher label pid 27.
+c [Main] Kill higher label pid 29.
+c [Label = 20] Minimize Makespan Labeling problem (A-pores_1.mtx.rnd):
+c [Label = 27] Encoding starts with target value = 6:
+c [Label = 27] Encoding duration: 24ms.
+c [Label = 27] Number of clauses: 15502.
+c [Label = 27] Number of variables: 2070.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 27 - 823946 terminated by signal 15.
+c [Main] Child pid 29 - 823944 terminated by signal 15.
+c [Label = 24] Encoding starts with target value = 6:
+c [Label = 24] Encoding duration: 8ms.
+c [Label = 24] Number of clauses: 13704.
+c [Label = 24] Number of variables: 1800.
+c [Label = 24] Solving duration: 68 ms.
+s [Label = 24] SAT (w = 6).
+c [Label = 24]Label assignment: 1 19 1 19 19 7 7 13 1 13 19 7 7 19 19 1 13 13 19 13 13 7 19 7 1 1 7 13 1 7 
+c [Label = 19] Minimize Makespan Labeling problem (A-pores_1.mtx.rnd):
+c [Label = 21] Minimize Makespan Labeling problem (A-pores_1.mtx.rnd):
+c [Label = 23] Encoding starts with target value = 6:
+c [Label = 23] Encoding duration: 8ms.
+c [Label = 23] Number of clauses: 13141.
+c [Label = 23] Number of variables: 1740.
+c [Label = 23] Solving duration: 75 ms.
+s [Label = 23] UNSAT (w = 6).
+c [Main] Highest label UNSAT is set to 23
+c [Main] Kill lower label pid 17.
+c [Main] Kill lower label pid 18.
+c [Main] Kill lower label pid 19.
+c [Main] Kill lower label pid 20.
+c [Main] Kill lower label pid 21.
+c [Main] Kill lower label pid 22.
+c [Label = 19] Encoding starts with target value = 6:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 21] Encoding starts with target value = 6:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 22] Encoding starts with target value = 6:
+c [Label = 22] Encoding duration: 24ms.
+c [Label = 22] Number of clauses: 12579.
+c [Label = 22] Number of variables: 1680.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 21 - 823952 terminated by signal 15.
+c [Main] Child pid 19 - 823954 terminated by signal 15.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 18 - 823955 terminated by signal 15.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 22 - 823951 terminated by signal 15.
+c [Main] Child pid 17 - 823956 terminated by signal 15.
+c [Main] Lowest label SAT is set to 24.
+c [Label = 20] Encoding starts with target value = 6:
+c [Label = 20] Encoding duration: 7ms.
+c [Label = 20] Number of clauses: 11454.
+c [Label = 20] Number of variables: 1560.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 20 - 823953 terminated by signal 15.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] All children have completed.
+r [Main] 
+r [Main] Final results: 
+r [Main] Lowest label SAT:  	24.
+r [Main] Highest label UNSAT:	23.
+r [Main] Total real time: 134 ms.
+r [Main] Total memory consumed: 37.3 MB.
+r [Main] 

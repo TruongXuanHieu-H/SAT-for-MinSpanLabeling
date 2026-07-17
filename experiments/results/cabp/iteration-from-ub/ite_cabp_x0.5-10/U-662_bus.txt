@@ -1,0 +1,84 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 83.
+c [Param] UB is predefined as 331.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Param] Worker count is set to 8.
+c [Param] Max CNF size is set to 10.
+c [Main] Search strategy: Iterating from upper bound.
+c [Main] Search order: 331 330 329 328 327 326 325 324 323 322 321 320 319 318 317 316 315 314 313 312 311 310 309 308 307 306 305 304 303 302 301 300 299 298 297 296 295 294 293 292 291 290 289 288 287 286 285 284 283 282 281 280 279 278 277 276 275 274 273 272 271 270 269 268 267 266 265 264 263 262 261 260 259 258 257 256 255 254 253 252 251 250 249 248 247 246 245 244 243 242 241 240 239 238 237 236 235 234 233 232 231 230 229 228 227 226 225 224 223 222 221 220 219 218 217 216 215 214 213 212 211 210 209 208 207 206 205 204 203 202 201 200 199 198 197 196 195 194 193 192 191 190 189 188 187 186 185 184 183 182 181 180 179 178 177 176 175 174 173 172 171 170 169 168 167 166 165 164 163 162 161 160 159 158 157 156 155 154 153 152 151 150 149 148 147 146 145 144 143 142 141 140 139 138 137 136 135 134 133 132 131 130 129 128 127 126 125 124 123 122 121 120 119 118 117 116 115 114 113 112 111 110 109 108 107 106 105 104 103 102 101 100 99 98 97 96 95 94 93 92 91 90 89 88 87 86 85 84 83.
+c [Main] Encoding and solving for graph: U-662_bus.mtx.rnd.
+c [Label = 331] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Label = 328] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Label = 330] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Label = 324] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Label = 329] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Label = 325] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Label = 326] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Label = 327] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Label = 324] Encoding starts with target value = 82:
+c [Label = 324] Encoding duration: 3712ms.
+c [Label = 324] Number of clauses: 2945714.
+c [Label = 324] Number of variables: 661820.
+c [Label = 324] Solving duration: 14814 ms.
+s [Label = 324] UNSAT (w = 82).
+c [Label = 325] Encoding starts with target value = 82:
+c [Label = 325] Encoding duration: 3815ms.
+c [Label = 325] Number of clauses: 2952722.
+c [Label = 325] Number of variables: 663217.
+c [Label = 325] Solving duration: 14706 ms.
+s [Label = 325] UNSAT (w = 82).
+c [Label = 327] Encoding starts with target value = 82:
+c [Label = 327] Encoding duration: 3706ms.
+c [Label = 327] Number of clauses: 2966739.
+c [Label = 327] Number of variables: 666011.
+c [Label = 327] Solving duration: 14860 ms.
+s [Label = 327] UNSAT (w = 82).
+c [Label = 326] Encoding starts with target value = 82:
+c [Label = 326] Encoding duration: 3759ms.
+c [Label = 326] Number of clauses: 2959731.
+c [Label = 326] Number of variables: 664614.
+c [Label = 326] Solving duration: 14785 ms.
+s [Label = 326] UNSAT (w = 82).
+c [Main] Highest label UNSAT is set to 324
+c [Main] Highest label UNSAT is set to 325
+c [Main] Highest label UNSAT is set to 327
+c [Main] Kill lower label pid 326.
+c [Label = 328] Encoding starts with target value = 82:
+c [Label = 328] Encoding duration: 3732ms.
+c [Label = 328] Number of clauses: 2973748.
+c [Label = 328] Number of variables: 667408.
+c [Label = 328] Solving duration: 112795 ms.
+s [Label = 328] SAT (w = 82).
+c [Label = 328]Label assignment: 165 1 1 1 209 226 1 1 1 2 161 1 1 1 1 308 1 1 1 1 208 1 83 132 7 1 1 1 248 1 296 6 1 1 1 1 1 1 1 1 264 1 1 1 247 252 47 21 1 1 251 7 309 1 1 1 83 1 1 83 287 1 231 272 1 328 1 247 1 247 1 1 247 90 102 1 1 1 1 248 1 1 258 31 83 280 1 191 1 82 45 83 7 328 121 1 42 64 56 214 84 239 1 1 165 83 1 247 1 1 263 1 7 1 19 173 23 1 102 6 1 1 257 63 1 126 1 1 153 256 217 95 83 1 247 1 1 1 6 83 1 83 30 1 83 131 1 83 85 83 1 1 1 1 21 1 1 1 1 248 1 1 69 210 1 1 247 83 1 165 157 9 14 238 243 83 164 321 41 160 83 83 83 282 83 1 83 165 8 275 123 17 46 130 1 134 133 53 152 83 1 1 247 1 1 165 1 180 1 83 57 1 1 313 1 212 1 254 1 83 156 190 1 83 93 246 1 16 225 1 247 83 83 83 1 14 293 83 83 247 1 6 87 83 83 1 1 225 1 115 165 83 165 242 83 1 165 83 91 83 115 155 73 1 87 110 165 1 266 109 267 83 310 1 247 289 1 215 232 1 1 1 247 15 1 246 307 168 94 238 125 104 245 1 22 213 103 46 83 83 165 83 165 306 1 302 1 1 260 83 143 83 276 58 292 178 111 271 233 224 149 268 83 83 247 165 83 1 291 259 83 1 165 20 83 83 241 301 247 247 1 108 83 156 102 1 240 83 1 223 1 246 83 184 194 164 327 1 249 1 172 83 165 74 83 83 190 181 75 83 265 1 320 1 1 166 237 84 83 1 135 1 205 286 83 203 83 165 95 83 165 269 76 147 326 60 59 83 247 229 247 1 299 114 165 274 83 165 296 116 174 315 325 261 247 198 165 120 13 119 270 113 112 1 143 83 319 292 250 165 166 68 247 62 95 1 236 290 247 148 9 158 247 165 193 234 247 105 118 11 206 12 304 247 247 13 283 45 2 37 246 297 79 262 88 81 83 36 61 70 82 129 149 253 165 82 295 165 165 51 183 52 247 165 220 25 49 145 55 48 54 187 201 255 29 233 96 5 216 252 199 252 106 318 300 92 35 165 309 167 247 169 154 285 165 228 194 165 102 196 247 165 83 273 99 165 218 222 33 27 165 211 18 294 303 200 195 179 13 219 166 100 305 247 19 247 247 64 324 314 101 89 247 151 230 165 221 170 65 247 66 197 16 97 247 150 20 39 107 14 165 279 163 247 192 298 162 247 299 98 130 8 204 83 159 247 86 177 288 124 247 311 202 176 91 71 40 34 117 189 247 185 182 147 17 6 32 146 188 3 244 235 207 10 284 24 277 247 4 316 170 53 127 247 144 128 78 322 278 142 171 260 175 4 137 28 138 136 80 122 44 312 323 7 72 247 139 317 141 26 38 281 140 50 311 77 186 44 67 299 43 227 
+c [Main] Lowest label SAT is set to 328.
+c [Main] Kill higher label pid 329.
+c [Main] Kill higher label pid 330.
+c [Main] Kill higher label pid 331.
+c [Label = 329] Encoding starts with target value = 82:
+c [Label = 329] Encoding duration: 3743ms.
+c [Label = 329] Number of clauses: 2980024.
+c [Label = 329] Number of variables: 668805.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 331] Encoding starts with target value = 82:
+c [Label = 331] Encoding duration: 3993ms.
+c [Label = 331] Number of clauses: 3152259.
+c [Label = 331] Number of variables: 723897.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 330] Encoding starts with target value = 82:
+c [Label = 330] Encoding duration: 4241ms.
+c [Label = 330] Number of clauses: 3145251.
+c [Label = 330] Number of variables: 722500.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 329 - 783594 terminated by signal 15.
+c [Main] Child pid 331 - 783592 terminated by signal 15.
+c [Main] Child pid 330 - 783593 terminated by signal 15.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] All children have completed.
+r [Main] 
+r [Main] Final results: 
+r [Main] Lowest label SAT:  	328.
+r [Main] Highest label UNSAT:	327.
+r [Main] Total real time: 117457 ms.
+r [Main] Total memory consumed: 9626.7 MB.
+r [Main] 
