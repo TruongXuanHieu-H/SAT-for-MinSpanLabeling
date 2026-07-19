@@ -43,6 +43,11 @@ void ArgsParser::init_parser()
         globalData.search_strategy = SearchStrategy::iterate_bfs;
     };
 
+    cmd["--iterate-bfs-reverse"] = [this](int, int, char **)
+    {
+        globalData.search_strategy = SearchStrategy::iterate_bfs_reverse;
+    };
+
     cmd["--iterate-from-ub"] = [this](int, int, char **)
     {
         globalData.search_strategy = SearchStrategy::iterate_from_ub;

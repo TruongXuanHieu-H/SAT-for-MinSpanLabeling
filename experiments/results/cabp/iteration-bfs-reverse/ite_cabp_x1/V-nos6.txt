@@ -1,0 +1,195 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] LB is predefined as 329.
+c [Param] UB is predefined as 675.
+c [Param] Memory limit is set to 45000.
+c [Param] Real time limit is set to 1800.
+c [Param] Worker count is set to 8.
+c [Main] Search strategy: Iterating Breadth First Search (Reverse).
+c [Main] Search order: 502 589 415 632 545 458 371 654 610 567 523 480 436 393 349 665 643 621 599 578 556 534 512 491 469 447 425 404 382 360 338 670 659 648 637 626 615 604 594 583 572 561 550 539 528 517 507 496 485 474 463 452 441 430 420 409 398 387 376 365 354 343 333 673 667 662 656 651 645 640 634 629 623 618 612 607 601 596 591 586 580 575 569 564 558 553 547 542 536 531 525 520 514 509 504 499 493 488 482 477 471 466 460 455 449 444 438 433 427 422 417 412 406 401 395 390 384 379 373 368 362 357 351 346 340 335 330 674 671 668 666 663 660 657 655 652 649 646 644 641 638 635 633 630 627 624 622 619 616 613 611 608 605 602 600 597 595 592 590 587 584 581 579 576 573 570 568 565 562 559 557 554 551 548 546 543 540 537 535 532 529 526 524 521 518 515 513 510 508 505 503 500 497 494 492 489 486 483 481 478 475 472 470 467 464 461 459 456 453 450 448 445 442 439 437 434 431 428 426 423 421 418 416 413 410 407 405 402 399 396 394 391 388 385 383 380 377 374 372 369 366 363 361 358 355 352 350 347 344 341 339 336 334 331 329 675 672 669 664 661 658 653 650 647 642 639 636 631 628 625 620 617 614 609 606 603 598 593 588 585 582 577 574 571 566 563 560 555 552 549 544 541 538 533 530 527 522 519 516 511 506 501 498 495 490 487 484 479 476 473 468 465 462 457 454 451 446 443 440 435 432 429 424 419 414 411 408 403 400 397 392 389 386 381 378 375 370 367 364 359 356 353 348 345 342 337 332.
+c [Main] Encoding and solving for graph: V-nos6.mtx.rnd.
+c [Label = 502] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 589] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 415] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 632] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 545] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 458] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 371] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 654] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 371] Encoding starts with target value = 328:
+c [Label = 371] Encoding duration: 7686ms.
+c [Label = 371] Number of clauses: 4695905.
+c [Label = 371] Number of variables: 939600.
+c [Label = 371] Solving duration: 0 ms.
+s [Label = 371] UNSAT (w = 328).
+c [Main] Highest label UNSAT is set to 371
+c [Label = 610] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 415] Encoding starts with target value = 328:
+c [Label = 415] Encoding duration: 8325ms.
+c [Label = 415] Number of clauses: 5071467.
+c [Label = 415] Number of variables: 999000.
+c [Label = 415] Solving duration: 0 ms.
+s [Label = 415] UNSAT (w = 328).
+c [Main] Highest label UNSAT is set to 415
+c [Label = 567] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 458] Encoding starts with target value = 328:
+c [Label = 458] Encoding duration: 8952ms.
+c [Label = 458] Number of clauses: 5438494.
+c [Label = 458] Number of variables: 1057050.
+c [Label = 458] Solving duration: 0 ms.
+s [Label = 458] UNSAT (w = 328).
+c [Main] Highest label UNSAT is set to 458
+c [Label = 523] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 502] Encoding starts with target value = 328:
+c [Label = 502] Encoding duration: 9565ms.
+c [Label = 502] Number of clauses: 5814056.
+c [Label = 502] Number of variables: 1116450.
+c [Label = 502] Solving duration: 0 ms.
+s [Label = 502] UNSAT (w = 328).
+c [Main] Highest label UNSAT is set to 502
+c [Label = 665] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 545] Encoding starts with target value = 328:
+c [Label = 545] Encoding duration: 10177ms.
+c [Label = 545] Number of clauses: 6181082.
+c [Label = 545] Number of variables: 1174500.
+c [Label = 545] Solving duration: 0 ms.
+s [Label = 545] UNSAT (w = 328).
+c [Main] Highest label UNSAT is set to 545
+c [Main] Kill lower label pid 523.
+c [Label = 523] Encoding starts with target value = 328:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 643] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Main] Child pid 523 - 934889 terminated by signal 15.
+c [Label = 621] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 589] Encoding starts with target value = 328:
+c [Label = 589] Encoding duration: 10822ms.
+c [Label = 589] Number of clauses: 6556644.
+c [Label = 589] Number of variables: 1233900.
+c [Label = 589] Solving duration: 0 ms.
+s [Label = 589] UNSAT (w = 328).
+c [Main] Highest label UNSAT is set to 589
+c [Main] Kill lower label pid 567.
+c [Label = 567] Encoding starts with target value = 328:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 599] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Main] Child pid 567 - 934888 terminated by signal 15.
+c [Label = 670] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 632] Encoding starts with target value = 328:
+c [Label = 632] Encoding duration: 11393ms.
+c [Label = 632] Number of clauses: 6923671.
+c [Label = 632] Number of variables: 1291950.
+c [Label = 632] Solving duration: 0 ms.
+s [Label = 632] UNSAT (w = 328).
+c [Main] Highest label UNSAT is set to 632
+c [Main] Kill lower label pid 599.
+c [Main] Kill lower label pid 621.
+c [Main] Kill lower label pid 610.
+c [Label = 610] Encoding starts with target value = 328:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 599] Encoding starts with target value = 328:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 621] Encoding starts with target value = 328:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 659] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Main] Child pid 599 - 934895 terminated by signal 15.
+c [Label = 648] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Main] Child pid 621 - 934894 terminated by signal 15.
+c [Label = 637] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Main] Child pid 610 - 934887 terminated by signal 15.
+c [Label = 673] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 654] Encoding starts with target value = 328:
+c [Label = 654] Encoding duration: 11798ms.
+c [Label = 654] Number of clauses: 7111452.
+c [Label = 654] Number of variables: 1321650.
+c [Label = 654] Solving duration: 0 ms.
+s [Label = 654] UNSAT (w = 328).
+c [Main] Highest label UNSAT is set to 654
+c [Main] Kill lower label pid 637.
+c [Main] Kill lower label pid 648.
+c [Main] Kill lower label pid 643.
+c [Label = 637] Encoding starts with target value = 328:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 643] Encoding starts with target value = 328:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 648] Encoding starts with target value = 328:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 667] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Main] Child pid 648 - 934898 terminated by signal 15.
+c [Label = 662] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Main] Child pid 637 - 934899 terminated by signal 15.
+c [Label = 656] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Main] Child pid 643 - 934893 terminated by signal 15.
+c [Label = 674] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 656] Encoding starts with target value = 328:
+c [Label = 656] Encoding duration: 12839ms.
+c [Label = 656] Number of clauses: 7128523.
+c [Label = 656] Number of variables: 1324350.
+c [Label = 656] Solving duration: 208 ms.
+s [Label = 656] SAT (w = 328).
+c [Label = 656]Label assignment: 328 328 328 656 328 656 656 328 328 656 656 328 656 656 656 328 656 328 656 328 328 656 328 656 328 328 656 656 328 656 328 328 656 656 656 328 656 328 328 656 328 656 328 656 328 328 656 328 328 656 328 328 328 656 656 656 656 328 656 656 328 656 656 328 328 656 656 656 656 328 328 328 328 656 656 328 328 328 656 328 328 656 656 656 328 656 656 656 656 328 328 328 656 328 656 656 328 328 328 328 656 328 328 328 328 328 328 656 328 328 328 328 328 328 328 656 328 656 656 656 656 328 656 656 328 328 328 656 656 656 328 328 328 656 328 656 656 328 328 656 656 328 328 656 656 656 328 328 656 328 656 328 656 328 656 656 328 328 328 656 656 656 656 656 328 328 656 328 328 656 656 656 328 656 656 328 328 328 328 328 328 656 656 656 328 656 656 656 328 656 656 656 656 328 656 656 656 328 328 328 656 656 656 656 328 656 656 656 656 656 656 656 656 656 656 328 328 328 656 328 328 656 656 328 328 656 656 656 328 328 328 656 656 656 656 328 656 328 656 328 328 328 328 328 656 328 328 656 656 328 656 656 328 328 328 328 328 328 328 328 656 328 656 328 656 328 328 328 328 328 656 656 656 328 656 328 328 328 656 656 328 656 656 328 656 656 656 656 656 328 328 656 328 656 328 656 656 656 656 656 328 328 656 328 656 656 656 328 656 328 328 328 656 328 328 656 656 656 656 328 656 656 656 328 328 656 328 656 328 328 328 328 656 656 328 328 328 328 656 656 328 656 328 328 328 656 328 328 656 328 656 328 328 656 656 328 328 328 328 328 656 656 328 328 328 656 328 328 656 656 328 656 656 328 328 328 328 656 328 328 328 328 656 328 328 328 328 328 656 656 328 328 328 656 656 656 656 328 328 656 656 328 328 656 328 328 656 656 656 328 656 328 328 328 656 656 328 656 328 656 656 328 328 328 656 656 328 328 656 328 328 656 328 328 656 328 328 328 328 656 328 656 656 328 328 656 328 328 656 656 328 656 656 656 328 328 328 328 328 656 328 656 656 656 656 656 656 656 656 328 656 328 328 328 328 328 328 656 656 328 656 656 328 328 328 656 328 656 656 328 328 656 656 656 328 328 328 656 328 328 656 656 328 656 656 656 656 328 656 328 656 656 656 328 328 328 328 328 656 656 328 328 656 656 328 656 328 656 656 656 328 656 656 656 656 656 656 656 328 656 656 328 328 656 656 656 656 656 328 328 656 656 328 328 328 328 328 656 328 656 328 656 328 656 328 656 656 656 328 656 656 328 656 656 328 328 328 656 656 328 328 656 328 328 656 656 328 656 328 328 328 328 328 656 328 328 656 656 656 656 328 328 328 328 656 656 656 656 656 328 328 656 656 328 328 656 656 328 328 656 656 328 656 328 328 328 656 656 656 656 328 656 656 656 328 328 656 328 656 656 656 656 656 656 328 328 656 656 656 328 656 656 656 656 328 328 656 328 328 656 656 656 328 656 656 656 328 328 656 328 656 328 328 328 328 
+c [Label = 674] Encoding starts with target value = 328:
+c [Label = 674] Encoding duration: 14724ms.
+c [Label = 674] Number of clauses: 7938442.
+c [Label = 674] Number of variables: 1568025.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 662] Encoding starts with target value = 328:
+c [Label = 662] Encoding duration: 14514ms.
+c [Label = 662] Number of clauses: 7836016.
+c [Label = 662] Number of variables: 1551825.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Lowest label SAT is set to 656.
+c [Main] Kill higher label pid 674.
+c [Main] Kill higher label pid 662.
+c [Main] Kill higher label pid 667.
+c [Main] Kill higher label pid 673.
+c [Main] Kill higher label pid 659.
+c [Main] Kill higher label pid 670.
+c [Main] Kill higher label pid 665.
+c [Label = 667] Encoding starts with target value = 328:
+c [Label = 667] Encoding duration: 14517ms.
+c [Label = 667] Number of clauses: 7878693.
+c [Label = 667] Number of variables: 1558575.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 670] Encoding starts with target value = 328:
+c [Label = 670] Encoding duration: 14319ms.
+c [Label = 670] Number of clauses: 7904300.
+c [Label = 670] Number of variables: 1562625.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 665] Encoding starts with target value = 328:
+c [Label = 665] Encoding duration: 14465ms.
+c [Label = 665] Number of clauses: 7861622.
+c [Label = 665] Number of variables: 1555875.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 673] Encoding starts with target value = 328:
+c [Label = 673] Encoding duration: 14524ms.
+c [Label = 673] Number of clauses: 7929906.
+c [Label = 673] Number of variables: 1566675.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 659] Encoding starts with target value = 328:
+c [Label = 659] Encoding duration: 14190ms.
+c [Label = 659] Number of clauses: 7810409.
+c [Label = 659] Number of variables: 1547775.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 655] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Main] Child pid 662 - 934902 terminated by signal 15.
+c [Main] Child pid 667 - 934901 terminated by signal 15.
+c [Main] Child pid 674 - 934904 terminated by signal 15.
+c [Main] Child pid 659 - 934897 terminated by signal 15.
+c [Main] Child pid 665 - 934890 terminated by signal 15.
+c [Main] Child pid 673 - 934900 terminated by signal 15.
+c [Main] Child pid 670 - 934896 terminated by signal 15.
+c [Label = 655] Encoding starts with target value = 328:
+c [Label = 655] Encoding duration: 9075ms.
+c [Label = 655] Number of clauses: 7119987.
+c [Label = 655] Number of variables: 1323000.
+c [Label = 655] Solving duration: 0 ms.
+s [Label = 655] UNSAT (w = 328).
+c [Main] Highest label UNSAT is set to 655
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] All children have completed.
+r [Main] 
+r [Main] Final results: 
+r [Main] Lowest label SAT:  	656.
+r [Main] Highest label UNSAT:	655.
+r [Main] Total real time: 39830 ms.
+r [Main] Total memory consumed: 20321.9 MB.
+r [Main] 

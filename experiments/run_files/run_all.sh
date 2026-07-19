@@ -32,6 +32,12 @@ scripts=(
     "cabp/iteration-from-ub/ite_cabp_x1.5.sh"
     "cabp/iteration-from-ub/ite_cabp_x1.25.sh"
     "cabp/iteration-from-ub/ite_cabp_x1.sh"
+
+    "cabp/iteration-bfs-reverse/ite_cabp_x0.5-10.sh"
+    "cabp/iteration-bfs-reverse/ite_cabp_x0.75-10.sh"
+    "cabp/iteration-bfs-reverse/ite_cabp_x1.5.sh"
+    "cabp/iteration-bfs-reverse/ite_cabp_x1.25.sh"
+    "cabp/iteration-bfs-reverse/ite_cabp_x1.sh"
 )
 
 chmod +x "${scripts[@]}"

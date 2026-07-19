@@ -3,6 +3,7 @@
 #include "searchers/incre_from_ub.h"
 #include "searchers/ite_from_ub.h"
 #include "searchers/ite_bfs.h"
+#include "searchers/ite_bfs_reverse.h"
 
 #include <iostream>
 
@@ -21,6 +22,9 @@ std::unique_ptr<Searcher> Encoder::get_searcher()
     case SearchStrategy::iterate_bfs:
         std::cout << "c [Main] Search strategy: Iterating Breadth First Search.\n";
         return std::make_unique<IteBFS>(global_data);
+    case SearchStrategy::iterate_bfs_reverse:
+        std::cout << "c [Main] Search strategy: Iterating Breadth First Search (Reverse).\n";
+        return std::make_unique<IteBFSReverse>(global_data);
 
     default:
         throw std::runtime_error("Unrecognized search strategy: " + std::to_string(static_cast<int>(global_data.search_strategy)));
