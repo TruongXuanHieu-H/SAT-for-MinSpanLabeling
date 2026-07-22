@@ -2,9 +2,9 @@
 
 #include <assert.h>
 
-int TargetValueVerifierCABP::calculate_target_value(const Graph &g, const std::vector<int> &labels_assignment)
+int TargetValueVerifierCABP::calculate_target_value(const Graph &g, const std::vector<int> &labels_assignment, const int span)
 {
     assert(!labels_assignment.empty());
 
-    return g.calculate_cyclic_antibandwidth(labels_assignment);
+    return g.calculate_cyclic_antibandwidth(labels_assignment, span);
 }

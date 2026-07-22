@@ -19,7 +19,7 @@ public:
 
     int calculate_antibandwidth(const std::vector<int> &node_labels) const;
     int calculate_bandwidth(const std::vector<int> &node_labels) const;
-    int calculate_cyclic_antibandwidth(const std::vector<int> &node_labels) const;
+    int calculate_cyclic_antibandwidth(const std::vector<int> &node_labels, const int span) const;
 
     int find_greatest_outdegree_node() const;
     int find_smallest_outdegree_node() const;

@@ -108,15 +108,15 @@ int Graph::calculate_bandwidth(const std::vector<int> &node_labels) const
     return max_dist;
 };
 
-int Graph::calculate_cyclic_antibandwidth(const std::vector<int> &node_labels) const
+int Graph::calculate_cyclic_antibandwidth(const std::vector<int> &node_labels, const int span) const
 {
-    int min_dist = n;
+    int min_dist = span;
     for (std::pair<int, int> edge : edges)
     {
         int label1 = node_labels[edge.first - 1];
         int label2 = node_labels[edge.second - 1];
         int distance1 = abs(label1 - label2);
-        int distance2 = n - abs(label1 - label2);
+        int distance2 = span - abs(label1 - label2);
         int distance = std::min(distance1, distance2);
 
         if (distance < min_dist)

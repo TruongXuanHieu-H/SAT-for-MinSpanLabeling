@@ -43,9 +43,7 @@ bool Verifier::verify_span(const Graph &g, const int target_value, const std::ve
 
 bool Verifier::verify_target_value(const Graph &g, const int target_value, const std::vector<int> label_assignment, const int span)
 {
-    (void)span;
-
-    return target_value_verifier->verify_target_value(g, target_value, label_assignment);
+    return target_value_verifier->verify_target_value(g, target_value, label_assignment, span);
 }
 
 bool Verifier::verify_vertices(const Graph &g, const int target_value, const std::vector<int> label_assignment, const int span)

@@ -6,7 +6,7 @@
 class TargetValueVerifierABP : public TargetValueVerifier
 {
 protected:
-    int calculate_target_value(const Graph &g, const std::vector<int> &labels_assignment) override;
+    int calculate_target_value(const Graph &g, const std::vector<int> &labels_assignment, const int span) override;
 };
 
 #endif

@@ -8,16 +8,16 @@
 class TargetValueVerifier
 {
 public:
-    bool verify_target_value(const Graph &g, const int target_value, const std::vector<int> &labels_assignment)
+    bool verify_target_value(const Graph &g, const int target_value, const std::vector<int> &labels_assignment, const int span)
     {
-        if (calculate_target_value(g, labels_assignment) < target_value)
+        if (calculate_target_value(g, labels_assignment, span) < target_value)
             return false;
 
         return true;
     }
 
 protected:
-    virtual int calculate_target_value(const Graph &g, const std::vector<int> &labels_assignment) = 0;
+    virtual int calculate_target_value(const Graph &g, const std::vector<int> &labels_assignment, const int span) = 0;
 };
 
 #endif
