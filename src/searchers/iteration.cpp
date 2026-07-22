@@ -70,7 +70,7 @@ void Iteration::encode_and_solve()
 
                     switch (WEXITSTATUS(status))
                     {
-                    case 10:
+                    case 0:
                         if (it->first < lowest_label_SAT)
                         {
                             lowest_label_SAT = it->first;
@@ -87,7 +87,7 @@ void Iteration::encode_and_solve()
                             }
                         }
                         break;
-                    case 20:
+                    case 1:
                         if (it->first > highest_label_UNSAT)
                         {
                             highest_label_UNSAT = it->first;

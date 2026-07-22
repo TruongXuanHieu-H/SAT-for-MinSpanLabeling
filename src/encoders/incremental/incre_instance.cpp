@@ -39,7 +39,7 @@ int IncreInstance::encode_and_solve_problem()
         auto solving_duration = std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1).count();
         std::cout << "c " << instance_data->get_signature() << " Solving duration: " << solving_duration << " ms.\n";
 
-        if (SAT_res == 10)
+        if (SAT_res == 0)
         {
             std::cout << "s " << instance_data->get_signature() << " SAT (label = " << i << ").\n";
 
@@ -65,7 +65,7 @@ int IncreInstance::encode_and_solve_problem()
             }
             i = max_used_label;
         }
-        else if (SAT_res == 20)
+        else if (SAT_res == 1)
         {
             std::cout << "s " << instance_data->get_signature() << " UNSAT (label = " << i << ").\n";
             break;
@@ -73,7 +73,7 @@ int IncreInstance::encode_and_solve_problem()
         else
         {
             std::cout << "s " << instance_data->get_signature() << " Error at label = " << i << ", SAT result: " << SAT_res << ".\n";
-            return -20;
+            return -1;
         }
     }
 

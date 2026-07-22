@@ -19,7 +19,19 @@ void SATSolverCadical::add_clause(const std::vector<int> &c)
     solver->add(0);
 }
 
-int SATSolverCadical::solve() { return solver->solve(); }
+int SATSolverCadical::solve()
+{
+    switch (solver->solve())
+    {
+    case 10:
+        return 0;
+    case 20:
+        return 1;
+
+    default:
+        return -1;
+    }
+}
 
 std::vector<int> SATSolverCadical::extract_result(int num_vertices, int num_labels)
 {
