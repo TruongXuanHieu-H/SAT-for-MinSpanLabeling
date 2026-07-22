@@ -15,7 +15,7 @@ public:
     int solve() override;
     std::vector<int> extract_result(int num_vertices, int num_labels) override;
 
-    std::unique_ptr<CaDiCaL::Solver> solver;
+    CaDiCaL::Solver solver;
 };
 
 #endif // SAT_SOLVER_CADICAL_H
