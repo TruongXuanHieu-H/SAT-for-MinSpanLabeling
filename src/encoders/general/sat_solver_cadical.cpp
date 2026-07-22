@@ -3,9 +3,8 @@
 #include <iostream>
 #include <csignal>
 
-SATSolverCadical::SATSolverCadical()
+SATSolverCadical::SATSolverCadical() : solver()
 {
-    solver = CaDiCaL::Solver();
     std::string sat_configuration = "sat";
     solver.configure(sat_configuration.data());
 }
