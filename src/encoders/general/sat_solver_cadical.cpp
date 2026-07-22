@@ -5,9 +5,9 @@
 
 SATSolverCadical::SATSolverCadical()
 {
-    solver = std::make_unique<CaDiCaL::Solver>();
+    solver = CaDiCaL::Solver();
     std::string sat_configuration = "sat";
-    solver->configure(sat_configuration.data());
+    solver.configure(sat_configuration.data());
 }
 
 SATSolverCadical::~SATSolverCadical() {}
@@ -15,13 +15,13 @@ SATSolverCadical::~SATSolverCadical() {}
 void SATSolverCadical::add_clause(const std::vector<int> &c)
 {
     for (const auto &lit : c)
-        solver->add(lit);
-    solver->add(0);
+        solver.add(lit);
+    solver.add(0);
 }
 
 int SATSolverCadical::solve()
 {
-    switch (solver->solve())
+    switch (solver.solve())
     {
     case 10:
         return 0;
@@ -40,7 +40,7 @@ std::vector<int> SATSolverCadical::extract_result(int num_vertices, int num_labe
     {
         for (int label = 1; label <= num_labels; ++label)
         {
-            int res = solver->val(vertex * num_labels + label);
+            int res = solver.val(vertex * num_labels + label);
             if (res > 0)
             {
                 if (result[vertex] != 0)
