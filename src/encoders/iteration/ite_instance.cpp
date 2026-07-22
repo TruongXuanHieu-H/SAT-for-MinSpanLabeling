@@ -15,6 +15,12 @@ IteInstance::IteInstance(GlobalData &global_data, int label)
 
 IteInstance::~IteInstance() {}
 
+/*
+    Return:
+    0   if  SATISFIABLE
+    1   if  UNSATISFIABLE
+    -1  if  UNKNOW
+*/
 int IteInstance::encode_and_solve_problem()
 {
     std::cout << "c " << instance_data->get_signature() << " Minimize Makespan Labeling problem (" << instance_data->global_data.g.graph_name << "):" << std::endl;
@@ -36,7 +42,7 @@ int IteInstance::encode_and_solve_problem()
     t2 = std::chrono::high_resolution_clock::now();
     auto solving_duration = std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1).count();
     std::cout << "c " << instance_data->get_signature() << " Solving duration: " << solving_duration << " ms.\n";
-    if (SAT_res == 10)
+    if (SAT_res == 0)
     {
         std::cout << "s " << instance_data->get_signature() << " SAT (w = " << instance_data->global_data.target_value << ").\n";
 
@@ -51,12 +57,12 @@ int IteInstance::encode_and_solve_problem()
         {
         }
     }
-    else if (SAT_res == 20)
+    else if (SAT_res == 1)
         std::cout << "s " << instance_data->get_signature() << " UNSAT (w = " << instance_data->global_data.target_value << ").\n";
     else
     {
         std::cout << "s " << instance_data->get_signature() << " Error at w = " << instance_data->global_data.target_value << ", SAT result: " << SAT_res << ".\n";
-        return -20;
+        return -1;
     }
 
     return SAT_res;
