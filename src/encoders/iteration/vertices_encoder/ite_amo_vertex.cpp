@@ -6,6 +6,7 @@
 void IteAMOVertex::encode_vertices_constraint(const IteInstanceData &instance_data)
 {
     force_use_label(instance_data, 0);
+    force_use_label(instance_data, instance_data.label);
 
     for (int label = 0; label < instance_data.label; label++)
     {
