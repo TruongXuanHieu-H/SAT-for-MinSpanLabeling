@@ -12,6 +12,7 @@ public:
     std::string graph_name;
     std::vector<std::pair<int, int>> edges;
 
+    Graph() = default;
     explicit Graph(std::string file_name);
     void filename(std::string &path);
     void print_stat() const;

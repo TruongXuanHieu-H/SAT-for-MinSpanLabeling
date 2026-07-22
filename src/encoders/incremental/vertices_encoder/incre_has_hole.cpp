@@ -10,7 +10,7 @@ void IncreHasHole::encode_vertices_constraint(const IncreInstanceData &instance_
 
 void IncreHasHole::ignore_label(const IncreInstanceData &instance_data, int label)
 {
-    for (int j = 0; j < instance_data.global_data.g->n; j++)
+    for (int j = 0; j < instance_data.global_data.g.n; j++)
     {
         instance_data.cc->add_clause({-(j * instance_data.global_data.upper_bound + label)});
     }

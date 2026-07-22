@@ -7,9 +7,9 @@ void IncreAMOVertex::encode_vertices_constraint(const IncreInstanceData &instanc
 {
     for (int label = 0; label < instance_data.global_data.upper_bound; label++)
     {
-        std::vector<int> node_vertices(instance_data.global_data.g->n);
+        std::vector<int> node_vertices(instance_data.global_data.g.n);
 
-        for (int vertex = 0; vertex < instance_data.global_data.g->n; vertex++)
+        for (int vertex = 0; vertex < instance_data.global_data.g.n; vertex++)
         {
             node_vertices[vertex] = vertex * instance_data.global_data.upper_bound + label + 1;
         }
@@ -73,7 +73,7 @@ void IncreAMOVertex::encode_amo_seq(const IncreInstanceData &instance_data, cons
 
 void IncreAMOVertex::ignore_label(const IncreInstanceData &instance_data, int label)
 {
-    for (int j = 0; j < instance_data.global_data.g->n; j++)
+    for (int j = 0; j < instance_data.global_data.g.n; j++)
     {
         instance_data.cc->add_clause({-(j * instance_data.global_data.upper_bound + label)});
     }

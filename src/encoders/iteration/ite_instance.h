@@ -18,7 +18,6 @@ public:
 private:
     int SAT_res = 0;
 
-    GlobalData &global_data;
     std::unique_ptr<IteInstanceData> instance_data;
 };
 

@@ -33,14 +33,14 @@ std::unique_ptr<Searcher> Encoder::get_searcher()
 
 void Encoder::encode_and_solve()
 {
-    std::cout << "c [Main] Encoding and solving for graph: " << global_data.g->graph_name << ".\n";
+    std::cout << "c [Main] Encoding and solving for graph: " << global_data.g.graph_name << ".\n";
 
     searcher->encode_and_solve();
 }
 
 void Encoder::encode_and_print_dimacs()
 {
-    std::cout << "c [Main] Encoding and printing DIMACS for graph: " << global_data.g->graph_name << ".\n";
+    std::cout << "c [Main] Encoding and printing DIMACS for graph: " << global_data.g.graph_name << ".\n";
 
     searcher->encode_and_print_dimacs();
 }

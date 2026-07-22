@@ -38,7 +38,7 @@ void IteInstanceData::setup_for_solving()
 
 void IteInstanceData::setup_for_encoding()
 {
-    vh = std::make_unique<VarHandler>(1, global_data.g->n * label);
+    vh = std::make_unique<VarHandler>(1, global_data.g.n * label);
     cc = std::make_unique<ClauseContainer>(global_data, *vh, *solver);
 
     set_up_encoder();
@@ -46,7 +46,7 @@ void IteInstanceData::setup_for_encoding()
 
 void IteInstanceData::export_dimacs(std::ostream &out)
 {
-    out << "c CNF fomular for graph " << global_data.g->graph_name << " with target value of " << global_data.target_value << "\n";
+    out << "c CNF fomular for graph " << global_data.g.graph_name << " with target value of " << global_data.target_value << "\n";
     out << "p cnf " << vh->size() << " " << cc->size() << "\n";
     for (const std::vector<int> &c : cc->clause_list)
     {

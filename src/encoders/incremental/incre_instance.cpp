@@ -16,7 +16,7 @@ IncreInstance::~IncreInstance() {};
 
 int IncreInstance::encode_and_solve_problem()
 {
-    std::cout << "c " << instance_data->get_signature() << " Minimize Makespan Labeling problem (" << global_data.g->graph_name << "):" << std::endl;
+    std::cout << "c " << instance_data->get_signature() << " Minimize Makespan Labeling problem (" << global_data.g.graph_name << "):" << std::endl;
 
     instance_data->setup_for_solving();
     std::cout << "c " << instance_data->get_signature() << " Encoding starts with target value = " << global_data.target_value << ":\n";
@@ -43,7 +43,7 @@ int IncreInstance::encode_and_solve_problem()
         {
             std::cout << "s " << instance_data->get_signature() << " SAT (label = " << i << ").\n";
 
-            std::vector<int> label_assignment = instance_data->solver->extract_result(global_data.g->n, global_data.upper_bound);
+            std::vector<int> label_assignment = instance_data->solver->extract_result(global_data.g.n, global_data.upper_bound);
 
             std::cout << "c " << instance_data->get_signature() << " Label assignment: ";
             for (int l : label_assignment)

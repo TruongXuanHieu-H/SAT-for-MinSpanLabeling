@@ -86,7 +86,7 @@ void IncreEncoder::encode_symmetry_break_first_node()
 
 void IncreEncoder::encode_symmetry_break_highest_degree_node()
 {
-    int max_node_id = instance_data.global_data.g->find_greatest_outdegree_node();
+    int max_node_id = instance_data.global_data.g.find_greatest_outdegree_node();
 
     for (int i = max_node_id * instance_data.global_data.upper_bound; i > (max_node_id * instance_data.global_data.upper_bound) - (instance_data.global_data.upper_bound / 2); i--)
     {
@@ -96,7 +96,7 @@ void IncreEncoder::encode_symmetry_break_highest_degree_node()
 
 void IncreEncoder::encode_symmetry_break_lowest_degree_node()
 {
-    int min_node_id = instance_data.global_data.g->find_smallest_outdegree_node();
+    int min_node_id = instance_data.global_data.g.find_smallest_outdegree_node();
 
     for (int i = min_node_id * instance_data.global_data.upper_bound; i > (min_node_id * instance_data.global_data.upper_bound) - (instance_data.global_data.upper_bound / 2); i--)
     {

@@ -30,7 +30,7 @@ int IncreLadderABP::get_target_value_aux_var(const IncreInstanceData &instance_d
 void IncreLadderABP::encode_target_value(const IncreInstanceData &instance_data)
 {
     std::vector<std::vector<int>> ladders_vars;
-    for (int vertex = 0; vertex < instance_data.global_data.g->n; vertex++)
+    for (int vertex = 0; vertex < instance_data.global_data.g.n; vertex++)
     {
         std::vector<int> ladder_vars;
         for (int label = 0; label < instance_data.global_data.upper_bound; label++)
@@ -40,12 +40,12 @@ void IncreLadderABP::encode_target_value(const IncreInstanceData &instance_data)
         ladders_vars.push_back(ladder_vars);
     }
 
-    for (int i = 0; i < instance_data.global_data.g->n; i++)
+    for (int i = 0; i < instance_data.global_data.g.n; i++)
     {
         encode_ladder(instance_data, ladders_vars[i], instance_data.global_data.target_value);
     }
 
-    for (auto edge : instance_data.global_data.g->edges)
+    for (auto edge : instance_data.global_data.g.edges)
     {
         connect_ladder(instance_data, ladders_vars[edge.first - 1], ladders_vars[edge.second - 1], instance_data.global_data.target_value); // Have to reduce by 1 since edges are start from 1
     }
@@ -240,7 +240,7 @@ void IncreLadderABP::connect_ladder(const IncreInstanceData &instance_data, cons
 
 void IncreLadderABP::encode_labels(const IncreInstanceData &instance_data)
 {
-    for (int vertex = 0; vertex < instance_data.global_data.g->n; vertex++)
+    for (int vertex = 0; vertex < instance_data.global_data.g.n; vertex++)
     {
         int number_windows = ceil((float)instance_data.global_data.upper_bound / instance_data.global_data.target_value);
         std::vector<std::vector<int>> vertice_vars(number_windows);
