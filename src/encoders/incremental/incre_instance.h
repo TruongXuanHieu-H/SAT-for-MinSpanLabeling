@@ -3,6 +3,7 @@
 
 #include "incre_instance_data.h"
 #include "../../global_data.h"
+#include "../verifier/verifier.h"
 #include <limits>
 #include <memory>
 
@@ -16,8 +17,8 @@ public:
     void encode_and_print_dimacs();
 
 private:
-    GlobalData &global_data;
-    std::unique_ptr<IncreInstanceData> instance_data;
+    IncreInstanceData instance_data;
+    Verifier verifier;
 };
 
 #endif

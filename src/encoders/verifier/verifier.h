@@ -21,7 +21,9 @@ public:
     Verifier(VerticesMode, ProblemType);
     ~Verifier() = default;
 
-    bool verify_result(const Graph &g, const int target_value, const std::vector<int> label_assignment, const int span);
+    bool verify_span(const Graph &g, const int target_value, const std::vector<int> label_assignment, const int span);
+    bool verify_target_value(const Graph &g, const int target_value, const std::vector<int> label_assignment, const int span);
+    bool verify_vertices(const Graph &g, const int target_value, const std::vector<int> label_assignment, const int span);
 
 private:
     std::unique_ptr<SpanVerifier> span_verifier;

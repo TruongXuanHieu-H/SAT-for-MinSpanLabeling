@@ -7,72 +7,75 @@
 #include <chrono>
 #include <algorithm>
 
-IncreInstance::IncreInstance(GlobalData &global_data) : global_data(global_data)
-{
-    instance_data = std::make_unique<IncreInstanceData>(global_data);
-};
+IncreInstance::IncreInstance(GlobalData &global_data) : instance_data(global_data),
+                                                        verifier(instance_data.global_data.vertices_mode, instance_data.global_data.problem_type) {}
 
 IncreInstance::~IncreInstance() {};
 
 int IncreInstance::encode_and_solve_problem()
 {
-    std::cout << "c " << instance_data->get_signature() << " Minimize Makespan Labeling problem (" << global_data.g.graph_name << "):" << std::endl;
+    std::cout << "c " << instance_data.get_signature() << " Minimize Makespan Labeling problem (" << instance_data.global_data.g.graph_name << "):" << std::endl;
 
-    instance_data->setup_for_solving();
-    std::cout << "c " << instance_data->get_signature() << " Encoding starts with target value = " << global_data.target_value << ":\n";
+    instance_data.setup_for_solving();
+    std::cout << "c " << instance_data.get_signature() << " Encoding starts with target value = " << instance_data.global_data.target_value << ":\n";
 
     auto t1 = std::chrono::high_resolution_clock::now();
-    instance_data->enc->encode_min_makespan_labeling();
+    instance_data.enc->encode_min_makespan_labeling();
     auto t2 = std::chrono::high_resolution_clock::now();
     auto encode_duration = std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1).count();
 
-    std::cout << "c " << instance_data->get_signature() << " Encoding duration: " << encode_duration << "ms" << ".\n";
-    std::cout << "c " << instance_data->get_signature() << " Number of clauses: " << instance_data->cc->size() << ".\n";
-    std::cout << "c " << instance_data->get_signature() << " Number of variables: " << instance_data->vh->size() << ".\n";
+    std::cout << "c " << instance_data.get_signature() << " Encoding duration: " << encode_duration << "ms" << ".\n";
+    std::cout << "c " << instance_data.get_signature() << " Number of clauses: " << instance_data.cc->size() << ".\n";
+    std::cout << "c " << instance_data.get_signature() << " Number of variables: " << instance_data.vh->size() << ".\n";
 
-    for (int i = global_data.upper_bound; i >= global_data.lower_bound; i--)
+    for (int i = instance_data.global_data.upper_bound; i >= instance_data.global_data.lower_bound; i--)
     {
-        std::cout << "c " << instance_data->get_signature() << " Solving for max label = " << i << ":\n";
+        std::cout << "c " << instance_data.get_signature() << " Solving for max label = " << i << ":\n";
         t1 = std::chrono::high_resolution_clock::now();
-        int SAT_res = instance_data->solver->solve();
+        int SAT_res = instance_data.solver->solve();
         t2 = std::chrono::high_resolution_clock::now();
         auto solving_duration = std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1).count();
-        std::cout << "c " << instance_data->get_signature() << " Solving duration: " << solving_duration << " ms.\n";
+        std::cout << "c " << instance_data.get_signature() << " Solving duration: " << solving_duration << " ms.\n";
 
         if (SAT_res == 0)
         {
-            std::cout << "s " << instance_data->get_signature() << " SAT (label = " << i << ").\n";
+            std::cout << "s " << instance_data.get_signature() << " SAT (label = " << i << ").\n";
 
-            std::vector<int> label_assignment = instance_data->solver->extract_result(global_data.g.n, global_data.upper_bound);
+            std::vector<int> label_assignment = instance_data.solver->extract_result(instance_data.global_data.g.n, instance_data.global_data.upper_bound);
 
-            std::cout << "c " << instance_data->get_signature() << " Label assignment: ";
+            std::cout << "c " << instance_data.get_signature() << " Label assignment: ";
             for (int l : label_assignment)
                 std::cout << l << " ";
             std::cout << "\n";
 
-            if (global_data.enable_solution_verification)
+            if (instance_data.global_data.enable_solution_verification)
             {
+                if (!verifier.verify_target_value(instance_data.global_data.g, instance_data.global_data.target_value, label_assignment, instance_data.global_data.upper_bound))
+                {
+                    std::cout << "s " << instance_data.get_signature() << " VERIFY FAILED: Target value not match.\n";
+                    exit(-1);
+                }
             }
 
             int max_used_label = *std::max_element(label_assignment.begin(), label_assignment.end());
             assert(max_used_label <= i);
-            std::cout << "c " << instance_data->get_signature() << " Max used label: " << max_used_label << ".\n";
+            std::cout << "c " << instance_data.get_signature() << " Max used label: " << max_used_label << ".\n";
 
             for (int k = i; k >= max_used_label; k--)
             {
-                instance_data->enc->ignore_label(k);
-                std::cout << "c " << instance_data->get_signature() << " Label " << k << " is removed from searching.\n";
+                instance_data.enc->ignore_label(k);
+                std::cout << "c " << instance_data.get_signature() << " Label " << k << " is removed from searching.\n";
             }
             i = max_used_label;
         }
         else if (SAT_res == 1)
         {
-            std::cout << "s " << instance_data->get_signature() << " UNSAT (label = " << i << ").\n";
+            std::cout << "s " << instance_data.get_signature() << " UNSAT (label = " << i << ").\n";
             break;
         }
         else
         {
-            std::cout << "s " << instance_data->get_signature() << " Error at label = " << i << ", SAT result: " << SAT_res << ".\n";
+            std::cout << "s " << instance_data.get_signature() << " Error at label = " << i << ", SAT result: " << SAT_res << ".\n";
             return -1;
         }
     }
@@ -82,6 +85,6 @@ int IncreInstance::encode_and_solve_problem()
 
 void IncreInstance::encode_and_print_dimacs()
 {
-    std::cerr << "c " << instance_data->get_signature() << " DIMAC printing is not implemented.\n";
+    std::cerr << "c " << instance_data.get_signature() << " DIMAC printing is not implemented.\n";
     exit(-1);
 };

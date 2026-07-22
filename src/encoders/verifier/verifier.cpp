@@ -33,16 +33,25 @@ Verifier::Verifier(VerticesMode v_mode, ProblemType p_type)
     span_verifier = std::make_unique<SpanVerifier>();
 }
 
-bool Verifier::verify_result(const Graph &g, const int target_value, const std::vector<int> label_assignment, const int span)
+bool Verifier::verify_span(const Graph &g, const int target_value, const std::vector<int> label_assignment, const int span)
 {
-    if (!target_value_verifier->verify_target_value(g, target_value, label_assignment))
-        return false;
+    (void)g;
+    (void)target_value;
 
-    if (!span_verifier->verify_span(label_assignment, span))
-        return false;
+    return span_verifier->verify_span(label_assignment, span);
+}
 
-    if (!vertices_verifier->verify_vertices(label_assignment, span))
-        return false;
+bool Verifier::verify_target_value(const Graph &g, const int target_value, const std::vector<int> label_assignment, const int span)
+{
+    (void)span;
 
-    return true;
+    return target_value_verifier->verify_target_value(g, target_value, label_assignment);
+}
+
+bool Verifier::verify_vertices(const Graph &g, const int target_value, const std::vector<int> label_assignment, const int span)
+{
+    (void)g;
+    (void)target_value;
+
+    return vertices_verifier->verify_vertices(label_assignment, span);
 }

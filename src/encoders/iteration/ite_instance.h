@@ -3,6 +3,7 @@
 
 #include "ite_instance_data.h"
 #include "../../global_data.h"
+#include "../verifier/verifier.h"
 #include <limits>
 #include <memory>
 
@@ -16,9 +17,8 @@ public:
     void encode_and_print_dimacs();
 
 private:
-    int SAT_res = 0;
-
-    std::unique_ptr<IteInstanceData> instance_data;
+    IteInstanceData instance_data;
+    Verifier verifier;
 };
 
 #endif
