@@ -9,6 +9,12 @@ scripts=(
     "abp/incremental/ite_abp_x1.25.sh"
     "abp/incremental/ite_abp_x1.sh"
 
+    "abp/iteration-bfs-reverse/ite_abp_x0.5-10.sh"
+    "abp/iteration-bfs-reverse/ite_abp_x0.75-10.sh"
+    "abp/iteration-bfs-reverse/ite_abp_x1.5.sh"
+    "abp/iteration-bfs-reverse/ite_abp_x1.25.sh"
+    "abp/iteration-bfs-reverse/ite_abp_x1.sh"
+
     "abp/iteration-bfs/ite_abp_x0.5-10.sh"
     "abp/iteration-bfs/ite_abp_x0.75-10.sh"
     "abp/iteration-bfs/ite_abp_x1.5.sh"
