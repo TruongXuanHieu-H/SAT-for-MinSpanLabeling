@@ -16,11 +16,13 @@ void ArgsParser::init_parser()
     cmd["--abp"] = [this](int, int, char **)
     {
         globalData.problem_type = ProblemType::ABP;
+        std::cout << "c [Param] Target value is set to Antibandwidth.\n";
     };
 
     cmd["--cabp"] = [this](int, int, char **)
     {
         globalData.problem_type = ProblemType::CyclicABP;
+        std::cout << "c [Param] Target value is set to Cyclic Antibandwidth.\n";
     };
 
     cmd["--ladder"] = [this](int, int, char **)
@@ -31,6 +33,7 @@ void ArgsParser::init_parser()
     cmd["--verify-result"] = [this](int, int, char **)
     {
         globalData.enable_solution_verification = true;
+        std::cout << "c [Param] Result verification is ON.\n";
     };
 
     cmd["--incremental-from-ub"] = [this](int, int, char **)
@@ -56,6 +59,7 @@ void ArgsParser::init_parser()
     cmd["-target-value"] = [this](int &i, int argc, char **argv)
     {
         globalData.target_value = get_positive(i, argc, argv, "target value");
+        std::cout << "c [Param] Target value is set to " << globalData.target_value << ".\n";
     };
 
     cmd["-set-lb"] = [this](int &i, int argc, char **argv)
@@ -157,16 +161,19 @@ void ArgsParser::init_parser()
     cmd["--has-hole"] = [this](int, int, char **)
     {
         globalData.vertices_mode = VerticesMode::has_hole;
+        std::cout << "c [Param] Vertices mode is set to Has hole.\n";
     };
 
     cmd["--no-hole"] = [this](int, int, char **)
     {
         globalData.vertices_mode = VerticesMode::no_hole;
+        std::cout << "c [Param] Vertices mode is set to No hole.\n";
     };
 
     cmd["--amo-vertex"] = [this](int, int, char **)
     {
         globalData.vertices_mode = VerticesMode::amo_vertex;
+        std::cout << "c [Param] Vertices mode is set to AMO vertex.\n";
     };
 
     cmd["-max-cnf-size"] = [this](int &i, int argc, char **argv)
