@@ -16,6 +16,8 @@ public:
 private:
     void encode_at_most_one_product(const IncreInstanceData &, const std::vector<int> &vars);
     void encode_amo_seq(const IncreInstanceData &, const std::vector<int> &vars);
+
+    void force_use_label(const IncreInstanceData &, int label);
 };
 
 #endif

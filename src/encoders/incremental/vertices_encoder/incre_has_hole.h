@@ -12,6 +12,9 @@ public:
     void encode_vertices_constraint(const IncreInstanceData &) override;
 
     void ignore_label(const IncreInstanceData &, int label) override;
+
+private:
+    void force_use_label(const IncreInstanceData &, int label);
 };
 
 #endif

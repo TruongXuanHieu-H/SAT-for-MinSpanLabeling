@@ -9,7 +9,7 @@ report_dir="$ROOT_DIR/experiments/results/cabp/iteration-bfs-reverse/ite_cabp_x1
 
 time_limit="1800"
 memory_limit="45000"
-general_config="--cabp --ladder --has-hole --verify-result --iterate-bfs-reverse -limit-memory $memory_limit -limit-real-time $time_limit -worker-count 8 -symmetry-break highest-degree"
+general_config="--cabp --ladder --has-hole --verify-result --iterate-bfs-reverse -limit-memory $memory_limit -limit-real-time $time_limit -worker-count 8 -symmetry-break highest-degree -max-cnf-size 10"
 
 mkdir -p "$report_dir"
 

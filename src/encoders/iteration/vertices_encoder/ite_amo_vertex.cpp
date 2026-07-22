@@ -5,6 +5,8 @@
 
 void IteAMOVertex::encode_vertices_constraint(const IteInstanceData &instance_data)
 {
+    force_use_label(instance_data, 0);
+
     for (int label = 0; label < instance_data.label; label++)
     {
         std::vector<int> node_vertices(instance_data.global_data.g.n);
@@ -70,3 +72,13 @@ void IteAMOVertex::encode_amo_seq(const IteInstanceData &instance_data, const st
     }
     instance_data.cc->add_clause({-1 * prev, -1 * vars[vars.size() - 1]});
 };
+
+void IteAMOVertex::force_use_label(const IteInstanceData &instance_data, int label)
+{
+    std::vector<int> node_vertices(instance_data.global_data.g.n);
+
+    for (int vertex = 0; vertex < instance_data.global_data.g.n; vertex++)
+        node_vertices[vertex] = vertex * instance_data.global_data.upper_bound + label + 1;
+
+    instance_data.cc->add_clause(node_vertices);
+}

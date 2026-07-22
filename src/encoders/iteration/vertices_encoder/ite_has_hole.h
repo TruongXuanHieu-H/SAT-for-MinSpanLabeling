@@ -10,6 +10,9 @@ public:
     ~IteHasHole() override = default;
 
     void encode_vertices_constraint(const IteInstanceData &) override;
+
+private:
+    void force_use_label(const IteInstanceData &, int label);
 };
 
 #endif

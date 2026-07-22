@@ -9,7 +9,7 @@ report_dir="$ROOT_DIR/experiments/results/abp/incremental/extended_bound/incre_a
 
 time_limit="1800"
 memory_limit="30000"
-general_config="--abp --ladder --has-hole --verify-result --incremental-from-ub -limit-memory $memory_limit -limit-real-time $time_limit -symmetry-break highest-degree"
+general_config="--abp --ladder --has-hole --verify-result --incremental-from-ub -limit-memory $memory_limit -limit-real-time $time_limit -symmetry-break highest-degree -max-cnf-size 10"
 
 mkdir -p "$report_dir"
 
