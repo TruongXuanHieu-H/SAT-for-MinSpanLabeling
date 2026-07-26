@@ -1,26 +1,57 @@
 c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] Target value is set to 13.
 c [Param] LB is predefined as 14.
 c [Param] UB is predefined as 57.
+c [Param] Target value is set to Antibandwidth.
+c [Param] Vertices mode is set to Has hole.
+c [Param] Result verification is ON.
 c [Param] Memory limit is set to 30000.
 c [Param] Real time limit is set to 1800.
+c [Param] Max CNF size is set to 10.
 c [Main] Search strategy: Incremental from upper bound.
 c [Main] Encoding and solving for graph: G-will57.mtx.rnd.
-c [Incremental] Minimize Makespan Labeling Antibandwidth problem (G-will57.mtx.rnd):
+c [Incremental] Minimize Makespan Labeling problem (G-will57.mtx.rnd):
 c [Incremental] Encoding starts with target value = 13:
-c [Incremental] Encoding duration: 22ms.
-c [Incremental] Number of clauses: 51004.
-c [Incremental] Number of variables: 9690.
+c [Incremental] Encoding duration: 19ms.
+c [Incremental] Number of clauses: 42347.
+c [Incremental] Number of variables: 8100.
 c [Incremental] Solving for max label = 57:
-c [Incremental] Solving duration: 518 ms.
+c [Incremental] Solving duration: 0 ms.
 s [Incremental] SAT (label = 57).
-Label assignment: 13 33 26 7 57 44 31 1 2 52 49 40 27 56 24 48 43 41 53 30 29 8 6 3 37 17 14 19 21 15 5 51 18 46 42 47 32 38 16 34 4 22 28 12 36 55 25 50 9 11 54 45 39 23 10 35 20 
+c [Incremental] Label assignment: 57 57 57 57 57 44 31 18 57 57 57 44 57 44 57 44 31 57 31 18 57 57 44 31 44 5 5 57 44 44 57 44 18 44 18 18 44 31 44 57 31 57 57 44 31 5 57 31 44 44 31 44 5 57 44 1 18 
 c [Incremental] Max used label: 57.
 c [Incremental] Label 57 is removed from searching.
 c [Incremental] Solving for max label = 56:
-c [Signal] Signal interruption. Caught signal: SIGTERM (15).
-c [Main] Lim pid ends with result: 254.
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 56).
+c [Incremental] Label assignment: 56 56 56 56 56 43 30 17 56 56 56 43 56 43 56 43 30 56 30 17 56 56 43 30 43 4 4 56 43 43 56 43 17 43 17 17 43 30 43 56 30 56 56 43 30 4 56 30 43 43 30 43 4 56 43 1 17 
+c [Incremental] Max used label: 56.
+c [Incremental] Label 56 is removed from searching.
+c [Incremental] Solving for max label = 55:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 55).
+c [Incremental] Label assignment: 55 55 55 55 55 42 29 16 55 55 55 42 55 42 55 42 29 55 29 16 55 55 42 29 42 3 3 55 42 42 55 42 16 42 16 16 42 29 42 55 29 55 55 42 29 3 55 29 42 42 29 42 3 55 42 1 16 
+c [Incremental] Max used label: 55.
+c [Incremental] Label 55 is removed from searching.
+c [Incremental] Solving for max label = 54:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 54).
+c [Incremental] Label assignment: 54 54 54 54 54 41 28 15 54 54 54 41 54 41 54 41 28 54 28 15 54 54 41 28 41 2 2 54 41 41 54 41 15 41 15 15 41 28 41 54 28 54 54 41 28 2 54 28 41 41 28 41 2 54 41 1 15 
+c [Incremental] Max used label: 54.
+c [Incremental] Label 54 is removed from searching.
+c [Incremental] Solving for max label = 53:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 53).
+c [Incremental] Label assignment: 53 53 53 53 53 40 27 14 53 53 53 40 53 40 53 40 27 53 27 14 53 53 40 27 40 1 1 53 40 40 53 40 14 40 14 14 40 27 40 53 27 53 53 40 27 1 53 27 40 40 27 40 1 53 40 53 14 
+c [Incremental] Max used label: 53.
+c [Incremental] Label 53 is removed from searching.
+c [Incremental] Solving for max label = 52:
+c [Incremental] Solving duration: 1 ms.
+s [Incremental] UNSAT (label = 52).
+c [Main] Work pid ends with result: 0.
 r [Main] 
 r [Main] Final results: 
-r [Main] Total real time: 1806145 ms.
-r [Main] Total memory consumed: 100.6 MB.
+r [Main] Total real time: 25 ms.
+r [Main] Total memory consumed: 5.3 MB.
 r [Main] 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).

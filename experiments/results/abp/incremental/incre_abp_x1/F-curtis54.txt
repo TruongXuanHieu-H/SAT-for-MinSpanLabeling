@@ -1,28 +1,34 @@
 c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] Target value is set to 13.
 c [Param] LB is predefined as 14.
 c [Param] UB is predefined as 54.
+c [Param] Target value is set to Antibandwidth.
+c [Param] Vertices mode is set to Has hole.
+c [Param] Result verification is ON.
 c [Param] Memory limit is set to 30000.
 c [Param] Real time limit is set to 1800.
+c [Param] Max CNF size is set to 10.
 c [Main] Search strategy: Incremental from upper bound.
 c [Main] Encoding and solving for graph: F-curtis54.mtx.rnd.
-c [Incremental] Minimize Makespan Labeling Antibandwidth problem (F-curtis54.mtx.rnd):
+c [Incremental] Minimize Makespan Labeling problem (F-curtis54.mtx.rnd):
 c [Incremental] Encoding starts with target value = 13:
-c [Incremental] Encoding duration: 21ms.
-c [Incremental] Number of clauses: 46155.
-c [Incremental] Number of variables: 8748.
+c [Incremental] Encoding duration: 16ms.
+c [Incremental] Number of clauses: 38439.
+c [Incremental] Number of variables: 7349.
 c [Incremental] Solving for max label = 54:
-c [Incremental] Solving duration: 65 ms.
+c [Incremental] Solving duration: 1 ms.
 s [Incremental] SAT (label = 54).
-Label assignment: 15 25 54 29 48 8 44 43 10 12 32 45 40 4 36 21 53 49 7 22 18 51 52 26 1 30 23 5 6 39 38 28 17 42 24 50 14 34 27 20 9 3 13 41 35 19 2 37 46 31 47 16 11 33 
-c [Incremental] Max used label: 54.
+c [Incremental] Label assignment: 40 27 53 40 40 1 14 14 27 1 53 1 14 40 40 40 53 14 27 1 1 14 1 27 40 1 27 27 14 14 1 14 27 27 1 14 1 1 27 14 1 1 1 1 1 14 27 1 14 1 14 1 1 1 
+c [Incremental] Max used label: 53.
 c [Incremental] Label 54 is removed from searching.
-c [Incremental] Solving for max label = 53:
-c [Incremental] Solving duration: 5 ms.
-s [Incremental] UNSAT (label = 53).
+c [Incremental] Label 53 is removed from searching.
+c [Incremental] Solving for max label = 52:
+c [Incremental] Solving duration: 2 ms.
+s [Incremental] UNSAT (label = 52).
 c [Main] Work pid ends with result: 0.
 r [Main] 
 r [Main] Final results: 
-r [Main] Total real time: 99 ms.
-r [Main] Total memory consumed: 5.8 MB.
+r [Main] Total real time: 22 ms.
+r [Main] Total memory consumed: 4.6 MB.
 r [Main] 
 c [Signal] Signal interruption. Caught signal: SIGTERM (15).

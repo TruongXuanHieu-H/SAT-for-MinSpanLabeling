@@ -1,28 +1,35 @@
 c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] Target value is set to 9.
 c [Param] LB is predefined as 10.
 c [Param] UB is predefined as 48.
+c [Param] Target value is set to Antibandwidth.
+c [Param] Vertices mode is set to Has hole.
+c [Param] Result verification is ON.
 c [Param] Memory limit is set to 30000.
 c [Param] Real time limit is set to 1800.
+c [Param] Max CNF size is set to 10.
 c [Main] Search strategy: Incremental from upper bound.
 c [Main] Encoding and solving for graph: D-bcsstk01.mtx.rnd.
-c [Incremental] Minimize Makespan Labeling Antibandwidth problem (D-bcsstk01.mtx.rnd):
+c [Incremental] Minimize Makespan Labeling problem (D-bcsstk01.mtx.rnd):
 c [Incremental] Encoding starts with target value = 9:
-c [Incremental] Encoding duration: 22ms.
-c [Incremental] Number of clauses: 46808.
-c [Incremental] Number of variables: 6816.
+c [Incremental] Encoding duration: 18ms.
+c [Incremental] Number of clauses: 40670.
+c [Incremental] Number of variables: 5669.
 c [Incremental] Solving for max label = 48:
-c [Incremental] Solving duration: 132 ms.
+c [Incremental] Solving duration: 0 ms.
 s [Incremental] SAT (label = 48).
-Label assignment: 14 7 16 42 22 40 28 47 25 11 34 38 39 20 4 35 17 6 8 37 10 29 31 27 32 30 3 23 2 5 48 44 26 13 15 36 33 45 1 24 12 21 9 41 18 43 19 46 
-c [Incremental] Max used label: 48.
+c [Incremental] Label assignment: 1 1 10 19 1 10 1 10 28 1 1 10 10 19 19 10 1 1 19 28 19 28 28 10 28 28 19 10 37 19 46 28 37 46 28 1 37 46 37 10 1 46 1 10 10 37 46 37 
+c [Incremental] Max used label: 46.
 c [Incremental] Label 48 is removed from searching.
-c [Incremental] Solving for max label = 47:
-c [Incremental] Solving duration: 554448 ms.
-s [Incremental] UNSAT (label = 47).
+c [Incremental] Label 47 is removed from searching.
+c [Incremental] Label 46 is removed from searching.
+c [Incremental] Solving for max label = 45:
+c [Incremental] Solving duration: 4 ms.
+s [Incremental] UNSAT (label = 45).
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
 c [Main] Work pid ends with result: 0.
 r [Main] 
 r [Main] Final results: 
-r [Main] Total real time: 554614 ms.
-r [Main] Total memory consumed: 66.3 MB.
+r [Main] Total real time: 24 ms.
+r [Main] Total memory consumed: 4.7 MB.
 r [Main] 
-c [Signal] Signal interruption. Caught signal: SIGTERM (15).

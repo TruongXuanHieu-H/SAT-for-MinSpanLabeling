@@ -1,0 +1,162 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] Target value is set to 16.
+c [Param] LB is predefined as 17.
+c [Param] UB is predefined as 72.
+c [Param] Target value is set to Antibandwidth.
+c [Param] Vertices mode is set to Has hole.
+c [Param] Result verification is ON.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Param] Worker count is set to 8.
+c [Param] Max CNF size is set to 10.
+c [Main] Search strategy: Iterating Breadth First Search (Reverse).
+c [Main] Search order: 44 58 30 65 51 37 23 69 61 54 47 40 33 26 19 71 67 63 59 56 52 49 45 42 38 35 31 28 24 21 17 72 70 68 66 64 62 60 57 55 53 50 48 46 43 41 39 36 34 32 29 27 25 22 20 18.
+c [Main] Encoding and solving for graph: G-will57.mtx.rnd.
+c [Label = 44] Minimize Makespan Labeling problem (G-will57.mtx.rnd):
+c [Label = 58] Minimize Makespan Labeling problem (G-will57.mtx.rnd):
+c [Label = 30] Minimize Makespan Labeling problem (G-will57.mtx.rnd):
+c [Label = 65] Minimize Makespan Labeling problem (G-will57.mtx.rnd):
+c [Label = 51] Minimize Makespan Labeling problem (G-will57.mtx.rnd):
+c [Label = 37] Minimize Makespan Labeling problem (G-will57.mtx.rnd):
+c [Label = 69] Minimize Makespan Labeling problem (G-will57.mtx.rnd):
+c [Label = 23] Minimize Makespan Labeling problem (G-will57.mtx.rnd):
+c [Label = 30] Encoding starts with target value = 16:
+c [Label = 30] Encoding duration: 10ms.
+c [Label = 30] Number of clauses: 14564.
+c [Label = 30] Number of variables: 3318.
+c [Label = 30] Solving duration: 0 ms.
+s [Label = 30] UNSAT (w = 16).
+c [Main] Highest label UNSAT is set to 30
+c [Main] Kill lower label pid 23.
+c [Label = 23] Encoding starts with target value = 16:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 61] Minimize Makespan Labeling problem (G-will57.mtx.rnd):
+c [Main] Child pid 23 - 1787581 terminated by signal 15.
+c [Label = 54] Minimize Makespan Labeling problem (G-will57.mtx.rnd):
+c [Label = 65] Encoding starts with target value = 16:
+c [Label = 65] Encoding duration: 32ms.
+c [Label = 65] Number of clauses: 48546.
+c [Label = 65] Number of variables: 9531.
+c [Label = 65] Solving duration: 1 ms.
+s [Label = 65] SAT (w = 16).
+c [Label = 65] Label assignment: 65 65 65 65 65 49 33 17 65 65 65 49 65 49 65 49 33 65 33 17 65 65 49 33 49 1 1 65 49 49 65 49 17 49 17 17 49 33 49 65 33 65 65 49 33 1 65 33 49 49 33 49 1 65 49 65 17 
+c [Main] Lowest label SAT is set to 65.
+c [Main] Kill higher label pid 69.
+c [Label = 69] Encoding starts with target value = 16:
+c [Label = 69] Encoding duration: 38ms.
+c [Label = 69] Number of clauses: 51720.
+c [Label = 69] Number of variables: 9987.
+c [Label = 69] Solving duration: 1 ms.
+s [Label = 69] SAT (w = 16).
+c [Label = 69] Label assignment: 69 69 69 69 69 53 37 21 69 69 69 53 69 53 69 53 37 69 37 21 69 69 53 37 53 5 5 69 53 53 69 53 21 53 21 21 53 37 53 69 37 69 69 53 37 5 69 37 53 53 37 53 5 69 53 1 21 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 47] Minimize Makespan Labeling problem (G-will57.mtx.rnd):
+c [Main] Child pid 69 - 1787582 terminated by signal 15.
+c [Label = 40] Minimize Makespan Labeling problem (G-will57.mtx.rnd):
+c [Label = 37] Encoding starts with target value = 16:
+c [Label = 37] Encoding duration: 17ms.
+c [Label = 37] Number of clauses: 22131.
+c [Label = 37] Number of variables: 4857.
+c [Label = 37] Solving duration: 56 ms.
+s [Label = 37] UNSAT (w = 16).
+c [Main] Highest label UNSAT is set to 37
+c [Label = 63] Minimize Makespan Labeling problem (G-will57.mtx.rnd):
+c [Label = 44] Encoding starts with target value = 16:
+c [Label = 44] Encoding duration: 20ms.
+c [Label = 44] Number of clauses: 27686.
+c [Label = 44] Number of variables: 5655.
+c [Label = 44] Solving duration: 64 ms.
+s [Label = 44] UNSAT (w = 16).
+c [Main] Highest label UNSAT is set to 44
+c [Main] Kill lower label pid 40.
+c [Label = 40] Encoding starts with target value = 16:
+c [Label = 40] Encoding duration: 18ms.
+c [Label = 40] Number of clauses: 24512.
+c [Label = 40] Number of variables: 5199.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 59] Minimize Makespan Labeling problem (G-will57.mtx.rnd):
+c [Main] Child pid 40 - 1787586 terminated by signal 15.
+c [Label = 56] Minimize Makespan Labeling problem (G-will57.mtx.rnd):
+c [Label = 58] Encoding starts with target value = 16:
+c [Label = 58] Encoding duration: 31ms.
+c [Label = 58] Number of clauses: 40865.
+c [Label = 58] Number of variables: 7992.
+c [Label = 58] Solving duration: 79 ms.
+s [Label = 58] UNSAT (w = 16).
+c [Main] Highest label UNSAT is set to 58
+c [Main] Kill lower label pid 56.
+c [Main] Kill lower label pid 47.
+c [Main] Kill lower label pid 54.
+c [Main] Kill lower label pid 51.
+c [Label = 54] Encoding starts with target value = 16:
+c [Label = 54] Encoding duration: 29ms.
+c [Label = 54] Number of clauses: 37691.
+c [Label = 54] Number of variables: 7536.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 47] Encoding starts with target value = 16:
+c [Label = 47] Encoding duration: 22ms.
+c [Label = 47] Number of clauses: 30066.
+c [Label = 47] Number of variables: 5997.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 51] Encoding starts with target value = 16:
+c [Label = 51] Encoding duration: 27ms.
+c [Label = 51] Number of clauses: 35310.
+c [Label = 51] Number of variables: 7194.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 56] Encoding starts with target value = 16:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 64] Minimize Makespan Labeling problem (G-will57.mtx.rnd):
+c [Main] Child pid 47 - 1787585 terminated by signal 15.
+c [Main] Child pid 54 - 1787584 terminated by signal 15.
+c [Label = 62] Minimize Makespan Labeling problem (G-will57.mtx.rnd):
+c [Main] Child pid 51 - 1787579 terminated by signal 15.
+c [Main] Child pid 56 - 1787589 terminated by signal 15.
+c [Label = 60] Minimize Makespan Labeling problem (G-will57.mtx.rnd):
+c [Label = 61] Encoding starts with target value = 16:
+c [Label = 61] Encoding duration: 34ms.
+c [Label = 61] Number of clauses: 43245.
+c [Label = 61] Number of variables: 8334.
+c [Label = 61] Solving duration: 77 ms.
+s [Label = 61] UNSAT (w = 16).
+c [Main] Highest label UNSAT is set to 61
+c [Main] Kill lower label pid 60.
+c [Main] Kill lower label pid 59.
+c [Label = 59] Encoding starts with target value = 16:
+c [Label = 59] Encoding duration: 32ms.
+c [Label = 59] Number of clauses: 41658.
+c [Label = 59] Number of variables: 8106.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 60] Encoding starts with target value = 16:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 60 - 1787592 terminated by signal 15.
+c [Main] Child pid 59 - 1787588 terminated by signal 15.
+c [Label = 63] Encoding starts with target value = 16:
+c [Label = 63] Encoding duration: 37ms.
+c [Label = 63] Number of clauses: 44832.
+c [Label = 63] Number of variables: 8562.
+c [Label = 63] Solving duration: 72 ms.
+s [Label = 63] UNSAT (w = 16).
+c [Main] Highest label UNSAT is set to 63
+c [Main] Kill lower label pid 62.
+c [Label = 62] Encoding starts with target value = 16:
+c [Label = 62] Encoding duration: 24ms.
+c [Label = 62] Number of clauses: 44039.
+c [Label = 62] Number of variables: 8448.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 62 - 1787591 terminated by signal 15.
+c [Label = 64] Encoding starts with target value = 16:
+c [Label = 64] Encoding duration: 38ms.
+c [Label = 64] Number of clauses: 45188.
+c [Label = 64] Number of variables: 8676.
+c [Label = 64] Solving duration: 53 ms.
+s [Label = 64] UNSAT (w = 16).
+c [Main] Highest label UNSAT is set to 64
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] All children have completed.
+r [Main] 
+r [Main] Final results: 
+r [Main] Lowest label SAT:  	65.
+r [Main] Highest label UNSAT:	64.
+r [Main] Total real time: 213 ms.
+r [Main] Total memory consumed: 105.2 MB.
+r [Main] 

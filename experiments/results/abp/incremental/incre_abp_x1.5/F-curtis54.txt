@@ -1,46 +1,52 @@
 c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] Target value is set to 19.
 c [Param] LB is predefined as 20.
 c [Param] UB is predefined as 81.
+c [Param] Target value is set to Antibandwidth.
+c [Param] Vertices mode is set to Has hole.
+c [Param] Result verification is ON.
 c [Param] Memory limit is set to 30000.
 c [Param] Real time limit is set to 1800.
+c [Param] Max CNF size is set to 10.
 c [Main] Search strategy: Incremental from upper bound.
 c [Main] Encoding and solving for graph: F-curtis54.mtx.rnd.
-c [Incremental] Minimize Makespan Labeling Antibandwidth problem (F-curtis54.mtx.rnd):
+c [Incremental] Minimize Makespan Labeling problem (F-curtis54.mtx.rnd):
 c [Incremental] Encoding starts with target value = 19:
-c [Incremental] Encoding duration: 44ms.
-c [Incremental] Number of clauses: 70327.
-c [Incremental] Number of variables: 13338.
+c [Incremental] Encoding duration: 30ms.
+c [Incremental] Number of clauses: 58750.
+c [Incremental] Number of variables: 11237.
 c [Incremental] Solving for max label = 81:
-c [Incremental] Solving duration: 206 ms.
+c [Incremental] Solving duration: 2 ms.
 s [Incremental] SAT (label = 81).
-Label assignment: 5 20 62 39 56 22 58 57 34 66 67 48 61 76 41 70 42 71 13 73 52 74 35 10 80 78 3 12 36 54 55 81 11 17 77 51 23 31 4 75 46 53 30 43 49 1 24 32 2 37 50 47 19 21 
+c [Incremental] Label assignment: 58 39 81 58 58 1 20 20 39 1 81 1 20 58 58 58 81 20 39 1 1 20 1 39 58 1 39 39 20 20 1 20 39 39 1 20 1 1 39 20 1 1 1 1 1 20 39 1 20 1 20 1 1 1 
 c [Incremental] Max used label: 81.
 c [Incremental] Label 81 is removed from searching.
 c [Incremental] Solving for max label = 80:
-c [Incremental] Solving duration: 57 ms.
+c [Incremental] Solving duration: 1 ms.
 s [Incremental] SAT (label = 80).
-Label assignment: 1 27 60 53 56 22 57 44 34 32 39 59 61 75 41 70 42 71 8 72 52 74 35 10 80 76 3 12 36 54 55 79 11 13 73 51 23 31 4 68 46 45 30 40 49 78 20 29 77 37 50 58 19 21 
+c [Incremental] Label assignment: 58 39 80 58 58 1 20 20 39 1 80 1 20 58 58 58 80 20 39 1 1 20 1 39 58 1 39 39 20 20 1 20 39 39 1 20 1 1 39 20 1 1 1 1 1 20 39 1 20 1 20 1 1 1 
 c [Incremental] Max used label: 80.
 c [Incremental] Label 80 is removed from searching.
 c [Incremental] Solving for max label = 79:
-c [Incremental] Solving duration: 165 ms.
+c [Incremental] Solving duration: 1 ms.
 s [Incremental] SAT (label = 79).
-Label assignment: 79 48 22 13 17 44 23 33 63 52 21 50 20 12 74 77 1 26 4 38 64 27 68 47 59 51 3 55 70 34 46 41 75 32 14 54 78 25 39 76 69 57 67 60 56 72 2 35 71 45 5 49 53 24 
+c [Incremental] Label assignment: 58 39 79 58 58 1 20 20 39 1 79 1 20 58 58 58 79 20 39 1 1 20 1 39 58 1 39 39 20 20 1 20 39 39 1 20 1 1 39 20 1 1 1 1 1 20 39 1 20 1 20 1 1 1 
 c [Incremental] Max used label: 79.
 c [Incremental] Label 79 is removed from searching.
 c [Incremental] Solving for max label = 78:
-c [Incremental] Solving duration: 446 ms.
+c [Incremental] Solving duration: 1 ms.
 s [Incremental] SAT (label = 78).
-Label assignment: 21 67 78 49 71 17 68 46 52 69 76 22 1 73 57 55 20 45 16 38 65 13 53 50 39 34 36 75 15 33 56 59 8 9 14 74 58 29 77 47 26 66 31 40 70 44 2 35 25 48 10 54 37 72 
-c [Incremental] Max used label: 78.
+c [Incremental] Label assignment: 58 39 77 58 58 1 20 20 39 1 77 1 20 58 58 58 77 20 39 1 1 20 1 39 58 1 39 39 20 20 1 20 39 39 1 20 1 1 39 20 1 1 1 1 1 20 39 1 20 1 20 1 1 1 
+c [Incremental] Max used label: 77.
 c [Incremental] Label 78 is removed from searching.
-c [Incremental] Solving for max label = 77:
-c [Incremental] Solving duration: 10 ms.
-s [Incremental] UNSAT (label = 77).
+c [Incremental] Label 77 is removed from searching.
+c [Incremental] Solving for max label = 76:
+c [Incremental] Solving duration: 4 ms.
+s [Incremental] UNSAT (label = 76).
 c [Main] Work pid ends with result: 0.
 r [Main] 
 r [Main] Final results: 
-r [Main] Total real time: 950 ms.
-r [Main] Total memory consumed: 30.2 MB.
+r [Main] Total real time: 44 ms.
+r [Main] Total memory consumed: 2.4 MB.
 r [Main] 
 c [Signal] Signal interruption. Caught signal: SIGTERM (15).

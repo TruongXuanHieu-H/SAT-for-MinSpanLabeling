@@ -1,0 +1,176 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] Target value is set to 10.
+c [Param] LB is predefined as 11.
+c [Param] UB is predefined as 74.
+c [Param] Target value is set to Antibandwidth.
+c [Param] Vertices mode is set to Has hole.
+c [Param] Result verification is ON.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Param] Worker count is set to 8.
+c [Param] Max CNF size is set to 10.
+c [Main] Search strategy: Iterating Breadth First Search (Reverse).
+c [Main] Search order: 42 58 26 66 50 34 18 70 62 54 46 38 30 22 14 72 68 64 60 56 52 48 44 40 36 32 28 24 20 16 12 73 71 69 67 65 63 61 59 57 55 53 51 49 47 45 43 41 39 37 35 33 31 29 27 25 23 21 19 17 15 13 11 74.
+c [Main] Encoding and solving for graph: H-impcol_b.mtx.rnd.
+c [Label = 42] Minimize Makespan Labeling problem (H-impcol_b.mtx.rnd):
+c [Label = 58] Minimize Makespan Labeling problem (H-impcol_b.mtx.rnd):
+c [Label = 66] Minimize Makespan Labeling problem (H-impcol_b.mtx.rnd):
+c [Label = 34] Minimize Makespan Labeling problem (H-impcol_b.mtx.rnd):
+c [Label = 18] Minimize Makespan Labeling problem (H-impcol_b.mtx.rnd):
+c [Label = 70] Minimize Makespan Labeling problem (H-impcol_b.mtx.rnd):
+c [Label = 26] Minimize Makespan Labeling problem (H-impcol_b.mtx.rnd):
+c [Label = 50] Minimize Makespan Labeling problem (H-impcol_b.mtx.rnd):
+c [Label = 18] Encoding starts with target value = 10:
+c [Label = 18] Encoding duration: 9ms.
+c [Label = 18] Number of clauses: 13662.
+c [Label = 18] Number of variables: 2018.
+c [Label = 18] Solving duration: 0 ms.
+s [Label = 18] UNSAT (w = 10).
+c [Main] Highest label UNSAT is set to 18
+c [Label = 62] Minimize Makespan Labeling problem (H-impcol_b.mtx.rnd):
+c [Label = 26] Encoding starts with target value = 10:
+c [Label = 26] Encoding duration: 17ms.
+c [Label = 26] Number of clauses: 25591.
+c [Label = 26] Number of variables: 3375.
+c [Label = 26] Solving duration: 48 ms.
+s [Label = 26] UNSAT (w = 10).
+c [Main] Highest label UNSAT is set to 26
+c [Label = 54] Minimize Makespan Labeling problem (H-impcol_b.mtx.rnd):
+c [Label = 34] Encoding starts with target value = 10:
+c [Label = 34] Encoding duration: 26ms.
+c [Label = 34] Number of clauses: 37579.
+c [Label = 34] Number of variables: 4732.
+c [Label = 34] Solving duration: 66 ms.
+s [Label = 34] UNSAT (w = 10).
+c [Main] Highest label UNSAT is set to 34
+c [Label = 46] Minimize Makespan Labeling problem (H-impcol_b.mtx.rnd):
+c [Label = 42] Encoding starts with target value = 10:
+c [Label = 42] Encoding duration: 36ms.
+c [Label = 42] Number of clauses: 49626.
+c [Label = 42] Number of variables: 6089.
+c [Label = 42] Solving duration: 108 ms.
+s [Label = 42] UNSAT (w = 10).
+c [Main] Highest label UNSAT is set to 42
+c [Label = 72] Minimize Makespan Labeling problem (H-impcol_b.mtx.rnd):
+c [Label = 50] Encoding starts with target value = 10:
+c [Label = 50] Encoding duration: 44ms.
+c [Label = 50] Number of clauses: 60080.
+c [Label = 50] Number of variables: 7033.
+c [Label = 50] Solving duration: 116 ms.
+s [Label = 50] UNSAT (w = 10).
+c [Main] Highest label UNSAT is set to 50
+c [Main] Kill lower label pid 46.
+c [Label = 46] Encoding starts with target value = 10:
+c [Label = 46] Encoding duration: 41ms.
+c [Label = 46] Number of clauses: 55304.
+c [Label = 46] Number of variables: 6561.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 68] Minimize Makespan Labeling problem (H-impcol_b.mtx.rnd):
+c [Main] Child pid 46 - 1787605 terminated by signal 15.
+c [Label = 64] Minimize Makespan Labeling problem (H-impcol_b.mtx.rnd):
+c [Label = 58] Encoding starts with target value = 10:
+c [Label = 58] Encoding duration: 54ms.
+c [Label = 58] Number of clauses: 73088.
+c [Label = 58] Number of variables: 8390.
+c [Label = 58] Solving duration: 171 ms.
+s [Label = 58] UNSAT (w = 10).
+c [Main] Highest label UNSAT is set to 58
+c [Main] Kill lower label pid 54.
+c [Label = 54] Encoding starts with target value = 10:
+c [Label = 54] Encoding duration: 55ms.
+c [Label = 54] Number of clauses: 67410.
+c [Label = 54] Number of variables: 7918.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 54 - 1787604 terminated by signal 15.
+c [Label = 73] Minimize Makespan Labeling problem (H-impcol_b.mtx.rnd):
+c [Label = 60] Minimize Makespan Labeling problem (H-impcol_b.mtx.rnd):
+c [Label = 72] Encoding starts with target value = 10:
+c [Label = 72] Encoding duration: 73ms.
+c [Label = 72] Number of clauses: 94638.
+c [Label = 72] Number of variables: 10868.
+c [Label = 72] Solving duration: 2 ms.
+s [Label = 72] SAT (w = 10).
+c [Label = 72] Label assignment: 72 72 72 62 36 72 72 72 62 72 72 72 72 62 72 72 62 52 52 52 26 26 42 62 52 62 52 72 52 42 32 22 62 52 72 72 52 62 42 72 52 26 26 62 16 62 72 16 62 62 72 42 62 16 2 52 22 12 1 
+c [Main] Lowest label SAT is set to 72.
+c [Main] Kill higher label pid 73.
+c [Label = 73] Encoding starts with target value = 10:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 73 - 1787610 terminated by signal 15.
+c [Label = 69] Minimize Makespan Labeling problem (H-impcol_b.mtx.rnd):
+c [Label = 71] Minimize Makespan Labeling problem (H-impcol_b.mtx.rnd):
+c [Label = 71] Encoding starts with target value = 10:
+c [Label = 71] Encoding duration: 90ms.
+c [Label = 71] Number of clauses: 93218.
+c [Label = 71] Number of variables: 10750.
+c [Label = 71] Solving duration: 2 ms.
+s [Label = 71] SAT (w = 10).
+c [Label = 71] Label assignment: 71 71 71 61 36 71 71 71 61 71 71 71 71 61 71 71 61 51 51 51 26 26 41 61 51 61 51 71 51 41 31 21 61 51 71 71 51 61 41 71 51 26 26 61 16 61 71 16 61 61 71 41 61 16 1 51 21 11 71 
+c [Main] Lowest label SAT is set to 71.
+c [Label = 67] Minimize Makespan Labeling problem (H-impcol_b.mtx.rnd):
+c [Label = 70] Encoding starts with target value = 10:
+c [Label = 70] Encoding duration: 69ms.
+c [Label = 70] Number of clauses: 90029.
+c [Label = 70] Number of variables: 10219.
+c [Label = 70] Solving duration: 357 ms.
+s [Label = 70] UNSAT (w = 10).
+c [Label = 67] Encoding starts with target value = 10:
+c [Label = 67] Encoding duration: 71ms.
+c [Label = 67] Number of clauses: 86672.
+c [Label = 67] Number of variables: 9865.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 68] Encoding starts with target value = 10:
+c [Label = 68] Encoding duration: 67ms.
+c [Label = 68] Number of clauses: 88092.
+c [Label = 68] Number of variables: 9983.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 60] Encoding starts with target value = 10:
+c [Label = 60] Encoding duration: 55ms.
+c [Label = 60] Number of clauses: 75025.
+c [Label = 60] Number of variables: 8626.
+c [Label = 60] Solving duration: 147 ms.
+s [Label = 60] UNSAT (w = 10).
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 64] Encoding starts with target value = 10:
+c [Label = 64] Encoding duration: 65ms.
+c [Label = 64] Number of clauses: 82414.
+c [Label = 64] Number of variables: 9511.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Highest label UNSAT is set to 70
+c [Main] Kill lower label pid 67.
+c [Main] Kill lower label pid 69.
+c [Main] Kill lower label pid 60.
+c [Main] Kill lower label pid 64.
+c [Main] Kill lower label pid 68.
+c [Main] Kill lower label pid 62.
+c [Main] Kill lower label pid 66.
+c [Label = 69] Encoding starts with target value = 10:
+c [Label = 69] Encoding duration: 65ms.
+c [Label = 69] Number of clauses: 89511.
+c [Label = 69] Number of variables: 10101.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 62] Encoding starts with target value = 10:
+c [Label = 62] Encoding duration: 62ms.
+c [Label = 62] Number of clauses: 79575.
+c [Label = 62] Number of variables: 9275.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 66] Encoding starts with target value = 10:
+c [Label = 66] Encoding duration: 62ms.
+c [Label = 66] Number of clauses: 85253.
+c [Label = 66] Number of variables: 9747.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 67 - 1787613 terminated by signal 15.
+c [Main] Child pid 66 - 1787598 terminated by signal 15.
+c [Main] Child pid 64 - 1787608 terminated by signal 15.
+c [Main] Child pid 68 - 1787607 terminated by signal 15.
+c [Main] Child pid 60 - 1787609 terminated by signal 15.
+c [Main] Child pid 69 - 1787612 terminated by signal 15.
+c [Main] Child pid 62 - 1787603 terminated by signal 15.
+c [Main] All children have completed.
+r [Main] 
+r [Main] Final results: 
+r [Main] Lowest label SAT:  	71.
+r [Main] Highest label UNSAT:	70.
+r [Main] Total real time: 453 ms.
+r [Main] Total memory consumed: 193.1 MB.
+r [Main] 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).

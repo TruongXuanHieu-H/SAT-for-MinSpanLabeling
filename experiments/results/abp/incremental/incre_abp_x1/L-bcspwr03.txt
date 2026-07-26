@@ -1,28 +1,33 @@
 c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] Target value is set to 39.
 c [Param] LB is predefined as 40.
 c [Param] UB is predefined as 118.
+c [Param] Target value is set to Antibandwidth.
+c [Param] Vertices mode is set to Has hole.
+c [Param] Result verification is ON.
 c [Param] Memory limit is set to 30000.
 c [Param] Real time limit is set to 1800.
+c [Param] Max CNF size is set to 10.
 c [Main] Search strategy: Incremental from upper bound.
 c [Main] Encoding and solving for graph: L-bcspwr03.mtx.rnd.
-c [Incremental] Minimize Makespan Labeling Antibandwidth problem (L-bcspwr03.mtx.rnd):
+c [Incremental] Minimize Makespan Labeling problem (L-bcspwr03.mtx.rnd):
 c [Incremental] Encoding starts with target value = 39:
-c [Incremental] Encoding duration: 107ms.
-c [Incremental] Number of clauses: 180808.
-c [Incremental] Number of variables: 40828.
+c [Incremental] Encoding duration: 94ms.
+c [Incremental] Number of clauses: 146365.
+c [Incremental] Number of variables: 36120.
 c [Incremental] Solving for max label = 118:
-c [Incremental] Solving duration: 6288 ms.
+c [Incremental] Solving duration: 4 ms.
 s [Incremental] SAT (label = 118).
-Label assignment: 108 113 17 20 68 85 105 71 45 112 13 54 118 114 40 4 35 80 116 100 50 83 69 76 11 111 49 32 26 67 51 37 95 75 62 88 3 103 59 21 43 109 64 78 77 65 12 94 87 9 70 22 14 18 16 23 5 106 102 115 101 96 44 90 55 29 19 8 53 41 10 73 63 57 97 91 104 107 38 61 81 1 92 56 42 52 60 89 66 93 39 82 58 33 79 47 86 30 7 25 99 46 48 117 2 72 98 74 84 24 15 31 6 28 27 36 34 110 
+c [Incremental] Label assignment: 118 118 118 118 118 118 118 118 79 118 118 118 118 118 79 79 79 79 118 118 79 118 79 118 118 79 79 118 40 118 118 79 79 118 79 118 79 118 118 79 118 79 40 118 118 40 79 118 118 79 40 118 118 40 118 40 118 79 118 1 79 118 1 79 79 40 118 79 79 79 40 79 79 79 118 118 1 118 79 40 79 40 79 79 79 1 79 118 40 118 118 118 79 79 1 40 79 118 40 79 79 79 1 40 40 79 1 79 118 118 40 40 79 118 1 40 118 1 
 c [Incremental] Max used label: 118.
 c [Incremental] Label 118 is removed from searching.
 c [Incremental] Solving for max label = 117:
-c [Incremental] Solving duration: 11 ms.
+c [Incremental] Solving duration: 9 ms.
 s [Incremental] UNSAT (label = 117).
 c [Signal] Signal interruption. Caught signal: SIGTERM (15).
 c [Main] Work pid ends with result: 0.
 r [Main] 
 r [Main] Final results: 
-r [Main] Total real time: 6438 ms.
-r [Main] Total memory consumed: 80.3 MB.
+r [Main] Total real time: 115 ms.
+r [Main] Total memory consumed: 39.9 MB.
 r [Main] 

@@ -1,0 +1,164 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] Target value is set to 51.
+c [Param] LB is predefined as 52.
+c [Param] UB is predefined as 117.
+c [Param] Target value is set to Antibandwidth.
+c [Param] Vertices mode is set to Has hole.
+c [Param] Result verification is ON.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Param] Worker count is set to 8.
+c [Param] Max CNF size is set to 10.
+c [Main] Search strategy: Iterating Breadth First Search (Reverse).
+c [Main] Search order: 84 101 67 109 92 75 59 113 105 96 88 79 71 63 55 115 111 107 103 98 94 90 86 81 77 73 69 65 61 57 53 116 114 112 110 108 106 104 102 99 97 95 93 91 89 87 85 82 80 78 76 74 72 70 68 66 64 62 60 58 56 54 52 117 100 83.
+c [Main] Encoding and solving for graph: K-dwt__234.mtx.rnd.
+c [Label = 84] Minimize Makespan Labeling problem (K-dwt__234.mtx.rnd):
+c [Label = 101] Minimize Makespan Labeling problem (K-dwt__234.mtx.rnd):
+c [Label = 67] Minimize Makespan Labeling problem (K-dwt__234.mtx.rnd):
+c [Label = 92] Minimize Makespan Labeling problem (K-dwt__234.mtx.rnd):
+c [Label = 75] Minimize Makespan Labeling problem (K-dwt__234.mtx.rnd):
+c [Label = 109] Minimize Makespan Labeling problem (K-dwt__234.mtx.rnd):
+c [Label = 113] Minimize Makespan Labeling problem (K-dwt__234.mtx.rnd):
+c [Label = 59] Minimize Makespan Labeling problem (K-dwt__234.mtx.rnd):
+c [Label = 67] Encoding starts with target value = 51:
+c [Label = 67] Encoding duration: 39ms.
+c [Label = 67] Number of clauses: 43115.
+c [Label = 67] Number of variables: 15468.
+c [Label = 67] Solving duration: 0 ms.
+s [Label = 67] UNSAT (w = 51).
+c [Main] Highest label UNSAT is set to 67
+c [Main] Kill lower label pid 59.
+c [Label = 59] Encoding starts with target value = 51:
+c [Label = 59] Encoding duration: 32ms.
+c [Label = 59] Number of clauses: 33247.
+c [Label = 59] Number of variables: 13596.
+c [Label = 59] Solving duration: 0 ms.
+s [Label = 59] UNSAT (w = 51).
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 105] Minimize Makespan Labeling problem (K-dwt__234.mtx.rnd):
+c [Main] Child pid 59 - 1793276 terminated by signal 15.
+c [Label = 96] Minimize Makespan Labeling problem (K-dwt__234.mtx.rnd):
+c [Label = 75] Encoding starts with target value = 51:
+c [Label = 75] Encoding duration: 48ms.
+c [Label = 75] Number of clauses: 52983.
+c [Label = 75] Number of variables: 17340.
+c [Label = 75] Solving duration: 0 ms.
+s [Label = 75] UNSAT (w = 51).
+c [Main] Highest label UNSAT is set to 75
+c [Label = 88] Minimize Makespan Labeling problem (K-dwt__234.mtx.rnd):
+c [Label = 84] Encoding starts with target value = 51:
+c [Label = 84] Encoding duration: 59ms.
+c [Label = 84] Number of clauses: 64085.
+c [Label = 84] Number of variables: 19446.
+c [Label = 84] Solving duration: 0 ms.
+s [Label = 84] UNSAT (w = 51).
+c [Main] Highest label UNSAT is set to 84
+c [Label = 115] Minimize Makespan Labeling problem (K-dwt__234.mtx.rnd):
+c [Label = 92] Encoding starts with target value = 51:
+c [Label = 92] Encoding duration: 69ms.
+c [Label = 92] Number of clauses: 73953.
+c [Label = 92] Number of variables: 21318.
+c [Label = 92] Solving duration: 0 ms.
+s [Label = 92] UNSAT (w = 51).
+c [Main] Highest label UNSAT is set to 92
+c [Main] Kill lower label pid 88.
+c [Label = 88] Encoding starts with target value = 51:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 111] Minimize Makespan Labeling problem (K-dwt__234.mtx.rnd):
+c [Main] Child pid 88 - 1793280 terminated by signal 15.
+c [Label = 107] Minimize Makespan Labeling problem (K-dwt__234.mtx.rnd):
+c [Label = 101] Encoding starts with target value = 51:
+c [Label = 101] Encoding duration: 80ms.
+c [Label = 101] Number of clauses: 85054.
+c [Label = 101] Number of variables: 23424.
+c [Label = 101] Solving duration: 0 ms.
+s [Label = 101] UNSAT (w = 51).
+c [Main] Highest label UNSAT is set to 101
+c [Main] Kill lower label pid 96.
+c [Label = 96] Encoding starts with target value = 51:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 103] Minimize Makespan Labeling problem (K-dwt__234.mtx.rnd):
+c [Main] Child pid 96 - 1793279 terminated by signal 15.
+c [Label = 116] Minimize Makespan Labeling problem (K-dwt__234.mtx.rnd):
+c [Label = 109] Encoding starts with target value = 51:
+c [Label = 109] Encoding duration: 103ms.
+c [Label = 109] Number of clauses: 111635.
+c [Label = 109] Number of variables: 30912.
+c [Label = 109] Solving duration: 5 ms.
+s [Label = 109] SAT (w = 51).
+c [Label = 109] Label assignment: 109 109 58 109 109 109 109 109 58 58 109 109 109 109 109 109 109 58 58 109 109 7 109 58 109 58 109 58 58 109 58 109 109 109 109 58 58 58 7 58 109 109 58 58 109 58 7 7 109 109 109 109 109 109 58 109 109 109 58 7 58 7 58 109 7 109 58 109 109 109 58 7 58 58 7 7 109 109 109 58 7 109 109 58 7 109 109 109 7 58 58 58 7 109 58 58 58 109 109 109 58 7 109 58 109 58 109 7 109 7 7 7 7 7 109 1 58 
+c [Main] Lowest label SAT is set to 109.
+c [Main] Kill higher label pid 116.
+c [Main] Kill higher label pid 111.
+c [Main] Kill higher label pid 115.
+c [Main] Kill higher label pid 113.
+c [Label = 111] Encoding starts with target value = 51:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 115] Encoding starts with target value = 51:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 116] Encoding starts with target value = 51:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 113] Encoding starts with target value = 51:
+c [Label = 113] Encoding duration: 113ms.
+c [Label = 113] Number of clauses: 116569.
+c [Label = 113] Number of variables: 31848.
+c [Label = 113] Solving duration: 5 ms.
+s [Label = 113] SAT (w = 51).
+c [Label = 113] Label assignment: 113 113 62 113 113 113 113 113 62 62 113 113 113 113 113 113 113 62 62 113 113 11 113 62 113 62 113 62 62 113 62 113 113 113 113 62 62 62 11 62 113 113 62 62 113 62 11 11 113 113 113 113 113 113 62 113 113 113 62 11 62 11 62 113 11 113 62 113 113 113 62 11 62 62 11 11 113 113 113 62 11 113 113 62 11 113 113 113 11 62 62 62 11 113 62 62 62 113 113 113 62 11 113 62 113 62 113 11 113 11 11 11 11 11 113 1 62 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 116 - 1793285 terminated by signal 15.
+c [Label = 106] Minimize Makespan Labeling problem (K-dwt__234.mtx.rnd):
+c [Main] Child pid 111 - 1793282 terminated by signal 15.
+c [Label = 108] Minimize Makespan Labeling problem (K-dwt__234.mtx.rnd):
+c [Main] Child pid 115 - 1793281 terminated by signal 15.
+c [Label = 102] Minimize Makespan Labeling problem (K-dwt__234.mtx.rnd):
+c [Main] Child pid 113 - 1793277 terminated by signal 15.
+c [Label = 104] Minimize Makespan Labeling problem (K-dwt__234.mtx.rnd):
+c [Label = 105] Encoding starts with target value = 51:
+c [Label = 105] Encoding duration: 100ms.
+c [Label = 105] Number of clauses: 106701.
+c [Label = 105] Number of variables: 29976.
+c [Label = 105] Solving duration: 3 ms.
+s [Label = 105] SAT (w = 51).
+c [Label = 105] Label assignment: 105 105 54 105 105 105 105 105 54 54 105 105 105 105 105 105 105 54 54 105 105 3 105 54 105 54 105 54 54 105 54 105 105 105 105 54 54 54 3 54 105 105 54 54 105 54 3 3 105 105 105 105 105 105 54 105 105 105 54 3 54 3 54 105 3 105 54 105 105 105 54 3 54 54 3 3 105 105 105 54 3 105 105 54 3 105 105 105 3 54 54 54 3 105 54 54 54 105 105 105 54 3 105 54 105 54 105 3 105 3 3 3 3 3 105 1 54 
+c [Main] Lowest label SAT is set to 105.
+c [Main] Kill higher label pid 106.
+c [Main] Kill higher label pid 108.
+c [Main] Kill higher label pid 107.
+c [Label = 106] Encoding starts with target value = 51:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 107] Encoding starts with target value = 51:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 108] Encoding starts with target value = 51:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 108 - 1793286 terminated by signal 15.
+c [Main] Child pid 106 - 1793287 terminated by signal 15.
+c [Main] Child pid 107 - 1793283 terminated by signal 15.
+c [Label = 103] Encoding starts with target value = 51:
+c [Label = 103] Encoding duration: 94ms.
+c [Label = 103] Number of clauses: 104234.
+c [Label = 103] Number of variables: 29508.
+c [Label = 103] Solving duration: 3 ms.
+s [Label = 103] SAT (w = 51).
+c [Label = 103] Label assignment: 103 103 52 103 103 103 103 103 52 52 103 103 103 103 103 103 103 52 52 103 103 1 103 52 103 52 103 52 52 103 52 103 103 103 103 52 52 52 1 52 103 103 52 52 103 52 1 1 103 103 103 103 103 103 52 103 103 103 52 1 52 1 52 103 1 103 52 103 103 103 52 1 52 52 1 1 103 103 103 52 1 103 103 52 1 103 103 103 1 52 52 52 1 103 52 52 52 103 103 103 52 1 103 52 103 52 103 1 103 1 1 1 1 1 103 103 52 
+c [Main] Lowest label SAT is set to 103.
+c [Main] Kill higher label pid 104.
+c [Label = 104] Encoding starts with target value = 51:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 104 - 1793288 terminated by signal 15.
+c [Label = 102] Encoding starts with target value = 51:
+c [Label = 102] Encoding duration: 63ms.
+c [Label = 102] Number of clauses: 85685.
+c [Label = 102] Number of variables: 23658.
+c [Label = 102] Solving duration: 0 ms.
+s [Label = 102] UNSAT (w = 51).
+c [Main] Highest label UNSAT is set to 102
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] All children have completed.
+r [Main] 
+r [Main] Final results: 
+r [Main] Lowest label SAT:  	103.
+r [Main] Highest label UNSAT:	102.
+r [Main] Total real time: 218 ms.
+r [Main] Total memory consumed: 125.9 MB.
+r [Main] 

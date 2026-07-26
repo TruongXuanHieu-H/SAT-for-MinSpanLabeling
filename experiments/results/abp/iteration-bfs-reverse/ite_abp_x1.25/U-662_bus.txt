@@ -1,0 +1,241 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] Target value is set to 275.
+c [Param] LB is predefined as 276.
+c [Param] UB is predefined as 828.
+c [Param] Target value is set to Antibandwidth.
+c [Param] Vertices mode is set to Has hole.
+c [Param] Result verification is ON.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Param] Worker count is set to 8.
+c [Param] Max CNF size is set to 10.
+c [Main] Search strategy: Iterating Breadth First Search (Reverse).
+c [Main] Search order: 552 690 413 759 621 482 344 794 724 655 586 517 447 378 309 811 776 741 707 672 638 603 569 534 499 464 430 395 361 326 292 820 802 785 767 750 732 715 698 681 663 646 629 612 594 577 560 543 525 508 490 473 455 438 421 404 386 369 352 335 317 300 283 824 815 806 798 789 780 771 763 754 745 736 728 719 711 702 694 685 676 667 659 650 642 633 625 616 607 598 590 581 573 564 556 547 538 529 521 512 503 494 486 477 468 459 451 442 434 425 417 408 399 390 382 373 365 356 348 339 330 321 313 304 296 287 279 826 822 817 813 808 804 800 796 791 787 782 778 773 769 765 761 756 752 747 743 738 734 730 726 721 717 713 709 704 700 696 692 687 683 678 674 669 665 661 657 652 648 644 640 635 631 627 623 618 614 609 605 600 596 592 588 583 579 575 571 566 562 558 554 549 545 540 536 531 527 523 519 514 510 505 501 496 492 488 484 479 475 470 466 461 457 453 449 444 440 436 432 427 423 419 415 410 406 401 397 392 388 384 380 375 371 367 363 358 354 350 346 341 337 332 328 323 319 315 311 306 302 298 294 289 285 281 277 827 825 823 821 818 816 814 812 809 807 805 803 801 799 797 795 792 790 788 786 783 781 779 777 774 772 770 768 766 764 762 760 757 755 753 751 748 746 744 742 739 737 735 733 731 729 727 725 722 720 718 716 714 712 710 708 705 703 701 699 697 695 693 691 688 686 684 682 679 677 675 673 670 668 666 664 662 660 658 656 653 651 649 647 645 643 641 639 636 634 632 630 628 626 624 622 619 617 615 613 610 608 606 604 601 599 597 595 593 591 589 587 584 582 580 578 576 574 572 570 567 565 563 561 559 557 555 553 550 548 546 544 541 539 537 535 532 530 528 526 524 522 520 518 515 513 511 509 506 504 502 500 497 495 493 491 489 487 485 483 480 478 476 474 471 469 467 465 462 460 458 456 454 452 450 448 445 443 441 439 437 435 433 431 428 426 424 422 420 418 416 414 411 409 407 405 402 400 398 396 393 391 389 387 385 383 381 379 376 374 372 370 368 366 364 362 359 357 355 353 351 349 347 345 342 340 338 336 333 331 329 327 324 322 320 318 316 314 312 310 307 305 303 301 299 297 295 293 290 288 286 284 282 280 278 276 828 819 810 793 784 775 758 749 740 723 706 689 680 671 654 637 620 611 602 585 568 551 542 533 516 507 498 481 472 463 446 429 412 403 394 377 360 343 334 325 308 291.
+c [Main] Encoding and solving for graph: U-662_bus.mtx.rnd.
+c [Label = 552] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Label = 690] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Label = 413] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Label = 759] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Label = 621] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Label = 482] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Label = 344] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Label = 794] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Label = 344] Encoding starts with target value = 275:
+c [Label = 344] Encoding duration: 1770ms.
+c [Label = 344] Number of clauses: 1203900.
+c [Label = 344] Number of variables: 454278.
+c [Label = 344] Solving duration: 0 ms.
+s [Label = 344] UNSAT (w = 275).
+c [Main] Highest label UNSAT is set to 344
+c [Label = 724] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Label = 413] Encoding starts with target value = 275:
+c [Label = 413] Encoding duration: 2427ms.
+c [Label = 413] Number of clauses: 1682380.
+c [Label = 413] Number of variables: 545634.
+c [Label = 413] Solving duration: 0 ms.
+s [Label = 413] UNSAT (w = 275).
+c [Main] Highest label UNSAT is set to 413
+c [Label = 655] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Label = 482] Encoding starts with target value = 275:
+c [Label = 482] Encoding duration: 3314ms.
+c [Label = 482] Number of clauses: 2160861.
+c [Label = 482] Number of variables: 636990.
+c [Label = 482] Solving duration: 0 ms.
+s [Label = 482] UNSAT (w = 275).
+c [Main] Highest label UNSAT is set to 482
+c [Label = 586] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Label = 552] Encoding starts with target value = 275:
+c [Label = 552] Encoding duration: 5187ms.
+c [Label = 552] Number of clauses: 3185736.
+c [Label = 552] Number of variables: 909734.
+c [Label = 552] Solving duration: 14841 ms.
+s [Label = 552] UNSAT (w = 275).
+c [Main] Highest label UNSAT is set to 552
+c [Label = 811] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Label = 586] Encoding starts with target value = 275:
+c [Label = 586] Encoding duration: 5966ms.
+c [Label = 586] Number of clauses: 3421509.
+c [Label = 586] Number of variables: 954750.
+c [Label = 586] Solving duration: 14517 ms.
+s [Label = 586] UNSAT (w = 275).
+c [Main] Highest label UNSAT is set to 586
+c [Label = 776] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Label = 621] Encoding starts with target value = 275:
+c [Label = 621] Encoding duration: 5786ms.
+c [Label = 621] Number of clauses: 3664216.
+c [Label = 621] Number of variables: 1001090.
+c [Label = 621] Solving duration: 21073 ms.
+s [Label = 621] UNSAT (w = 275).
+c [Main] Highest label UNSAT is set to 621
+c [Label = 741] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Label = 690] Encoding starts with target value = 275:
+c [Label = 690] Encoding duration: 6898ms.
+c [Label = 690] Number of clauses: 4142697.
+c [Label = 690] Number of variables: 1092446.
+c [Label = 690] Solving duration: 21968 ms.
+s [Label = 690] UNSAT (w = 275).
+c [Main] Highest label UNSAT is set to 690
+c [Main] Kill lower label pid 655.
+c [Label = 655] Encoding starts with target value = 275:
+c [Label = 655] Encoding duration: 6710ms.
+c [Label = 655] Number of clauses: 3899989.
+c [Label = 655] Number of variables: 1046106.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 707] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Main] Child pid 655 - 1792412 terminated by signal 15.
+c [Label = 820] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Label = 794] Encoding starts with target value = 275:
+c [Label = 794] Encoding duration: 8388ms.
+c [Label = 794] Number of clauses: 4863885.
+c [Label = 794] Number of variables: 1230142.
+c [Label = 794] Solving duration: 21592 ms.
+s [Label = 794] UNSAT (w = 275).
+c [Label = 776] Encoding starts with target value = 275:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Highest label UNSAT is set to 794
+c [Main] Kill lower label pid 741.
+c [Main] Kill lower label pid 776.
+c [Main] Kill lower label pid 724.
+c [Main] Kill lower label pid 707.
+c [Main] Kill lower label pid 759.
+c [Label = 741] Encoding starts with target value = 275:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 724] Encoding starts with target value = 275:
+c [Label = 724] Encoding duration: 7530ms.
+c [Label = 724] Number of clauses: 4378470.
+c [Label = 724] Number of variables: 1137462.
+c [Label = 724] Solving duration: 21477 ms.
+s [Label = 724] UNSAT (w = 275).
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 707] Encoding starts with target value = 275:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 759] Encoding starts with target value = 275:
+c [Label = 759] Encoding duration: 8027ms.
+c [Label = 759] Number of clauses: 4621177.
+c [Label = 759] Number of variables: 1183802.
+c [Label = 759] Solving duration: 22020 ms.
+s [Label = 759] UNSAT (w = 275).
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 802] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Main] Child pid 707 - 1792856 terminated by signal 15.
+c [Label = 824] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Main] Child pid 741 - 1792855 terminated by signal 15.
+c [Label = 815] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Main] Child pid 776 - 1792854 terminated by signal 15.
+c [Label = 806] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Main] Child pid 759 - 1792404 terminated by signal 15.
+c [Label = 798] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Main] Child pid 724 - 1792409 terminated by signal 15.
+c [Label = 826] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Label = 826] Encoding starts with target value = 275:
+c [Label = 826] Encoding duration: 9264ms.
+c [Label = 826] Number of clauses: 5625911.
+c [Label = 826] Number of variables: 1452574.
+c [Label = 826] Solving duration: 245 ms.
+s [Label = 826] SAT (w = 275).
+c [Label = 826] Label assignment: 826 826 826 826 826 826 826 826 826 826 551 826 826 826 826 826 826 826 826 826 826 826 551 551 826 826 826 826 826 826 826 826 826 826 826 826 826 826 826 826 826 826 826 826 551 826 826 826 826 826 826 826 826 826 826 826 826 826 826 551 826 826 826 826 826 826 826 551 826 551 826 826 551 551 551 826 826 826 826 826 826 826 826 826 551 826 826 826 826 551 826 551 826 826 551 826 826 826 826 826 551 826 826 826 276 551 826 551 826 826 826 826 826 826 826 551 551 826 551 826 826 826 826 551 826 551 826 826 551 826 826 551 551 826 551 826 826 826 826 551 826 551 551 826 551 551 826 551 551 551 826 826 826 826 826 826 826 826 826 826 826 826 551 826 826 826 276 551 826 276 551 826 826 826 551 551 276 826 826 826 551 551 551 826 551 826 551 551 826 826 551 826 826 551 826 551 551 826 551 551 826 826 551 826 826 276 826 826 826 551 551 826 826 826 826 551 826 551 826 551 413 826 826 551 551 276 826 826 826 826 276 551 551 551 826 826 826 551 551 276 826 826 551 551 551 826 826 826 826 551 276 551 551 551 551 826 276 826 551 551 551 551 276 826 551 551 551 826 826 551 551 551 551 826 551 826 826 551 551 826 826 826 551 826 826 1 551 276 551 1 551 551 551 826 826 276 551 826 551 551 276 551 276 826 826 551 826 826 138 551 276 551 551 551 276 276 551 826 826 276 1 826 551 551 1 276 551 826 826 1 551 826 1 826 551 551 826 551 551 551 826 551 551 276 551 826 826 551 826 826 826 551 551 826 551 276 826 826 826 826 551 551 551 551 551 551 276 551 551 551 551 826 276 826 826 276 826 551 551 826 276 826 551 551 551 276 551 276 551 551 276 826 551 276 551 276 551 551 551 551 1 826 826 551 276 826 551 551 826 551 276 826 826 826 276 276 276 551 826 551 826 551 551 826 276 551 826 551 551 276 551 551 551 551 826 826 551 551 276 551 826 551 276 1 551 276 551 551 551 826 276 826 276 551 1 826 826 826 826 826 1 826 551 551 551 276 551 826 826 276 551 551 276 551 276 551 551 551 826 826 551 138 551 1 276 826 826 551 826 826 826 551 276 551 826 551 551 276 551 551 276 1 276 826 826 551 826 276 826 276 551 276 276 276 276 551 276 276 551 276 276 551 551 1 551 276 551 826 826 826 276 551 826 551 551 551 276 551 551 276 551 551 826 276 826 551 551 276 826 826 276 551 276 276 826 276 826 276 276 551 551 276 826 551 551 276 826 551 276 826 276 1 551 551 826 826 276 551 276 551 276 276 276 276 551 551 1 551 551 551 551 826 276 1 551 826 1 826 551 276 551 276 276 826 551 826 276 826 276 1 276 276 276 826 826 826 826 1 826 826 276 551 551 276 276 551 551 826 1 276 276 1 276 826 551 276 551 551 276 1 826 1 826 826 551 276 276 1 276 826 551 276 551 551 826 826 276 1 276 276 1 551 
+c [Main] Lowest label SAT is set to 826.
+c [Label = 822] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Label = 811] Encoding starts with target value = 275:
+c [Label = 811] Encoding duration: 7984ms.
+c [Label = 811] Number of clauses: 4981771.
+c [Label = 811] Number of variables: 1252650.
+c [Label = 811] Solving duration: 22163 ms.
+s [Label = 811] UNSAT (w = 275).
+c [Main] Highest label UNSAT is set to 811
+c [Main] Kill lower label pid 806.
+c [Main] Kill lower label pid 802.
+c [Main] Kill lower label pid 798.
+c [Label = 806] Encoding starts with target value = 275:
+c [Label = 806] Encoding duration: 7670ms.
+c [Label = 806] Number of clauses: 4947099.
+c [Label = 806] Number of variables: 1246030.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 802] Encoding starts with target value = 275:
+c [Label = 802] Encoding duration: 7703ms.
+c [Label = 802] Number of clauses: 4919361.
+c [Label = 802] Number of variables: 1240734.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 798] Encoding starts with target value = 275:
+c [Label = 798] Encoding duration: 7670ms.
+c [Label = 798] Number of clauses: 4891623.
+c [Label = 798] Number of variables: 1235438.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 817] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Main] Child pid 798 - 1792862 terminated by signal 15.
+c [Label = 813] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Main] Child pid 802 - 1792858 terminated by signal 15.
+c [Main] Child pid 806 - 1792861 terminated by signal 15.
+c [Label = 823] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Label = 825] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Label = 820] Encoding starts with target value = 275:
+c [Label = 820] Encoding duration: 8014ms.
+c [Label = 820] Number of clauses: 5044182.
+c [Label = 820] Number of variables: 1264566.
+c [Label = 820] Solving duration: 21813 ms.
+s [Label = 820] UNSAT (w = 275).
+c [Label = 815] Encoding starts with target value = 275:
+c [Label = 815] Encoding duration: 7859ms.
+c [Label = 815] Number of clauses: 5009509.
+c [Label = 815] Number of variables: 1257946.
+c [Label = 815] Solving duration: 21056 ms.
+s [Label = 815] UNSAT (w = 275).
+c [Main] Highest label UNSAT is set to 820
+c [Main] Kill lower label pid 813.
+c [Main] Kill lower label pid 817.
+c [Main] Kill lower label pid 815.
+c [Label = 817] Encoding starts with target value = 275:
+c [Label = 817] Encoding duration: 8343ms.
+c [Label = 817] Number of clauses: 5023378.
+c [Label = 817] Number of variables: 1260594.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 813] Encoding starts with target value = 275:
+c [Label = 813] Encoding duration: 8100ms.
+c [Label = 813] Number of clauses: 4995640.
+c [Label = 813] Number of variables: 1255298.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 821] Minimize Makespan Labeling problem (U-662_bus.mtx.rnd):
+c [Main] Kill lower label pid 813.
+c [Main] Child pid 817 - 1792874 terminated by signal 15.
+c [Main] Child pid 813 - 1792875 terminated by signal 15.
+c [Label = 824] Encoding starts with target value = 275:
+c [Label = 824] Encoding duration: 8043ms.
+c [Label = 824] Number of clauses: 5071920.
+c [Label = 824] Number of variables: 1269862.
+c [Label = 824] Solving duration: 21368 ms.
+s [Label = 824] UNSAT (w = 275).
+c [Main] Highest label UNSAT is set to 824
+c [Main] Kill lower label pid 821.
+c [Main] Kill lower label pid 823.
+c [Main] Kill lower label pid 822.
+c [Label = 821] Encoding starts with target value = 275:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 822] Encoding starts with target value = 275:
+c [Label = 822] Encoding duration: 8858ms.
+c [Label = 822] Number of clauses: 5058051.
+c [Label = 822] Number of variables: 1267214.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 823] Encoding starts with target value = 275:
+c [Label = 823] Encoding duration: 8180ms.
+c [Label = 823] Number of clauses: 5064985.
+c [Label = 823] Number of variables: 1268538.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 821 - 1792882 terminated by signal 15.
+c [Main] Child pid 823 - 1792877 terminated by signal 15.
+c [Main] Child pid 822 - 1792868 terminated by signal 15.
+c [Label = 825] Encoding starts with target value = 275:
+c [Label = 825] Encoding duration: 8347ms.
+c [Label = 825] Number of clauses: 5075474.
+c [Label = 825] Number of variables: 1271186.
+c [Label = 825] Solving duration: 15813 ms.
+s [Label = 825] UNSAT (w = 275).
+c [Main] Highest label UNSAT is set to 825
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] All children have completed.
+r [Main] 
+r [Main] Final results: 
+r [Main] Lowest label SAT:  	826.
+r [Main] Highest label UNSAT:	825.
+r [Main] Total real time: 78433 ms.
+r [Main] Total memory consumed: 15678.4 MB.
+r [Main] 

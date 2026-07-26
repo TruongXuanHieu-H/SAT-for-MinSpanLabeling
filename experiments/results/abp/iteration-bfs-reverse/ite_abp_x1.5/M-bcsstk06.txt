@@ -1,0 +1,211 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] Target value is set to 51.
+c [Param] LB is predefined as 52.
+c [Param] UB is predefined as 630.
+c [Param] Target value is set to Antibandwidth.
+c [Param] Vertices mode is set to Has hole.
+c [Param] Result verification is ON.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Param] Worker count is set to 8.
+c [Param] Max CNF size is set to 10.
+c [Main] Search strategy: Iterating Breadth First Search (Reverse).
+c [Main] Search order: 341 486 196 558 413 268 123 594 522 449 377 304 232 159 87 612 576 540 504 467 431 395 359 322 286 250 214 177 141 105 69 621 603 585 567 549 531 513 495 476 458 440 422 404 386 368 350 331 313 295 277 259 241 223 205 186 168 150 132 114 96 78 60 626 616 607 598 589 580 571 562 553 544 535 526 517 508 499 490 481 471 462 453 444 435 426 417 408 399 390 381 372 363 354 345 336 326 317 308 299 290 281 272 263 254 245 236 227 218 209 200 191 181 172 163 154 145 136 127 118 109 100 91 82 73 64 55 628 623 618 614 609 605 600 596 591 587 582 578 573 569 564 560 555 551 546 542 537 533 528 524 519 515 510 506 501 497 492 488 483 478 473 469 464 460 455 451 446 442 437 433 428 424 419 415 410 406 401 397 392 388 383 379 374 370 365 361 356 352 347 343 338 333 328 324 319 315 310 306 301 297 292 288 283 279 274 270 265 261 256 252 247 243 238 234 229 225 220 216 211 207 202 198 193 188 183 179 174 170 165 161 156 152 147 143 138 134 129 125 120 116 111 107 102 98 93 89 84 80 75 71 66 62 57 53 629 627 624 622 619 617 615 613 610 608 606 604 601 599 597 595 592 590 588 586 583 581 579 577 574 572 570 568 565 563 561 559 556 554 552 550 547 545 543 541 538 536 534 532 529 527 525 523 520 518 516 514 511 509 507 505 502 500 498 496 493 491 489 487 484 482 479 477 474 472 470 468 465 463 461 459 456 454 452 450 447 445 443 441 438 436 434 432 429 427 425 423 420 418 416 414 411 409 407 405 402 400 398 396 393 391 389 387 384 382 380 378 375 373 371 369 366 364 362 360 357 355 353 351 348 346 344 342 339 337 334 332 329 327 325 323 320 318 316 314 311 309 307 305 302 300 298 296 293 291 289 287 284 282 280 278 275 273 271 269 266 264 262 260 257 255 253 251 248 246 244 242 239 237 235 233 230 228 226 224 221 219 217 215 212 210 208 206 203 201 199 197 194 192 189 187 184 182 180 178 175 173 171 169 166 164 162 160 157 155 153 151 148 146 144 142 139 137 135 133 130 128 126 124 121 119 117 115 112 110 108 106 103 101 99 97 94 92 90 88 85 83 81 79 76 74 72 70 67 65 63 61 58 56 54 52 630 625 620 611 602 593 584 575 566 557 548 539 530 521 512 503 494 485 480 475 466 457 448 439 430 421 412 403 394 385 376 367 358 349 340 335 330 321 312 303 294 285 276 267 258 249 240 231 222 213 204 195 190 185 176 167 158 149 140 131 122 113 104 95 86 77 68 59.
+c [Main] Encoding and solving for graph: M-bcsstk06.mtx.rnd.
+c [Label = 341] Minimize Makespan Labeling problem (M-bcsstk06.mtx.rnd):
+c [Label = 486] Minimize Makespan Labeling problem (M-bcsstk06.mtx.rnd):
+c [Label = 196] Minimize Makespan Labeling problem (M-bcsstk06.mtx.rnd):
+c [Label = 558] Minimize Makespan Labeling problem (M-bcsstk06.mtx.rnd):
+c [Label = 413] Minimize Makespan Labeling problem (M-bcsstk06.mtx.rnd):
+c [Label = 268] Minimize Makespan Labeling problem (M-bcsstk06.mtx.rnd):
+c [Label = 123] Minimize Makespan Labeling problem (M-bcsstk06.mtx.rnd):
+c [Label = 594] Minimize Makespan Labeling problem (M-bcsstk06.mtx.rnd):
+c [Label = 123] Encoding starts with target value = 51:
+c [Label = 123] Encoding duration: 1622ms.
+c [Label = 123] Number of clauses: 1360175.
+c [Label = 123] Number of variables: 122732.
+c [Label = 123] Solving duration: 3225 ms.
+s [Label = 123] UNSAT (w = 51).
+c [Main] Highest label UNSAT is set to 123
+c [Label = 522] Minimize Makespan Labeling problem (M-bcsstk06.mtx.rnd):
+c [Label = 196] Encoding starts with target value = 51:
+c [Label = 196] Encoding duration: 3573ms.
+c [Label = 196] Number of clauses: 2650752.
+c [Label = 196] Number of variables: 204212.
+c [Label = 196] Solving duration: 6506 ms.
+s [Label = 196] UNSAT (w = 51).
+c [Main] Highest label UNSAT is set to 196
+c [Label = 449] Minimize Makespan Labeling problem (M-bcsstk06.mtx.rnd):
+c [Label = 268] Encoding starts with target value = 51:
+c [Label = 268] Encoding duration: 5320ms.
+c [Label = 268] Number of clauses: 3976608.
+c [Label = 268] Number of variables: 305012.
+c [Label = 268] Solving duration: 12600 ms.
+s [Label = 268] UNSAT (w = 51).
+c [Main] Highest label UNSAT is set to 268
+c [Label = 377] Minimize Makespan Labeling problem (M-bcsstk06.mtx.rnd):
+c [Label = 341] Encoding starts with target value = 51:
+c [Label = 341] Encoding duration: 7609ms.
+c [Label = 341] Number of clauses: 5268444.
+c [Label = 341] Number of variables: 386492.
+c [Label = 341] Solving duration: 18084 ms.
+s [Label = 341] UNSAT (w = 51).
+c [Main] Highest label UNSAT is set to 341
+c [Label = 612] Minimize Makespan Labeling problem (M-bcsstk06.mtx.rnd):
+c [Label = 594] Encoding starts with target value = 51:
+c [Label = 594] Encoding duration: 14965ms.
+c [Label = 594] Number of clauses: 9832531.
+c [Label = 594] Number of variables: 700232.
+c [Label = 594] Solving duration: 37905 ms.
+s [Label = 594] SAT (w = 51).
+c [Label = 594] Label assignment: 542 593 543 491 542 593 594 594 593 593 593 593 593 135 593 593 594 593 389 287 185 593 492 594 542 440 593 542 593 492 440 185 542 440 441 542 593 441 389 236 492 593 542 441 389 542 491 593 542 593 542 593 491 542 491 491 593 390 491 440 440 440 440 491 543 339 134 542 390 542 441 543 542 440 440 338 542 542 491 185 593 185 491 593 542 594 441 338 542 440 338 389 440 389 542 491 440 440 593 593 339 440 288 491 593 491 542 236 338 593 440 338 542 542 593 338 440 185 185 83 593 440 287 389 389 543 338 389 185 542 389 491 594 389 542 440 542 440 287 593 338 237 441 338 491 338 236 542 542 389 542 491 338 236 440 338 542 440 492 440 389 542 542 390 338 288 236 185 287 492 134 440 593 338 236 134 491 491 389 542 287 593 491 390 288 288 236 543 389 440 2 491 186 237 185 237 542 287 194 491 134 287 389 440 593 134 237 236 287 440 83 185 543 185 593 134 491 491 185 338 134 236 389 83 338 389 287 389 338 236 134 134 593 338 236 287 237 491 593 185 287 338 389 287 593 492 236 2 440 287 338 236 440 441 287 491 593 185 236 83 287 2 185 134 542 2 185 542 83 593 236 287 440 593 287 134 593 390 389 236 185 2 83 593 134 338 287 185 491 2 83 135 83 2 236 134 338 83 134 2 134 236 83 2 236 134 2 542 83 83 287 2 2 185 2 287 542 491 389 134 441 185 287 185 236 288 389 186 338 236 441 287 338 186 83 338 593 594 491 2 542 134 185 83 135 542 83 2 389 2 83 83 338 339 134 593 134 491 83 83 287 185 389 2 440 593 134 543 288 236 134 2 83 338 83 389 593 2 83 287 2 2 83 134 542 134 593 338 593 593 83 593 440 2 134 593 83 1 543 1 389 491 134 236 389 83 594 236 185 389 543 135 287 338 594 83 1 441 492 186 
+c [Main] Lowest label SAT is set to 594.
+c [Main] Kill higher label pid 612.
+c [Label = 576] Minimize Makespan Labeling problem (M-bcsstk06.mtx.rnd):
+c [Label = 612] Encoding starts with target value = 51:
+c [Label = 612] Encoding duration: 14143ms.
+c [Label = 612] Number of clauses: 10126600.
+c [Label = 612] Number of variables: 715352.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 612 - 1782183 terminated by signal 15.
+c [Label = 540] Minimize Makespan Labeling problem (M-bcsstk06.mtx.rnd):
+c [Label = 377] Encoding starts with target value = 51:
+c [Label = 377] Encoding duration: 7751ms.
+c [Label = 377] Number of clauses: 5932422.
+c [Label = 377] Number of variables: 436892.
+c [Label = 377] Solving duration: 42824 ms.
+s [Label = 377] UNSAT (w = 51).
+c [Main] Highest label UNSAT is set to 377
+c [Label = 504] Minimize Makespan Labeling problem (M-bcsstk06.mtx.rnd):
+c [Label = 576] Encoding starts with target value = 51:
+c [Label = 576] Encoding duration: 13473ms.
+c [Label = 576] Number of clauses: 9526882.
+c [Label = 576] Number of variables: 685112.
+c [Label = 576] Solving duration: 36917 ms.
+s [Label = 576] SAT (w = 51).
+c [Label = 576] Label assignment: 525 575 525 576 525 575 576 525 575 575 575 575 474 525 2 575 576 575 371 269 423 269 525 116 524 423 575 524 575 474 576 474 524 116 423 524 575 423 372 116 474 371 524 321 371 524 473 575 524 524 524 575 473 524 473 474 575 474 473 423 422 422 422 473 525 321 576 65 372 524 422 474 524 65 423 218 524 524 525 321 525 372 473 575 524 372 423 321 423 422 321 371 422 372 524 473 422 422 575 575 321 422 474 473 270 423 524 218 219 575 525 321 524 524 575 320 422 167 167 525 371 270 270 371 320 525 423 372 372 270 371 473 576 371 65 321 524 423 270 575 320 320 372 320 473 167 219 524 524 2 524 423 320 218 422 320 524 371 474 320 371 524 269 372 320 269 423 473 269 2 116 422 575 320 218 116 576 473 473 524 269 524 473 168 65 270 218 525 218 218 423 473 269 218 167 116 524 473 185 473 167 269 218 372 575 116 218 218 320 372 167 65 66 576 575 116 473 473 525 320 117 116 371 116 320 167 269 2 219 269 269 116 575 320 218 269 320 65 575 167 269 320 575 167 575 167 218 65 422 474 371 218 422 423 269 473 320 167 218 65 270 270 167 116 474 2 576 320 65 575 2 2 422 575 2 65 575 167 320 218 167 371 474 575 116 321 269 167 2 65 575 167 575 167 219 116 269 168 116 167 65 218 575 2 218 116 2 524 2 371 2 2 371 321 2 167 524 525 218 422 423 422 167 167 218 270 65 219 269 2 575 269 65 218 65 320 65 117 372 65 474 116 167 269 167 371 218 167 65 2 371 218 320 2 116 575 321 575 372 116 269 2 371 2 422 474 116 116 269 423 576 320 168 65 65 116 65 2 269 269 167 2 65 116 524 372 575 321 575 575 474 575 167 167 116 575 167 321 525 116 269 473 576 1 371 65 65 422 576 474 474 167 218 576 576 167 423 423 372 1 
+c [Main] Lowest label SAT is set to 576.
+c [Label = 467] Minimize Makespan Labeling problem (M-bcsstk06.mtx.rnd):
+c [Label = 413] Encoding starts with target value = 51:
+c [Label = 413] Encoding duration: 10084ms.
+c [Label = 413] Number of clauses: 6596820.
+c [Label = 413] Number of variables: 487292.
+c [Label = 413] Solving duration: 235891 ms.
+s [Label = 413] UNSAT (w = 51).
+c [Main] Highest label UNSAT is set to 413
+c [Label = 431] Minimize Makespan Labeling problem (M-bcsstk06.mtx.rnd):
+c [Label = 449] Encoding starts with target value = 51:
+c [Label = 449] Encoding duration: 10475ms.
+c [Label = 449] Number of clauses: 7208118.
+c [Label = 449] Number of variables: 517532.
+c [Label = 449] Solving duration: 251507 ms.
+s [Label = 449] UNSAT (w = 51).
+c [Main] Highest label UNSAT is set to 449
+c [Main] Kill lower label pid 431.
+c [Label = 431] Encoding starts with target value = 51:
+c [Label = 431] Encoding duration: 7758ms.
+c [Label = 431] Number of clauses: 6902469.
+c [Label = 431] Number of variables: 502412.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 567] Minimize Makespan Labeling problem (M-bcsstk06.mtx.rnd):
+c [Main] Child pid 431 - 1782612 terminated by signal 15.
+c [Label = 549] Minimize Makespan Labeling problem (M-bcsstk06.mtx.rnd):
+c [Label = 567] Encoding starts with target value = 51:
+c [Label = 567] Encoding duration: 10647ms.
+c [Label = 567] Number of clauses: 9374057.
+c [Label = 567] Number of variables: 677552.
+c [Label = 567] Solving duration: 35530 ms.
+s [Label = 567] SAT (w = 51).
+c [Label = 567] Label assignment: 465 566 515 465 516 566 566 465 566 566 566 566 515 515 566 566 56 566 311 260 413 1 515 107 515 414 566 515 566 464 567 158 515 414 464 515 566 413 362 465 362 566 311 209 209 515 464 566 515 566 515 566 464 515 464 465 566 464 464 414 413 413 413 464 566 413 515 52 362 515 413 515 515 413 414 311 515 515 516 566 516 362 464 566 464 362 413 414 464 413 312 362 413 516 515 515 413 413 363 566 311 413 362 464 516 56 515 209 311 566 2 311 515 515 566 311 413 158 158 107 362 516 260 362 311 515 414 363 413 515 362 464 567 362 158 311 515 414 260 566 311 311 362 56 464 260 209 515 515 566 515 464 209 209 413 312 515 413 260 311 362 515 261 362 311 260 413 464 260 2 107 260 413 311 209 107 107 464 414 515 158 566 158 464 311 311 465 260 362 209 311 464 260 311 158 260 515 464 260 464 260 260 362 515 566 107 209 158 312 413 260 209 158 103 566 107 464 515 260 464 107 2 362 107 311 107 260 362 414 260 209 210 566 311 209 2 311 56 566 158 260 311 566 210 566 464 209 158 413 465 362 260 413 413 260 464 566 209 260 56 158 516 158 209 465 2 567 515 362 566 209 260 566 566 2 464 566 158 362 566 464 2 158 566 107 312 209 158 56 2 56 209 56 52 209 107 311 2 2 2 158 209 56 2 209 107 2 515 56 158 567 2 2 209 107 260 515 260 158 362 413 158 210 158 260 311 56 566 209 158 566 56 311 260 56 260 261 107 363 566 464 311 56 260 209 515 158 413 107 107 362 2 311 2 209 566 209 464 363 56 260 56 362 56 413 515 158 158 260 209 107 2 53 311 56 107 1 209 566 209 107 2 311 107 515 363 260 567 566 566 2 566 209 362 107 362 158 362 566 107 1 464 567 107 362 56 158 1 56 516 107 158 312 311 567 158 107 413 209 1 
+c [Main] Lowest label SAT is set to 567.
+c [Label = 531] Minimize Makespan Labeling problem (M-bcsstk06.mtx.rnd):
+c [Label = 486] Encoding starts with target value = 51:
+c [Label = 486] Encoding duration: 11580ms.
+c [Label = 486] Number of clauses: 7889917.
+c [Label = 486] Number of variables: 568772.
+c [Label = 486] Solving duration: 1007475 ms.
+s [Label = 486] UNSAT (w = 51).
+c [Main] Highest label UNSAT is set to 486
+c [Main] Kill lower label pid 467.
+c [Label = 467] Encoding starts with target value = 51:
+c [Label = 467] Encoding duration: 8394ms.
+c [Label = 467] Number of clauses: 7567287.
+c [Label = 467] Number of variables: 552812.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 513] Minimize Makespan Labeling problem (M-bcsstk06.mtx.rnd):
+c [Main] Child pid 467 - 1782555 terminated by signal 15.
+c [Label = 495] Minimize Makespan Labeling problem (M-bcsstk06.mtx.rnd):
+c [Label = 504] Encoding starts with target value = 51:
+c [Label = 504] Encoding duration: 9507ms.
+c [Label = 504] Number of clauses: 8195566.
+c [Label = 504] Number of variables: 583892.
+c [Label = 504] Solving duration: 1050920 ms.
+s [Label = 504] UNSAT (w = 51).
+c [Main] Highest label UNSAT is set to 504
+c [Main] Kill lower label pid 495.
+c [Label = 495] Encoding starts with target value = 51:
+c [Label = 495] Encoding duration: 9290ms.
+c [Label = 495] Number of clauses: 8042741.
+c [Label = 495] Number of variables: 576332.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 562] Minimize Makespan Labeling problem (M-bcsstk06.mtx.rnd):
+c [Main] Child pid 495 - 1783834 terminated by signal 15.
+c [Label = 553] Minimize Makespan Labeling problem (M-bcsstk06.mtx.rnd):
+c [Label = 562] Encoding starts with target value = 51:
+c [Label = 562] Encoding duration: 10818ms.
+c [Label = 562] Number of clauses: 9289155.
+c [Label = 562] Number of variables: 673352.
+c [Label = 562] Solving duration: 52534 ms.
+s [Label = 562] SAT (w = 51).
+c [Label = 562] Label assignment: 205 408 307 561 307 307 358 307 561 561 1 458 561 409 511 561 562 511 511 256 52 562 561 562 460 509 510 460 562 256 511 307 254 103 509 2 561 409 154 460 256 1 460 154 409 99 409 561 103 562 407 307 458 460 510 562 561 460 511 358 205 511 307 409 561 2 358 307 307 2 305 205 407 307 509 256 561 509 205 52 305 409 358 561 460 205 52 511 407 562 458 357 357 103 509 307 2 305 356 510 562 305 356 458 205 307 509 562 511 1 52 460 509 561 561 2 460 154 154 154 509 562 460 154 356 1 154 307 409 1 356 256 358 99 562 358 460 511 409 407 460 253 407 1 409 458 358 561 509 511 2 458 205 460 204 460 562 358 307 305 562 460 1 409 254 1 152 356 205 154 103 254 459 2 409 103 358 458 458 509 203 2 103 256 203 52 256 52 52 561 256 458 202 409 103 511 307 2 2 407 101 256 409 509 2 52 154 1 460 407 52 152 1 154 561 103 510 256 205 154 154 1 511 509 358 307 256 562 511 561 511 511 561 205 409 256 510 409 356 154 154 306 356 407 561 256 103 103 460 205 203 152 358 509 407 408 460 152 103 562 154 103 154 103 254 154 511 460 562 407 103 1 99 2 1 256 2 103 52 52 358 358 562 561 99 458 255 562 254 2 511 99 256 409 358 52 307 562 511 205 307 254 358 1 511 99 154 509 562 1 103 52 1 356 52 205 356 1 561 305 562 103 407 205 99 305 307 1 2 305 561 358 307 202 154 356 256 103 2 409 154 511 152 254 254 103 203 458 52 307 256 254 307 460 562 561 460 1 52 511 1 409 255 254 561 509 358 101 203 460 358 511 205 205 409 205 52 154 562 203 358 1 256 52 509 103 409 256 2 561 52 561 509 103 52 409 52 103 509 151 205 510 256 511 256 1 256 1 358 1 205 407 409 205 152 1 358 511 358 460 
+c [Main] Lowest label SAT is set to 562.
+c [Label = 544] Minimize Makespan Labeling problem (M-bcsstk06.mtx.rnd):
+c [Label = 513] Encoding starts with target value = 51:
+c [Label = 513] Encoding duration: 9824ms.
+c [Label = 513] Number of clauses: 8402750.
+c [Label = 513] Number of variables: 612032.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 544] Encoding starts with target value = 51:
+c [Label = 544] Encoding duration: 10380ms.
+c [Label = 544] Number of clauses: 8929146.
+c [Label = 544] Number of variables: 638072.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 549] Encoding starts with target value = 51:
+c [Label = 549] Encoding duration: 9697ms.
+c [Label = 549] Number of clauses: 9014048.
+c [Label = 549] Number of variables: 642272.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 540] Encoding starts with target value = 51:
+c [Label = 540] Encoding duration: 11916ms.
+c [Label = 540] Number of clauses: 8861224.
+c [Label = 540] Number of variables: 634712.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 553] Encoding starts with target value = 51:
+c [Label = 553] Encoding duration: 10482ms.
+c [Label = 553] Number of clauses: 9081970.
+c [Label = 553] Number of variables: 645632.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 522] Encoding starts with target value = 51:
+c [Label = 522] Encoding duration: 12295ms.
+c [Label = 522] Number of clauses: 8555575.
+c [Label = 522] Number of variables: 619592.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 558] Encoding starts with target value = 51:
+c [Label = 558] Encoding duration: 14212ms.
+c [Label = 558] Number of clauses: 9166873.
+c [Label = 558] Number of variables: 649832.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Lim pid ends with result: 254.
+c [Main] All children have completed.
+r [Main] 
+r [Main] Final results: 
+r [Main] Lowest label SAT:  	562.
+r [Main] Highest label UNSAT:	504.
+r [Main] Total real time: 1811990 ms.
+r [Main] Total memory consumed: 17671 MB.
+r [Main] 
+c [Label = 531] Encoding starts with target value = 51:
+c [Label = 531] Encoding duration: 9827ms.
+c [Label = 531] Number of clauses: 8708399.
+c [Label = 531] Number of variables: 627152.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).

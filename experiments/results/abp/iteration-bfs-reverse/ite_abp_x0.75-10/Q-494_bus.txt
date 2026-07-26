@@ -1,0 +1,150 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] Target value is set to 170.
+c [Param] LB is predefined as 171.
+c [Param] UB is predefined as 370.
+c [Param] Target value is set to Antibandwidth.
+c [Param] Vertices mode is set to No hole.
+c [Param] Result verification is ON.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Param] Worker count is set to 8.
+c [Param] Max CNF size is set to 10.
+c [Main] Search strategy: Iterating Breadth First Search (Reverse).
+c [Main] Search order: 270 320 220 345 295 245 195 358 332 307 282 257 232 207 182 364 351 338 326 313 301 288 276 263 251 238 226 213 201 188 176 367 361 354 348 341 335 329 323 316 310 304 298 291 285 279 273 266 260 254 248 241 235 229 223 216 210 204 198 191 185 179 173 369 365 362 359 356 352 349 346 343 339 336 333 330 327 324 321 318 314 311 308 305 302 299 296 293 289 286 283 280 277 274 271 268 264 261 258 255 252 249 246 243 239 236 233 230 227 224 221 218 214 211 208 205 202 199 196 193 189 186 183 180 177 174 171 370 368 366 363 360 357 355 353 350 347 344 342 340 337 334 331 328 325 322 319 317 315 312 309 306 303 300 297 294 292 290 287 284 281 278 275 272 269 267 265 262 259 256 253 250 247 244 242 240 237 234 231 228 225 222 219 217 215 212 209 206 203 200 197 194 192 190 187 184 181 178 175 172.
+c [Main] Encoding and solving for graph: Q-494_bus.mtx.rnd.
+c [Label = 270] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 320] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 345] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 220] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 295] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 358] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 245] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 195] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 195] Encoding starts with target value = 170:
+c [Label = 195] Encoding duration: 645ms.
+c [Label = 195] Number of clauses: 464714.
+c [Label = 195] Number of variables: 202202.
+c [Label = 195] Solving duration: 0 ms.
+s [Label = 195] UNSAT (w = 170).
+c [Main] Highest label UNSAT is set to 195
+c [Label = 332] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 220] Encoding starts with target value = 170:
+c [Label = 220] Encoding duration: 823ms.
+c [Label = 220] Number of clauses: 586452.
+c [Label = 220] Number of variables: 228252.
+c [Label = 220] Solving duration: 0 ms.
+s [Label = 220] UNSAT (w = 170).
+c [Main] Highest label UNSAT is set to 220
+c [Label = 307] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 245] Encoding starts with target value = 170:
+c [Label = 245] Encoding duration: 938ms.
+c [Label = 245] Number of clauses: 708189.
+c [Label = 245] Number of variables: 254302.
+c [Label = 245] Solving duration: 0 ms.
+s [Label = 245] UNSAT (w = 170).
+c [Main] Highest label UNSAT is set to 245
+c [Label = 282] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 270] Encoding starts with target value = 170:
+c [Label = 270] Encoding duration: 1092ms.
+c [Label = 270] Number of clauses: 829927.
+c [Label = 270] Number of variables: 280352.
+c [Label = 270] Solving duration: 0 ms.
+s [Label = 270] UNSAT (w = 170).
+c [Main] Highest label UNSAT is set to 270
+c [Label = 364] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 295] Encoding starts with target value = 170:
+c [Label = 295] Encoding duration: 1207ms.
+c [Label = 295] Number of clauses: 951664.
+c [Label = 295] Number of variables: 306402.
+c [Label = 295] Solving duration: 0 ms.
+s [Label = 295] UNSAT (w = 170).
+c [Main] Highest label UNSAT is set to 295
+c [Main] Kill lower label pid 282.
+c [Label = 282] Encoding starts with target value = 170:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 351] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Main] Child pid 282 - 1649122 terminated by signal 15.
+c [Label = 338] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 320] Encoding starts with target value = 170:
+c [Label = 320] Encoding duration: 1355ms.
+c [Label = 320] Number of clauses: 1073402.
+c [Label = 320] Number of variables: 332452.
+c [Label = 320] Solving duration: 0 ms.
+s [Label = 320] UNSAT (w = 170).
+c [Main] Highest label UNSAT is set to 320
+c [Main] Kill lower label pid 307.
+c [Label = 307] Encoding starts with target value = 170:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 326] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Main] Child pid 307 - 1649121 terminated by signal 15.
+c [Label = 367] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 332] Encoding starts with target value = 170:
+c [Label = 332] Encoding duration: 1441ms.
+c [Label = 332] Number of clauses: 1131836.
+c [Label = 332] Number of variables: 344956.
+c [Label = 332] Solving duration: 0 ms.
+s [Label = 332] UNSAT (w = 170).
+c [Main] Highest label UNSAT is set to 332
+c [Main] Kill lower label pid 326.
+c [Label = 326] Encoding starts with target value = 170:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 361] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Main] Child pid 326 - 1649126 terminated by signal 15.
+c [Label = 354] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 338] Encoding starts with target value = 170:
+c [Label = 338] Encoding duration: 1487ms.
+c [Label = 338] Number of clauses: 1161053.
+c [Label = 338] Number of variables: 351208.
+c [Label = 338] Solving duration: 0 ms.
+s [Label = 338] UNSAT (w = 170).
+c [Main] Highest label UNSAT is set to 338
+c [Label = 348] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 348] Encoding starts with target value = 170:
+c [Label = 348] Encoding duration: 1932ms.
+c [Label = 348] Number of clauses: 1456966.
+c [Label = 348] Number of variables: 444126.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 367] Encoding starts with target value = 170:
+c [Label = 367] Encoding duration: 2065ms.
+c [Label = 367] Number of clauses: 1549486.
+c [Label = 367] Number of variables: 463924.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 351] Encoding starts with target value = 170:
+c [Label = 351] Encoding duration: 1963ms.
+c [Label = 351] Number of clauses: 1471574.
+c [Label = 351] Number of variables: 447252.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 345] Encoding starts with target value = 170:
+c [Label = 345] Encoding duration: 1981ms.
+c [Label = 345] Number of clauses: 1442357.
+c [Label = 345] Number of variables: 441000.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 354] Encoding starts with target value = 170:
+c [Label = 354] Encoding duration: 1951ms.
+c [Label = 354] Number of clauses: 1486183.
+c [Label = 354] Number of variables: 450378.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 358] Encoding starts with target value = 170:
+c [Label = 358] Encoding duration: 2051ms.
+c [Label = 358] Number of clauses: 1505661.
+c [Label = 358] Number of variables: 454546.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Lim pid ends with result: 254.
+c [Main] All children have completed.
+r [Main] 
+r [Main] Final results: 
+r [Main] Lowest label SAT:  	-.
+r [Main] Highest label UNSAT:	338.
+r [Main] Total real time: 1811939 ms.
+r [Main] Total memory consumed: 6132.3 MB.
+r [Main] 
+c [Label = 364] Encoding starts with target value = 170:
+c [Label = 364] Encoding duration: 1993ms.
+c [Label = 364] Number of clauses: 1534878.
+c [Label = 364] Number of variables: 460798.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 361] Encoding starts with target value = 170:
+c [Label = 361] Encoding duration: 2138ms.
+c [Label = 361] Number of clauses: 1520269.
+c [Label = 361] Number of variables: 457672.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
