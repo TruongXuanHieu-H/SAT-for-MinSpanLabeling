@@ -79,7 +79,7 @@ void IteAMOVertex::force_use_label(const IteInstanceData &instance_data, int lab
     std::vector<int> node_vertices(instance_data.global_data.g.n);
 
     for (int vertex = 0; vertex < instance_data.global_data.g.n; vertex++)
-        node_vertices[vertex] = vertex * instance_data.global_data.upper_bound + label + 1;
+        node_vertices[vertex] = vertex * instance_data.label + label + 1;
 
     instance_data.cc->add_clause(node_vertices);
 }
