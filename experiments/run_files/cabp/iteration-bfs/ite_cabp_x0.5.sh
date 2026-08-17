@@ -5,11 +5,11 @@ ROOT_DIR="$(cd "$SCRIPT_DIR/../../../.." && pwd)"
 
 build_dir="$ROOT_DIR/build"
 dataset_dir="$ROOT_DIR/benchmarks"
-report_dir="$ROOT_DIR/experiments/results/cabp/iteration-from-ub/ite_cabp_x0.5-10"
+report_dir="$ROOT_DIR/experiments/results/cabp/iteration-bfs/ite_cabp_x0.5"
 
 time_limit="1800"
 memory_limit="30000"
-general_config="--cabp --ladder --no-hole --verify-result --iterate-from-ub -limit-memory $memory_limit -limit-real-time $time_limit -worker-count 8 -symmetry-break highest-degree -max-cnf-size 10"
+general_config="--cabp --ladder --no-hole --verify-result --iterate-bfs -limit-memory $memory_limit -limit-real-time $time_limit -worker-count 8 -symmetry-break highest-degree -max-cnf-size 10"
 
 mkdir -p "$report_dir"
 

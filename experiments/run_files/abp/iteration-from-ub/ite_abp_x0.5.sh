@@ -5,7 +5,7 @@ ROOT_DIR="$(cd "$SCRIPT_DIR/../../../.." && pwd)"
 
 build_dir="$ROOT_DIR/build"
 dataset_dir="$ROOT_DIR/benchmarks"
-report_dir="$ROOT_DIR/experiments/results/abp/iteration-from-ub/ite_abp_x0.5-10"
+report_dir="$ROOT_DIR/experiments/results/abp/iteration-from-ub/ite_abp_x0.5"
 
 time_limit="1800"
 memory_limit="30000"
