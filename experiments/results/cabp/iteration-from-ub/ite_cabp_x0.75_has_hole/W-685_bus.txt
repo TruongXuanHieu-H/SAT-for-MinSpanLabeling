@@ -1,0 +1,123 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] Target value is set to 85.
+c [Param] LB is predefined as 86.
+c [Param] UB is predefined as 513.
+c [Param] Target value is set to Cyclic Antibandwidth.
+c [Param] Vertices mode is set to Has hole.
+c [Param] Result verification is ON.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Param] Worker count is set to 8.
+c [Param] Max CNF size is set to 10.
+c [Main] Search strategy: Iterating from upper bound.
+c [Main] Search order: 513 512 511 510 509 508 507 506 505 504 503 502 501 500 499 498 497 496 495 494 493 492 491 490 489 488 487 486 485 484 483 482 481 480 479 478 477 476 475 474 473 472 471 470 469 468 467 466 465 464 463 462 461 460 459 458 457 456 455 454 453 452 451 450 449 448 447 446 445 444 443 442 441 440 439 438 437 436 435 434 433 432 431 430 429 428 427 426 425 424 423 422 421 420 419 418 417 416 415 414 413 412 411 410 409 408 407 406 405 404 403 402 401 400 399 398 397 396 395 394 393 392 391 390 389 388 387 386 385 384 383 382 381 380 379 378 377 376 375 374 373 372 371 370 369 368 367 366 365 364 363 362 361 360 359 358 357 356 355 354 353 352 351 350 349 348 347 346 345 344 343 342 341 340 339 338 337 336 335 334 333 332 331 330 329 328 327 326 325 324 323 322 321 320 319 318 317 316 315 314 313 312 311 310 309 308 307 306 305 304 303 302 301 300 299 298 297 296 295 294 293 292 291 290 289 288 287 286 285 284 283 282 281 280 279 278 277 276 275 274 273 272 271 270 269 268 267 266 265 264 263 262 261 260 259 258 257 256 255 254 253 252 251 250 249 248 247 246 245 244 243 242 241 240 239 238 237 236 235 234 233 232 231 230 229 228 227 226 225 224 223 222 221 220 219 218 217 216 215 214 213 212 211 210 209 208 207 206 205 204 203 202 201 200 199 198 197 196 195 194 193 192 191 190 189 188 187 186 185 184 183 182 181 180 179 178 177 176 175 174 173 172 171 170 169 168 167 166 165 164 163 162 161 160 159 158 157 156 155 154 153 152 151 150 149 148 147 146 145 144 143 142 141 140 139 138 137 136 135 134 133 132 131 130 129 128 127 126 125 124 123 122 121 120 119 118 117 116 115 114 113 112 111 110 109 108 107 106 105 104 103 102 101 100 99 98 97 96 95 94 93 92 91 90 89 88 87 86.
+c [Main] Encoding and solving for graph: W-685_bus.mtx.rnd.
+c [Label = 513] Minimize Makespan Labeling problem (W-685_bus.mtx.rnd):
+c [Label = 512] Minimize Makespan Labeling problem (W-685_bus.mtx.rnd):
+c [Label = 511] Minimize Makespan Labeling problem (W-685_bus.mtx.rnd):
+c [Label = 510] Minimize Makespan Labeling problem (W-685_bus.mtx.rnd):
+c [Label = 509] Minimize Makespan Labeling problem (W-685_bus.mtx.rnd):
+c [Label = 508] Minimize Makespan Labeling problem (W-685_bus.mtx.rnd):
+c [Label = 507] Minimize Makespan Labeling problem (W-685_bus.mtx.rnd):
+c [Label = 506] Minimize Makespan Labeling problem (W-685_bus.mtx.rnd):
+c [Label = 510] Encoding starts with target value = 85:
+c [Label = 510] Encoding duration: 9559ms.
+c [Label = 510] Number of clauses: 5420291.
+c [Label = 510] Number of variables: 1035870.
+c [Label = 510] Solving duration: 589 ms.
+s [Label = 510] SAT (w = 85).
+c [Label = 510] Label assignment: 425 340 340 85 425 1 255 255 170 255 340 85 340 85 340 425 255 255 340 170 340 85 255 340 85 340 340 170 340 170 340 170 255 340 255 170 170 170 85 340 255 255 85 425 170 340 170 255 255 170 340 170 170 255 255 255 170 170 85 340 170 255 425 255 170 425 255 425 170 510 85 85 170 170 255 340 510 255 85 85 340 85 340 425 255 170 255 340 170 170 170 170 85 85 255 255 255 255 340 170 255 170 255 340 170 255 255 170 170 255 170 340 85 170 255 170 85 255 425 255 425 255 255 255 170 340 255 255 255 170 170 170 255 85 85 170 170 170 425 170 255 425 85 170 85 170 85 85 255 425 85 170 255 425 255 340 85 170 170 255 85 255 340 255 170 510 170 340 170 170 170 255 255 255 255 170 255 85 85 85 170 85 340 85 255 170 340 170 255 255 255 340 340 170 85 255 170 170 85 255 85 255 255 340 170 85 85 340 340 255 170 85 340 170 170 85 170 255 170 85 170 170 85 425 85 255 170 255 170 255 340 340 170 170 170 340 170 85 170 170 85 255 340 255 170 255 170 425 340 255 170 170 255 425 85 170 340 85 85 170 170 170 85 170 170 255 85 85 340 340 255 170 85 170 85 255 85 170 340 85 85 85 255 170 255 85 255 340 85 255 170 170 85 170 170 170 170 255 170 340 170 85 85 85 170 170 170 170 255 85 170 255 255 255 170 85 255 170 255 170 170 85 85 170 340 255 85 170 170 255 255 85 170 170 255 85 340 170 170 170 85 340 170 255 85 255 170 85 170 170 170 170 170 170 170 170 85 340 170 170 255 255 170 170 255 85 255 255 85 255 85 255 85 85 170 85 255 255 170 85 255 85 340 170 170 85 170 255 255 85 170 170 85 170 85 85 170 170 255 170 170 170 170 170 170 85 255 170 170 255 170 85 170 170 255 170 85 85 85 85 85 85 170 85 340 170 85 255 255 85 170 170 85 85 85 170 255 255 85 170 170 85 85 85 85 170 170 85 85 85 170 170 85 85 170 85 85 170 85 170 170 85 85 340 85 170 170 170 170 85 85 170 255 255 85 85 85 85 85 255 170 170 85 85 170 85 85 85 85 85 85 340 170 170 85 170 170 85 85 85 170 85 255 85 85 170 170 255 170 85 85 170 170 170 85 255 255 170 85 170 170 85 85 170 255 85 85 85 255 85 170 170 85 85 85 85 85 170 170 170 85 85 170 170 170 170 85 85 170 85 85 85 170 85 170 170 85 170 85 85 85 170 85 85 85 170 85 85 170 85 170 170 85 170 85 85 85 170 85 85 85 255 255 85 85 85 85 85 85 170 85 85 85 85 85 85 85 170 170 85 85 85 85 85 85 85 85 85 85 85 85 85 85 85 170 170 85 85 170 85 85 85 85 85 85 85 170 85 85 85 170 85 85 85 170 170 85 85 85 85 85 85 85 170 85 85 85 170 85 170 170 85 85 85 85 85 170 85 85 85 85 85 85 85 85 85 85 85 85 170 85 85 85 85 85 85 85 85 85 85 85 85 85 85 85 
+c [Label = 511] Encoding starts with target value = 85:
+c [Label = 511] Encoding duration: 9552ms.
+c [Label = 511] Number of clauses: 5428423.
+c [Label = 511] Number of variables: 1037240.
+c [Label = 511] Solving duration: 772 ms.
+s [Label = 511] SAT (w = 85).
+c [Label = 511] Label assignment: 172 257 257 511 172 1 342 342 427 342 257 1 257 1 257 172 342 342 257 427 257 1 342 257 1 257 342 427 257 427 257 427 342 257 342 427 427 427 1 257 342 342 1 257 427 257 427 342 342 427 257 427 427 342 342 172 427 427 1 257 427 342 172 342 427 172 342 172 427 87 1 1 427 427 342 257 87 342 1 1 257 1 257 172 342 427 342 257 427 427 427 427 1 1 342 342 342 342 257 427 342 427 342 257 427 342 342 427 427 342 427 257 1 427 342 427 1 342 172 342 172 342 342 342 427 257 342 342 342 427 427 427 342 1 1 427 427 427 172 427 342 172 1 427 1 427 1 1 342 172 1 427 342 342 342 257 1 427 427 342 1 342 257 342 427 87 427 257 427 427 427 342 342 257 342 427 342 1 1 1 427 1 257 1 342 427 257 427 342 342 342 342 257 427 1 342 427 427 1 342 1 342 342 257 427 1 1 257 257 342 427 1 257 427 427 1 427 342 427 1 427 427 1 172 1 342 427 342 427 342 257 342 427 427 427 257 427 1 427 427 1 256 257 342 427 342 427 172 342 342 427 427 342 172 1 427 257 1 1 427 427 427 1 427 427 342 1 1 257 257 342 427 1 427 1 342 1 427 257 1 1 1 342 427 342 1 342 257 1 342 427 427 1 427 427 427 427 342 427 257 427 1 1 1 427 427 427 427 342 1 427 342 342 342 427 1 342 427 342 427 427 1 1 427 257 342 1 427 427 342 342 1 427 427 342 1 257 427 427 427 1 257 427 342 1 342 427 1 427 427 427 427 427 427 427 427 1 342 427 427 342 342 427 427 342 1 342 342 1 342 1 342 1 1 427 1 342 342 427 1 342 1 257 427 427 1 427 342 342 1 427 427 1 427 1 1 427 427 342 427 427 427 427 427 427 1 342 427 427 342 427 1 427 427 342 427 1 1 1 1 1 1 427 1 257 427 1 342 342 1 427 427 1 1 1 427 342 342 1 427 427 1 1 1 1 427 427 1 1 1 427 427 1 1 427 1 1 427 1 427 427 1 1 257 1 427 427 427 427 1 1 427 342 342 1 1 1 1 1 342 427 427 1 1 427 1 1 1 1 1 1 257 427 427 1 427 427 1 1 1 427 1 342 1 1 427 427 342 427 1 1 427 427 427 1 342 342 427 1 427 427 1 1 427 342 1 1 1 342 1 427 427 1 1 1 1 1 427 427 427 1 1 427 427 427 427 1 1 427 1 1 1 427 1 427 427 1 427 1 1 1 427 1 1 1 427 1 1 427 1 427 427 1 427 1 1 1 427 1 1 1 342 342 1 1 1 1 1 1 427 1 1 1 1 1 1 1 427 427 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 427 427 1 1 427 1 1 1 1 1 1 1 427 1 1 1 427 1 1 1 427 427 1 1 1 1 1 1 1 427 1 1 1 427 1 427 427 1 1 1 1 1 427 1 1 1 1 1 1 1 1 1 1 1 1 427 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+c [Main] Lowest label SAT is set to 510.
+c [Main] Kill higher label pid 511.
+c [Main] Kill higher label pid 512.
+c [Main] Kill higher label pid 513.
+c [Label = 512] Encoding starts with target value = 85:
+c [Label = 512] Encoding duration: 10116ms.
+c [Label = 512] Number of clauses: 5606857.
+c [Label = 512] Number of variables: 1094780.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 513] Encoding starts with target value = 85:
+c [Label = 513] Encoding duration: 10293ms.
+c [Label = 513] Number of clauses: 5615410.
+c [Label = 513] Number of variables: 1096150.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 505] Minimize Makespan Labeling problem (W-685_bus.mtx.rnd):
+c [Main] Kill higher label pid 512.
+c [Main] Kill higher label pid 513.
+c [Label = 504] Minimize Makespan Labeling problem (W-685_bus.mtx.rnd):
+c [Main] Child pid 512 - 105618 terminated by signal 15.
+c [Label = 503] Minimize Makespan Labeling problem (W-685_bus.mtx.rnd):
+c [Main] Child pid 513 - 105617 terminated by signal 15.
+c [Label = 502] Minimize Makespan Labeling problem (W-685_bus.mtx.rnd):
+c [Label = 506] Encoding starts with target value = 85:
+c [Label = 506] Encoding duration: 9522ms.
+c [Label = 506] Number of clauses: 5386077.
+c [Label = 506] Number of variables: 1030390.
+c [Label = 506] Solving duration: 27412 ms.
+s [Label = 506] UNSAT (w = 85).
+c [Label = 502] Encoding starts with target value = 85:
+c [Label = 502] Encoding duration: 9042ms.
+c [Label = 502] Number of clauses: 5351863.
+c [Label = 502] Number of variables: 1024910.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 503] Encoding starts with target value = 85:
+c [Label = 503] Encoding duration: 9075ms.
+c [Label = 503] Number of clauses: 5360416.
+c [Label = 503] Number of variables: 1026280.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Highest label UNSAT is set to 506
+c [Main] Kill lower label pid 502.
+c [Main] Kill lower label pid 503.
+c [Main] Kill lower label pid 504.
+c [Main] Kill lower label pid 505.
+c [Label = 504] Encoding starts with target value = 85:
+c [Label = 504] Encoding duration: 9038ms.
+c [Label = 504] Number of clauses: 5368970.
+c [Label = 504] Number of variables: 1027650.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 505] Encoding starts with target value = 85:
+c [Label = 505] Encoding duration: 9095ms.
+c [Label = 505] Number of clauses: 5377523.
+c [Label = 505] Number of variables: 1029020.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 503 - 105629 terminated by signal 15.
+c [Main] Child pid 505 - 105627 terminated by signal 15.
+c [Main] Child pid 504 - 105628 terminated by signal 15.
+c [Main] Child pid 502 - 105630 terminated by signal 15.
+c [Label = 507] Encoding starts with target value = 85:
+c [Label = 507] Encoding duration: 9596ms.
+c [Label = 507] Number of clauses: 5394630.
+c [Label = 507] Number of variables: 1031760.
+c [Label = 507] Solving duration: 27744 ms.
+s [Label = 507] UNSAT (w = 85).
+c [Main] Highest label UNSAT is set to 507
+c [Label = 509] Encoding starts with target value = 85:
+c [Label = 509] Encoding duration: 9621ms.
+c [Label = 509] Number of clauses: 5411737.
+c [Label = 509] Number of variables: 1034500.
+c [Label = 509] Solving duration: 28038 ms.
+s [Label = 509] UNSAT (w = 85).
+c [Main] Highest label UNSAT is set to 509
+c [Main] Kill lower label pid 508.
+c [Label = 508] Encoding starts with target value = 85:
+c [Label = 508] Encoding duration: 9662ms.
+c [Label = 508] Number of clauses: 5403184.
+c [Label = 508] Number of variables: 1033130.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 508 - 105622 terminated by signal 15.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] All children have completed.
+r [Main] 
+r [Main] Final results: 
+r [Main] Lowest label SAT:  	510.
+r [Main] Highest label UNSAT:	509.
+r [Main] Total real time: 39276 ms.
+r [Main] Total memory consumed: 14562.8 MB.
+r [Main] 

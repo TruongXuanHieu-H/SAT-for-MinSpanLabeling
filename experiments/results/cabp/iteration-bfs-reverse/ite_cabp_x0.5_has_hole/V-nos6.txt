@@ -1,0 +1,209 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] Target value is set to 164.
+c [Param] LB is predefined as 165.
+c [Param] UB is predefined as 337.
+c [Param] Target value is set to Cyclic Antibandwidth.
+c [Param] Vertices mode is set to Has hole.
+c [Param] Result verification is ON.
+c [Param] Memory limit is set to 45000.
+c [Param] Real time limit is set to 1800.
+c [Param] Worker count is set to 8.
+c [Param] Max CNF size is set to 10.
+c [Main] Search strategy: Iterating Breadth First Search (Reverse).
+c [Main] Search order: 251 294 207 316 272 229 185 327 305 283 261 240 218 196 174 332 321 310 299 288 277 266 256 245 234 223 212 201 190 179 169 335 329 324 318 313 307 302 296 291 285 280 274 269 263 258 253 248 242 237 231 226 220 215 209 204 198 193 187 182 176 171 166 336 333 330 328 325 322 319 317 314 311 308 306 303 300 297 295 292 289 286 284 281 278 275 273 270 267 264 262 259 257 254 252 249 246 243 241 238 235 232 230 227 224 221 219 216 213 210 208 205 202 199 197 194 191 188 186 183 180 177 175 172 170 167 165 337 334 331 326 323 320 315 312 309 304 301 298 293 290 287 282 279 276 271 268 265 260 255 250 247 244 239 236 233 228 225 222 217 214 211 206 203 200 195 192 189 184 181 178 173 168.
+c [Main] Encoding and solving for graph: V-nos6.mtx.rnd.
+c [Label = 251] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 294] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 207] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 316] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 272] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 229] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 327] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 185] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 185] Encoding starts with target value = 164:
+c [Label = 185] Encoding duration: 4345ms.
+c [Label = 185] Number of clauses: 2333552.
+c [Label = 185] Number of variables: 467248.
+c [Label = 185] Solving duration: 0 ms.
+s [Label = 185] UNSAT (w = 164).
+c [Main] Highest label UNSAT is set to 185
+c [Label = 305] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 207] Encoding starts with target value = 164:
+c [Label = 207] Encoding duration: 4721ms.
+c [Label = 207] Number of clauses: 2521333.
+c [Label = 207] Number of variables: 496948.
+c [Label = 207] Solving duration: 0 ms.
+s [Label = 207] UNSAT (w = 164).
+c [Main] Highest label UNSAT is set to 207
+c [Label = 283] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 229] Encoding starts with target value = 164:
+c [Label = 229] Encoding duration: 5060ms.
+c [Label = 229] Number of clauses: 2709114.
+c [Label = 229] Number of variables: 526648.
+c [Label = 229] Solving duration: 0 ms.
+s [Label = 229] UNSAT (w = 164).
+c [Main] Highest label UNSAT is set to 229
+c [Label = 261] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 251] Encoding starts with target value = 164:
+c [Label = 251] Encoding duration: 5377ms.
+c [Label = 251] Number of clauses: 2896895.
+c [Label = 251] Number of variables: 556348.
+c [Label = 251] Solving duration: 0 ms.
+s [Label = 251] UNSAT (w = 164).
+c [Main] Highest label UNSAT is set to 251
+c [Label = 332] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 272] Encoding starts with target value = 164:
+c [Label = 272] Encoding duration: 5697ms.
+c [Label = 272] Number of clauses: 3076141.
+c [Label = 272] Number of variables: 584698.
+c [Label = 272] Solving duration: 0 ms.
+s [Label = 272] UNSAT (w = 164).
+c [Main] Highest label UNSAT is set to 272
+c [Main] Kill lower label pid 261.
+c [Label = 261] Encoding starts with target value = 164:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 321] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Main] Child pid 261 - 68125 terminated by signal 15.
+c [Label = 310] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 294] Encoding starts with target value = 164:
+c [Label = 294] Encoding duration: 6070ms.
+c [Label = 294] Number of clauses: 3263922.
+c [Label = 294] Number of variables: 614398.
+c [Label = 294] Solving duration: 0 ms.
+s [Label = 294] UNSAT (w = 164).
+c [Main] Highest label UNSAT is set to 294
+c [Main] Kill lower label pid 283.
+c [Label = 283] Encoding starts with target value = 164:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 299] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Main] Child pid 283 - 68124 terminated by signal 15.
+c [Label = 335] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 316] Encoding starts with target value = 164:
+c [Label = 316] Encoding duration: 6398ms.
+c [Label = 316] Number of clauses: 3451703.
+c [Label = 316] Number of variables: 644098.
+c [Label = 316] Solving duration: 0 ms.
+s [Label = 316] UNSAT (w = 164).
+c [Main] Highest label UNSAT is set to 316
+c [Main] Kill lower label pid 299.
+c [Main] Kill lower label pid 310.
+c [Main] Kill lower label pid 305.
+c [Label = 299] Encoding starts with target value = 164:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 305] Encoding starts with target value = 164:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 310] Encoding starts with target value = 164:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 329] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Main] Child pid 299 - 68129 terminated by signal 15.
+c [Label = 324] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Main] Child pid 310 - 68128 terminated by signal 15.
+c [Label = 318] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Main] Child pid 305 - 68123 terminated by signal 15.
+c [Label = 336] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 327] Encoding starts with target value = 164:
+c [Label = 327] Encoding duration: 6596ms.
+c [Label = 327] Number of clauses: 3545593.
+c [Label = 327] Number of variables: 658948.
+c [Label = 327] Solving duration: 0 ms.
+s [Label = 327] UNSAT (w = 164).
+c [Main] Highest label UNSAT is set to 327
+c [Main] Kill lower label pid 324.
+c [Main] Kill lower label pid 321.
+c [Main] Kill lower label pid 318.
+c [Label = 318] Encoding starts with target value = 164:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 324] Encoding starts with target value = 164:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 321] Encoding starts with target value = 164:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 333] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Main] Child pid 324 - 68132 terminated by signal 15.
+c [Main] Child pid 318 - 68133 terminated by signal 15.
+c [Label = 330] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 328] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Main] Child pid 321 - 68127 terminated by signal 15.
+c [Label = 337] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 328] Encoding starts with target value = 164:
+c [Label = 328] Encoding duration: 7345ms.
+c [Label = 328] Number of clauses: 3554129.
+c [Label = 328] Number of variables: 660298.
+c [Label = 328] Solving duration: 159 ms.
+s [Label = 328] UNSAT (w = 164).
+c [Main] Highest label UNSAT is set to 328
+c [Label = 334] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 332] Encoding starts with target value = 164:
+c [Label = 332] Encoding duration: 7466ms.
+c [Label = 332] Number of clauses: 3912451.
+c [Label = 332] Number of variables: 774373.
+c [Label = 332] Solving duration: 22740 ms.
+s [Label = 332] SAT (w = 164).
+c [Label = 332] Label assignment: 1 1 1 162 1 162 151 321 1 164 153 12 161 173 162 327 161 1 162 5 4 157 1 176 5 332 165 161 1 162 1 327 162 163 162 4 163 327 1 161 1 155 331 161 1 321 173 1 325 161 330 1 326 159 161 165 153 5 157 161 1 168 157 1 1 165 173 165 161 319 5 328 332 163 161 325 4 329 173 323 12 164 157 162 332 165 167 168 159 330 325 1 161 327 176 161 327 329 326 329 162 329 3 1 328 5 328 168 328 321 329 326 5 1 329 161 1 162 161 169 155 328 169 169 1 4 329 161 172 157 325 325 1 153 327 166 161 328 9 157 157 1 329 162 162 167 330 317 161 5 161 329 161 326 161 157 1 330 319 157 169 161 169 161 331 332 165 325 332 169 155 168 1 165 157 329 332 329 330 330 1 165 168 165 321 165 164 168 1 162 165 168 163 323 163 157 165 329 327 4 165 162 165 162 329 155 158 173 169 168 165 166 168 165 160 329 328 325 160 325 1 161 165 329 321 165 162 165 328 326 321 165 157 162 165 325 161 9 161 325 330 323 329 5 161 328 329 162 165 325 162 165 332 1 325 329 1 330 329 329 167 329 165 329 169 325 321 326 326 326 161 169 161 326 169 1 1 326 168 162 325 157 164 321 161 163 165 165 165 1 5 165 326 161 326 162 173 161 165 168 327 325 161 329 162 162 163 325 162 329 332 1 161 325 329 157 168 161 161 325 162 161 153 330 5 169 331 161 4 325 321 326 161 165 1 4 330 331 162 161 330 162 7 330 329 159 328 8 161 325 169 330 328 162 165 4 325 332 4 332 168 176 326 9 329 161 8 325 161 165 329 165 163 1 325 329 1 157 1 329 325 4 162 5 4 1 328 328 165 159 1 326 329 162 165 160 158 332 5 159 162 332 1 161 329 8 165 168 165 327 165 1 1 325 160 165 327 161 1 165 164 329 331 328 161 169 329 327 165 323 331 172 329 330 172 325 329 329 329 176 1 162 171 1 325 161 4 326 162 161 329 162 162 161 5 1 321 329 1 162 332 172 166 162 171 165 161 159 161 1 157 328 329 325 330 332 329 161 172 8 160 165 329 326 5 165 329 165 164 329 1 161 161 165 329 321 329 165 329 329 165 153 329 172 166 165 169 325 161 330 165 167 157 325 4 332 327 329 161 165 329 1 161 168 3 165 332 172 157 171 328 169 161 172 155 161 165 165 323 169 177 325 328 166 157 161 162 168 330 8 165 168 319 328 327 327 330 169 5 168 326 165 329 157 329 172 165 165 321 173 165 1 168 165 325 1 327 168 161 327 7 162 330 3 165 157 1 161 325 329 330 325 328 165 8 321 165 161 173 165 323 5 329 330 161 161 160 165 165 328 329 157 157 325 321 165 176 329 327 165 157 329 159 325 321 329 165 153 165 157 1 162 161 162 329 329 161 332 166 165 165 160 169 165 1 326 169 166 161 329 161 163 165 169 325 329 161 324 326 165 166 165 8 173 165 169 1 329 173 9 162 329 329 329 325 
+c [Main] Lowest label SAT is set to 332.
+c [Main] Kill higher label pid 334.
+c [Main] Kill higher label pid 337.
+c [Main] Kill higher label pid 333.
+c [Main] Kill higher label pid 336.
+c [Main] Kill higher label pid 335.
+c [Label = 337] Encoding starts with target value = 164:
+c [Label = 337] Encoding duration: 7812ms.
+c [Label = 337] Number of clauses: 3955128.
+c [Label = 337] Number of variables: 781123.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 333] Encoding starts with target value = 164:
+c [Label = 333] Encoding duration: 7812ms.
+c [Label = 333] Number of clauses: 3920986.
+c [Label = 333] Number of variables: 775723.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 336] Encoding starts with target value = 164:
+c [Label = 336] Encoding duration: 7711ms.
+c [Label = 336] Number of clauses: 3946593.
+c [Label = 336] Number of variables: 779773.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 335] Encoding starts with target value = 164:
+c [Label = 335] Encoding duration: 8031ms.
+c [Label = 335] Number of clauses: 3938057.
+c [Label = 335] Number of variables: 778423.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 334] Encoding starts with target value = 164:
+c [Label = 334] Encoding duration: 9295ms.
+c [Label = 334] Number of clauses: 3929522.
+c [Label = 334] Number of variables: 777073.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 331] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 329] Encoding starts with target value = 164:
+c [Label = 329] Encoding duration: 6623ms.
+c [Label = 329] Number of clauses: 3559469.
+c [Label = 329] Number of variables: 661648.
+c [Label = 329] Solving duration: 22888 ms.
+s [Label = 329] SAT (w = 164).
+c [Label = 329] Label assignment: 1 1 1 161 1 162 161 327 329 167 163 1 163 166 163 329 163 1 164 2 1 163 1 165 2 3 165 164 329 162 1 327 164 164 165 1 164 1 1 164 327 162 329 164 1 327 166 1 327 164 1 1 329 163 164 164 162 328 164 164 329 165 163 1 1 165 166 165 164 326 1 329 2 163 164 327 1 329 164 327 2 164 163 161 1 165 164 164 163 329 328 1 164 328 167 164 327 329 328 327 165 1 329 1 329 329 329 166 327 326 328 327 1 328 327 164 1 166 164 166 163 328 165 166 329 329 329 164 165 163 328 328 328 164 329 165 164 328 329 162 164 1 328 165 165 165 329 326 163 329 163 329 164 329 162 163 328 327 326 162 163 164 166 164 329 1 165 328 329 166 162 165 1 165 164 329 329 329 327 329 1 165 167 165 327 165 165 165 1 165 165 167 163 327 164 164 165 1 327 329 164 165 164 165 1 162 164 164 166 166 165 165 165 165 165 329 1 327 163 327 1 162 163 1 328 164 162 163 1 329 327 164 163 164 165 329 164 329 164 328 327 327 329 1 164 328 329 163 165 328 165 165 329 1 328 1 327 329 329 329 165 329 165 329 166 329 327 327 329 326 165 164 163 328 165 329 1 329 167 164 328 163 164 328 164 163 162 163 164 329 2 165 328 164 329 161 164 164 165 167 328 328 165 329 163 164 165 328 163 329 329 1 164 328 329 164 165 164 164 328 164 164 162 329 329 163 327 164 1 328 328 328 165 165 1 329 329 329 162 164 329 162 1 1 329 163 329 329 163 328 164 326 329 165 163 2 328 2 2 329 165 165 329 2 329 164 2 328 166 165 329 165 162 329 328 328 329 164 1 329 328 1 165 1 329 327 327 329 165 163 1 326 329 165 165 165 164 329 2 163 164 329 328 165 328 2 165 165 164 328 165 329 1 328 163 165 328 163 1 165 164 329 329 328 164 165 328 327 165 327 329 167 326 329 166 328 327 329 329 166 328 164 165 327 328 164 2 326 165 164 329 165 162 164 2 1 328 329 2 162 329 166 162 162 165 164 164 163 163 1 163 328 329 328 329 2 329 164 165 1 164 165 329 325 2 165 329 165 165 329 1 163 164 165 327 328 328 165 329 329 165 162 329 165 162 164 164 329 165 329 165 165 163 329 2 329 328 329 165 165 329 327 164 166 1 165 329 165 163 165 327 165 165 166 162 164 164 164 327 165 165 328 328 165 163 165 161 166 328 329 165 166 326 328 329 326 329 166 329 165 329 163 328 163 329 166 165 165 327 166 165 329 165 165 329 327 328 165 163 328 1 165 326 1 165 163 328 164 329 328 329 328 329 164 2 327 165 164 166 163 328 328 329 328 165 163 164 165 165 328 328 163 163 329 327 165 167 329 328 162 163 329 163 328 327 329 165 162 165 164 1 164 164 163 329 328 164 329 164 162 163 164 165 165 1 326 166 165 164 328 165 165 165 166 328 1 163 328 329 165 163 165 329 167 165 166 1 327 165 2 164 327 329 329 328 
+c [Main] Child pid 334 - 68141 terminated by signal 15.
+c [Main] Child pid 337 - 68138 terminated by signal 15.
+c [Main] Child pid 333 - 68135 terminated by signal 15.
+c [Main] Child pid 335 - 68130 terminated by signal 15.
+c [Main] Child pid 336 - 68134 terminated by signal 15.
+c [Main] Lowest label SAT is set to 329.
+c [Main] Kill higher label pid 331.
+c [Main] Kill higher label pid 330.
+c [Label = 331] Encoding starts with target value = 164:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 330] Encoding starts with target value = 164:
+c [Label = 330] Encoding duration: 7598ms.
+c [Label = 330] Number of clauses: 3895380.
+c [Label = 330] Number of variables: 771673.
+c [Label = 330] Solving duration: 23057 ms.
+s [Label = 330] SAT (w = 164).
+c [Label = 330] Label assignment: 1 1 1 162 1 160 161 328 1 166 164 1 164 169 162 2 164 1 160 3 1 161 1 165 3 2 165 164 1 162 1 327 162 164 162 1 164 328 1 160 1 161 330 164 1 329 170 1 325 165 330 1 326 162 164 165 159 1 164 164 1 165 164 1 1 165 170 165 164 327 3 328 2 162 164 330 4 330 165 327 8 164 166 162 2 165 164 165 162 326 327 1 166 327 172 164 324 329 328 329 164 330 2 2 328 328 328 168 328 323 329 326 3 327 329 164 1 164 163 168 161 328 167 167 1 330 329 163 166 163 330 330 328 162 329 166 163 328 330 159 164 1 327 164 162 166 330 327 166 330 161 329 164 326 161 165 328 327 325 159 166 163 167 164 330 1 165 330 330 166 159 166 1 165 164 1 330 329 327 330 1 166 168 165 325 165 164 166 330 164 165 168 162 325 163 163 165 1 326 2 165 164 163 164 330 162 162 166 167 166 165 166 166 165 162 329 1 330 162 325 328 162 162 328 328 163 164 164 328 328 330 163 163 165 165 326 165 330 163 329 326 327 1 3 161 328 330 161 165 329 162 165 1 1 330 1 329 328 330 329 166 329 165 329 167 326 325 326 328 326 162 164 163 327 163 1 1 328 166 163 329 161 166 328 163 160 165 163 163 1 3 165 329 164 328 160 166 163 165 166 327 328 165 329 163 164 163 328 160 329 2 1 162 329 330 162 168 166 163 327 164 164 163 329 330 165 326 166 4 329 328 328 165 165 1 1 330 329 163 162 328 160 4 330 329 163 329 330 162 327 165 327 329 166 164 2 330 330 4 1 168 166 326 6 329 164 6 327 164 165 329 165 160 1 329 328 329 162 1 329 330 2 166 4 1 330 328 328 166 161 329 328 329 162 164 165 163 330 3 163 164 330 329 165 329 6 165 167 165 326 165 329 1 329 162 165 325 163 1 165 166 329 329 328 163 165 328 327 163 326 329 170 328 330 170 330 328 329 329 172 328 163 168 329 1 165 4 328 164 161 329 166 162 163 2 1 328 329 2 162 330 170 163 163 168 163 163 161 163 2 163 327 327 327 330 330 328 164 165 6 162 162 329 326 4 165 329 165 167 329 1 163 165 165 328 328 327 165 329 329 165 163 329 165 163 163 164 328 165 330 165 166 161 329 4 330 327 329 164 165 329 329 163 166 2 165 2 167 164 168 328 164 163 170 161 163 162 165 327 167 166 327 328 166 164 164 162 168 328 330 165 167 325 328 330 324 330 167 330 165 326 163 329 164 329 170 165 165 325 168 165 328 166 165 329 328 328 165 162 329 4 162 327 2 166 164 329 165 329 328 330 328 328 163 6 329 165 165 169 163 327 330 330 328 164 163 162 165 165 328 327 166 165 330 327 165 172 329 328 163 165 329 161 328 330 330 165 161 166 164 329 162 163 162 329 329 163 330 164 163 165 161 167 164 1 326 168 166 163 329 163 164 164 167 329 329 163 327 326 165 163 165 1 169 165 167 329 328 164 5 162 328 328 329 330 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 331 - 68149 terminated by signal 15.
+c [Main] Child pid 330 - 68136 terminated by signal 15.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] All children have completed.
+r [Main] 
+r [Main] Final results: 
+r [Main] Lowest label SAT:  	329.
+r [Main] Highest label UNSAT:	328.
+r [Main] Total real time: 38576 ms.
+r [Main] Total memory consumed: 11504.5 MB.
+r [Main] 

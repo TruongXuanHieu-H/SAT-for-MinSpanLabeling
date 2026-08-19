@@ -1,0 +1,49 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] Target value is set to 17.
+c [Param] LB is predefined as 18.
+c [Param] UB is predefined as 63.
+c [Param] Target value is set to Antibandwidth.
+c [Param] Vertices mode is set to Has hole.
+c [Param] Result verification is ON.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Param] Max CNF size is set to 10.
+c [Main] Search strategy: Incremental from upper bound.
+c [Main] Encoding and solving for graph: I-ash85.mtx.rnd.
+c [Incremental] Minimize Makespan Labeling problem (I-ash85.mtx.rnd):
+c [Incremental] Encoding starts with target value = 17:
+c [Incremental] Encoding duration: 53ms.
+c [Incremental] Number of clauses: 71797.
+c [Incremental] Number of variables: 12929.
+c [Incremental] Solving for max label = 63:
+c [Incremental] Solving duration: 161 ms.
+s [Incremental] SAT (label = 63).
+c [Incremental] Label assignment: 18 18 18 18 18 18 35 18 63 34 52 34 18 1 18 63 34 63 35 35 1 1 18 35 35 63 1 35 18 12 52 63 18 35 46 1 1 1 18 18 52 35 63 46 1 46 1 63 17 46 46 1 63 63 1 46 1 52 52 1 1 1 18 35 54 18 35 52 37 52 29 1 63 52 18 1 35 1 46 52 52 46 35 1 1 
+c [Incremental] Max used label: 63.
+c [Incremental] Label 63 is removed from searching.
+c [Incremental] Solving for max label = 62:
+c [Incremental] Solving duration: 3 ms.
+s [Incremental] SAT (label = 62).
+c [Incremental] Label assignment: 18 18 18 18 18 18 35 18 52 34 52 34 18 1 18 52 34 18 35 1 35 35 18 35 35 35 1 35 35 17 52 35 18 35 52 52 1 1 18 35 52 35 35 18 1 18 1 35 17 18 35 1 52 52 1 52 52 52 52 1 1 1 18 35 52 52 35 52 1 52 35 1 52 52 18 1 35 1 1 52 52 1 52 1 35 
+c [Incremental] Max used label: 52.
+c [Incremental] Label 62 is removed from searching.
+c [Incremental] Label 61 is removed from searching.
+c [Incremental] Label 60 is removed from searching.
+c [Incremental] Label 59 is removed from searching.
+c [Incremental] Label 58 is removed from searching.
+c [Incremental] Label 57 is removed from searching.
+c [Incremental] Label 56 is removed from searching.
+c [Incremental] Label 55 is removed from searching.
+c [Incremental] Label 54 is removed from searching.
+c [Incremental] Label 53 is removed from searching.
+c [Incremental] Label 52 is removed from searching.
+c [Incremental] Solving for max label = 51:
+c [Incremental] Solving duration: 3 ms.
+s [Incremental] UNSAT (label = 51).
+c [Main] Work pid ends with result: 0.
+r [Main] 
+r [Main] Final results: 
+r [Main] Total real time: 227 ms.
+r [Main] Total memory consumed: 27.8 MB.
+r [Main] 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).

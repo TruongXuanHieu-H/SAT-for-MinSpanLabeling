@@ -1,0 +1,274 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] Target value is set to 26.
+c [Param] LB is predefined as 27.
+c [Param] UB is predefined as 75.
+c [Param] Target value is set to Antibandwidth.
+c [Param] Vertices mode is set to Has hole.
+c [Param] Result verification is ON.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Param] Worker count is set to 8.
+c [Param] Max CNF size is set to 10.
+c [Main] Search strategy: Iterating from upper bound.
+c [Main] Search order: 75 74 73 72 71 70 69 68 67 66 65 64 63 62 61 60 59 58 57 56 55 54 53 52 51 50 49 48 47 46 45 44 43 42 41 40 39 38 37 36 35 34 33 32 31 30 29 28 27.
+c [Main] Encoding and solving for graph: J-nos4.mtx.rnd.
+c [Label = 75] Minimize Makespan Labeling problem (J-nos4.mtx.rnd):
+c [Label = 73] Minimize Makespan Labeling problem (J-nos4.mtx.rnd):
+c [Label = 72] Minimize Makespan Labeling problem (J-nos4.mtx.rnd):
+c [Label = 71] Minimize Makespan Labeling problem (J-nos4.mtx.rnd):
+c [Label = 74] Minimize Makespan Labeling problem (J-nos4.mtx.rnd):
+c [Label = 70] Minimize Makespan Labeling problem (J-nos4.mtx.rnd):
+c [Label = 68] Minimize Makespan Labeling problem (J-nos4.mtx.rnd):
+c [Label = 69] Minimize Makespan Labeling problem (J-nos4.mtx.rnd):
+c [Label = 68] Encoding starts with target value = 26:
+c [Label = 68] Encoding duration: 108ms.
+c [Label = 68] Number of clauses: 79058.
+c [Label = 68] Number of variables: 15720.
+c [Label = 68] Solving duration: 3 ms.
+s [Label = 68] SAT (w = 26).
+c [Label = 68] Label assignment: 34 68 68 68 68 68 68 68 68 42 68 8 68 42 16 68 68 42 42 16 68 68 68 42 68 68 42 16 16 16 42 68 42 68 68 68 16 42 16 42 68 42 68 16 68 42 16 16 42 68 42 68 68 68 42 16 42 68 16 16 42 42 42 68 42 16 16 68 42 42 68 16 16 16 16 42 68 68 16 68 16 42 42 42 42 68 16 42 16 42 42 42 16 16 8 42 16 68 16 1 
+c [Label = 69] Encoding starts with target value = 26:
+c [Label = 69] Encoding duration: 108ms.
+c [Label = 69] Number of clauses: 80546.
+c [Label = 69] Number of variables: 15920.
+c [Label = 69] Solving duration: 3 ms.
+s [Label = 69] SAT (w = 26).
+c [Label = 69] Label assignment: 35 69 69 69 69 69 69 69 69 43 69 9 69 43 17 69 69 43 43 17 69 69 69 43 69 69 43 17 17 17 43 69 43 69 69 69 17 43 17 43 69 43 69 17 69 43 17 17 43 69 43 69 69 69 43 17 43 69 17 17 43 43 43 69 43 17 17 69 43 43 69 17 17 17 17 43 69 69 17 69 17 43 43 43 43 69 17 43 17 43 43 43 17 17 9 43 17 69 17 1 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 70] Encoding starts with target value = 26:
+c [Label = 70] Encoding duration: 112ms.
+c [Label = 70] Number of clauses: 82035.
+c [Label = 70] Number of variables: 16120.
+c [Label = 70] Solving duration: 3 ms.
+s [Label = 70] SAT (w = 26).
+c [Label = 70] Label assignment: 35 70 70 70 70 70 70 70 70 44 70 9 70 44 18 70 70 44 44 18 70 70 70 44 70 70 44 18 18 18 44 70 44 70 70 70 18 44 18 44 70 44 70 18 70 44 18 18 44 70 44 70 70 70 44 18 44 70 18 18 44 44 44 70 44 18 18 70 44 44 70 18 18 18 18 44 70 70 18 70 18 44 44 44 44 70 18 44 18 44 44 44 18 18 9 44 18 70 18 1 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 71] Encoding starts with target value = 26:
+c [Label = 71] Encoding duration: 116ms.
+c [Label = 71] Number of clauses: 83523.
+c [Label = 71] Number of variables: 16320.
+c [Label = 71] Solving duration: 4 ms.
+s [Label = 71] SAT (w = 26).
+c [Label = 71] Label assignment: 36 71 71 71 71 71 71 71 71 45 71 10 71 45 19 71 71 45 45 19 71 71 71 45 71 71 45 19 19 19 45 71 45 71 71 71 19 45 19 45 71 45 71 19 71 45 19 19 45 71 45 71 71 71 45 19 45 71 19 19 45 45 45 71 45 19 19 71 45 45 71 19 19 19 19 45 71 71 19 71 19 45 45 45 45 71 19 45 19 45 45 45 19 19 10 45 19 71 19 1 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 72] Encoding starts with target value = 26:
+c [Label = 72] Encoding duration: 114ms.
+c [Label = 72] Number of clauses: 85012.
+c [Label = 72] Number of variables: 16520.
+c [Label = 72] Solving duration: 3 ms.
+s [Label = 72] SAT (w = 26).
+c [Label = 72] Label assignment: 36 72 72 72 72 72 72 72 72 46 72 10 72 46 20 72 72 46 46 20 72 72 72 46 72 72 46 20 20 20 46 72 46 72 72 72 20 46 20 46 72 46 72 20 72 46 20 20 46 72 46 72 72 72 46 20 46 72 20 20 46 46 46 72 46 20 20 72 46 46 72 20 20 20 20 46 72 72 20 72 20 46 46 46 46 72 20 46 20 46 46 46 20 20 10 46 20 72 20 1 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 73] Encoding starts with target value = 26:
+c [Label = 73] Encoding duration: 114ms.
+c [Label = 73] Number of clauses: 86500.
+c [Label = 73] Number of variables: 16720.
+c [Label = 73] Solving duration: 4 ms.
+s [Label = 73] SAT (w = 26).
+c [Label = 73] Label assignment: 37 73 73 73 73 73 73 73 73 47 73 11 73 47 21 73 73 47 47 21 73 73 73 47 73 73 47 21 21 21 47 73 47 73 73 73 21 47 21 47 73 47 73 21 73 47 21 21 47 73 47 73 73 73 47 21 47 73 21 21 47 47 47 73 47 21 21 73 47 47 73 21 21 21 21 47 73 73 21 73 21 47 47 47 47 73 21 47 21 47 47 47 21 21 11 47 21 73 21 1 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Lowest label SAT is set to 68.
+c [Main] Kill higher label pid 69.
+c [Main] Kill higher label pid 70.
+c [Main] Kill higher label pid 71.
+c [Main] Kill higher label pid 72.
+c [Main] Kill higher label pid 73.
+c [Main] Kill higher label pid 74.
+c [Main] Kill higher label pid 75.
+c [Label = 74] Encoding starts with target value = 26:
+c [Label = 74] Encoding duration: 119ms.
+c [Label = 74] Number of clauses: 87989.
+c [Label = 74] Number of variables: 16920.
+c [Label = 74] Solving duration: 4 ms.
+s [Label = 74] SAT (w = 26).
+c [Label = 74] Label assignment: 37 74 74 74 74 74 74 74 74 48 74 11 74 48 22 74 74 48 48 22 74 74 74 48 74 74 48 22 22 22 48 74 48 74 74 74 22 48 22 48 74 48 74 22 74 48 22 22 48 74 48 74 74 74 48 22 48 74 22 22 48 48 48 74 48 22 22 74 48 48 74 22 22 22 22 48 74 74 22 74 22 48 48 48 48 74 22 48 22 48 48 48 22 22 11 48 22 74 22 1 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 75] Encoding starts with target value = 26:
+c [Label = 75] Encoding duration: 120ms.
+c [Label = 75] Number of clauses: 89477.
+c [Label = 75] Number of variables: 17120.
+c [Label = 75] Solving duration: 4 ms.
+s [Label = 75] SAT (w = 26).
+c [Label = 75] Label assignment: 38 75 75 75 75 75 75 75 75 49 75 12 75 49 23 75 75 49 49 23 75 75 75 49 75 75 49 23 23 23 49 75 49 75 75 75 23 49 23 49 75 49 75 23 75 49 23 23 49 75 49 75 75 75 49 23 49 75 23 23 49 49 49 75 49 23 23 75 49 49 75 23 23 23 23 49 75 75 23 75 23 49 49 49 49 75 23 49 23 49 49 49 23 23 12 49 23 75 23 1 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 67] Minimize Makespan Labeling problem (J-nos4.mtx.rnd):
+c [Main] Child pid 69 - 55480 terminated by signal 15.
+c [Main] Child pid 71 - 55478 terminated by signal 15.
+c [Label = 66] Minimize Makespan Labeling problem (J-nos4.mtx.rnd):
+c [Main] Child pid 75 - 55474 terminated by signal 15.
+c [Main] Child pid 74 - 55475 terminated by signal 15.
+c [Main] Child pid 73 - 55476 terminated by signal 15.
+c [Main] Child pid 72 - 55477 terminated by signal 15.
+c [Main] Child pid 70 - 55479 terminated by signal 15.
+c [Label = 61] Minimize Makespan Labeling problem (J-nos4.mtx.rnd):
+c [Label = 64] Minimize Makespan Labeling problem (J-nos4.mtx.rnd):
+c [Label = 65] Minimize Makespan Labeling problem (J-nos4.mtx.rnd):
+c [Label = 63] Minimize Makespan Labeling problem (J-nos4.mtx.rnd):
+c [Label = 62] Minimize Makespan Labeling problem (J-nos4.mtx.rnd):
+c [Label = 60] Minimize Makespan Labeling problem (J-nos4.mtx.rnd):
+c [Label = 60] Encoding starts with target value = 26:
+c [Label = 60] Encoding duration: 92ms.
+c [Label = 60] Number of clauses: 67150.
+c [Label = 60] Number of variables: 14120.
+c [Label = 60] Solving duration: 3 ms.
+s [Label = 60] SAT (w = 26).
+c [Label = 60] Label assignment: 30 60 60 60 60 60 60 60 60 34 60 4 60 34 8 60 60 34 34 8 60 60 60 34 60 60 34 8 8 8 34 60 34 60 60 60 8 34 8 34 60 34 60 8 60 34 8 8 34 60 34 60 60 60 34 8 34 60 8 8 34 34 34 60 34 8 8 60 34 34 60 8 8 8 8 34 60 60 8 60 8 34 34 34 34 60 8 34 8 34 34 34 8 8 4 34 8 60 8 1 
+c [Label = 61] Encoding starts with target value = 26:
+c [Label = 61] Encoding duration: 93ms.
+c [Label = 61] Number of clauses: 68638.
+c [Label = 61] Number of variables: 14320.
+c [Label = 61] Solving duration: 3 ms.
+s [Label = 61] SAT (w = 26).
+c [Label = 61] Label assignment: 31 61 61 61 61 61 61 61 61 35 61 5 61 35 9 61 61 35 35 9 61 61 61 35 61 61 35 9 9 9 35 61 35 61 61 61 9 35 9 35 61 35 61 9 61 35 9 9 35 61 35 61 61 61 35 9 35 61 9 9 35 35 35 61 35 9 9 61 35 35 61 9 9 9 9 35 61 61 9 61 9 35 35 35 35 61 9 35 9 35 35 35 9 9 5 35 9 61 9 1 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 62] Encoding starts with target value = 26:
+c [Label = 62] Encoding duration: 95ms.
+c [Label = 62] Number of clauses: 70127.
+c [Label = 62] Number of variables: 14520.
+c [Label = 62] Solving duration: 3 ms.
+s [Label = 62] SAT (w = 26).
+c [Label = 62] Label assignment: 31 62 62 62 62 62 62 62 62 36 62 5 62 36 10 62 62 36 36 10 62 62 62 36 62 62 36 10 10 10 36 62 36 62 62 62 10 36 10 36 62 36 62 10 62 36 10 10 36 62 36 62 62 62 36 10 36 62 10 10 36 36 36 62 36 10 10 62 36 36 62 10 10 10 10 36 62 62 10 62 10 36 36 36 36 62 10 36 10 36 36 36 10 10 5 36 10 62 10 1 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 63] Encoding starts with target value = 26:
+c [Label = 63] Encoding duration: 98ms.
+c [Label = 63] Number of clauses: 71615.
+c [Label = 63] Number of variables: 14720.
+c [Label = 63] Solving duration: 3 ms.
+s [Label = 63] SAT (w = 26).
+c [Label = 63] Label assignment: 32 63 63 63 63 63 63 63 63 37 63 6 63 37 11 63 63 37 37 11 63 63 63 37 63 63 37 11 11 11 37 63 37 63 63 63 11 37 11 37 63 37 63 11 63 37 11 11 37 63 37 63 63 63 37 11 37 63 11 11 37 37 37 63 37 11 11 63 37 37 63 11 11 11 11 37 63 63 11 63 11 37 37 37 37 63 11 37 11 37 37 37 11 11 6 37 11 63 11 1 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 64] Encoding starts with target value = 26:
+c [Label = 64] Encoding duration: 98ms.
+c [Label = 64] Number of clauses: 73104.
+c [Label = 64] Number of variables: 14920.
+c [Label = 64] Solving duration: 3 ms.
+s [Label = 64] SAT (w = 26).
+c [Label = 64] Label assignment: 32 64 64 64 64 64 64 64 64 38 64 6 64 38 12 64 64 38 38 12 64 64 64 38 64 64 38 12 12 12 38 64 38 64 64 64 12 38 12 38 64 38 64 12 64 38 12 12 38 64 38 64 64 64 38 12 38 64 12 12 38 38 38 64 38 12 12 64 38 38 64 12 12 12 12 38 64 64 12 64 12 38 38 38 38 64 12 38 12 38 38 38 12 12 6 38 12 64 12 1 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 65] Encoding starts with target value = 26:
+c [Label = 65] Encoding duration: 100ms.
+c [Label = 65] Number of clauses: 74592.
+c [Label = 65] Number of variables: 15120.
+c [Label = 65] Solving duration: 3 ms.
+s [Label = 65] SAT (w = 26).
+c [Label = 65] Label assignment: 33 65 65 65 65 65 65 65 65 39 65 7 65 39 13 65 65 39 39 13 65 65 65 39 65 65 39 13 13 13 39 65 39 65 65 65 13 39 13 39 65 39 65 13 65 39 13 13 39 65 39 65 65 65 39 13 39 65 13 13 39 39 39 65 39 13 13 65 39 39 65 13 13 13 13 39 65 65 13 65 13 39 39 39 39 65 13 39 13 39 39 39 13 13 7 39 13 65 13 1 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Lowest label SAT is set to 60.
+c [Main] Kill higher label pid 61.
+c [Main] Kill higher label pid 62.
+c [Main] Kill higher label pid 63.
+c [Main] Kill higher label pid 64.
+c [Main] Kill higher label pid 65.
+c [Main] Kill higher label pid 66.
+c [Main] Kill higher label pid 67.
+c [Label = 66] Encoding starts with target value = 26:
+c [Label = 66] Encoding duration: 104ms.
+c [Label = 66] Number of clauses: 76081.
+c [Label = 66] Number of variables: 15320.
+c [Label = 66] Solving duration: 3 ms.
+s [Label = 66] SAT (w = 26).
+c [Label = 66] Label assignment: 33 66 66 66 66 66 66 66 66 40 66 7 66 40 14 66 66 40 40 14 66 66 66 40 66 66 40 14 14 14 40 66 40 66 66 66 14 40 14 40 66 40 66 14 66 40 14 14 40 66 40 66 66 66 40 14 40 66 14 14 40 40 40 66 40 14 14 66 40 40 66 14 14 14 14 40 66 66 14 66 14 40 40 40 40 66 14 40 14 40 40 40 14 14 7 40 14 66 14 1 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 67] Encoding starts with target value = 26:
+c [Label = 67] Encoding duration: 106ms.
+c [Label = 67] Number of clauses: 77569.
+c [Label = 67] Number of variables: 15520.
+c [Label = 67] Solving duration: 3 ms.
+s [Label = 67] SAT (w = 26).
+c [Label = 67] Label assignment: 34 67 67 67 67 67 67 67 67 41 67 8 67 41 15 67 67 41 41 15 67 67 67 41 67 67 41 15 15 15 41 67 41 67 67 67 15 41 15 41 67 41 67 15 67 41 15 15 41 67 41 67 67 67 41 15 41 67 15 15 41 41 41 67 41 15 15 67 41 41 67 15 15 15 15 41 67 67 15 67 15 41 41 41 41 67 15 41 15 41 41 41 15 15 8 41 15 67 15 1 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 59] Minimize Makespan Labeling problem (J-nos4.mtx.rnd):
+c [Main] Child pid 61 - 55488 terminated by signal 15.
+c [Main] Child pid 62 - 55487 terminated by signal 15.
+c [Label = 58] Minimize Makespan Labeling problem (J-nos4.mtx.rnd):
+c [Main] Child pid 67 - 55482 terminated by signal 15.
+c [Main] Child pid 64 - 55485 terminated by signal 15.
+c [Main] Child pid 63 - 55486 terminated by signal 15.
+c [Label = 54] Minimize Makespan Labeling problem (J-nos4.mtx.rnd):
+c [Main] Child pid 65 - 55484 terminated by signal 15.
+c [Label = 57] Minimize Makespan Labeling problem (J-nos4.mtx.rnd):
+c [Label = 56] Minimize Makespan Labeling problem (J-nos4.mtx.rnd):
+c [Label = 55] Minimize Makespan Labeling problem (J-nos4.mtx.rnd):
+c [Main] Child pid 66 - 55483 terminated by signal 15.
+c [Label = 53] Minimize Makespan Labeling problem (J-nos4.mtx.rnd):
+c [Label = 52] Minimize Makespan Labeling problem (J-nos4.mtx.rnd):
+c [Label = 52] Encoding starts with target value = 26:
+c [Label = 52] Encoding duration: 63ms.
+c [Label = 52] Number of clauses: 47942.
+c [Label = 52] Number of variables: 10220.
+c [Label = 52] Solving duration: 0 ms.
+s [Label = 52] UNSAT (w = 26).
+c [Main] Highest label UNSAT is set to 52
+c [Label = 55] Encoding starts with target value = 26:
+c [Label = 55] Encoding duration: 78ms.
+c [Label = 55] Number of clauses: 59707.
+c [Label = 55] Number of variables: 13120.
+c [Label = 55] Solving duration: 2 ms.
+s [Label = 55] SAT (w = 26).
+c [Label = 55] Label assignment: 28 55 55 55 55 55 55 55 55 29 55 2 55 29 3 55 55 29 29 3 55 55 55 29 55 55 29 3 3 3 29 55 29 55 55 55 3 29 3 29 55 29 55 3 55 29 3 3 29 55 29 55 55 55 29 3 29 55 3 3 29 29 29 55 29 3 3 55 29 29 55 3 3 3 3 29 55 55 3 55 3 29 29 29 29 55 3 29 3 29 29 29 3 3 2 29 3 55 3 1 
+c [Main] Lowest label SAT is set to 55.
+c [Main] Kill higher label pid 56.
+c [Main] Kill higher label pid 57.
+c [Main] Kill higher label pid 58.
+c [Main] Kill higher label pid 59.
+c [Label = 56] Encoding starts with target value = 26:
+c [Label = 56] Encoding duration: 80ms.
+c [Label = 56] Number of clauses: 61196.
+c [Label = 56] Number of variables: 13320.
+c [Label = 56] Solving duration: 3 ms.
+s [Label = 56] SAT (w = 26).
+c [Label = 56] Label assignment: 28 56 56 56 56 56 56 56 56 30 56 2 56 30 4 56 56 30 30 4 56 56 56 30 56 56 30 4 4 4 30 56 30 56 56 56 4 30 4 30 56 30 56 4 56 30 4 4 30 56 30 56 56 56 30 4 30 56 4 4 30 30 30 56 30 4 4 56 30 30 56 4 4 4 4 30 56 56 4 56 4 30 30 30 30 56 4 30 4 30 30 30 4 4 2 30 4 56 4 1 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 57] Encoding starts with target value = 26:
+c [Label = 57] Encoding duration: 83ms.
+c [Label = 57] Number of clauses: 62684.
+c [Label = 57] Number of variables: 13520.
+c [Label = 57] Solving duration: 3 ms.
+s [Label = 57] SAT (w = 26).
+c [Label = 57] Label assignment: 29 57 57 57 57 57 57 57 57 31 57 3 57 31 5 57 57 31 31 5 57 57 57 31 57 57 31 5 5 5 31 57 31 57 57 57 5 31 5 31 57 31 57 5 57 31 5 5 31 57 31 57 57 57 31 5 31 57 5 5 31 31 31 57 31 5 5 57 31 31 57 5 5 5 5 31 57 57 5 57 5 31 31 31 31 57 5 31 5 31 31 31 5 5 3 31 5 57 5 1 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 58] Encoding starts with target value = 26:
+c [Label = 58] Encoding duration: 84ms.
+c [Label = 58] Number of clauses: 64173.
+c [Label = 58] Number of variables: 13720.
+c [Label = 58] Solving duration: 3 ms.
+s [Label = 58] SAT (w = 26).
+c [Label = 58] Label assignment: 29 58 58 58 58 58 58 58 58 32 58 3 58 32 6 58 58 32 32 6 58 58 58 32 58 58 32 6 6 6 32 58 32 58 58 58 6 32 6 32 58 32 58 6 58 32 6 6 32 58 32 58 58 58 32 6 32 58 6 6 32 32 32 58 32 6 6 58 32 32 58 6 6 6 6 32 58 58 6 58 6 32 32 32 32 58 6 32 6 32 32 32 6 6 3 32 6 58 6 1 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 59] Encoding starts with target value = 26:
+c [Label = 59] Encoding duration: 89ms.
+c [Label = 59] Number of clauses: 65661.
+c [Label = 59] Number of variables: 13920.
+c [Label = 59] Solving duration: 3 ms.
+s [Label = 59] SAT (w = 26).
+c [Label = 59] Label assignment: 30 59 59 59 59 59 59 59 59 33 59 4 59 33 7 59 59 33 33 7 59 59 59 33 59 59 33 7 7 7 33 59 33 59 59 59 7 33 7 33 59 33 59 7 59 33 7 7 33 59 33 59 59 59 33 7 33 59 7 7 33 33 33 59 33 7 7 59 33 33 59 7 7 7 7 33 59 59 7 59 7 33 33 33 33 59 7 33 7 33 33 33 7 7 4 33 7 59 7 1 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 56 - 55493 terminated by signal 15.
+c [Main] Child pid 57 - 55492 terminated by signal 15.
+c [Main] Child pid 59 - 55490 terminated by signal 15.
+c [Main] Child pid 58 - 55491 terminated by signal 15.
+c [Label = 54] Encoding starts with target value = 26:
+c [Label = 54] Encoding duration: 78ms.
+c [Label = 54] Number of clauses: 58219.
+c [Label = 54] Number of variables: 12920.
+c [Label = 54] Solving duration: 3 ms.
+s [Label = 54] SAT (w = 26).
+c [Label = 54] Label assignment: 27 54 54 54 54 54 54 54 54 28 54 1 54 28 2 54 54 28 28 2 54 54 54 28 54 54 28 2 2 2 28 54 28 54 54 54 2 28 2 28 54 28 54 2 54 28 2 2 28 54 28 54 54 54 28 2 28 54 2 2 28 28 28 54 28 2 2 54 28 28 54 2 2 2 2 28 54 54 2 54 2 28 28 28 28 54 2 28 2 28 28 28 2 2 1 28 2 54 2 2 
+c [Label = 53] Encoding starts with target value = 26:
+c [Label = 53] Encoding duration: 76ms.
+c [Label = 53] Number of clauses: 56730.
+c [Label = 53] Number of variables: 12720.
+c [Label = 53] Solving duration: 3 ms.
+s [Label = 53] SAT (w = 26).
+c [Label = 53] Label assignment: 27 53 53 53 53 53 53 53 53 27 53 1 53 27 1 53 53 27 27 1 53 53 53 27 53 53 27 1 1 1 27 53 27 53 53 53 1 27 1 27 53 27 53 1 53 27 1 1 27 53 27 53 53 53 27 1 27 53 1 1 27 27 27 53 27 1 1 53 27 27 53 1 1 1 1 27 53 53 1 53 1 27 27 27 27 53 1 27 1 27 27 27 1 1 1 27 1 53 1 1 
+c [Main] Lowest label SAT is set to 54.
+c [Main] Lowest label SAT is set to 53.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] All children have completed.
+r [Main] 
+r [Main] Final results: 
+r [Main] Lowest label SAT:  	53.
+r [Main] Highest label UNSAT:	52.
+r [Main] Total real time: 371 ms.
+r [Main] Total memory consumed: 145.1 MB.
+r [Main] 

@@ -1,0 +1,234 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] Target value is set to 113.
+c [Param] LB is predefined as 114.
+c [Param] UB is predefined as 247.
+c [Param] Target value is set to Antibandwidth.
+c [Param] Vertices mode is set to Has hole.
+c [Param] Result verification is ON.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Param] Worker count is set to 8.
+c [Param] Max CNF size is set to 10.
+c [Main] Search strategy: Iterating Breadth First Search.
+c [Main] Search order: 180 146 214 129 163 197 231 121 137 154 171 188 205 222 239 117 125 133 141 150 158 167 175 184 192 201 209 218 226 235 243 115 119 123 127 131 135 139 143 148 152 156 160 165 169 173 177 182 186 190 194 199 203 207 211 216 220 224 228 233 237 241 245 114 116 118 120 122 124 126 128 130 132 134 136 138 140 142 144 147 149 151 153 155 157 159 161 164 166 168 170 172 174 176 178 181 183 185 187 189 191 193 195 198 200 202 204 206 208 210 212 215 217 219 221 223 225 227 229 232 234 236 238 240 242 244 246 145 162 179 196 213 230 247.
+c [Main] Encoding and solving for graph: Q-494_bus.mtx.rnd.
+c [Label = 180] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 146] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 214] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 129] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 163] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 197] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 231] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 121] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 121] Encoding starts with target value = 113:
+c [Label = 121] Encoding duration: 468ms.
+c [Label = 121] Number of clauses: 259592.
+c [Label = 121] Number of variables: 118668.
+c [Label = 121] Solving duration: 0 ms.
+s [Label = 121] UNSAT (w = 113).
+c [Main] Highest label UNSAT is set to 121
+c [Label = 137] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 129] Encoding starts with target value = 113:
+c [Label = 129] Encoding duration: 541ms.
+c [Label = 129] Number of clauses: 298108.
+c [Label = 129] Number of variables: 126572.
+c [Label = 129] Solving duration: 0 ms.
+s [Label = 129] UNSAT (w = 113).
+c [Main] Highest label UNSAT is set to 129
+c [Label = 154] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 146] Encoding starts with target value = 113:
+c [Label = 146] Encoding duration: 657ms.
+c [Label = 146] Number of clauses: 379955.
+c [Label = 146] Number of variables: 143368.
+c [Label = 146] Solving duration: 0 ms.
+s [Label = 146] UNSAT (w = 113).
+c [Main] Highest label UNSAT is set to 146
+c [Main] Kill lower label pid 137.
+c [Label = 137] Encoding starts with target value = 113:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 171] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Main] Child pid 137 - 27579 terminated by signal 15.
+c [Label = 188] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 163] Encoding starts with target value = 113:
+c [Label = 163] Encoding duration: 778ms.
+c [Label = 163] Number of clauses: 461801.
+c [Label = 163] Number of variables: 160164.
+c [Label = 163] Solving duration: 0 ms.
+s [Label = 163] UNSAT (w = 113).
+c [Main] Highest label UNSAT is set to 163
+c [Main] Kill lower label pid 154.
+c [Label = 154] Encoding starts with target value = 113:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 205] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Main] Child pid 154 - 27580 terminated by signal 15.
+c [Label = 222] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 180] Encoding starts with target value = 113:
+c [Label = 180] Encoding duration: 921ms.
+c [Label = 180] Number of clauses: 543648.
+c [Label = 180] Number of variables: 176960.
+c [Label = 180] Solving duration: 0 ms.
+s [Label = 180] UNSAT (w = 113).
+c [Main] Highest label UNSAT is set to 180
+c [Main] Kill lower label pid 171.
+c [Label = 171] Encoding starts with target value = 113:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 239] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Main] Child pid 171 - 27581 terminated by signal 15.
+c [Label = 184] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 197] Encoding starts with target value = 113:
+c [Label = 197] Encoding duration: 1081ms.
+c [Label = 197] Number of clauses: 625494.
+c [Label = 197] Number of variables: 193756.
+c [Label = 197] Solving duration: 0 ms.
+s [Label = 197] UNSAT (w = 113).
+c [Main] Highest label UNSAT is set to 197
+c [Main] Kill lower label pid 184.
+c [Main] Kill lower label pid 188.
+c [Label = 184] Encoding starts with target value = 113:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 188] Encoding starts with target value = 113:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 201] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Main] Child pid 184 - 27586 terminated by signal 15.
+c [Main] Child pid 188 - 27582 terminated by signal 15.
+c [Label = 218] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 209] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 214] Encoding starts with target value = 113:
+c [Label = 214] Encoding duration: 1200ms.
+c [Label = 214] Number of clauses: 707341.
+c [Label = 214] Number of variables: 210552.
+c [Label = 214] Solving duration: 0 ms.
+s [Label = 214] UNSAT (w = 113).
+c [Label = 209] Encoding starts with target value = 113:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Highest label UNSAT is set to 214
+c [Main] Kill lower label pid 209.
+c [Main] Kill lower label pid 205.
+c [Main] Kill lower label pid 201.
+c [Label = 205] Encoding starts with target value = 113:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 201] Encoding starts with target value = 113:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 226] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Main] Child pid 209 - 27588 terminated by signal 15.
+c [Main] Child pid 201 - 27587 terminated by signal 15.
+c [Label = 235] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 243] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Main] Child pid 205 - 27583 terminated by signal 15.
+c [Label = 216] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 231] Encoding starts with target value = 113:
+c [Label = 231] Encoding duration: 1678ms.
+c [Label = 231] Number of clauses: 951931.
+c [Label = 231] Number of variables: 281688.
+c [Label = 231] Solving duration: 65 ms.
+s [Label = 231] SAT (w = 113).
+c [Label = 231] Label assignment: 231 231 231 231 231 231 231 231 231 231 231 231 231 231 231 118 231 118 231 231 231 231 231 118 231 118 231 231 231 231 231 231 231 231 231 231 118 231 231 231 231 118 118 231 231 231 231 118 231 5 231 118 231 231 231 231 231 231 231 231 118 231 231 231 231 231 231 231 231 231 231 231 231 231 231 231 118 231 231 231 118 231 231 231 231 231 231 118 118 231 5 118 118 231 231 231 118 231 118 5 118 231 231 231 118 231 118 231 5 231 231 231 118 231 5 118 231 118 118 118 231 118 118 118 231 118 231 231 231 231 231 231 231 231 5 118 231 118 118 231 231 231 5 231 231 231 231 118 118 231 231 231 118 118 118 118 231 231 5 231 231 231 118 231 231 231 118 231 231 118 231 231 231 118 118 118 231 118 118 231 231 231 231 231 231 231 231 231 231 118 231 5 231 118 231 118 231 231 231 231 118 5 231 118 231 118 231 231 118 118 5 5 231 231 5 231 231 118 118 118 231 118 118 118 118 118 231 5 118 231 118 5 231 231 231 231 5 118 231 5 231 231 231 231 5 118 118 231 231 5 118 5 5 5 118 5 118 118 118 231 118 231 5 231 231 118 231 231 231 5 231 231 231 231 118 231 118 118 231 118 118 231 231 118 5 118 231 118 231 118 5 231 118 231 231 231 231 5 118 5 118 118 118 231 118 231 231 231 231 118 5 118 231 5 118 118 5 231 118 5 118 118 118 118 231 118 118 118 118 118 5 118 231 231 118 231 231 118 5 231 118 231 118 231 118 5 5 231 5 5 231 118 5 5 118 118 118 118 118 118 231 5 118 118 118 118 231 231 118 118 231 5 118 5 231 118 118 231 118 118 118 5 5 118 231 231 5 5 118 118 231 231 5 231 118 231 231 118 231 231 118 231 5 5 118 231 231 5 118 231 231 231 118 118 231 118 5 118 231 118 231 118 118 231 5 231 118 231 231 118 231 231 118 5 118 5 231 231 5 231 5 5 118 118 231 118 118 5 118 118 5 231 231 118 231 118 5 5 118 231 118 231 118 231 5 118 231 5 118 118 118 118 118 5 118 5 5 231 231 118 118 118 5 5 118 231 118 231 118 231 5 118 1 231 
+c [Main] Lowest label SAT is set to 231.
+c [Main] Kill higher label pid 243.
+c [Main] Kill higher label pid 239.
+c [Main] Kill higher label pid 235.
+c [Label = 243] Encoding starts with target value = 113:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 239] Encoding starts with target value = 113:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 235] Encoding starts with target value = 113:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 220] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Main] Child pid 235 - 27591 terminated by signal 15.
+c [Main] Child pid 243 - 27592 terminated by signal 15.
+c [Label = 228] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Main] Child pid 239 - 27585 terminated by signal 15.
+c [Label = 224] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 215] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 222] Encoding starts with target value = 113:
+c [Label = 222] Encoding duration: 1242ms.
+c [Label = 222] Number of clauses: 745857.
+c [Label = 222] Number of variables: 218456.
+c [Label = 222] Solving duration: 0 ms.
+s [Label = 222] UNSAT (w = 113).
+c [Label = 215] Encoding starts with target value = 113:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 220] Encoding starts with target value = 113:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Highest label UNSAT is set to 222
+c [Main] Kill lower label pid 215.
+c [Main] Kill lower label pid 220.
+c [Main] Kill lower label pid 216.
+c [Main] Kill lower label pid 218.
+c [Label = 216] Encoding starts with target value = 113:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 218] Encoding starts with target value = 113:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 223] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Main] Child pid 220 - 27595 terminated by signal 15.
+c [Main] Child pid 215 - 27598 terminated by signal 15.
+c [Label = 227] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 225] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Main] Child pid 216 - 27593 terminated by signal 15.
+c [Main] Child pid 218 - 27589 terminated by signal 15.
+c [Label = 230] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 229] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Label = 226] Encoding starts with target value = 113:
+c [Label = 226] Encoding duration: 1365ms.
+c [Label = 226] Number of clauses: 762863.
+c [Label = 226] Number of variables: 222408.
+c [Label = 226] Solving duration: 0 ms.
+s [Label = 226] UNSAT (w = 113).
+c [Label = 225] Encoding starts with target value = 113:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Highest label UNSAT is set to 226
+c [Main] Kill lower label pid 225.
+c [Main] Kill lower label pid 223.
+c [Main] Kill lower label pid 224.
+c [Label = 223] Encoding starts with target value = 113:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 224] Encoding starts with target value = 113:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 225 - 27600 terminated by signal 15.
+c [Main] Child pid 223 - 27599 terminated by signal 15.
+c [Main] Child pid 224 - 27596 terminated by signal 15.
+c [Label = 228] Encoding starts with target value = 113:
+c [Label = 228] Encoding duration: 1422ms.
+c [Label = 228] Number of clauses: 937488.
+c [Label = 228] Number of variables: 278724.
+c [Label = 228] Solving duration: 40 ms.
+s [Label = 228] SAT (w = 113).
+c [Label = 228] Label assignment: 228 228 228 228 228 228 228 228 228 228 228 228 228 228 228 115 228 115 228 228 228 228 228 115 228 115 228 228 228 228 228 228 228 228 228 228 115 228 228 228 228 115 115 228 228 228 228 115 228 2 228 115 228 228 228 228 228 228 228 228 115 228 228 228 228 228 228 228 228 228 228 228 228 228 228 228 115 228 228 228 115 228 228 228 228 228 228 115 115 228 2 115 115 228 228 228 115 228 115 2 115 228 228 228 115 228 115 228 2 228 228 228 115 228 2 115 228 115 115 115 228 115 115 115 228 115 228 228 228 228 228 228 228 228 2 115 228 115 115 228 228 228 2 228 228 228 228 115 115 228 228 228 115 115 115 115 228 228 2 228 228 228 115 228 228 228 115 228 228 115 228 228 228 115 115 115 228 115 115 228 228 228 228 228 228 228 228 228 228 115 228 2 228 115 228 115 228 228 228 228 115 2 228 115 228 115 228 228 115 115 2 2 228 228 2 228 228 115 115 115 228 115 115 115 115 115 228 2 115 228 115 2 228 228 228 228 2 115 228 2 228 228 228 228 2 115 115 228 228 2 115 2 2 2 115 2 115 115 115 228 115 228 2 228 228 115 228 228 228 2 228 228 228 228 115 228 115 115 228 115 115 228 228 115 2 115 228 115 228 115 2 228 115 228 228 228 228 2 115 2 115 115 115 228 115 228 228 228 228 115 2 115 228 2 115 115 2 228 115 2 115 115 115 115 228 115 115 115 115 115 2 115 228 228 115 228 228 115 2 228 115 228 115 228 115 2 2 228 2 2 228 115 2 2 115 115 115 115 115 115 228 2 115 115 115 115 228 228 115 115 228 2 115 2 228 115 115 228 115 115 115 2 2 115 228 228 2 2 115 115 228 228 2 228 115 228 228 115 228 228 115 228 2 2 115 228 228 2 115 228 228 228 115 115 228 115 2 115 228 115 228 115 115 228 2 228 115 228 228 115 228 228 115 2 115 2 228 228 2 228 2 2 115 115 228 115 115 2 115 115 2 228 228 115 228 115 2 2 115 228 115 228 115 228 2 115 228 2 115 115 115 115 115 2 115 2 2 228 228 115 115 115 2 2 115 228 115 228 115 228 2 115 1 228 
+c [Main] Lowest label SAT is set to 228.
+c [Main] Kill higher label pid 230.
+c [Main] Kill higher label pid 229.
+c [Label = 229] Encoding starts with target value = 113:
+c [Label = 229] Encoding duration: 1271ms.
+c [Label = 229] Number of clauses: 942302.
+c [Label = 229] Number of variables: 279712.
+c [Label = 229] Solving duration: 41 ms.
+s [Label = 229] SAT (w = 113).
+c [Label = 229] Label assignment: 229 229 229 229 229 229 229 229 229 229 229 229 229 229 229 116 229 116 229 229 229 229 229 116 229 116 229 229 229 229 229 229 229 229 229 229 116 229 229 229 229 116 116 229 229 229 229 116 229 3 229 116 229 229 229 229 229 229 229 229 116 229 229 229 229 229 229 229 229 229 229 229 229 229 229 229 116 229 229 229 116 229 229 229 229 229 229 116 116 229 3 116 116 229 229 229 116 229 116 3 116 229 229 229 116 229 116 229 3 229 229 229 116 229 3 116 229 116 116 116 229 116 116 116 229 116 229 229 229 229 229 229 229 229 3 116 229 116 116 229 229 229 3 229 229 229 229 116 116 229 229 229 116 116 116 116 229 229 3 229 229 229 116 229 229 229 116 229 229 116 229 229 229 116 116 116 229 116 116 229 229 229 229 229 229 229 229 229 229 116 229 3 229 116 229 116 229 229 229 229 116 3 229 116 229 116 229 229 116 116 3 3 229 229 3 229 229 116 116 116 229 116 116 116 116 116 229 3 116 229 116 3 229 229 229 229 3 116 229 3 229 229 229 229 3 116 116 229 229 3 116 3 3 3 116 3 116 116 116 229 116 229 3 229 229 116 229 229 229 3 229 229 229 229 116 229 116 116 229 116 116 229 229 116 3 116 229 116 229 116 3 229 116 229 229 229 229 3 116 3 116 116 116 229 116 229 229 229 229 116 3 116 229 3 116 116 3 229 116 3 116 116 116 116 229 116 116 116 116 116 3 116 229 229 116 229 229 116 3 229 116 229 116 229 116 3 3 229 3 3 229 116 3 3 116 116 116 116 116 116 229 3 116 116 116 116 229 229 116 116 229 3 116 3 229 116 116 229 116 116 116 3 3 116 229 229 3 3 116 116 229 229 3 229 116 229 229 116 229 229 116 229 3 3 116 229 229 3 116 229 229 229 116 116 229 116 3 116 229 116 229 116 116 229 3 229 116 229 229 116 229 229 116 3 116 3 229 229 3 229 3 3 116 116 229 116 116 3 116 116 3 229 229 116 229 116 3 3 116 229 116 229 116 229 3 116 229 3 116 116 116 116 116 3 116 3 3 229 229 116 116 116 3 3 116 229 116 229 116 229 3 116 1 229 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 230] Encoding starts with target value = 113:
+c [Label = 230] Encoding duration: 1284ms.
+c [Label = 230] Number of clauses: 947117.
+c [Label = 230] Number of variables: 280700.
+c [Label = 230] Solving duration: 41 ms.
+s [Label = 230] SAT (w = 113).
+c [Label = 230] Label assignment: 230 230 230 230 230 230 230 230 230 230 230 230 230 230 230 117 230 117 230 230 230 230 230 117 230 117 230 230 230 230 230 230 230 230 230 230 117 230 230 230 230 117 117 230 230 230 230 117 230 4 230 117 230 230 230 230 230 230 230 230 117 230 230 230 230 230 230 230 230 230 230 230 230 230 230 230 117 230 230 230 117 230 230 230 230 230 230 117 117 230 4 117 117 230 230 230 117 230 117 4 117 230 230 230 117 230 117 230 4 230 230 230 117 230 4 117 230 117 117 117 230 117 117 117 230 117 230 230 230 230 230 230 230 230 4 117 230 117 117 230 230 230 4 230 230 230 230 117 117 230 230 230 117 117 117 117 230 230 4 230 230 230 117 230 230 230 117 230 230 117 230 230 230 117 117 117 230 117 117 230 230 230 230 230 230 230 230 230 230 117 230 4 230 117 230 117 230 230 230 230 117 4 230 117 230 117 230 230 117 117 4 4 230 230 4 230 230 117 117 117 230 117 117 117 117 117 230 4 117 230 117 4 230 230 230 230 4 117 230 4 230 230 230 230 4 117 117 230 230 4 117 4 4 4 117 4 117 117 117 230 117 230 4 230 230 117 230 230 230 4 230 230 230 230 117 230 117 117 230 117 117 230 230 117 4 117 230 117 230 117 4 230 117 230 230 230 230 4 117 4 117 117 117 230 117 230 230 230 230 117 4 117 230 4 117 117 4 230 117 4 117 117 117 117 230 117 117 117 117 117 4 117 230 230 117 230 230 117 4 230 117 230 117 230 117 4 4 230 4 4 230 117 4 4 117 117 117 117 117 117 230 4 117 117 117 117 230 230 117 117 230 4 117 4 230 117 117 230 117 117 117 4 4 117 230 230 4 4 117 117 230 230 4 230 117 230 230 117 230 230 117 230 4 4 117 230 230 4 117 230 230 230 117 117 230 117 4 117 230 117 230 117 117 230 4 230 117 230 230 117 230 230 117 4 117 4 230 230 4 230 4 4 117 117 230 117 117 4 117 117 4 230 230 117 230 117 4 4 117 230 117 230 117 230 4 117 230 4 117 117 117 117 117 4 117 4 4 230 230 117 117 117 4 4 117 230 117 230 117 230 4 117 1 230 
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Child pid 229 - 27602 terminated by signal 15.
+c [Main] Child pid 230 - 27603 terminated by signal 15.
+c [Label = 227] Encoding starts with target value = 113:
+c [Label = 227] Encoding duration: 1270ms.
+c [Label = 227] Number of clauses: 932673.
+c [Label = 227] Number of variables: 277736.
+c [Label = 227] Solving duration: 39 ms.
+s [Label = 227] SAT (w = 113).
+c [Label = 227] Label assignment: 227 227 227 227 227 227 227 227 227 227 227 227 227 227 227 114 227 114 227 227 227 227 227 114 227 114 227 227 227 227 227 227 227 227 227 227 114 227 227 227 227 114 114 227 227 227 227 114 227 1 227 114 227 227 227 227 227 227 227 227 114 227 227 227 227 227 227 227 227 227 227 227 227 227 227 227 114 227 227 227 114 227 227 227 227 227 227 114 114 227 1 114 114 227 227 227 114 227 114 1 114 227 227 227 114 227 114 227 1 227 227 227 114 227 1 114 227 114 114 114 227 114 114 114 227 114 227 227 227 227 227 227 227 227 1 114 227 114 114 227 227 227 1 227 227 227 227 114 114 227 227 227 114 114 114 114 227 227 1 227 227 227 114 227 227 227 114 227 227 114 227 227 227 114 114 114 227 114 114 227 227 227 227 227 227 227 227 227 227 114 227 1 227 114 227 114 227 227 227 227 114 1 227 114 227 114 227 227 114 114 1 1 227 227 1 227 227 114 114 114 227 114 114 114 114 114 227 1 114 227 114 1 227 227 227 227 1 114 227 1 227 227 227 227 1 114 114 227 227 1 114 1 1 1 114 1 114 114 114 227 114 227 1 227 227 114 227 227 227 1 227 227 227 227 114 227 114 114 227 114 114 227 227 114 1 114 227 114 227 114 1 227 114 227 227 227 227 1 114 1 114 114 114 227 114 227 227 227 227 114 1 114 227 1 114 114 1 227 114 1 114 114 114 114 227 114 114 114 114 114 1 114 227 227 114 227 227 114 1 227 114 227 114 227 114 1 1 227 1 1 227 114 1 1 114 114 114 114 114 114 227 1 114 114 114 114 227 227 114 114 227 1 114 1 227 114 114 227 114 114 114 1 1 114 227 227 1 1 114 114 227 227 1 227 114 227 227 114 227 227 114 227 1 1 114 227 227 1 114 227 227 227 114 114 227 114 1 114 227 114 227 114 114 227 1 227 114 227 227 114 227 227 114 1 114 1 227 227 1 227 1 1 114 114 227 114 114 1 114 114 1 227 227 114 227 114 1 1 114 227 114 227 114 227 1 114 227 1 114 114 114 114 114 1 114 1 1 227 227 114 114 114 1 1 114 227 114 227 114 227 1 114 114 227 
+c [Main] Lowest label SAT is set to 227.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] All children have completed.
+r [Main] 
+r [Main] Final results: 
+r [Main] Lowest label SAT:  	227.
+r [Main] Highest label UNSAT:	226.
+r [Main] Total real time: 4070 ms.
+r [Main] Total memory consumed: 1141.7 MB.
+r [Main] 

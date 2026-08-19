@@ -1,0 +1,33 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] Target value is set to 4.
+c [Param] LB is predefined as 5.
+c [Param] UB is predefined as 29.
+c [Param] Target value is set to Antibandwidth.
+c [Param] Vertices mode is set to Has hole.
+c [Param] Result verification is ON.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Param] Max CNF size is set to 10.
+c [Main] Search strategy: Incremental from upper bound.
+c [Main] Encoding and solving for graph: H-impcol_b.mtx.rnd.
+c [Incremental] Minimize Makespan Labeling problem (H-impcol_b.mtx.rnd):
+c [Incremental] Encoding starts with target value = 4:
+c [Incremental] Encoding duration: 23ms.
+c [Incremental] Number of clauses: 34318.
+c [Incremental] Number of variables: 3664.
+c [Incremental] Solving for max label = 29:
+c [Incremental] Solving duration: 0 ms.
+s [Incremental] SAT (label = 29).
+c [Incremental] Label assignment: 29 29 29 25 15 29 29 29 25 29 29 29 29 25 29 29 25 21 21 21 11 11 17 25 21 25 21 29 21 17 13 9 25 21 29 29 21 25 17 29 21 11 11 25 7 25 29 7 25 25 29 17 25 7 1 21 9 5 29 
+c [Incremental] Max used label: 29.
+c [Incremental] Label 29 is removed from searching.
+c [Incremental] Solving for max label = 28:
+c [Incremental] Solving duration: 129 ms.
+s [Incremental] UNSAT (label = 28).
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Work pid ends with result: 0.
+r [Main] 
+r [Main] Final results: 
+r [Main] Total real time: 155 ms.
+r [Main] Total memory consumed: 13.7 MB.
+r [Main] 
