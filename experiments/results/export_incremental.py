@@ -34,6 +34,8 @@ def parse_log(filepath):
 
     lowest_sat = sat_side_labels[-1] if sat_side_labels else "-"
 
+    best_span = int(lowest_sat) - 1 if lowest_sat != "-" else "-"
+
     row = {
         "File": os.path.basename(filepath),
 
@@ -70,6 +72,8 @@ def parse_log(filepath):
         "Highest label UNSAT": highest_unsat,
 
         "Lowest label SAT": lowest_sat,
+
+        "Best span": best_span,
 
         "Memory consumed (MB)": extract(
             r'r \[Main\] Total memory consumed:\s*([^\n\r]+) MB\.',
@@ -130,6 +134,7 @@ def main(root_dir, output_file):
                 "Upper bound",
                 "Highest label UNSAT",
                 "Lowest label SAT",
+                "Best span",
                 "Memory consumed (MB)",
                 "Time consumed (ms)",
                 "Optimal found"

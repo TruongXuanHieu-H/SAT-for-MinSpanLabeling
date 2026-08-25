@@ -61,6 +61,18 @@ def parse_log(filepath):
             content
         ),
 
+        "Best span": (
+            int(extract(
+                r'r \[Main\] Lowest label SAT:\s*(-|\d+)\.?',
+                content
+            )) - 1
+            if extract(
+                r'r \[Main\] Lowest label SAT:\s*(-|\d+)\.?',
+                content
+            ) != "-"
+            else "-"
+        ),
+
         "Memory consumed (MB)": extract(
             r'r \[Main\] Total memory consumed:\s*([^\n\r]+) MB\.',
             content
@@ -121,6 +133,7 @@ def main(root_dir, output_file):
                 "Upper bound",
                 "Highest label UNSAT",
                 "Lowest label SAT",
+                "Best span",
                 "Memory consumed (MB)",
                 "Time consumed (ms)",
                 "Optimal found"
