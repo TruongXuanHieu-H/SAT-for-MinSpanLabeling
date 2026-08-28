@@ -3,7 +3,7 @@ c [Param] Target value is set to 246.
 c [Param] LB is predefined as 247.
 c [Param] UB is predefined as 506.
 c [Param] Target value is set to Cyclic Antibandwidth.
-c [Param] Vertices mode is set to No hole.
+c [Param] Vertices mode is set to Has hole.
 c [Param] Result verification is ON.
 c [Param] Memory limit is set to 45000.
 c [Param] Real time limit is set to 1800.
@@ -18,44 +18,44 @@ c [Label = 311] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
 c [Label = 474] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
 c [Label = 408] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
 c [Label = 343] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
-c [Label = 490] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
 c [Label = 278] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Label = 490] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
 c [Label = 278] Encoding starts with target value = 246:
-c [Label = 278] Encoding duration: 5529ms.
-c [Label = 278] Number of clauses: 3535504.
-c [Label = 278] Number of variables: 723922.
+c [Label = 278] Encoding duration: 7546ms.
+c [Label = 278] Number of clauses: 3514804.
+c [Label = 278] Number of variables: 703498.
 c [Label = 278] Solving duration: 0 ms.
 s [Label = 278] UNSAT (w = 246).
 c [Main] Highest label UNSAT is set to 278
 c [Label = 457] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
 c [Label = 311] Encoding starts with target value = 246:
-c [Label = 311] Encoding duration: 5690ms.
-c [Label = 311] Number of clauses: 3819650.
-c [Label = 311] Number of variables: 770914.
+c [Label = 311] Encoding duration: 8108ms.
+c [Label = 311] Number of clauses: 3796475.
+c [Label = 311] Number of variables: 748048.
 c [Label = 311] Solving duration: 0 ms.
 s [Label = 311] UNSAT (w = 246).
 c [Main] Highest label UNSAT is set to 311
 c [Label = 424] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
 c [Label = 343] Encoding starts with target value = 246:
-c [Label = 343] Encoding duration: 6012ms.
-c [Label = 343] Number of clauses: 4095186.
-c [Label = 343] Number of variables: 816482.
+c [Label = 343] Encoding duration: 8640ms.
+c [Label = 343] Number of clauses: 4069611.
+c [Label = 343] Number of variables: 791248.
 c [Label = 343] Solving duration: 0 ms.
 s [Label = 343] UNSAT (w = 246).
 c [Main] Highest label UNSAT is set to 343
 c [Label = 392] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
 c [Label = 376] Encoding starts with target value = 246:
-c [Label = 376] Encoding duration: 6509ms.
-c [Label = 376] Number of clauses: 4379333.
-c [Label = 376] Number of variables: 863474.
+c [Label = 376] Encoding duration: 9280ms.
+c [Label = 376] Number of clauses: 4351283.
+c [Label = 376] Number of variables: 835798.
 c [Label = 376] Solving duration: 0 ms.
 s [Label = 376] UNSAT (w = 246).
 c [Main] Highest label UNSAT is set to 376
 c [Label = 498] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
 c [Label = 408] Encoding starts with target value = 246:
-c [Label = 408] Encoding duration: 6944ms.
-c [Label = 408] Number of clauses: 4654869.
-c [Label = 408] Number of variables: 909042.
+c [Label = 408] Encoding duration: 9819ms.
+c [Label = 408] Number of clauses: 4624419.
+c [Label = 408] Number of variables: 878998.
 c [Label = 408] Solving duration: 0 ms.
 s [Label = 408] UNSAT (w = 246).
 c [Main] Highest label UNSAT is set to 408
@@ -63,12 +63,12 @@ c [Main] Kill lower label pid 392.
 c [Label = 392] Encoding starts with target value = 246:
 c [Signal] Signal interruption. Caught signal: SIGTERM (15).
 c [Label = 482] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
-c [Main] Child pid 392 - 1708905 terminated by signal 15.
+c [Main] Child pid 392 - 75310 terminated by signal 15.
 c [Label = 465] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
 c [Label = 441] Encoding starts with target value = 246:
-c [Label = 441] Encoding duration: 7458ms.
-c [Label = 441] Number of clauses: 4939015.
-c [Label = 441] Number of variables: 956034.
+c [Label = 441] Encoding duration: 10474ms.
+c [Label = 441] Number of clauses: 4906090.
+c [Label = 441] Number of variables: 923548.
 c [Label = 441] Solving duration: 0 ms.
 s [Label = 441] UNSAT (w = 246).
 c [Main] Highest label UNSAT is set to 441
@@ -76,12 +76,12 @@ c [Main] Kill lower label pid 424.
 c [Label = 424] Encoding starts with target value = 246:
 c [Signal] Signal interruption. Caught signal: SIGTERM (15).
 c [Label = 449] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
-c [Main] Child pid 424 - 1708904 terminated by signal 15.
+c [Main] Child pid 424 - 75309 terminated by signal 15.
 c [Label = 502] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
 c [Label = 474] Encoding starts with target value = 246:
-c [Label = 474] Encoding duration: 7951ms.
-c [Label = 474] Number of clauses: 5223162.
-c [Label = 474] Number of variables: 1003026.
+c [Label = 474] Encoding duration: 10984ms.
+c [Label = 474] Number of clauses: 5187762.
+c [Label = 474] Number of variables: 968098.
 c [Label = 474] Solving duration: 0 ms.
 s [Label = 474] UNSAT (w = 246).
 c [Main] Highest label UNSAT is set to 474
@@ -95,89 +95,129 @@ c [Signal] Signal interruption. Caught signal: SIGTERM (15).
 c [Label = 457] Encoding starts with target value = 246:
 c [Signal] Signal interruption. Caught signal: SIGTERM (15).
 c [Label = 494] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
-c [Main] Child pid 449 - 1708911 terminated by signal 15.
+c [Main] Child pid 449 - 75316 terminated by signal 15.
 c [Label = 486] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
-c [Main] Child pid 465 - 1708910 terminated by signal 15.
+c [Main] Child pid 465 - 75313 terminated by signal 15.
 c [Label = 478] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
-c [Main] Child pid 457 - 1708903 terminated by signal 15.
+c [Main] Child pid 457 - 75305 terminated by signal 15.
 c [Label = 504] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
 c [Label = 490] Encoding starts with target value = 246:
-c [Label = 490] Encoding duration: 8056ms.
-c [Label = 490] Number of clauses: 5360930.
-c [Label = 490] Number of variables: 1025810.
+c [Label = 490] Encoding duration: 11383ms.
+c [Label = 490] Number of clauses: 5324330.
+c [Label = 490] Number of variables: 989698.
 c [Label = 490] Solving duration: 0 ms.
 s [Label = 490] UNSAT (w = 246).
 c [Main] Highest label UNSAT is set to 490
 c [Main] Kill lower label pid 478.
 c [Main] Kill lower label pid 486.
 c [Main] Kill lower label pid 482.
+c [Label = 486] Encoding starts with target value = 246:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
 c [Label = 478] Encoding starts with target value = 246:
 c [Signal] Signal interruption. Caught signal: SIGTERM (15).
 c [Label = 482] Encoding starts with target value = 246:
 c [Signal] Signal interruption. Caught signal: SIGTERM (15).
-c [Label = 486] Encoding starts with target value = 246:
-c [Signal] Signal interruption. Caught signal: SIGTERM (15).
 c [Label = 500] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
-c [Main] Child pid 486 - 1708914 terminated by signal 15.
-c [Main] Child pid 478 - 1708915 terminated by signal 15.
-c [Label = 492] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Main] Child pid 486 - 75319 terminated by signal 15.
+c [Main] Child pid 478 - 75320 terminated by signal 15.
 c [Label = 496] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
-c [Main] Child pid 482 - 1708909 terminated by signal 15.
+c [Label = 492] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Main] Child pid 482 - 75312 terminated by signal 15.
 c [Label = 505] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
 c [Label = 492] Encoding starts with target value = 246:
-c [Label = 492] Encoding duration: 8359ms.
-c [Label = 492] Number of clauses: 5378151.
-c [Label = 492] Number of variables: 1028658.
-c [Label = 492] Solving duration: 59 ms.
+c [Label = 492] Encoding duration: 11745ms.
+c [Label = 492] Number of clauses: 5341401.
+c [Label = 492] Number of variables: 992398.
+c [Label = 492] Solving duration: 313 ms.
 s [Label = 492] UNSAT (w = 246).
 c [Main] Highest label UNSAT is set to 492
 c [Label = 503] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
-c [Label = 505] Encoding starts with target value = 246:
-c [Label = 505] Encoding duration: 9502ms.
-c [Label = 505] Number of clauses: 5980317.
-c [Label = 505] Number of variables: 1211195.
-c [Signal] Signal interruption. Caught signal: SIGTERM (15).
-c [Label = 496] Encoding starts with target value = 246:
-c [Label = 496] Encoding duration: 9366ms.
-c [Label = 496] Number of clauses: 5902823.
-c [Label = 496] Number of variables: 1198379.
+c [Label = 498] Encoding starts with target value = 246:
+c [Label = 498] Encoding duration: 13000ms.
+c [Label = 498] Number of clauses: 5882844.
+c [Label = 498] Number of variables: 1164523.
+c [Label = 498] Solving duration: 31650 ms.
+s [Label = 498] SAT (w = 246).
+c [Label = 498] Label assignment: 1 1 1 248 1 242 223 481 1 246 229 12 241 259 242 491 241 1 242 7 6 235 1 258 7 497 247 241 1 242 1 491 246 246 242 498 242 491 1 241 1 229 497 241 1 481 252 1 487 241 492 1 488 235 241 247 229 1 235 241 1 252 235 1 1 247 246 247 241 475 7 492 497 241 241 487 5 491 253 481 6 246 235 242 498 247 251 246 235 494 487 1 241 491 252 241 491 493 497 493 246 493 3 1 492 498 492 251 492 481 493 488 7 1 493 241 1 242 241 251 229 492 253 253 1 498 493 241 252 235 487 487 492 229 491 242 241 492 7 235 235 1 493 242 242 252 494 475 241 1 241 493 241 488 241 235 1 494 475 235 247 241 252 241 498 498 247 487 494 252 229 252 1 247 235 493 498 493 491 493 1 247 251 247 481 247 243 252 1 242 247 251 242 481 245 235 247 493 487 498 247 242 241 246 493 229 235 253 253 252 247 248 246 247 240 493 492 487 240 487 1 235 240 493 481 241 241 241 492 498 481 247 235 241 247 487 241 7 241 487 491 481 493 7 241 492 493 241 247 487 242 247 498 498 487 493 1 494 491 493 251 493 247 493 253 487 481 488 494 488 241 247 241 488 247 1 493 492 252 242 487 235 245 481 241 241 247 241 241 1 7 247 487 241 488 242 253 241 247 251 487 487 241 493 242 242 242 487 240 492 492 1 241 487 494 235 246 241 241 487 242 241 229 494 1 247 493 241 1 487 481 487 241 247 1 498 494 497 241 241 494 242 6 491 493 235 492 6 240 487 247 497 492 242 247 6 487 498 1 492 251 258 491 498 493 241 7 487 241 247 493 247 242 1 487 492 493 235 1 493 487 497 242 498 6 493 487 492 247 235 1 491 493 242 247 240 235 498 7 235 241 498 493 241 493 6 247 246 247 487 247 1 1 487 240 247 487 241 1 247 246 493 491 492 241 247 493 487 247 481 497 257 493 494 247 487 487 493 493 253 1 242 252 493 487 241 5 491 242 241 493 241 242 241 6 1 481 493 1 242 498 258 247 241 252 247 241 235 241 1 235 492 491 487 494 498 493 241 246 1 248 247 493 494 497 247 493 247 246 493 1 241 241 247 487 481 493 247 493 493 247 229 493 252 242 247 247 487 241 494 247 251 235 487 5 492 491 493 241 247 493 493 241 251 6 247 497 258 235 255 487 252 241 253 229 241 247 247 481 253 259 487 492 248 235 241 245 247 494 6 247 252 475 492 491 491 494 253 498 252 492 241 493 235 493 257 247 247 481 259 247 493 252 247 487 493 487 252 240 487 6 242 494 498 247 235 493 241 487 493 494 487 492 247 11 481 247 241 259 247 481 1 493 494 241 241 240 247 246 492 493 235 235 487 481 244 258 493 491 241 235 493 235 487 481 493 247 229 248 235 1 245 241 242 493 493 241 498 248 247 247 240 253 247 1 494 251 242 241 493 241 242 247 253 487 493 241 486 494 247 247 247 6 259 247 253 1 492 252 13 245 492 493 493 487 
+c [Label = 503] Encoding starts with target value = 246:
+c [Label = 503] Encoding duration: 16903ms.
+c [Label = 503] Number of clauses: 5925521.
+c [Label = 503] Number of variables: 1171273.
 c [Signal] Signal interruption. Caught signal: SIGTERM (15).
 c [Label = 500] Encoding starts with target value = 246:
-c [Label = 500] Encoding duration: 9598ms.
-c [Label = 500] Number of clauses: 5937265.
-c [Label = 500] Number of variables: 1204075.
+c [Label = 500] Encoding duration: 13828ms.
+c [Label = 500] Number of clauses: 5899915.
+c [Label = 500] Number of variables: 1167223.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 505] Encoding starts with target value = 246:
+c [Label = 505] Encoding duration: 13860ms.
+c [Label = 505] Number of clauses: 5942592.
+c [Label = 505] Number of variables: 1173973.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Lowest label SAT is set to 498.
+c [Main] Kill higher label pid 503.
+c [Main] Kill higher label pid 505.
+c [Main] Kill higher label pid 500.
+c [Main] Kill higher label pid 504.
+c [Main] Kill higher label pid 502.
+c [Label = 504] Encoding starts with target value = 246:
+c [Label = 504] Encoding duration: 13622ms.
+c [Label = 504] Number of clauses: 5934057.
+c [Label = 504] Number of variables: 1172623.
 c [Signal] Signal interruption. Caught signal: SIGTERM (15).
 c [Label = 502] Encoding starts with target value = 246:
-c [Label = 502] Encoding duration: 9360ms.
-c [Label = 502] Number of clauses: 5954486.
-c [Label = 502] Number of variables: 1206923.
+c [Label = 502] Encoding duration: 13210ms.
+c [Label = 502] Number of clauses: 5916986.
+c [Label = 502] Number of variables: 1169923.
 c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Label = 497] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Main] Child pid 505 - 75325 terminated by signal 15.
+c [Label = 495] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Main] Child pid 504 - 75321 terminated by signal 15.
+c [Main] Child pid 503 - 75328 terminated by signal 15.
+c [Main] Child pid 500 - 75322 terminated by signal 15.
+c [Label = 493] Minimize Makespan Labeling problem (V-nos6.mtx.rnd):
+c [Main] Child pid 502 - 75317 terminated by signal 15.
 c [Label = 494] Encoding starts with target value = 246:
-c [Label = 494] Encoding duration: 9484ms.
-c [Label = 494] Number of clauses: 5885602.
-c [Label = 494] Number of variables: 1195531.
+c [Label = 494] Encoding duration: 13749ms.
+c [Label = 494] Number of clauses: 5848702.
+c [Label = 494] Number of variables: 1159123.
+c [Label = 494] Solving duration: 31015 ms.
+s [Label = 494] SAT (w = 246).
+c [Label = 494] Label assignment: 1 1 1 246 1 246 243 491 1 254 246 3 246 251 246 494 246 1 252 3 6 243 1 251 3 8 247 246 1 246 1 491 252 246 250 5 246 2 1 242 3 243 494 246 1 493 252 1 489 247 2 1 490 243 245 247 241 1 246 246 1 252 246 1 1 247 252 247 246 491 3 3 6 245 246 494 4 494 249 491 8 248 248 246 6 247 248 250 243 4 491 1 247 491 254 246 492 493 6 493 250 1 2 2 492 4 4 252 1 487 493 492 3 491 493 246 1 249 245 250 243 1 249 249 1 3 1 245 253 245 494 494 1 244 1 248 247 492 3 241 246 1 1 249 250 248 494 491 248 3 243 493 246 490 243 247 1 494 489 241 249 245 249 248 494 6 247 494 2 248 241 248 1 248 246 1 2 493 494 494 1 248 254 247 489 247 249 250 494 250 247 254 246 489 245 245 247 1 491 4 247 248 247 250 1 243 245 251 249 254 247 248 250 247 250 493 1 494 247 489 2 245 247 2 492 248 247 247 492 4 494 245 245 247 247 490 247 3 245 493 492 491 1 3 243 1 494 247 247 492 250 247 4 1 494 1 1 2 1 493 248 493 247 493 249 490 489 493 4 492 244 250 245 494 250 1 1 4 256 248 493 243 250 492 245 244 249 247 247 1 3 247 493 246 2 244 249 247 247 254 491 492 247 494 245 248 249 493 245 493 4 1 244 494 494 244 252 248 245 491 246 246 245 494 3 249 492 248 6 493 492 493 247 248 1 4 2 494 247 244 494 246 4 2 493 245 493 5 247 491 249 494 493 248 248 8 493 8 6 2 252 251 4 6 494 247 8 493 247 247 1 247 246 1 493 493 2 244 1 1 494 6 248 4 6 1 493 492 248 243 1 494 1 244 248 247 245 2 3 245 247 494 1 247 493 6 247 250 247 491 247 3 1 493 244 247 493 245 1 247 248 493 1 1 245 249 494 491 248 489 494 254 493 494 253 494 493 493 493 254 2 248 250 1 1 247 6 494 250 247 493 248 247 245 2 1 492 493 6 246 2 252 248 245 250 245 244 245 245 2 245 491 1 491 2 8 2 246 251 6 252 250 493 492 4 247 493 247 252 493 1 245 247 247 493 492 491 247 493 1 247 245 493 253 248 245 249 492 247 2 247 248 243 493 6 2 491 493 247 247 493 1 245 254 2 247 4 253 246 250 493 251 249 254 243 245 248 247 491 249 251 491 492 248 246 246 246 253 494 5 247 254 489 492 494 492 494 249 5 249 4 247 491 245 493 252 247 247 489 250 247 2 248 247 493 1 491 252 247 493 4 244 494 2 248 246 1 247 493 494 1 492 2 245 6 493 247 247 251 248 491 3 493 494 246 247 247 248 247 492 491 248 247 494 491 248 254 493 492 247 247 493 243 492 494 494 247 243 248 246 1 252 245 246 494 493 245 494 248 247 249 243 249 248 1 492 250 248 247 493 245 248 248 249 493 1 245 491 6 247 248 248 5 251 247 249 1 1 251 5 252 1 492 493 494 
+c [Main] Lowest label SAT is set to 494.
+c [Main] Kill higher label pid 495.
+c [Main] Kill higher label pid 497.
+c [Main] Kill higher label pid 496.
+c [Label = 497] Encoding starts with target value = 246:
 c [Signal] Signal interruption. Caught signal: SIGTERM (15).
-c [Label = 504] Encoding starts with target value = 246:
-c [Label = 504] Encoding duration: 9572ms.
-c [Label = 504] Number of clauses: 5971707.
-c [Label = 504] Number of variables: 1209771.
+c [Label = 495] Encoding starts with target value = 246:
 c [Signal] Signal interruption. Caught signal: SIGTERM (15).
-c [Label = 498] Encoding starts with target value = 246:
-c [Label = 498] Encoding duration: 9285ms.
-c [Label = 498] Number of clauses: 5920044.
-c [Label = 498] Number of variables: 1201227.
+c [Label = 496] Encoding starts with target value = 246:
+c [Label = 496] Encoding duration: 13338ms.
+c [Label = 496] Number of clauses: 5865773.
+c [Label = 496] Number of variables: 1161823.
+c [Label = 496] Solving duration: 32347 ms.
+s [Label = 496] SAT (w = 246).
+c [Label = 496] Label assignment: 1 1 1 244 1 244 233 485 1 246 235 12 243 255 244 491 243 1 244 5 4 239 1 258 5 495 247 243 1 244 1 491 244 244 244 4 246 491 1 243 1 237 494 243 1 485 246 1 489 243 496 1 490 241 243 247 235 5 239 243 1 250 239 1 1 247 249 247 243 483 5 492 495 245 243 489 3 493 255 487 4 246 239 244 496 247 243 246 241 494 489 1 243 491 250 243 491 493 492 493 246 493 496 1 492 4 492 249 492 485 493 490 5 1 493 243 1 244 243 249 237 492 251 251 1 496 493 243 254 239 489 489 1 235 491 249 243 492 9 239 239 1 493 244 244 247 496 481 243 5 243 493 243 490 243 239 1 494 483 239 251 243 251 243 494 496 247 489 496 251 237 250 1 247 239 493 496 493 494 494 1 247 249 247 485 247 246 246 1 246 247 249 245 487 245 239 247 493 491 496 247 244 247 246 493 237 240 255 251 250 247 249 246 247 242 493 492 489 242 489 1 243 247 493 485 247 244 247 492 492 485 247 239 244 247 489 243 9 243 489 494 487 493 5 243 492 493 244 247 489 244 247 496 1 489 493 1 494 493 493 248 493 247 493 251 489 485 491 492 491 243 251 243 490 250 1 1 492 250 244 489 239 245 485 243 245 247 251 247 1 5 247 490 243 490 244 255 243 247 249 491 489 243 493 244 244 245 489 244 493 492 1 243 489 495 239 246 243 243 489 244 243 235 494 5 251 495 243 1 489 485 490 243 247 1 496 495 493 244 243 494 244 4 494 493 241 492 8 243 489 255 494 492 244 247 4 489 496 1 492 249 258 490 496 493 243 496 489 243 247 493 247 245 1 489 493 496 239 1 493 489 495 244 495 4 1 492 492 247 241 1 491 493 244 247 242 240 493 5 241 244 496 5 243 493 496 247 246 247 491 247 1 1 489 242 247 491 243 1 247 246 493 495 492 243 250 493 491 247 487 493 250 493 494 247 489 493 493 493 250 1 244 249 1 489 243 3 490 246 243 493 244 244 243 5 1 485 493 1 244 493 250 248 244 250 247 243 241 243 1 239 492 493 489 496 496 493 243 250 1 244 247 493 490 495 247 493 247 246 493 1 243 243 247 493 485 493 247 493 493 247 235 493 254 248 247 251 489 243 495 247 248 239 489 1 492 491 493 243 247 493 1 243 249 496 247 495 254 239 250 492 250 243 247 237 243 247 247 487 251 259 489 492 248 239 243 244 247 494 8 247 250 483 492 491 491 496 251 4 250 490 247 493 239 493 253 247 247 485 255 247 1 250 247 489 1 491 250 243 491 496 244 494 1 247 239 5 243 489 493 494 489 492 247 4 485 247 243 255 251 487 5 493 494 243 243 242 247 247 492 493 239 239 489 485 247 250 493 491 247 239 493 241 489 485 493 247 235 249 239 1 242 243 244 493 493 243 496 244 247 251 242 251 247 1 490 249 250 243 493 243 245 247 251 489 493 243 488 490 247 248 247 8 255 247 251 1 493 254 9 244 493 493 493 489 
 c [Signal] Signal interruption. Caught signal: SIGTERM (15).
-c [Main] Lim pid ends with result: 254.
+c [Main] Child pid 497 - 75336 terminated by signal 15.
+c [Main] Child pid 495 - 75337 terminated by signal 15.
+c [Main] Child pid 496 - 75323 terminated by signal 15.
+c [Label = 493] Encoding starts with target value = 246:
+c [Label = 493] Encoding duration: 8086ms.
+c [Label = 493] Number of clauses: 5346741.
+c [Label = 493] Number of variables: 993748.
+c [Label = 493] Solving duration: 16990 ms.
+s [Label = 493] SAT (w = 246).
+c [Label = 493] Label assignment: 1 1 1 245 1 244 243 491 493 248 245 1 245 248 245 493 245 1 246 2 1 245 1 247 2 2 247 246 493 245 1 491 246 246 247 1 246 1 1 246 1 244 493 246 1 491 248 1 491 246 1 1 493 245 246 246 244 1 246 246 493 247 245 1 1 247 248 247 246 490 1 493 2 246 246 491 1 493 247 491 2 246 245 244 1 247 246 246 245 493 492 1 246 492 249 246 491 493 492 491 247 1 493 1 493 1 493 248 492 490 492 491 1 492 491 246 1 248 246 248 245 492 247 248 493 493 493 246 248 245 492 492 493 246 493 247 246 492 1 244 246 1 492 247 247 247 493 490 245 1 245 493 246 493 244 245 492 492 490 244 247 246 248 246 493 493 247 492 493 248 244 247 1 247 246 493 493 493 492 493 1 247 248 247 491 247 247 247 1 247 247 248 246 491 246 246 247 1 491 493 246 247 246 247 1 244 246 247 248 247 247 247 247 247 247 493 1 491 245 491 1 245 246 1 492 246 245 246 1 493 491 246 245 246 247 493 246 1 246 492 492 491 493 1 246 492 493 245 247 492 247 247 493 1 492 1 493 493 493 493 247 493 247 493 248 493 491 491 493 491 247 247 245 492 247 493 1 493 248 246 492 245 246 492 246 245 247 246 246 493 2 247 492 246 493 244 247 247 247 248 492 492 247 493 245 246 247 492 245 493 493 1 246 492 493 246 247 246 246 492 246 246 244 493 1 247 492 246 1 492 492 492 247 247 1 493 493 493 245 246 493 245 1 1 493 245 493 1 246 492 247 492 493 247 246 1 492 2 1 493 247 247 493 2 493 246 2 492 248 247 493 247 245 493 492 492 493 246 1 493 492 1 247 1 493 493 491 493 247 245 1 491 1 247 247 247 246 493 2 245 246 493 493 247 492 2 247 247 246 492 247 1 1 492 245 247 492 245 1 247 246 493 493 492 246 247 492 491 247 491 493 248 492 493 247 492 492 493 493 248 493 246 247 493 492 246 2 491 247 246 493 247 245 246 2 1 492 493 1 245 493 248 246 244 247 246 246 245 245 1 245 492 493 492 493 1 493 246 247 1 246 247 493 491 2 247 493 247 247 493 1 245 246 247 492 492 492 247 493 493 247 244 493 247 246 246 247 493 247 493 247 247 245 493 1 493 492 493 247 247 493 493 246 248 1 247 493 247 245 247 491 247 247 248 244 246 246 246 491 247 247 492 492 247 245 247 245 247 492 1 247 247 490 492 493 491 493 248 1 247 493 246 492 245 493 248 247 247 491 248 247 493 247 247 493 492 492 247 246 492 1 247 492 1 247 245 493 246 493 493 493 492 493 246 2 491 247 246 248 246 492 1 493 492 247 245 246 247 247 492 492 245 245 493 491 247 249 493 493 246 245 493 245 492 491 493 247 244 247 246 1 246 246 245 493 492 246 493 246 246 247 246 247 247 1 491 248 247 246 492 247 247 247 248 492 1 245 492 493 247 245 247 493 249 247 248 1 492 247 2 246 492 493 493 492 
+c [Main] Lowest label SAT is set to 493.
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
 c [Main] All children have completed.
 r [Main] 
 r [Main] Final results: 
-r [Main] Lowest label SAT:  	-.
+r [Main] Lowest label SAT:  	493.
 r [Main] Highest label UNSAT:	492.
-r [Main] Total real time: 1812122 ms.
-r [Main] Total memory consumed: 18630.5 MB.
+r [Main] Total real time: 85033 ms.
+r [Main] Total memory consumed: 18618.6 MB.
 r [Main] 
-c [Label = 503] Encoding starts with target value = 246:
-c [Label = 503] Encoding duration: 12803ms.
-c [Label = 503] Number of clauses: 5963096.
-c [Label = 503] Number of variables: 1208347.
-c [Signal] Signal interruption. Caught signal: SIGTERM (15).

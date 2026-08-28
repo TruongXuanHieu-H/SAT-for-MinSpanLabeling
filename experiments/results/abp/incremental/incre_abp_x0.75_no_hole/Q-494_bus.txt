@@ -1,0 +1,25 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] Target value is set to 170.
+c [Param] LB is predefined as 171.
+c [Param] UB is predefined as 370.
+c [Param] Target value is set to Antibandwidth.
+c [Param] Vertices mode is set to No hole.
+c [Param] Result verification is ON.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Param] Max CNF size is set to 10.
+c [Main] Search strategy: Incremental from upper bound.
+c [Main] Encoding and solving for graph: Q-494_bus.mtx.rnd.
+c [Incremental] Minimize Makespan Labeling problem (Q-494_bus.mtx.rnd):
+c [Incremental] Encoding starts with target value = 170:
+c [Incremental] Encoding duration: 1513ms.
+c [Incremental] Number of clauses: 1747244.
+c [Incremental] Number of variables: 467420.
+c [Incremental] Solving for max label = 370:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Lim pid ends with result: 254.
+r [Main] 
+r [Main] Final results: 
+r [Main] Total real time: 1804996 ms.
+r [Main] Total memory consumed: 1097.4 MB.
+r [Main] 

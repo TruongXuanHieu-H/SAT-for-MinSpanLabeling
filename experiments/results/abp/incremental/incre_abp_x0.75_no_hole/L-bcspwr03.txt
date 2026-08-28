@@ -1,0 +1,33 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] Target value is set to 29.
+c [Param] LB is predefined as 30.
+c [Param] UB is predefined as 88.
+c [Param] Target value is set to Antibandwidth.
+c [Param] Vertices mode is set to No hole.
+c [Param] Result verification is ON.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Param] Max CNF size is set to 10.
+c [Main] Search strategy: Incremental from upper bound.
+c [Main] Encoding and solving for graph: L-bcspwr03.mtx.rnd.
+c [Incremental] Minimize Makespan Labeling problem (L-bcspwr03.mtx.rnd):
+c [Incremental] Encoding starts with target value = 29:
+c [Incremental] Encoding duration: 60ms.
+c [Incremental] Number of clauses: 120120.
+c [Incremental] Number of variables: 27900.
+c [Incremental] Solving for max label = 88:
+c [Incremental] Solving duration: 2630 ms.
+s [Incremental] SAT (label = 88).
+c [Incremental] Label assignment: 20 88 38 54 1 15 14 31 55 33 25 35 30 1 59 2 51 85 88 3 56 8 9 7 13 30 57 11 58 83 24 39 6 29 46 18 32 26 88 31 1 34 59 28 84 67 72 23 1 86 88 53 79 87 27 47 16 30 1 88 44 1 62 42 59 63 5 50 30 52 59 4 45 30 1 12 1 17 41 82 48 88 81 74 77 43 33 10 78 36 76 60 30 73 1 59 22 61 75 40 68 65 30 59 1 66 19 70 69 1 88 71 47 37 49 64 80 21 
+c [Incremental] Max used label: 88.
+c [Incremental] Label 88 is removed from searching.
+c [Incremental] Solving for max label = 87:
+c [Incremental] Solving duration: 9 ms.
+s [Incremental] UNSAT (label = 87).
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Work pid ends with result: 0.
+r [Main] 
+r [Main] Final results: 
+r [Main] Total real time: 2707 ms.
+r [Main] Total memory consumed: 50.5 MB.
+r [Main] 

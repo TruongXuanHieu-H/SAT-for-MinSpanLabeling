@@ -9,7 +9,7 @@ report_dir="$ROOT_DIR/experiments/results/abp/iteration-bfs-reverse/ite_abp_x0.7
 
 time_limit="1800"
 memory_limit="30000"
-general_config="--abp --ladder --no-hole --verify-result --iterate-bfs-reverse -limit-memory $memory_limit -limit-real-time $time_limit -worker-count 8 -symmetry-break highest-degree -max-cnf-size 10"
+general_config="--abp --ladder --has-hole --verify-result --iterate-bfs-reverse -limit-memory $memory_limit -limit-real-time $time_limit -worker-count 8 -symmetry-break highest-degree -max-cnf-size 10"
 
 mkdir -p "$report_dir"
 
