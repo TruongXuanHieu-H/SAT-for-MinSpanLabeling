@@ -1,0 +1,25 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] Target value is set to 63.
+c [Param] LB is predefined as 64.
+c [Param] UB is predefined as 503.
+c [Param] Target value is set to Antibandwidth.
+c [Param] Vertices mode is set to No hole.
+c [Param] Result verification is ON.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Param] Max CNF size is set to 10.
+c [Main] Search strategy: Incremental from upper bound.
+c [Main] Encoding and solving for graph: R-dwt__503.mtx.rnd.
+c [Incremental] Minimize Makespan Labeling problem (R-dwt__503.mtx.rnd):
+c [Incremental] Encoding starts with target value = 63:
+c [Incremental] Encoding duration: 6715ms.
+c [Incremental] Number of clauses: 6886273.
+c [Incremental] Number of variables: 714260.
+c [Incremental] Solving for max label = 503:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Lim pid ends with result: 254.
+r [Main] 
+r [Main] Final results: 
+r [Main] Total real time: 1806429 ms.
+r [Main] Total memory consumed: 2172 MB.
+r [Main] 

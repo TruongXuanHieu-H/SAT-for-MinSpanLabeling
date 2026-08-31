@@ -1,0 +1,45 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] Target value is set to 9.
+c [Param] LB is predefined as 10.
+c [Param] UB is predefined as 32.
+c [Param] Target value is set to Antibandwidth.
+c [Param] Vertices mode is set to No hole.
+c [Param] Result verification is ON.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Param] Max CNF size is set to 10.
+c [Main] Search strategy: Incremental from upper bound.
+c [Main] Encoding and solving for graph: B-ibm32.mtx.rnd.
+c [Incremental] Minimize Makespan Labeling problem (B-ibm32.mtx.rnd):
+c [Incremental] Encoding starts with target value = 9:
+c [Incremental] Encoding duration: 9ms.
+c [Incremental] Number of clauses: 15045.
+c [Incremental] Number of variables: 2496.
+c [Incremental] Solving for max label = 32:
+c [Incremental] Solving duration: 1209 ms.
+s [Incremental] SAT (label = 32).
+c [Incremental] Label assignment: 4 12 7 17 11 20 25 3 31 8 10 22 16 13 9 15 26 6 32 21 5 27 29 2 1 30 24 28 18 19 23 14 
+c [Incremental] Max used label: 32.
+c [Incremental] Label 32 is removed from searching.
+c [Incremental] Solving for max label = 31:
+c [Incremental] Solving duration: 523 ms.
+s [Incremental] SAT (label = 31).
+c [Incremental] Label assignment: 4 9 7 17 11 18 23 3 27 8 1 22 15 13 6 14 25 5 31 20 3 29 28 2 10 30 24 26 19 16 21 12 
+c [Incremental] Max used label: 31.
+c [Incremental] Label 31 is removed from searching.
+c [Incremental] Solving for max label = 30:
+c [Incremental] Solving duration: 1592 ms.
+s [Incremental] SAT (label = 30).
+c [Incremental] Label assignment: 19 25 26 6 20 9 10 22 15 24 27 4 7 28 23 1 11 30 21 8 29 13 16 30 12 18 14 17 3 5 11 2 
+c [Incremental] Max used label: 30.
+c [Incremental] Label 30 is removed from searching.
+c [Incremental] Solving for max label = 29:
+c [Incremental] Solving duration: 1376 ms.
+s [Incremental] UNSAT (label = 29).
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Work pid ends with result: 0.
+r [Main] 
+r [Main] Final results: 
+r [Main] Total real time: 4714 ms.
+r [Main] Total memory consumed: 13.1 MB.
+r [Main] 

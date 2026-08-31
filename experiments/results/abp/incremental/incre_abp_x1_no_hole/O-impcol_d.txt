@@ -1,0 +1,25 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] Target value is set to 120.
+c [Param] LB is predefined as 121.
+c [Param] UB is predefined as 425.
+c [Param] Target value is set to Antibandwidth.
+c [Param] Vertices mode is set to No hole.
+c [Param] Result verification is ON.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Param] Max CNF size is set to 10.
+c [Main] Search strategy: Incremental from upper bound.
+c [Main] Encoding and solving for graph: O-impcol_d.mtx.rnd.
+c [Incremental] Minimize Makespan Labeling problem (O-impcol_d.mtx.rnd):
+c [Incremental] Encoding starts with target value = 120:
+c [Incremental] Encoding duration: 3015ms.
+c [Incremental] Number of clauses: 2891966.
+c [Incremental] Number of variables: 480250.
+c [Incremental] Solving for max label = 425:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Lim pid ends with result: 254.
+r [Main] 
+r [Main] Final results: 
+r [Main] Total real time: 1806506 ms.
+r [Main] Total memory consumed: 1494.9 MB.
+r [Main] 

@@ -1,0 +1,37 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] Target value is set to 9.
+c [Param] LB is predefined as 10.
+c [Param] UB is predefined as 48.
+c [Param] Target value is set to Antibandwidth.
+c [Param] Vertices mode is set to No hole.
+c [Param] Result verification is ON.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Param] Max CNF size is set to 10.
+c [Main] Search strategy: Incremental from upper bound.
+c [Main] Encoding and solving for graph: D-bcsstk01.mtx.rnd.
+c [Incremental] Minimize Makespan Labeling problem (D-bcsstk01.mtx.rnd):
+c [Incremental] Encoding starts with target value = 9:
+c [Incremental] Encoding duration: 28ms.
+c [Incremental] Number of clauses: 43303.
+c [Incremental] Number of variables: 5952.
+c [Incremental] Solving for max label = 48:
+c [Incremental] Solving duration: 1514 ms.
+s [Incremental] SAT (label = 48).
+c [Incremental] Label assignment: 6 4 43 14 21 47 29 39 25 1 12 42 46 10 15 18 45 26 7 48 11 32 33 16 30 37 22 34 28 27 19 41 31 3 17 38 5 8 20 35 9 13 23 40 24 44 2 36 
+c [Incremental] Max used label: 48.
+c [Incremental] Label 48 is removed from searching.
+c [Incremental] Solving for max label = 47:
+c [Incremental] Solving duration: 15684 ms.
+s [Incremental] SAT (label = 47).
+c [Incremental] Label assignment: 5 34 15 6 7 21 29 38 24 1 13 39 46 10 14 17 8 25 30 20 47 32 43 18 27 37 36 22 28 31 19 41 26 47 12 3 44 40 11 35 9 16 33 45 23 4 2 42 
+c [Incremental] Max used label: 47.
+c [Incremental] Label 47 is removed from searching.
+c [Incremental] Solving for max label = 46:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Lim pid ends with result: 254.
+r [Main] 
+r [Main] Final results: 
+r [Main] Total real time: 1806584 ms.
+r [Main] Total memory consumed: 64.8 MB.
+r [Main] 

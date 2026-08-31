@@ -1,0 +1,31 @@
+c [Version] Minimize Makespan Labeling Encoder version 1.0.0.
+c [Param] Target value is set to 13.
+c [Param] LB is predefined as 14.
+c [Param] UB is predefined as 54.
+c [Param] Target value is set to Antibandwidth.
+c [Param] Vertices mode is set to No hole.
+c [Param] Result verification is ON.
+c [Param] Memory limit is set to 30000.
+c [Param] Real time limit is set to 1800.
+c [Param] Max CNF size is set to 10.
+c [Main] Search strategy: Incremental from upper bound.
+c [Main] Encoding and solving for graph: F-curtis54.mtx.rnd.
+c [Incremental] Minimize Makespan Labeling problem (F-curtis54.mtx.rnd):
+c [Incremental] Encoding starts with target value = 13:
+c [Incremental] Encoding duration: 33ms.
+c [Incremental] Number of clauses: 41726.
+c [Incremental] Number of variables: 7668.
+c [Incremental] Solving for max label = 54:
+c [Incremental] Solving duration: 43197 ms.
+s [Incremental] SAT (label = 54).
+c [Incremental] Label assignment: 15 22 54 25 47 9 46 8 11 38 32 45 53 42 39 17 40 37 3 52 16 7 13 20 27 31 26 30 12 29 44 28 21 10 43 34 1 4 14 36 6 23 35 41 50 18 2 49 51 33 48 19 24 5 
+c [Incremental] Max used label: 54.
+c [Incremental] Label 54 is removed from searching.
+c [Incremental] Solving for max label = 53:
+c [Signal] Signal interruption. Caught signal: SIGTERM (15).
+c [Main] Lim pid ends with result: 254.
+r [Main] 
+r [Main] Final results: 
+r [Main] Total real time: 1806416 ms.
+r [Main] Total memory consumed: 97.9 MB.
+r [Main] 
